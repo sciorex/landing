@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-900 text-white antialiased;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dark-400;
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: 0 0 40px rgba(92, 124, 250, 0.4);
+}
+
+.glow-accent {
+  box-shadow: 0 0 40px rgba(240, 101, 149, 0.4);
+}
+
+/* Text gradient */
+.text-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, #5c7cfa 0%, #f06595 100%);
+}
+
+.text-gradient-blue {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, #748ffc 0%, #91a7ff 100%);
+}
+
+/* Glass morphism */
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.glass-dark {
+  @apply bg-dark-800/60 backdrop-blur-xl border border-white/5;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300;
+}
+
+.card-hover:hover {
+  @apply -translate-y-2;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Mesh background */
+.mesh-bg {
+  background-image:
+    radial-gradient(at 40% 20%, hsla(240, 100%, 74%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(320, 100%, 74%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(210, 100%, 70%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 70% 60%, hsla(270, 100%, 60%, 0.1) 0px, transparent 50%);
+}
+
+/* Grid background */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(92, 124, 250, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(92, 124, 250, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Animated border */
+.animated-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #5c7cfa, #f06595, #5c7cfa);
+  background-size: 200% 200%;
+  animation: gradient-rotate 3s ease infinite;
+  z-index: -1;
+  padding: 2px;
+  border-radius: inherit;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Feature icon container */
+.feature-icon {
+  @apply w-14 h-14 rounded-2xl flex items-center justify-center;
+  background: linear-gradient(135deg, rgba(92, 124, 250, 0.2), rgba(240, 101, 149, 0.2));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Section container */
+.section {
+  @apply py-24 px-4 sm:px-6 lg:px-8;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold rounded-xl;
+  @apply hover:from-primary-500 hover:to-primary-400 transition-all duration-300;
+  @apply hover:shadow-lg hover:shadow-primary-500/25;
+}
+
+.btn-secondary {
+  @apply px-8 py-4 bg-white/5 backdrop-blur-xl border border-white/10 text-white font-semibold rounded-xl;
+  @apply hover:bg-white/10 transition-all duration-300;
+}
+
+/* Image container with gradient border */
+.image-frame {
+  @apply relative rounded-2xl overflow-hidden;
+  background: linear-gradient(135deg, rgba(92, 124, 250, 0.3), rgba(240, 101, 149, 0.3));
+  padding: 1px;
+}
+
+.image-frame>div {
+  @apply rounded-2xl overflow-hidden bg-dark-800;
+}
+
+/* Floating particles */
+.particle {
+  @apply absolute w-2 h-2 rounded-full opacity-40;
+  background: linear-gradient(135deg, #5c7cfa, #f06595);
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Nav blur */
+.nav-blur {
+  @apply bg-dark-900/80 backdrop-blur-xl;
+}
