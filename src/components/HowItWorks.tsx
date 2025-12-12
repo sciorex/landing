@@ -7,7 +7,7 @@ const steps = [
     icon: Bot,
     title: 'Create Specialized Agents',
     description:
-      'Define AI agents with specific prompts, tool permissions, and MCP configurations. Create a Paper Fetcher, a Hypothesis Generator, an Experiment Runner — each optimized for its role.',
+      'Define AI agents with specific prompts, tool permissions, and MCP configurations. Create a Paper Fetcher, a Hypothesis Generator, an Experiment Runner: each optimized for its role.',
     image: '/screenshots/step-config.png',
   },
   {
@@ -49,7 +49,7 @@ export default function HowItWorks() {
           </h2>
           <p className="text-xl text-dark-100 max-w-2xl mx-auto">
             From agent creation to workflow automation in three simple steps.
-            No coding required — just drag, drop, and orchestrate.
+            No coding required. Just drag, drop, and orchestrate.
           </p>
         </motion.div>
         
