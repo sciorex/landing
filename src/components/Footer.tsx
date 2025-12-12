@@ -1,40 +1,58 @@
 import { ArrowUp } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { analytics } from '../utils/analytics';
 
 const footerLinks = {
   Product: [
-    { name: 'Features', href: '#features' },
-    { name: 'How It Works', href: '#how-it-works' },
-    { name: 'Download', href: '#download' },
-    { name: 'Changelog', href: 'https://docs.sciorex.com/changelog' },
+    { name: 'Features', href: '#features', type: 'hash' },
+    { name: 'How It Works', href: '#how-it-works', type: 'hash' },
+    { name: 'Download', href: '#download', type: 'hash' },
+    { name: 'Changelog', href: 'https://docs.sciorex.com/changelog', type: 'external' },
   ],
   Resources: [
-    { name: 'Documentation', href: 'https://docs.sciorex.com' },
-    { name: 'Getting Started', href: 'https://docs.sciorex.com/guide/getting-started' },
-    { name: 'API Reference', href: 'https://docs.sciorex.com/api/overview' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Documentation', href: 'https://docs.sciorex.com', type: 'external' },
+    { name: 'Getting Started', href: 'https://docs.sciorex.com/guide/getting-started', type: 'external' },
+    { name: 'Blog', href: '#blog', type: 'hash' },
   ],
   Company: [
-    { name: 'About', href: '#' },
-    { name: 'Contact', href: '#' },
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Service', href: '#' },
+    { name: 'About', href: '/about', type: 'internal' },
+    { name: 'Contact', href: '/contact', type: 'internal' },
+    { name: 'Privacy Policy', href: '/privacy', type: 'internal' },
+    { name: 'Terms of Service', href: '/terms', type: 'internal' },
   ],
 };
 
 export default function Footer() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.substring(1);
+
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: targetId } });
+    } else {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   return (
     <footer className="relative border-t border-white/5">
       <div className="absolute inset-0 bg-dark-800/30" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-3 mb-4 group">
+            <Link to="/" className="flex items-center gap-3 mb-4 group">
               <img
                 src="/logo.png"
                 alt="Sciorex Logo"
@@ -43,7 +61,7 @@ export default function Footer() {
               <span className="text-xl font-display font-bold text-white">
                 Sciorex
               </span>
-            </a>
+            </Link>
             <p className="text-dark-100 mb-6 max-w-sm">
               The King of Knowledge. Orchestrate AI agent swarms,
               design research workflows, and rule your domain with ease.
@@ -53,6 +71,7 @@ export default function Footer() {
                 href="https://github.com/sciorex/sciorex"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => analytics.trackSocialClick('GitHub')}
                 className="w-10 h-10 rounded-lg glass flex items-center justify-center text-dark-100 hover:text-white hover:bg-white/10 transition-all"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -63,6 +82,7 @@ export default function Footer() {
                 href="https://x.com/sciorex"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => analytics.trackSocialClick('X')}
                 className="w-10 h-10 rounded-lg glass flex items-center justify-center text-dark-100 hover:text-white hover:bg-white/10 transition-all"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -70,9 +90,10 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://discord.gg/sciorex"
+                href="https://discord.gg/zSjPjA5j"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => analytics.trackSocialClick('Discord')}
                 className="w-10 h-10 rounded-lg glass flex items-center justify-center text-dark-100 hover:text-white hover:bg-white/10 transition-all"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -81,7 +102,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
+
           {/* Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
@@ -89,19 +110,38 @@ export default function Footer() {
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-dark-100 hover:text-white transition-colors text-sm"
-                    >
-                      {link.name}
-                    </a>
+                    {link.type === 'internal' ? (
+                      <Link
+                        to={link.href}
+                        className="text-dark-100 hover:text-white transition-colors text-sm"
+                      >
+                        {link.name}
+                      </Link>
+                    ) : link.type === 'hash' ? (
+                      <a
+                        href={link.href}
+                        onClick={(e) => handleHashClick(e, link.href)}
+                        className="text-dark-100 hover:text-white transition-colors text-sm"
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-dark-100 hover:text-white transition-colors text-sm"
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
-        
+
         {/* Bottom */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-dark-200 text-sm">

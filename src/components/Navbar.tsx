@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Features', href: '#features' },
   { name: 'How It Works', href: '#how-it-works' },
   { name: 'Pricing', href: '#pricing' },
-  { name: 'Docs', href: 'https://docs.sciorex.com' },
+  { name: 'Docs', href: 'https://docs.sciorex.com', external: true },
   { name: 'Blog', href: '#blog' },
   { name: 'Download', href: '#download' },
 ];
@@ -13,6 +14,8 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +24,41 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+
+      if (location.pathname !== '/') {
+        // Navigate to home page first, then scroll to section
+        navigate('/', { state: { scrollTo: targetId } });
+      } else {
+        // Already on home page, just scroll
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+      setMobileMenuOpen(false);
+    }
+  };
+
+  // Handle scroll after navigation from subpage
+  useEffect(() => {
+    if (location.pathname === '/' && location.state?.scrollTo) {
+      const targetId = location.state.scrollTo;
+      // Small delay to ensure the page has rendered
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      // Clear the state
+      window.history.replaceState({}, document.title);
+    }
+  }, [location]);
 
   return (
     <nav
@@ -31,7 +69,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <img
               src="/logo.png"
               alt="Sciorex Logo"
@@ -40,18 +78,31 @@ export default function Navbar() {
             <span className="text-xl font-display font-bold text-white">
               Sciorex
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-dark-100 hover:text-white transition-colors font-medium"
-              >
-                {link.name}
-              </a>
+              link.external ? (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-dark-100 hover:text-white transition-colors font-medium"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="text-dark-100 hover:text-white transition-colors font-medium"
+                >
+                  {link.name}
+                </a>
+              )
             ))}
           </div>
 
@@ -79,6 +130,7 @@ export default function Navbar() {
             </a>
             <a
               href="#download"
+              onClick={(e) => handleNavClick(e, '#download')}
               className="btn-primary text-sm px-6 py-3"
             >
               Download
@@ -99,14 +151,27 @@ export default function Navbar() {
           <div className="md:hidden glass rounded-2xl mt-2 p-6 animate-slide-up">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-dark-100 hover:text-white transition-colors font-medium py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
+                link.external ? (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-dark-100 hover:text-white transition-colors font-medium py-2"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="text-dark-100 hover:text-white transition-colors font-medium py-2"
+                  >
+                    {link.name}
+                  </a>
+                )
               ))}
               <div className="flex gap-4 pt-4 border-t border-white/10">
                 <a

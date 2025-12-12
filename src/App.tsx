@@ -1,27 +1,24 @@
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Showcase from './components/Showcase';
-import HowItWorks from './components/HowItWorks';
-import Pricing from './components/Pricing';
-import Blog from './components/Blog';
-import Download from './components/Download';
-import CTA from './components/CTA';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 function App() {
   return (
     <div className="min-h-screen bg-dark-900">
       <Navbar />
       <main>
-        <Hero />
-        <Features />
-        <Showcase />
-        <HowItWorks />
-        <Pricing />
-        <Blog />
-        <Download />
-        <CTA />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+        </Routes>
       </main>
       <Footer />
     </div>

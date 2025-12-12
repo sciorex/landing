@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
 import { Download, Apple, Monitor, Terminal, CheckCircle, Package } from 'lucide-react';
+import { analytics } from '../utils/analytics';
+
+const BASE_URL = 'https://github.com/sciorex/sciorex/releases/latest/download';
 
 const downloadGroups = [
   {
@@ -7,8 +10,8 @@ const downloadGroups = [
     icon: Monitor,
     color: 'from-blue-500 to-cyan-500',
     options: [
-      { name: 'Installer', file: '.exe', size: '~85 MB', description: 'Recommended' },
-      { name: 'Portable', file: '.zip', size: '~82 MB', description: 'No install needed' },
+      { name: 'Installer', file: 'Sciorex-win-x64.exe', size: '~85 MB', description: 'Recommended', url: `${BASE_URL}/Sciorex-win-x64.exe` },
+      { name: 'Portable', file: 'Sciorex-portable.exe', size: '~82 MB', description: 'No install needed', url: `${BASE_URL}/Sciorex-portable.exe` },
     ],
   },
   {
@@ -16,8 +19,8 @@ const downloadGroups = [
     icon: Apple,
     color: 'from-gray-400 to-gray-600',
     options: [
-      { name: 'Apple Silicon', file: '.dmg (arm64)', size: '~88 MB', description: 'M1/M2/M3/M4' },
-      { name: 'Intel', file: '.dmg (x64)', size: '~92 MB', description: 'Intel Macs' },
+      { name: 'Apple Silicon', file: 'Sciorex-mac-arm64.dmg', size: '~88 MB', description: 'M1/M2/M3/M4', url: `${BASE_URL}/Sciorex-mac-arm64.dmg` },
+      { name: 'Intel', file: 'Sciorex-mac-x64.dmg', size: '~92 MB', description: 'Intel Macs', url: `${BASE_URL}/Sciorex-mac-x64.dmg` },
     ],
   },
   {
@@ -25,8 +28,9 @@ const downloadGroups = [
     icon: Terminal,
     color: 'from-orange-500 to-yellow-500',
     options: [
-      { name: 'AppImage', file: '.AppImage', size: '~80 MB', description: 'Universal' },
-      { name: 'Debian/Ubuntu', file: '.deb', size: '~78 MB', description: 'apt compatible' },
+      { name: 'AppImage', file: 'Sciorex-linux-x86_64.AppImage', size: '~103 MB', description: 'Universal', url: `${BASE_URL}/Sciorex-linux-x86_64.AppImage` },
+      { name: 'Debian/Ubuntu', file: 'Sciorex-linux-amd64.deb', size: '~88 MB', description: 'apt compatible', url: `${BASE_URL}/Sciorex-linux-amd64.deb` },
+      { name: 'Fedora/RHEL', file: 'Sciorex-linux-x86_64.rpm', size: '~89 MB', description: 'dnf/yum compatible', url: `${BASE_URL}/Sciorex-linux-x86_64.rpm` },
     ],
   },
 ];
@@ -98,10 +102,12 @@ export default function DownloadSection() {
               {/* Download Options */}
               <div className="p-4 space-y-3">
                 {group.options.map((option) => (
-                  <motion.button
+                  <motion.a
                     key={option.name}
+                    href={option.url}
                     whileHover={{ scale: 1.01, x: 4 }}
                     whileTap={{ scale: 0.99 }}
+                    onClick={() => analytics.trackDownload(group.os, option.name)}
                     className="w-full flex items-center justify-between p-3 rounded-xl bg-dark-700/50 hover:bg-dark-600/50 border border-white/5 hover:border-primary-500/30 transition-all group"
                   >
                     <div className="flex items-center gap-3">
@@ -125,7 +131,7 @@ export default function DownloadSection() {
                       <p className="text-xs text-dark-200">{option.file}</p>
                       <p className="text-xs text-dark-400">{option.size}</p>
                     </div>
-                  </motion.button>
+                  </motion.a>
                 ))}
               </div>
             </div>
@@ -160,7 +166,7 @@ export default function DownloadSection() {
           className="mt-12 text-center"
         >
           <p className="text-sm text-dark-300">
-            Requires Node.js v18+ and Claude Code CLI for AI features.{' '}
+            Requires Claude Code CLI for AI features.{' '}
             <a href="#" className="text-primary-400 hover:text-primary-300 underline">
               Setup Guide →
             </a>
