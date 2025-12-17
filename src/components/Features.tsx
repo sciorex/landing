@@ -13,6 +13,7 @@ import {
   Puzzle,
   Bell,
   Sparkles,
+  Code2,
 } from 'lucide-react';
 
 const features = [
@@ -57,6 +58,13 @@ const features = [
     description:
       'Configure different MCP servers per agent. Need Slack alerts? Database access? Custom APIs? Just add the right MCP.',
     color: 'from-indigo-500 to-violet-500',
+  },
+  {
+    icon: Code2,
+    title: 'IDE Integration',
+    description:
+      'Open files in your VS Code compatible IDE via our bridge extension, use the integrated VS Code web, or the Monaco editor for quick edits.',
+    color: 'from-cyan-500 to-blue-500',
   },
   {
     icon: GitBranch,
