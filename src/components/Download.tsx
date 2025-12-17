@@ -166,8 +166,8 @@ export default function DownloadSection() {
           className="mt-12 text-center"
         >
           <p className="text-sm text-dark-300">
-            Requires Claude Code CLI for AI features.{' '}
-            <a href="#" className="text-primary-400 hover:text-primary-300 underline">
+            Supports Claude, Gemini, Codex, LM Studio & Ollama.{' '}
+            <a href="https://docs.sciorex.com/guide/getting-started" className="text-primary-400 hover:text-primary-300 underline">
               Setup Guide →
             </a>
           </p>

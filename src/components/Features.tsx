@@ -12,9 +12,17 @@ import {
   Layers,
   Puzzle,
   Bell,
+  Sparkles,
 } from 'lucide-react';
 
 const features = [
+  {
+    icon: Sparkles,
+    title: 'Multi-Provider AI',
+    description:
+      'Use Claude, Gemini, Codex, or local models via LM Studio and Ollama. Switch providers per agent or chat session.',
+    color: 'from-violet-500 to-purple-500',
+  },
   {
     icon: Bot,
     title: 'Custom AI Agents',
