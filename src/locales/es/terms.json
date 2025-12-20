@@ -1,0 +1,73 @@
+{
+  "title": "Términos de Servicio",
+  "lastUpdated": "Última actualización: Diciembre 2024",
+  "sections": {
+    "acceptance": {
+      "title": "1. Aceptación de Términos",
+      "content": "Al descargar, instalar o usar Sciorex (\"el Software\"), aceptas estar sujeto a estos Términos de Servicio y nuestra",
+      "privacyPolicy": "Política de Privacidad",
+      "disclaimer": ". Si no estás de acuerdo con estos términos, no uses el Software."
+    },
+    "license": {
+      "title": "2. Concesión de Licencia",
+      "intro": "Sujeto a tu cumplimiento con estos términos, el Equipo de Sciorex te otorga una licencia limitada, no exclusiva, intransferible y revocable para:",
+      "rights": [
+        "Descargar e instalar el Software en dispositivos que poseas o controles",
+        "Usar el Software para fines personales o comerciales internos",
+        "Hacer copias de respaldo solo con fines de archivo"
+      ]
+    },
+    "restrictions": {
+      "title": "3. Restricciones",
+      "intro": "No puedes:",
+      "items": [
+        "Copiar, modificar o crear trabajos derivados del Software",
+        "Realizar ingeniería inversa, descompilar o intentar derivar el código fuente",
+        "Distribuir, sublicenciar, arrendar o transferir el Software a terceros",
+        "Usar el Software para desarrollar productos competidores",
+        "Eliminar o alterar avisos de propiedad"
+      ]
+    },
+    "yourContent": {
+      "title": "4. Tu Contenido",
+      "ownership": "Eres dueño de tu contenido.",
+      "ownershipDesc": "Conservas todos los derechos sobre el contenido que ingresas en el Software, incluido tu código, archivos, prompts y datos de proyecto.",
+      "aiOutput": "La salida generada por IA te pertenece.",
+      "aiOutputDesc": "En la medida permitida por la ley, cualquier contenido generado por IA a través del Software en respuesta a tus entradas se te asigna a ti."
+    },
+    "dataPrivacy": {
+      "title": "5. Datos y Privacidad",
+      "noCollection": "No recopilamos tus datos.",
+      "noCollectionDesc": "El Software opera completamente en tu máquina local. Tus conversaciones, código y archivos de proyecto permanecen en tu dispositivo y nunca se transmiten a nuestros servidores.",
+      "noTraining": "No entrenaremos con tu contenido.",
+      "noTrainingDesc": "Tus entradas y salidas no son recopiladas ni utilizadas con fines de entrenamiento por el Equipo de Sciorex."
+    },
+    "thirdParty": {
+      "title": "6. Servicios de IA de Terceros",
+      "content": "Al usar funciones de IA, tus datos pueden enviarse a proveedores de IA de terceros (como Claude de Anthropic) para procesamiento. Esto está sujeto a los términos de servicio de esos proveedores, tu propia configuración de claves API y cuenta, y sus políticas de retención de datos. No somos responsables de servicios de terceros."
+    },
+    "aiDisclaimer": {
+      "title": "7. Descargo de Responsabilidad de IA y Automatización",
+      "intro": "Este Software se integra con servicios de IA y agentes automatizados que pueden leer, modificar, crear o eliminar archivos, ejecutar comandos y acceder a tu código base.",
+      "responsibility": "Eres responsable de revisar todos los cambios sugeridos por IA",
+      "responsibilityDesc": "y mantener copias de seguridad adecuadas. No somos responsables de acciones tomadas por sistemas de IA o procesos automatizados."
+    },
+    "noWarranty": {
+      "title": "8. Sin Garantía",
+      "content": "El Software se proporciona \"tal cual\" sin garantía de ningún tipo. No garantizamos que el Software esté libre de errores, ininterrumpido o libre de componentes dañinos. Las sugerencias generadas por IA pueden contener errores o reflejar limitaciones en el razonamiento de IA."
+    },
+    "liability": {
+      "title": "9. Limitación de Responsabilidad",
+      "content": "En la máxima medida permitida por la ley, el Equipo de Sciorex no será responsable de daños indirectos, incidentales, especiales, consecuentes o punitivos, incluida la pérdida de datos, interrupción del negocio o daños que surjan de funciones de IA o ejecución de código automatizada."
+    },
+    "changes": {
+      "title": "10. Cambios a los Términos",
+      "content": "Podemos modificar estos términos en cualquier momento. El uso continuado del Software después de los cambios constituye la aceptación de los términos modificados."
+    },
+    "contact": {
+      "title": "11. Contacto",
+      "content": "Para preguntas sobre estos Términos, por favor contáctanos en",
+      "email": "legal@sciorex.com"
+    }
+  }
+}

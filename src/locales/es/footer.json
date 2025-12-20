@@ -1,0 +1,36 @@
+{
+  "tagline": "El Rey del Conocimiento. Orquesta enjambres de agentes de IA, diseña flujos de investigación y gobierna tu dominio con facilidad.",
+  "product": {
+    "title": "Producto",
+    "links": {
+      "features": "Características",
+      "howItWorks": "Cómo Funciona",
+      "download": "Descargar",
+      "changelog": "Registro de Cambios"
+    }
+  },
+  "resources": {
+    "title": "Recursos",
+    "links": {
+      "documentation": "Documentación",
+      "gettingStarted": "Primeros Pasos",
+      "blog": "Blog"
+    }
+  },
+  "company": {
+    "title": "Empresa",
+    "links": {
+      "about": "Acerca de",
+      "contact": "Contacto",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio"
+    }
+  },
+  "social": {
+    "github": "GitHub",
+    "twitter": "X (Twitter)",
+    "discord": "Discord"
+  },
+  "copyright": "Sciorex. Todos los derechos reservados.",
+  "scrollToTop": "Volver arriba"
+}

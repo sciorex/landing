@@ -1,0 +1,72 @@
+{
+  "badge": "Precios Simples",
+  "title": "Gratis para",
+  "titleHighlight": "Todos",
+  "subtitle": "Comienza con toda la potencia gratis. Escala cuando necesites funciones de equipo.",
+  "plans": {
+    "personal": {
+      "name": "Personal",
+      "price": "Gratis",
+      "period": "",
+      "description": "Todo lo que necesitas para orquestar tus agentes de IA",
+      "cta": "Descargar Ahora",
+      "available": "Disponible Ahora",
+      "features": [
+        "Agentes ilimitados",
+        "Flujos de trabajo ilimitados",
+        "Editor visual de flujos",
+        "Gestión de tickets Kanban",
+        "Soporte completo de MCP",
+        "Todos los modelos de IA (Claude Opus, Sonnet, Haiku)",
+        "Modos de pensamiento extendido",
+        "Almacenamiento de datos local",
+        "Actualizaciones automáticas",
+        "Soporte de la comunidad"
+      ]
+    },
+    "teams": {
+      "name": "Equipos",
+      "price": "Próximamente",
+      "period": "",
+      "description": "Colabora con tu equipo en flujos de investigación",
+      "cta": "Unirse a Lista de Espera",
+      "comingSoon": "Próximamente",
+      "features": [
+        "Todo en Personal",
+        "Espacios de trabajo de equipo",
+        "Configuraciones de agentes compartidas",
+        "Plantillas de flujos compartidas",
+        "Tableros de tickets de equipo",
+        "Colaboración en tiempo real",
+        "Gestión centralizada de MCP",
+        "Analíticas de uso",
+        "Soporte prioritario",
+        "Integración con Slack"
+      ]
+    },
+    "enterprise": {
+      "name": "Empresa",
+      "price": "Contáctanos",
+      "period": "",
+      "description": "Implementación a gran escala con integraciones empresariales",
+      "cta": "Contactar Ventas",
+      "comingSoon": "Próximamente",
+      "features": [
+        "Todo en Equipos",
+        "Integración con Jira",
+        "Integración con Confluence",
+        "GitHub Enterprise",
+        "Azure DevOps",
+        "Autenticación SSO / SAML",
+        "Implementación local",
+        "Plantillas de agentes personalizadas",
+        "Garantías de SLA",
+        "Soporte dedicado"
+      ]
+    }
+  },
+  "enterpriseCTA": {
+    "text": "¿Necesitas integraciones personalizadas?",
+    "linkText": "Hablemos"
+  }
+}

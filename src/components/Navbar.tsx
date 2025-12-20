@@ -1,21 +1,25 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-
-const navLinks = [
-  { name: 'Features', href: '#features' },
-  { name: 'How It Works', href: '#how-it-works' },
-  { name: 'Pricing', href: '#pricing' },
-  { name: 'Docs', href: 'https://docs.sciorex.com', external: true },
-  { name: 'Blog', href: '#blog' },
-  { name: 'Download', href: '#download' },
-];
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from './LanguageSelector';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const { locale } = useParams<{ locale: string }>();
+  const { t } = useTranslation('common');
+
+  const navLinks = [
+    { name: t('nav.features'), href: '#features' },
+    { name: t('nav.howItWorks'), href: '#how-it-works' },
+    { name: t('nav.pricing'), href: '#pricing' },
+    { name: t('nav.docs'), href: 'https://docs.sciorex.com', external: true },
+    { name: t('nav.blog'), href: '#blog' },
+    { name: t('nav.download'), href: '#download' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,10 +33,12 @@ export default function Navbar() {
     if (href.startsWith('#')) {
       e.preventDefault();
       const targetId = href.substring(1);
+      const currentLocale = locale || 'en';
+      const homePath = `/${currentLocale}/`;
 
-      if (location.pathname !== '/') {
+      if (location.pathname !== homePath) {
         // Navigate to home page first, then scroll to section
-        navigate('/', { state: { scrollTo: targetId } });
+        navigate(homePath, { state: { scrollTo: targetId } });
       } else {
         // Already on home page, just scroll
         const element = document.getElementById(targetId);
@@ -46,7 +52,10 @@ export default function Navbar() {
 
   // Handle scroll after navigation from subpage
   useEffect(() => {
-    if (location.pathname === '/' && location.state?.scrollTo) {
+    const currentLocale = locale || 'en';
+    const homePath = `/${currentLocale}/`;
+
+    if (location.pathname === homePath && location.state?.scrollTo) {
       const targetId = location.state.scrollTo;
       // Small delay to ensure the page has rendered
       setTimeout(() => {
@@ -58,7 +67,7 @@ export default function Navbar() {
       // Clear the state
       window.history.replaceState({}, document.title);
     }
-  }, [location]);
+  }, [location, locale]);
 
   return (
     <nav
@@ -69,7 +78,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to={`/${locale || 'en'}/`} className="flex items-center gap-3 group">
             <img
               src="/logo.png"
               alt="Sciorex Logo"
@@ -128,12 +137,13 @@ export default function Navbar() {
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
             </a>
+            <LanguageSelector />
             <a
               href="#download"
               onClick={(e) => handleNavClick(e, '#download')}
               className="btn-primary text-sm px-6 py-3"
             >
-              Download
+              {t('nav.download')}
             </a>
           </div>
 
@@ -173,6 +183,9 @@ export default function Navbar() {
                   </a>
                 )
               ))}
+              <div className="pt-4 border-t border-white/10">
+                <LanguageSelector />
+              </div>
               <div className="flex gap-4 pt-4 border-t border-white/10">
                 <a
                   href="https://github.com/sciorex/sciorex"

@@ -1,0 +1,64 @@
+{
+  "badge": "Now available for Windows, macOS & Linux",
+  "title": "The King of",
+  "titleHighlight": "Knowledge",
+  "tagline": "AI agents that actually get things done.",
+  "messages": [
+    {
+      "main": "Create AI agents, chain them into workflows, and let them handle your coding, research, and documentation tasks.",
+      "sub": "You define what each agent does. Sciorex runs them, tracks progress with tickets, and keeps everything on your machine. No cloud, no subscriptions."
+    },
+    {
+      "main": "Plan entire solutions with your AI agents. Control every decision, track every change, and steer the AI to follow your best practices.",
+      "sub": "Build applications from the ground up. Define architecture with specialized agents, break work into trackable tickets, and watch your agents deliver."
+    },
+    {
+      "main": "Stop context-switching between tools. One workspace for AI chat, task tracking, and code execution.",
+      "sub": "Your agents share context, remember decisions, and build on each other's work. Like a team that never forgets."
+    },
+    {
+      "main": "Turn hours of research into minutes. Agents fetch papers, extract insights, and synthesize knowledge automatically.",
+      "sub": "Feed it sources, get structured summaries. Perfect for literature reviews, competitive analysis, or learning new domains."
+    },
+    {
+      "main": "AI that follows your rules. Define coding standards, review criteria, and workflows your agents must follow.",
+      "sub": "Every change tracked, every decision logged. Full visibility into what your agents did and why."
+    }
+  ],
+  "cta": {
+    "download": "Download Free",
+    "watchDemo": "Watch Demo"
+  },
+  "stats": {
+    "local": {
+      "value": "100%",
+      "label": "Local & Private"
+    },
+    "workflows": {
+      "value": "∞",
+      "label": "Agent Workflows"
+    },
+    "mcp": {
+      "value": "MCP",
+      "label": "Tool Protocol"
+    }
+  },
+  "floatingCards": {
+    "agentCompleted": {
+      "title": "Agent Completed",
+      "subtitle": "Paper analysis done"
+    },
+    "chatActive": {
+      "title": "Chat Active",
+      "subtitle": "Discussing architecture"
+    },
+    "flowTriggered": {
+      "title": "Flow Triggered",
+      "subtitle": "Research pipeline active"
+    },
+    "ticketCreated": {
+      "title": "Ticket Created",
+      "subtitle": "Implement auth system"
+    }
+  }
+}

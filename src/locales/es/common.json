@@ -1,0 +1,120 @@
+{
+  "nav": {
+    "features": "Características",
+    "howItWorks": "Cómo Funciona",
+    "pricing": "Precios",
+    "docs": "Documentación",
+    "blog": "Blog",
+    "download": "Descargar",
+    "getStarted": "Comenzar"
+  },
+  "download": {
+    "badge": "Disponible Ahora",
+    "title": "Descargar",
+    "titleHighlight": "Sciorex",
+    "subtitle": "Reclama tu trono como el Rey del Conocimiento. Gratis para uso personal, sin necesidad de cuenta.",
+    "windows": "Windows",
+    "mac": "macOS",
+    "linux": "Linux",
+    "installer": "Instalador",
+    "portable": "Portátil",
+    "appleSilicon": "Apple Silicon",
+    "intel": "Intel",
+    "appImage": "AppImage",
+    "debian": "Debian/Ubuntu",
+    "fedora": "Fedora/RHEL",
+    "recommended": "Recomendado",
+    "noInstall": "Sin instalación necesaria",
+    "m1m2m3": "M1/M2/M3/M4",
+    "intelMacs": "Intel Macs",
+    "universal": "Universal",
+    "aptCompatible": "compatible con apt",
+    "dnfCompatible": "compatible con dnf/yum",
+    "features": {
+      "free": "Gratis para uso personal",
+      "allFeatures": "Todas las funciones incluidas",
+      "noAccount": "Sin necesidad de cuenta",
+      "autoUpdates": "Actualizaciones automáticas incluidas",
+      "localPrivate": "100% local y privado"
+    },
+    "requirements": "Compatible con Claude, Gemini, Codex, LM Studio y Ollama.",
+    "setupGuide": "Guía de Configuración"
+  },
+  "blog": {
+    "badge": "Aprende y Explora",
+    "title": "Lo Último del",
+    "titleHighlight": "Blog",
+    "emptyTitle": "Aún no hay publicaciones",
+    "emptyDescription": "Estamos trabajando en contenido excelente. Vuelve pronto para tutoriales, guías y mejores prácticas."
+  },
+  "showcase": {
+    "badge": "Véalo en Acción",
+    "title": "Interfaz Potente,",
+    "titleHighlight": "Diseño Intuitivo",
+    "subtitle": "Cada función diseñada para ayudarte a orquestar agentes de IA de manera eficiente",
+    "items": {
+      "kanban": {
+        "title": "Panel Kanban de Agentes",
+        "description": "Rastrea todas las tareas de tus agentes con un potente tablero Kanban de arrastrar y soltar. Organiza por estado, prioridad y asignaciones de agentes.",
+        "category": "Gestión de Tareas"
+      },
+      "flowEditor": {
+        "title": "Editor Visual de Flujos",
+        "description": "Diseña flujos de trabajo complejos multi-agente con nuestro editor basado en nodos. Encadena agentes, añade condiciones y ejecuta tareas paralelas.",
+        "category": "Diseño de Flujos"
+      },
+      "execution": {
+        "title": "Ejecución de Flujos en Tiempo Real",
+        "description": "Observa tus flujos ejecutarse en tiempo real. Ve cada nodo iluminarse mientras los agentes procesan, rastrea el progreso y monitorea los resultados a medida que se completan.",
+        "category": "Ejecución"
+      },
+      "config": {
+        "title": "Configuración de Agentes",
+        "description": "Crea agentes especializados con prompts personalizados, permisos de herramientas y configuraciones MCP adaptadas a tareas específicas.",
+        "category": "Configuración de Agentes"
+      },
+      "chat": {
+        "title": "Chat Multi-Sesión",
+        "description": "Ejecuta múltiples conversaciones en paralelo, bifurca cualquier sesión y vincula discusiones directamente a tickets para seguimiento.",
+        "category": "Interfaz de Chat"
+      },
+      "worktree": {
+        "title": "Gestión de Git Worktree",
+        "description": "Gestiona múltiples worktrees de git sin problemas. Trabaja en diferentes ramas simultáneamente sin cambiar de contexto.",
+        "category": "Control de Versiones"
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "Simple pero Potente",
+    "title": "Cómo",
+    "titleHighlight": "Funciona",
+    "subtitle": "Desde la creación de agentes hasta la automatización de flujos en tres simples pasos. Sin necesidad de código. Solo arrastra, suelta y orquesta.",
+    "steps": {
+      "createAgents": {
+        "number": "01",
+        "title": "Crea Agentes Especializados",
+        "description": "Define agentes de IA con prompts específicos, permisos de herramientas y configuraciones MCP. Crea un Buscador de Artículos, un Generador de Hipótesis, un Ejecutor de Experimentos: cada uno optimizado para su función."
+      },
+      "designWorkflow": {
+        "number": "02",
+        "title": "Diseña tu Flujo de Trabajo",
+        "description": "Usa el editor visual de flujos para encadenar agentes. Añade ramificaciones condicionales, ejecución paralela y nodos de transformación de datos para construir pipelines sofisticados."
+      },
+      "trackTickets": {
+        "number": "03",
+        "title": "Rastrea Todo con Tickets",
+        "description": "Mientras los agentes trabajan, sus salidas se vinculan a tickets automáticamente. Ve el tablero Kanban para ver el progreso, profundiza en cualquier ticket para ver el historial completo de conversaciones y registros de ejecución de agentes."
+      }
+    },
+    "getStarted": "Comenzar Ahora"
+  },
+  "cta": {
+    "badge": "¿Listo para gobernar tu dominio de conocimiento?",
+    "title": "Reclama tu Trono como",
+    "titleLine2": "El Rey del Conocimiento",
+    "subtitle": "Descarga Sciorex y comanda tu ejército de agentes de IA. Gratis para uso personal, sin necesidad de cuenta.",
+    "downloadNow": "Descargar Ahora",
+    "starGithub": "Estrella en GitHub"
+  }
+}

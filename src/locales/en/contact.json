@@ -1,0 +1,27 @@
+{
+  "title": "Contact Us",
+  "subtitle": "Have questions or feedback? We'd love to hear from you.",
+  "options": [
+    {
+      "title": "General Inquiries",
+      "email": "hello@sciorex.com",
+      "description": "For general questions about Sciorex."
+    },
+    {
+      "title": "Support",
+      "email": "support@sciorex.com",
+      "description": "Need help with the app? We're here for you."
+    },
+    {
+      "title": "Press & Media",
+      "email": "press@sciorex.com",
+      "description": "Media inquiries and press requests."
+    }
+  ],
+  "community": {
+    "title": "Join Our Community",
+    "description": "Connect with other Sciorex users, get tips, and stay updated on the latest features.",
+    "discord": "Join Discord",
+    "github": "GitHub"
+  }
+}

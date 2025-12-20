@@ -1,49 +1,58 @@
 import { motion } from 'framer-motion';
 import { Download, Apple, Monitor, Terminal, CheckCircle, Package } from 'lucide-react';
 import { analytics } from '../utils/analytics';
+import { useTranslation } from 'react-i18next';
 
 const BASE_URL = 'https://github.com/sciorex/sciorex/releases/latest/download';
 
-const downloadGroups = [
-  {
-    os: 'Windows',
-    icon: Monitor,
-    color: 'from-blue-500 to-cyan-500',
-    options: [
-      { name: 'Installer', file: 'Sciorex-win-x64.exe', size: '~85 MB', description: 'Recommended', url: `${BASE_URL}/Sciorex-win-x64.exe` },
-      { name: 'Portable', file: 'Sciorex-portable.exe', size: '~82 MB', description: 'No install needed', url: `${BASE_URL}/Sciorex-portable.exe` },
-    ],
-  },
-  {
-    os: 'macOS',
-    icon: Apple,
-    color: 'from-gray-400 to-gray-600',
-    options: [
-      { name: 'Apple Silicon', file: 'Sciorex-mac-arm64.dmg', size: '~88 MB', description: 'M1/M2/M3/M4', url: `${BASE_URL}/Sciorex-mac-arm64.dmg` },
-      { name: 'Intel', file: 'Sciorex-mac-x64.dmg', size: '~92 MB', description: 'Intel Macs', url: `${BASE_URL}/Sciorex-mac-x64.dmg` },
-    ],
-  },
-  {
-    os: 'Linux',
-    icon: Terminal,
-    color: 'from-orange-500 to-yellow-500',
-    options: [
-      { name: 'AppImage', file: 'Sciorex-linux-x86_64.AppImage', size: '~103 MB', description: 'Universal', url: `${BASE_URL}/Sciorex-linux-x86_64.AppImage` },
-      { name: 'Debian/Ubuntu', file: 'Sciorex-linux-amd64.deb', size: '~88 MB', description: 'apt compatible', url: `${BASE_URL}/Sciorex-linux-amd64.deb` },
-      { name: 'Fedora/RHEL', file: 'Sciorex-linux-x86_64.rpm', size: '~89 MB', description: 'dnf/yum compatible', url: `${BASE_URL}/Sciorex-linux-x86_64.rpm` },
-    ],
-  },
-];
-
-const features = [
-  'Free for personal use',
-  'All features included',
-  'No account required',
-  'Auto-updates included',
-  '100% local & private',
+const osIcons = [Monitor, Apple, Terminal];
+const osColors = [
+  'from-blue-500 to-cyan-500',
+  'from-gray-400 to-gray-600',
+  'from-orange-500 to-yellow-500',
 ];
 
 export default function DownloadSection() {
+  const { t } = useTranslation('common');
+
+  const downloadGroups = [
+    {
+      os: t('download.windows'),
+      icon: osIcons[0],
+      color: osColors[0],
+      options: [
+        { name: t('download.installer'), file: 'Sciorex-win-x64.exe', size: '~85 MB', description: t('download.recommended'), url: `${BASE_URL}/Sciorex-win-x64.exe` },
+        { name: t('download.portable'), file: 'Sciorex-portable.exe', size: '~82 MB', description: t('download.noInstall'), url: `${BASE_URL}/Sciorex-portable.exe` },
+      ],
+    },
+    {
+      os: t('download.mac'),
+      icon: osIcons[1],
+      color: osColors[1],
+      options: [
+        { name: t('download.appleSilicon'), file: 'Sciorex-mac-arm64.dmg', size: '~88 MB', description: t('download.m1m2m3'), url: `${BASE_URL}/Sciorex-mac-arm64.dmg` },
+        { name: t('download.intel'), file: 'Sciorex-mac-x64.dmg', size: '~92 MB', description: t('download.intelMacs'), url: `${BASE_URL}/Sciorex-mac-x64.dmg` },
+      ],
+    },
+    {
+      os: t('download.linux'),
+      icon: osIcons[2],
+      color: osColors[2],
+      options: [
+        { name: t('download.appImage'), file: 'Sciorex-linux-x86_64.AppImage', size: '~103 MB', description: t('download.universal'), url: `${BASE_URL}/Sciorex-linux-x86_64.AppImage` },
+        { name: t('download.debian'), file: 'Sciorex-linux-amd64.deb', size: '~88 MB', description: t('download.aptCompatible'), url: `${BASE_URL}/Sciorex-linux-amd64.deb` },
+        { name: t('download.fedora'), file: 'Sciorex-linux-x86_64.rpm', size: '~89 MB', description: t('download.dnfCompatible'), url: `${BASE_URL}/Sciorex-linux-x86_64.rpm` },
+      ],
+    },
+  ];
+
+  const features = [
+    t('download.features.free'),
+    t('download.features.allFeatures'),
+    t('download.features.noAccount'),
+    t('download.features.autoUpdates'),
+    t('download.features.localPrivate'),
+  ];
   return (
     <section id="download" className="section relative overflow-hidden">
       {/* Background */}
@@ -59,15 +68,14 @@ export default function DownloadSection() {
           className="text-center mb-12"
         >
           <span className="inline-block px-4 py-2 rounded-full glass text-sm text-primary-300 mb-4">
-            Available Now
+            {t('download.badge')}
           </span>
           <h2 className="text-4xl sm:text-5xl font-display font-bold mb-6">
-            Download
-            <span className="text-gradient"> Sciorex</span>
+            {t('download.title')}
+            <span className="text-gradient"> {t('download.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-dark-100 max-w-2xl mx-auto">
-            Claim your throne as the King of Knowledge.
-            Free for personal use, no account required.
+            {t('download.subtitle')}
           </p>
         </motion.div>
         
@@ -166,9 +174,9 @@ export default function DownloadSection() {
           className="mt-12 text-center"
         >
           <p className="text-sm text-dark-300">
-            Supports Claude, Gemini, Codex, LM Studio & Ollama.{' '}
+            {t('download.requirements')}{' '}
             <a href="https://docs.sciorex.com/guide/getting-started" className="text-primary-400 hover:text-primary-300 underline">
-              Setup Guide →
+              {t('download.setupGuide')} →
             </a>
           </p>
         </motion.div>

@@ -1,0 +1,64 @@
+{
+  "badge": "Funciones Potentes",
+  "title": "Todo lo que Necesitas para",
+  "titleHighlight": "Gestionar Agentes de IA",
+  "subtitle": "Desde tareas de un solo agente hasta complejos pipelines de investigación multi-agente, Sciorex te da control total sobre tus flujos de trabajo de IA.",
+  "features": [
+    {
+      "title": "IA Multi-Proveedor",
+      "description": "Usa Claude, Gemini, Codex o modelos locales vía LM Studio y Ollama. Cambia de proveedor por agente o sesión de chat."
+    },
+    {
+      "title": "Agentes de IA Personalizados",
+      "description": "Crea agentes especializados con prompts únicos, instrucciones del sistema y permisos de herramientas. Cada agente tiene su propia personalidad y experiencia."
+    },
+    {
+      "title": "Editor Visual de Flujos",
+      "description": "Diseña pipelines complejos multi-agente con un editor basado en nodos. Encadena agentes, añade condiciones, ejecución paralela y transformación de datos."
+    },
+    {
+      "title": "Tickets y Kanban",
+      "description": "Rastrea el trabajo a través de agentes con un potente sistema de tickets. Vincula conversaciones a tickets y ve el historial completo de interacciones de agentes."
+    },
+    {
+      "title": "Chat Multi-Sesión",
+      "description": "Ejecuta múltiples hilos de conversación, bifurca sesiones desde cualquier mensaje y organiza chats con etiquetas codificadas por colores."
+    },
+    {
+      "title": "Protocolo de Herramientas MCP",
+      "description": "Configura diferentes servidores MCP por agente. ¿Necesitas alertas de Slack? ¿Acceso a base de datos? ¿APIs personalizadas? Solo añade el MCP correcto."
+    },
+    {
+      "title": "Integración con IDE",
+      "description": "Abre archivos en tu IDE compatible con VS Code mediante nuestra extensión puente, usa el VS Code web integrado o el editor Monaco para ediciones rápidas."
+    },
+    {
+      "title": "Seguimiento de Investigación",
+      "description": "Rastrea flujos de investigación: búsqueda de artículos, resumen, generación de hipótesis, experimentación y verificación."
+    },
+    {
+      "title": "Organización por Épicas",
+      "description": "Agrupa tickets relacionados en épicas para organización jerárquica. Perfecto para rastrear proyectos de investigación grandes."
+    },
+    {
+      "title": "Registro de Auditoría Completo",
+      "description": "Cada acción se registra con información del actor (humano o agente). Nunca pierdas el rastro de qué sucedió y cuándo."
+    },
+    {
+      "title": "Flujos Basados en Eventos",
+      "description": "Activa flujos de trabajo desde eventos de tickets, horarios cron o acciones manuales. Construye sistemas de automatización reactivos."
+    },
+    {
+      "title": "Pensamiento Extendido",
+      "description": "Configura niveles de pensamiento desde respuestas rápidas hasta análisis ultra-profundo con presupuestos de tokens ajustables."
+    },
+    {
+      "title": "100% Local y Privado",
+      "description": "Todos los datos permanecen en tu máquina. Sin recopilación de datos, sin seguimiento. Tus interacciones con IA permanecen privadas."
+    },
+    {
+      "title": "Notificaciones Inteligentes",
+      "description": "Notificaciones de escritorio y sonido para completaciones de agentes, errores y eventos importantes."
+    }
+  ]
+}

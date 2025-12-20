@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Showcase from '../components/Showcase';
@@ -10,6 +11,7 @@ import CTA from '../components/CTA';
 export default function Home() {
   return (
     <>
+      <SEO />
       <Hero />
       <Features />
       <Showcase />

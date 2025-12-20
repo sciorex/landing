@@ -1,0 +1,46 @@
+{
+  "title": "Privacy Policy",
+  "lastUpdated": "Last updated: December 2024",
+  "sections": {
+    "introduction": {
+      "title": "1. Introduction",
+      "content": "Sciorex (\"we\", \"our\", or \"us\") is committed to protecting your privacy. We believe in minimal data collection and full transparency. This Privacy Policy explains what little data we collect when you visit our website."
+    },
+    "whatWeCollect": {
+      "title": "2. What We Collect",
+      "content": "We do not collect any personal data. We do not use cookies, we do not track you across websites, and we do not collect any personally identifiable information.",
+      "analytics": "The only data we gather is anonymous, aggregated website analytics through",
+      "plausible": "Plausible Analytics",
+      "analyticsDesc": ", a privacy-focused analytics service."
+    },
+    "plausibleAnalytics": {
+      "title": "3. Plausible Analytics",
+      "intro": "We use Plausible Analytics to understand how visitors use our website. Plausible is a privacy-friendly alternative to Google Analytics that:",
+      "features": [
+        "Does not use cookies",
+        "Does not collect personal data",
+        "Does not track you across websites",
+        "Is fully GDPR, CCPA, and PECR compliant",
+        "Is hosted in the EU"
+      ],
+      "dataCollected": "The data collected includes: page views, referrer source, browser type, operating system, device type, and country (not city or precise location). This data cannot be used to identify you personally."
+    },
+    "application": {
+      "title": "4. The Sciorex Application",
+      "content": "Sciorex is a local-first application. All your research data, workflows, and configurations are stored entirely on your device. We have no access to your data, and nothing is sent to our servers."
+    },
+    "thirdPartyAI": {
+      "title": "5. Third-Party AI Services",
+      "content": "When you use AI features in Sciorex, your queries are sent directly to the AI provider you configure (such as Anthropic's Claude). We do not proxy, store, or have access to these communications. Please review the privacy policy of your chosen AI provider."
+    },
+    "changes": {
+      "title": "6. Changes to This Policy",
+      "content": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last updated\" date."
+    },
+    "contact": {
+      "title": "7. Contact Us",
+      "content": "If you have any questions about this Privacy Policy, please contact us at",
+      "email": "privacy@sciorex.com"
+    }
+  }
+}

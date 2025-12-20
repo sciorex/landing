@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion';
 import { FileText } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const blogPosts: never[] = [];
 
 export default function Blog() {
+  const { t } = useTranslation('common');
+
   return (
     <section id="blog" className="section relative overflow-hidden">
       <div className="absolute inset-0 mesh-bg opacity-30" />
@@ -18,11 +21,11 @@ export default function Blog() {
           className="text-center mb-12"
         >
           <span className="inline-block px-4 py-2 rounded-full glass text-sm text-primary-300 mb-4">
-            Learn & Explore
+            {t('blog.badge')}
           </span>
           <h2 className="text-4xl sm:text-5xl font-display font-bold">
-            Latest from the
-            <span className="text-gradient"> Blog</span>
+            {t('blog.title')}
+            <span className="text-gradient"> {t('blog.titleHighlight')}</span>
           </h2>
         </motion.div>
 
@@ -39,10 +42,10 @@ export default function Blog() {
               <FileText className="w-10 h-10 text-dark-300" />
             </div>
             <h3 className="text-xl font-display font-semibold text-white mb-2">
-              No posts yet
+              {t('blog.emptyTitle')}
             </h3>
             <p className="text-dark-200 text-center max-w-md">
-              We're working on some great content. Check back soon for tutorials, guides, and best practices.
+              {t('blog.emptyDescription')}
             </p>
           </motion.div>
         )}

@@ -1,33 +1,36 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
-
-const messages = [
-  {
-    main: 'Create AI agents, chain them into workflows, and let them handle your coding, research, and documentation tasks.',
-    sub: 'You define what each agent does. Sciorex runs them, tracks progress with tickets, and keeps everything on your machine. No cloud, no subscriptions.',
-  },
-  {
-    main: 'Plan entire solutions with your AI agents. Control every decision, track every change, and steer the AI to follow your best practices.',
-    sub: 'Build applications from the ground up. Define architecture with specialized agents, break work into trackable tickets, and watch your agents deliver.',
-  },
-  {
-    main: 'Stop context-switching between tools. One workspace for AI chat, task tracking, and code execution.',
-    sub: 'Your agents share context, remember decisions, and build on each other\'s work. Like a team that never forgets.',
-  },
-  {
-    main: 'Turn hours of research into minutes. Agents fetch papers, extract insights, and synthesize knowledge automatically.',
-    sub: 'Feed it sources, get structured summaries. Perfect for literature reviews, competitive analysis, or learning new domains.',
-  },
-  {
-    main: 'AI that follows your rules. Define coding standards, review criteria, and workflows your agents must follow.',
-    sub: 'Every change tracked, every decision logged. Full visibility into what your agents did and why.',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
+  const { t } = useTranslation('hero');
   const [messageIndex, setMessageIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+
+  // Get messages from translations
+  const messages = [
+    {
+      main: t('messages.0.main'),
+      sub: t('messages.0.sub'),
+    },
+    {
+      main: t('messages.1.main'),
+      sub: t('messages.1.sub'),
+    },
+    {
+      main: t('messages.2.main'),
+      sub: t('messages.2.sub'),
+    },
+    {
+      main: t('messages.3.main'),
+      sub: t('messages.3.sub'),
+    },
+    {
+      main: t('messages.4.main'),
+      sub: t('messages.4.sub'),
+    },
+  ];
 
   useEffect(() => {
     if (isPaused) return;
@@ -35,7 +38,7 @@ export default function Hero() {
       setMessageIndex((prev) => (prev + 1) % messages.length);
     }, 6000);
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, [isPaused, messages.length]);
 
   return (
     <section className="min-h-screen relative overflow-hidden flex items-center">
@@ -59,12 +62,12 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-sm text-dark-100">Now available for Windows, macOS & Linux</span>
+              <span className="text-sm text-dark-100">{t('badge')}</span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6">
-              The King of
-              <span className="block text-gradient">Knowledge</span>
+              {t('title')}
+              <span className="block text-gradient">{t('titleHighlight')}</span>
             </h1>
 
             <div
@@ -82,7 +85,7 @@ export default function Hero() {
                 >
                   <p className="text-xl text-dark-100 mb-4 max-w-lg">
                     {messages[messageIndex].main}
-                    <span className="text-white font-medium"> AI agents that actually get things done.</span>
+                    <span className="text-white font-medium"> {t('tagline')}</span>
                   </p>
 
                   <p className="text-dark-200 max-w-lg">
@@ -108,27 +111,27 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4 mt-8">
               <a href="#download" className="btn-primary flex items-center gap-2 group">
-                Download Free
+                {t('cta.download')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <button className="btn-secondary flex items-center gap-2">
                 <Play className="w-5 h-5" />
-                Watch Demo
+                {t('cta.watchDemo')}
               </button>
             </div>
 
             <div className="flex items-center gap-8 mt-12 pt-8 border-t border-white/10">
               <div>
-                <div className="text-3xl font-bold text-white">100%</div>
-                <div className="text-sm text-dark-200">Local & Private</div>
+                <div className="text-3xl font-bold text-white">{t('stats.local.value')}</div>
+                <div className="text-sm text-dark-200">{t('stats.local.label')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-white">∞</div>
-                <div className="text-sm text-dark-200">Agent Workflows</div>
+                <div className="text-3xl font-bold text-white">{t('stats.workflows.value')}</div>
+                <div className="text-sm text-dark-200">{t('stats.workflows.label')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-white">MCP</div>
-                <div className="text-sm text-dark-200">Tool Protocol</div>
+                <div className="text-3xl font-bold text-white">{t('stats.mcp.value')}</div>
+                <div className="text-sm text-dark-200">{t('stats.mcp.label')}</div>
               </div>
             </div>
           </motion.div>
@@ -166,8 +169,8 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-white">Agent Completed</div>
-                    <div className="text-xs text-dark-200">Paper analysis done</div>
+                    <div className="text-sm font-medium text-white">{t('floatingCards.agentCompleted.title')}</div>
+                    <div className="text-xs text-dark-200">{t('floatingCards.agentCompleted.subtitle')}</div>
                   </div>
                 </div>
               </motion.div>
@@ -184,8 +187,8 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-white">Chat Active</div>
-                    <div className="text-xs text-dark-200">Discussing architecture</div>
+                    <div className="text-sm font-medium text-white">{t('floatingCards.chatActive.title')}</div>
+                    <div className="text-xs text-dark-200">{t('floatingCards.chatActive.subtitle')}</div>
                   </div>
                 </div>
               </motion.div>
@@ -202,8 +205,8 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-white">Flow Triggered</div>
-                    <div className="text-xs text-dark-200">Research pipeline active</div>
+                    <div className="text-sm font-medium text-white">{t('floatingCards.flowTriggered.title')}</div>
+                    <div className="text-xs text-dark-200">{t('floatingCards.flowTriggered.subtitle')}</div>
                   </div>
                 </div>
               </motion.div>
@@ -220,8 +223,8 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-white">Ticket Created</div>
-                    <div className="text-xs text-dark-200">Implement auth system</div>
+                    <div className="text-sm font-medium text-white">{t('floatingCards.ticketCreated.title')}</div>
+                    <div className="text-xs text-dark-200">{t('floatingCards.ticketCreated.subtitle')}</div>
                   </div>
                 </div>
               </motion.div>

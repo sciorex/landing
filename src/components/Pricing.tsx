@@ -1,84 +1,64 @@
 import { motion } from 'framer-motion';
 import { Check, Crown, Users, Building2, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { analytics } from '../utils/analytics';
+import { useTranslation } from 'react-i18next';
 
-const plans = [
-  {
-    name: 'Personal',
-    price: 'Free',
-    period: '',
-    description: 'Everything you need to orchestrate your AI agents',
-    icon: Crown,
-    color: 'from-primary-500 to-primary-600',
-    popular: true,
-    features: [
-      'Unlimited agents',
-      'Unlimited workflows',
-      'Visual flow editor',
-      'Kanban ticket management',
-      'Full MCP support',
-      'All AI models (Claude Opus, Sonnet, Haiku)',
-      'Extended thinking modes',
-      'Local data storage',
-      'Auto-updates',
-      'Community support',
-    ],
-    cta: 'Download Now',
-    ctaLink: '#download',
-    available: true,
-  },
-  {
-    name: 'Teams',
-    price: 'Coming Soon',
-    period: '',
-    description: 'Collaborate with your team on research workflows',
-    icon: Users,
-    color: 'from-accent-500 to-accent-600',
-    popular: false,
-    features: [
-      'Everything in Personal',
-      'Team workspaces',
-      'Shared agent configurations',
-      'Shared flow templates',
-      'Team ticket boards',
-      'Real-time collaboration',
-      'Centralized MCP management',
-      'Usage analytics',
-      'Priority support',
-      'Slack integration',
-    ],
-    cta: 'Join Waitlist',
-    ctaLink: '#',
-    available: false,
-  },
-  {
-    name: 'Enterprise',
-    price: 'Contact Us',
-    period: '',
-    description: 'Full-scale deployment with enterprise integrations',
-    icon: Building2,
-    color: 'from-emerald-500 to-emerald-600',
-    popular: false,
-    features: [
-      'Everything in Teams',
-      'Jira integration',
-      'Confluence integration',
-      'GitHub Enterprise',
-      'Azure DevOps',
-      'SSO / SAML authentication',
-      'On-premise deployment',
-      'Custom agent templates',
-      'SLA guarantees',
-      'Dedicated support',
-    ],
-    cta: 'Contact Sales',
-    ctaLink: '#',
-    available: false,
-  },
+const planIcons = [Crown, Users, Building2];
+const planColors = [
+  'from-primary-500 to-primary-600',
+  'from-accent-500 to-accent-600',
+  'from-emerald-500 to-emerald-600',
 ];
 
 export default function Pricing() {
+  const { t } = useTranslation('pricing');
+  const { locale } = useParams<{ locale: string }>();
+
+  const plans = [
+    {
+      name: t('plans.personal.name'),
+      price: t('plans.personal.price'),
+      period: t('plans.personal.period'),
+      description: t('plans.personal.description'),
+      icon: planIcons[0],
+      color: planColors[0],
+      popular: true,
+      features: (t('plans.personal.features', { returnObjects: true }) as string[]),
+      cta: t('plans.personal.cta'),
+      ctaLink: '#download',
+      available: true,
+      availableText: t('plans.personal.available'),
+    },
+    {
+      name: t('plans.teams.name'),
+      price: t('plans.teams.price'),
+      period: t('plans.teams.period'),
+      description: t('plans.teams.description'),
+      icon: planIcons[1],
+      color: planColors[1],
+      popular: false,
+      features: (t('plans.teams.features', { returnObjects: true }) as string[]),
+      cta: t('plans.teams.cta'),
+      ctaLink: '#',
+      available: false,
+      comingSoonText: t('plans.teams.comingSoon'),
+    },
+    {
+      name: t('plans.enterprise.name'),
+      price: t('plans.enterprise.price'),
+      period: t('plans.enterprise.period'),
+      description: t('plans.enterprise.description'),
+      icon: planIcons[2],
+      color: planColors[2],
+      popular: false,
+      features: (t('plans.enterprise.features', { returnObjects: true }) as string[]),
+      cta: t('plans.enterprise.cta'),
+      ctaLink: '#',
+      available: false,
+      comingSoonText: t('plans.enterprise.comingSoon'),
+    },
+  ];
   return (
     <section id="pricing" className="section relative overflow-hidden">
       <div className="absolute inset-0 mesh-bg opacity-30" />
@@ -93,14 +73,14 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 rounded-full glass text-sm text-primary-300 mb-4">
-            Simple Pricing
+            {t('badge')}
           </span>
           <h2 className="text-4xl sm:text-5xl font-display font-bold mb-6">
-            Free for
-            <span className="text-gradient"> Everyone</span>
+            {t('title')}
+            <span className="text-gradient"> {t('titleHighlight')}</span>
           </h2>
           <p className="text-xl text-dark-100 max-w-2xl mx-auto">
-            Start with full power for free. Scale up when you need team features.
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -123,7 +103,7 @@ export default function Pricing() {
                 <div className="absolute top-0 right-0 z-10">
                   <div className="bg-gradient-to-r from-primary-500 to-accent-500 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl flex items-center gap-1.5">
                     <Sparkles className="w-3 h-3" />
-                    Available Now
+                    {plan.availableText}
                   </div>
                 </div>
               )}
@@ -132,7 +112,7 @@ export default function Pricing() {
               {!plan.available && (
                 <div className="absolute inset-0 bg-dark-900/60 backdrop-blur-[2px] z-20 flex items-center justify-center">
                   <span className="px-4 py-2 rounded-full bg-dark-700 text-dark-100 text-sm font-medium border border-white/10">
-                    Coming Soon
+                    {plan.comingSoonText}
                   </span>
                 </div>
               )}
@@ -202,13 +182,13 @@ export default function Pricing() {
           className="mt-12 text-center"
         >
           <p className="text-dark-200 text-sm">
-            Need custom integrations?{' '}
+            {t('enterpriseCTA.text')}{' '}
             <Link
-              to="/contact"
+              to={`/${locale || 'en'}/contact`}
               onClick={() => analytics.trackEnterpriseCTA()}
               className="text-primary-400 hover:text-primary-300 underline"
             >
-              Let's talk →
+              {t('enterpriseCTA.linkText')} →
             </Link>
           </p>
         </motion.div>

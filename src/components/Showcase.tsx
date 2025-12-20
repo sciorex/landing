@@ -1,61 +1,66 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const showcaseItems = [
-  {
-    id: 1,
-    title: 'Agent Kanban Dashboard',
-    description:
-      'Track all your agent tasks with a powerful drag-and-drop Kanban board. Organize by status, priority, and agent assignments.',
-    category: 'Task Management',
-    image: '/screenshots/showcase-kanban.png',
-  },
-  {
-    id: 2,
-    title: 'Visual Flow Editor',
-    description:
-      'Design complex multi-agent workflows with our node-based editor. Chain agents, add conditions, and run parallel tasks.',
-    category: 'Workflow Design',
-    image: '/screenshots/showcase-flow.png',
-  },
-  {
-    id: 3,
-    title: 'Real-Time Flow Execution',
-    description:
-      'Watch your workflows execute in real-time. See each node light up as agents process, track progress, and monitor results as they complete.',
-    category: 'Execution',
-    image: '/screenshots/showcase-execution.png',
-  },
-  {
-    id: 4,
-    title: 'Agent Configuration',
-    description:
-      'Create specialized agents with custom prompts, tool permissions, and MCP configurations tailored to specific tasks.',
-    category: 'Agent Setup',
-    image: '/screenshots/showcase-config.png',
-  },
-  {
-    id: 5,
-    title: 'Multi-Session Chat',
-    description:
-      'Run multiple conversations in parallel, fork any session, and link discussions directly to tickets for tracking.',
-    category: 'Chat Interface',
-    image: '/screenshots/showcase-chat.png',
-  },
-  {
-    id: 6,
-    title: 'Git Worktree Management',
-    description:
-      'Manage multiple git worktrees seamlessly. Work on different branches simultaneously without switching contexts.',
-    category: 'Version Control',
-    image: '/screenshots/showcase-worktree.png',
-  },
+const imageMap = [
+  '/screenshots/showcase-kanban.png',
+  '/screenshots/showcase-flow.png',
+  '/screenshots/showcase-execution.png',
+  '/screenshots/showcase-config.png',
+  '/screenshots/showcase-chat.png',
+  '/screenshots/showcase-worktree.png',
 ];
 
 export default function Showcase() {
+  const { t } = useTranslation('common');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const showcaseItems = [
+    {
+      id: 1,
+      title: t('showcase.items.kanban.title'),
+      description: t('showcase.items.kanban.description'),
+      category: t('showcase.items.kanban.category'),
+      image: imageMap[0],
+    },
+    {
+      id: 2,
+      title: t('showcase.items.flowEditor.title'),
+      description: t('showcase.items.flowEditor.description'),
+      category: t('showcase.items.flowEditor.category'),
+      image: imageMap[1],
+    },
+    {
+      id: 3,
+      title: t('showcase.items.execution.title'),
+      description: t('showcase.items.execution.description'),
+      category: t('showcase.items.execution.category'),
+      image: imageMap[2],
+    },
+    {
+      id: 4,
+      title: t('showcase.items.config.title'),
+      description: t('showcase.items.config.description'),
+      category: t('showcase.items.config.category'),
+      image: imageMap[3],
+    },
+    {
+      id: 5,
+      title: t('showcase.items.chat.title'),
+      description: t('showcase.items.chat.description'),
+      category: t('showcase.items.chat.category'),
+      image: imageMap[4],
+    },
+    {
+      id: 6,
+      title: t('showcase.items.worktree.title'),
+      description: t('showcase.items.worktree.description'),
+      category: t('showcase.items.worktree.category'),
+      image: imageMap[5],
+    },
+  ];
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % showcaseItems.length);
@@ -79,14 +84,14 @@ export default function Showcase() {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 rounded-full glass text-sm text-primary-300 mb-4">
-            See It In Action
+            {t('showcase.badge')}
           </span>
           <h2 className="text-4xl sm:text-5xl font-display font-bold mb-6">
-            Powerful Interface,
-            <span className="text-gradient"> Intuitive Design</span>
+            {t('showcase.title')}
+            <span className="text-gradient"> {t('showcase.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-dark-100 max-w-2xl mx-auto">
-            Every feature designed to help you orchestrate AI agents efficiently
+            {t('showcase.subtitle')}
           </p>
         </motion.div>
 

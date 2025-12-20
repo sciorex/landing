@@ -1,8 +1,20 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function Terms() {
+  const { t } = useTranslation('terms');
+  const { locale } = useParams<{ locale: string }>();
+
   return (
-    <div className="pt-32 pb-20">
+    <>
+      <SEO
+        title={`${t('title')} | Sciorex`}
+        description={t('sections.acceptance.content')}
+        path="/terms"
+      />
+      <div className="pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -11,10 +23,10 @@ export default function Terms() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-            Terms of Service
+            {t('title')}
           </h1>
           <p className="text-dark-100">
-            Last updated: December 2024
+            {t('lastUpdated')}
           </p>
         </motion.div>
 
@@ -27,152 +39,126 @@ export default function Terms() {
           <div className="space-y-8 text-dark-100">
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                1. Acceptance of Terms
+                {t('sections.acceptance.title')}
               </h2>
               <p>
-                By downloading, installing, or using Sciorex ("the Software"), you agree
-                to be bound by these Terms of Service and our{' '}
-                <a href="/privacy" className="text-primary-400 hover:text-primary-300">
-                  Privacy Policy
+                {t('sections.acceptance.content')}{' '}
+                <a href={`/${locale || 'en'}/privacy`} className="text-primary-400 hover:text-primary-300">
+                  {t('sections.acceptance.privacyPolicy')}
                 </a>
-                . If you do not agree to these terms, do not use the Software.
+                {t('sections.acceptance.disclaimer')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                2. License Grant
+                {t('sections.license.title')}
               </h2>
               <p className="mb-4">
-                Subject to your compliance with these terms, the Sciorex Team grants you
-                a limited, non-exclusive, non-transferable, revocable license to:
+                {t('sections.license.intro')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Download and install the Software on devices you own or control</li>
-                <li>Use the Software for personal or internal business purposes</li>
-                <li>Make backup copies for archival purposes only</li>
+                {(t('sections.license.rights', { returnObjects: true }) as string[]).map((right, index) => (
+                  <li key={index}>{right}</li>
+                ))}
               </ul>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                3. Restrictions
+                {t('sections.restrictions.title')}
               </h2>
-              <p className="mb-4">You may not:</p>
+              <p className="mb-4">{t('sections.restrictions.intro')}</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Copy, modify, or create derivative works of the Software</li>
-                <li>Reverse engineer, decompile, or attempt to derive the source code</li>
-                <li>Distribute, sublicense, lease, or transfer the Software to third parties</li>
-                <li>Use the Software to develop competing products</li>
-                <li>Remove or alter any proprietary notices</li>
+                {(t('sections.restrictions.items', { returnObjects: true }) as string[]).map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                4. Your Content
+                {t('sections.yourContent.title')}
               </h2>
               <p className="mb-4">
-                <strong className="text-white">You own your content.</strong> You retain
-                all rights to the content you input into the Software, including your code,
-                files, prompts, and project data.
+                <strong className="text-white">{t('sections.yourContent.ownership')}</strong> {t('sections.yourContent.ownershipDesc')}
               </p>
               <p>
-                <strong className="text-white">AI-generated output belongs to you.</strong> To
-                the extent permitted by law, any content generated by AI through the Software
-                in response to your inputs is assigned to you.
+                <strong className="text-white">{t('sections.yourContent.aiOutput')}</strong> {t('sections.yourContent.aiOutputDesc')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                5. Data and Privacy
+                {t('sections.dataPrivacy.title')}
               </h2>
               <p className="mb-4">
-                <strong className="text-white">We do not collect your data.</strong> The
-                Software operates entirely on your local machine. Your conversations, code,
-                and project files remain on your device and are never transmitted to our servers.
+                <strong className="text-white">{t('sections.dataPrivacy.noCollection')}</strong> {t('sections.dataPrivacy.noCollectionDesc')}
               </p>
               <p>
-                <strong className="text-white">We will not train on your content.</strong> Your
-                inputs and outputs are not collected or used for training purposes by the
-                Sciorex Team.
+                <strong className="text-white">{t('sections.dataPrivacy.noTraining')}</strong> {t('sections.dataPrivacy.noTrainingDesc')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                6. Third-Party AI Services
+                {t('sections.thirdParty.title')}
               </h2>
               <p>
-                When using AI features, your data may be sent to third-party AI providers
-                (such as Anthropic's Claude) for processing. This is subject to those
-                providers' terms of service, your own API keys and account settings, and
-                their data retention policies. We are not responsible for third-party services.
+                {t('sections.thirdParty.content')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                7. AI and Automation Disclaimer
+                {t('sections.aiDisclaimer.title')}
               </h2>
               <p className="mb-4">
-                This Software integrates with AI services and automated agents that may
-                read, modify, create, or delete files, execute commands, and access your
-                codebase.
+                {t('sections.aiDisclaimer.intro')}
               </p>
               <p>
-                <strong className="text-white">You are responsible for reviewing all
-                AI-suggested changes</strong> and maintaining adequate backups. We are not
-                responsible for actions taken by AI systems or automated processes.
+                <strong className="text-white">{t('sections.aiDisclaimer.responsibility')}</strong> {t('sections.aiDisclaimer.responsibilityDesc')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                8. No Warranty
+                {t('sections.noWarranty.title')}
               </h2>
               <p>
-                The Software is provided "as is" without warranty of any kind. We do not
-                warrant that the Software will be error-free, uninterrupted, or free of
-                harmful components. AI-generated suggestions may contain errors or reflect
-                limitations in AI reasoning.
+                {t('sections.noWarranty.content')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                9. Limitation of Liability
+                {t('sections.liability.title')}
               </h2>
               <p>
-                To the maximum extent permitted by law, the Sciorex Team shall not be liable
-                for any indirect, incidental, special, consequential, or punitive damages,
-                including loss of data, business interruption, or damages arising from AI
-                features or automated code execution.
+                {t('sections.liability.content')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                10. Changes to Terms
+                {t('sections.changes.title')}
               </h2>
               <p>
-                We may modify these terms at any time. Continued use of the Software after
-                changes constitutes acceptance of the modified terms.
+                {t('sections.changes.content')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                11. Contact
+                {t('sections.contact.title')}
               </h2>
               <p>
-                For questions about these Terms, please contact us at{' '}
+                {t('sections.contact.content')}{' '}
                 <a
-                  href="mailto:legal@sciorex.com"
+                  href={`mailto:${t('sections.contact.email')}`}
                   className="text-primary-400 hover:text-primary-300"
                 >
-                  legal@sciorex.com
+                  {t('sections.contact.email')}
                 </a>
                 .
               </p>
@@ -180,6 +166,7 @@ export default function Terms() {
           </div>
         </motion.div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

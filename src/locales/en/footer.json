@@ -1,0 +1,36 @@
+{
+  "tagline": "The King of Knowledge. Orchestrate AI agent swarms, design research workflows, and rule your domain with ease.",
+  "product": {
+    "title": "Product",
+    "links": {
+      "features": "Features",
+      "howItWorks": "How It Works",
+      "download": "Download",
+      "changelog": "Changelog"
+    }
+  },
+  "resources": {
+    "title": "Resources",
+    "links": {
+      "documentation": "Documentation",
+      "gettingStarted": "Getting Started",
+      "blog": "Blog"
+    }
+  },
+  "company": {
+    "title": "Company",
+    "links": {
+      "about": "About",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "social": {
+    "github": "GitHub",
+    "twitter": "X (Twitter)",
+    "discord": "Discord"
+  },
+  "copyright": "Sciorex. All rights reserved.",
+  "scrollToTop": "Scroll to top"
+}

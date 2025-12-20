@@ -1,0 +1,29 @@
+{
+  "title": "About Sciorex",
+  "subtitle": "The King of Knowledge",
+  "mission": {
+    "heading": "Our Mission",
+    "paragraph1": "Sciorex was born from a simple belief: research should be powerful yet effortless. We're building tools that let you orchestrate AI agent swarms, design complex research workflows, and conquer any knowledge domain with ease.",
+    "paragraph2": "Our platform combines cutting-edge AI capabilities with an intuitive interface, enabling researchers, developers, and knowledge workers to accomplish in hours what once took days or weeks.",
+    "paragraph3": "Whether you're conducting academic research, competitive analysis, or deep-diving into any topic, Sciorex gives you the power to rule your domain."
+  },
+  "valuesTitle": "Our Values",
+  "values": [
+    {
+      "title": "Excellence",
+      "description": "We strive to build the most powerful and intuitive research tools available."
+    },
+    {
+      "title": "Focus",
+      "description": "Every feature is designed to help you achieve your research goals faster."
+    },
+    {
+      "title": "Community",
+      "description": "We build alongside our users, listening and iterating based on real needs."
+    },
+    {
+      "title": "Innovation",
+      "description": "Pushing the boundaries of what AI-powered research can accomplish."
+    }
+  ]
+}

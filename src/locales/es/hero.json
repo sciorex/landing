@@ -1,0 +1,64 @@
+{
+  "badge": "Ahora disponible para Windows, macOS y Linux",
+  "title": "El Rey del",
+  "titleHighlight": "Conocimiento",
+  "tagline": "Agentes de IA que realmente hacen el trabajo.",
+  "messages": [
+    {
+      "main": "Crea agentes de IA, encadénalos en flujos de trabajo y deja que se encarguen de tus tareas de programación, investigación y documentación.",
+      "sub": "Tú defines qué hace cada agente. Sciorex los ejecuta, rastrea el progreso con tickets y mantiene todo en tu máquina. Sin nube, sin suscripciones."
+    },
+    {
+      "main": "Planifica soluciones completas con tus agentes de IA. Controla cada decisión, rastrea cada cambio y dirige la IA para que siga tus mejores prácticas.",
+      "sub": "Construye aplicaciones desde cero. Define la arquitectura con agentes especializados, divide el trabajo en tickets rastreables y observa a tus agentes entregar resultados."
+    },
+    {
+      "main": "Deja de cambiar entre herramientas. Un espacio de trabajo para chat de IA, seguimiento de tareas y ejecución de código.",
+      "sub": "Tus agentes comparten contexto, recuerdan decisiones y se basan en el trabajo de los demás. Como un equipo que nunca olvida."
+    },
+    {
+      "main": "Convierte horas de investigación en minutos. Los agentes buscan artículos, extraen conocimientos y sintetizan información automáticamente.",
+      "sub": "Aliméntalo con fuentes, obtén resúmenes estructurados. Perfecto para revisiones bibliográficas, análisis competitivo o aprendizaje de nuevos dominios."
+    },
+    {
+      "main": "IA que sigue tus reglas. Define estándares de codificación, criterios de revisión y flujos de trabajo que tus agentes deben seguir.",
+      "sub": "Cada cambio rastreado, cada decisión registrada. Visibilidad completa de qué hicieron tus agentes y por qué."
+    }
+  ],
+  "cta": {
+    "download": "Descargar Gratis",
+    "watchDemo": "Ver Demo"
+  },
+  "stats": {
+    "local": {
+      "value": "100%",
+      "label": "Local y Privado"
+    },
+    "workflows": {
+      "value": "∞",
+      "label": "Flujos de Agentes"
+    },
+    "mcp": {
+      "value": "MCP",
+      "label": "Protocolo de Herramientas"
+    }
+  },
+  "floatingCards": {
+    "agentCompleted": {
+      "title": "Agente Completado",
+      "subtitle": "Análisis de artículo terminado"
+    },
+    "chatActive": {
+      "title": "Chat Activo",
+      "subtitle": "Discutiendo arquitectura"
+    },
+    "flowTriggered": {
+      "title": "Flujo Activado",
+      "subtitle": "Pipeline de investigación activo"
+    },
+    "ticketCreated": {
+      "title": "Ticket Creado",
+      "subtitle": "Implementar sistema de autenticación"
+    }
+  }
+}

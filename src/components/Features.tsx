@@ -15,106 +15,57 @@ import {
   Sparkles,
   Code2,
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const features = [
-  {
-    icon: Sparkles,
-    title: 'Multi-Provider AI',
-    description:
-      'Use Claude, Gemini, Codex, or local models via LM Studio and Ollama. Switch providers per agent or chat session.',
-    color: 'from-violet-500 to-purple-500',
-  },
-  {
-    icon: Bot,
-    title: 'Custom AI Agents',
-    description:
-      'Create specialized agents with unique prompts, system instructions, and tool permissions. Each agent has its own personality and expertise.',
-    color: 'from-blue-500 to-cyan-500',
-  },
-  {
-    icon: Workflow,
-    title: 'Visual Flow Editor',
-    description:
-      'Design complex multi-agent pipelines with a node-based editor. Chain agents, add conditions, parallel execution, and data transformation.',
-    color: 'from-purple-500 to-pink-500',
-  },
-  {
-    icon: Kanban,
-    title: 'Ticket & Kanban',
-    description:
-      'Track work across agents with a powerful ticket system. Link conversations to tickets and see the full history of agent interactions.',
-    color: 'from-green-500 to-emerald-500',
-  },
-  {
-    icon: MessageSquare,
-    title: 'Multi-Session Chat',
-    description:
-      'Run multiple conversation threads, fork sessions from any message, and organize chats with color-coded labels.',
-    color: 'from-orange-500 to-amber-500',
-  },
-  {
-    icon: Puzzle,
-    title: 'MCP Tool Protocol',
-    description:
-      'Configure different MCP servers per agent. Need Slack alerts? Database access? Custom APIs? Just add the right MCP.',
-    color: 'from-indigo-500 to-violet-500',
-  },
-  {
-    icon: Code2,
-    title: 'IDE Integration',
-    description:
-      'Open files in your VS Code compatible IDE via our bridge extension, use the integrated VS Code web, or the Monaco editor for quick edits.',
-    color: 'from-cyan-500 to-blue-500',
-  },
-  {
-    icon: GitBranch,
-    title: 'Research Tracking',
-    description:
-      'Track research workflows: paper fetching, summarization, hypothesis generation, experimentation, and verification.',
-    color: 'from-teal-500 to-cyan-500',
-  },
-  {
-    icon: Layers,
-    title: 'Epic Organization',
-    description:
-      'Group related tickets into epics for hierarchical organization. Perfect for tracking large research projects.',
-    color: 'from-rose-500 to-pink-500',
-  },
-  {
-    icon: History,
-    title: 'Full Audit Trail',
-    description:
-      'Every action is logged with actor information (human or agent). Never lose track of what happened and when.',
-    color: 'from-yellow-500 to-orange-500',
-  },
-  {
-    icon: Zap,
-    title: 'Event-Driven Flows',
-    description:
-      'Trigger workflows from ticket events, cron schedules, or manual actions. Build reactive automation systems.',
-    color: 'from-sky-500 to-blue-500',
-  },
-  {
-    icon: Settings2,
-    title: 'Extended Thinking',
-    description:
-      'Configure thinking levels from quick responses to ultra-deep analysis with adjustable token budgets.',
-    color: 'from-fuchsia-500 to-purple-500',
-  },
-  {
-    icon: Shield,
-    title: '100% Local & Private',
-    description:
-      'All data stays on your machine. No data collection, no tracking. Your AI interactions remain private.',
-    color: 'from-emerald-500 to-green-500',
-  },
-  {
-    icon: Bell,
-    title: 'Smart Notifications',
-    description:
-      'Desktop and sound notifications for agent completions, errors, and important events.',
-    color: 'from-red-500 to-rose-500',
-  },
+const iconMap = {
+  Sparkles,
+  Bot,
+  Workflow,
+  Kanban,
+  MessageSquare,
+  Puzzle,
+  Code2,
+  GitBranch,
+  Layers,
+  History,
+  Zap,
+  Settings2,
+  Shield,
+  Bell,
+};
+
+const colorMap = [
+  'from-violet-500 to-purple-500',
+  'from-blue-500 to-cyan-500',
+  'from-purple-500 to-pink-500',
+  'from-green-500 to-emerald-500',
+  'from-orange-500 to-amber-500',
+  'from-indigo-500 to-violet-500',
+  'from-cyan-500 to-blue-500',
+  'from-teal-500 to-cyan-500',
+  'from-rose-500 to-pink-500',
+  'from-yellow-500 to-orange-500',
+  'from-sky-500 to-blue-500',
+  'from-fuchsia-500 to-purple-500',
+  'from-emerald-500 to-green-500',
+  'from-red-500 to-rose-500',
+];
+
+const iconOrder = [
+  'Sparkles',
+  'Bot',
+  'Workflow',
+  'Kanban',
+  'MessageSquare',
+  'Puzzle',
+  'Code2',
+  'GitBranch',
+  'Layers',
+  'History',
+  'Zap',
+  'Settings2',
+  'Shield',
+  'Bell',
 ];
 
 const containerVariants = {
@@ -137,11 +88,20 @@ const itemVariants = {
 };
 
 export default function Features() {
+  const { t } = useTranslation('features');
+
+  const features = iconOrder.map((iconName, index) => ({
+    icon: iconMap[iconName as keyof typeof iconMap],
+    title: t(`features.${index}.title`),
+    description: t(`features.${index}.description`),
+    color: colorMap[index],
+  }));
+
   return (
     <section id="features" className="section relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 mesh-bg opacity-50" />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
@@ -152,18 +112,17 @@ export default function Features() {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 rounded-full glass text-sm text-primary-300 mb-4">
-            Powerful Features
+            {t('badge')}
           </span>
           <h2 className="text-4xl sm:text-5xl font-display font-bold mb-6">
-            Everything You Need to
-            <span className="text-gradient"> Manage AI Agents</span>
+            {t('title')}
+            <span className="text-gradient"> {t('titleHighlight')}</span>
           </h2>
           <p className="text-xl text-dark-100 max-w-2xl mx-auto">
-            From single agent tasks to complex multi-agent research pipelines,
-            Sciorex gives you total control over your AI workflows.
+            {t('subtitle')}
           </p>
         </motion.div>
-        
+
         {/* Features Grid */}
         <motion.div
           variants={containerVariants}

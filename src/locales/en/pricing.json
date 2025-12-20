@@ -1,0 +1,72 @@
+{
+  "badge": "Simple Pricing",
+  "title": "Free for",
+  "titleHighlight": "Everyone",
+  "subtitle": "Start with full power for free. Scale up when you need team features.",
+  "plans": {
+    "personal": {
+      "name": "Personal",
+      "price": "Free",
+      "period": "",
+      "description": "Everything you need to orchestrate your AI agents",
+      "cta": "Download Now",
+      "available": "Available Now",
+      "features": [
+        "Unlimited agents",
+        "Unlimited workflows",
+        "Visual flow editor",
+        "Kanban ticket management",
+        "Full MCP support",
+        "All AI models (Claude Opus, Sonnet, Haiku)",
+        "Extended thinking modes",
+        "Local data storage",
+        "Auto-updates",
+        "Community support"
+      ]
+    },
+    "teams": {
+      "name": "Teams",
+      "price": "Coming Soon",
+      "period": "",
+      "description": "Collaborate with your team on research workflows",
+      "cta": "Join Waitlist",
+      "comingSoon": "Coming Soon",
+      "features": [
+        "Everything in Personal",
+        "Team workspaces",
+        "Shared agent configurations",
+        "Shared flow templates",
+        "Team ticket boards",
+        "Real-time collaboration",
+        "Centralized MCP management",
+        "Usage analytics",
+        "Priority support",
+        "Slack integration"
+      ]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Contact Us",
+      "period": "",
+      "description": "Full-scale deployment with enterprise integrations",
+      "cta": "Contact Sales",
+      "comingSoon": "Coming Soon",
+      "features": [
+        "Everything in Teams",
+        "Jira integration",
+        "Confluence integration",
+        "GitHub Enterprise",
+        "Azure DevOps",
+        "SSO / SAML authentication",
+        "On-premise deployment",
+        "Custom agent templates",
+        "SLA guarantees",
+        "Dedicated support"
+      ]
+    }
+  },
+  "enterpriseCTA": {
+    "text": "Need custom integrations?",
+    "linkText": "Let's talk"
+  }
+}

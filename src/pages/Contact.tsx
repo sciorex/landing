@@ -1,31 +1,30 @@
 import { motion } from 'framer-motion';
 import { Mail, MessageSquare, FileText } from 'lucide-react';
 import { analytics } from '../utils/analytics';
+import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
-const contactOptions = [
-  {
-    icon: Mail,
-    title: 'General Inquiries',
-    email: 'hello@sciorex.com',
-    description: 'For general questions about Sciorex.',
-  },
-  {
-    icon: MessageSquare,
-    title: 'Support',
-    email: 'support@sciorex.com',
-    description: 'Need help with the app? We\'re here for you.',
-  },
-  {
-    icon: FileText,
-    title: 'Press & Media',
-    email: 'press@sciorex.com',
-    description: 'Media inquiries and press requests.',
-  },
-];
+const iconMap = [Mail, MessageSquare, FileText];
 
 export default function Contact() {
+  const { t } = useTranslation('contact');
+
+  const contactOptions = (t('options', { returnObjects: true }) as Array<{ title: string; email: string; description: string }>).map(
+    (option, index) => ({
+      icon: iconMap[index],
+      title: option.title,
+      email: option.email,
+      description: option.description,
+    })
+  );
   return (
-    <div className="pt-32 pb-20">
+    <>
+      <SEO
+        title={`${t('title')} | Sciorex`}
+        description={t('subtitle')}
+        path="/contact"
+      />
+      <div className="pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,10 +33,10 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-            Contact Us
+            {t('title')}
           </h1>
           <p className="text-xl text-dark-100 max-w-2xl mx-auto">
-            Have questions or feedback? We'd love to hear from you.
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -73,10 +72,10 @@ export default function Contact() {
           className="glass rounded-2xl p-8 md:p-12 text-center"
         >
           <h2 className="text-2xl font-display font-bold text-white mb-4">
-            Join Our Community
+            {t('community.title')}
           </h2>
           <p className="text-dark-100 mb-6">
-            Connect with other Sciorex users, get tips, and stay updated on the latest features.
+            {t('community.description')}
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
@@ -86,7 +85,7 @@ export default function Contact() {
               onClick={() => analytics.trackSocialClick('Discord')}
               className="btn-primary"
             >
-              Join Discord
+              {t('community.discord')}
             </a>
             <a
               href="https://github.com/sciorex/sciorex"
@@ -95,11 +94,12 @@ export default function Contact() {
               onClick={() => analytics.trackSocialClick('GitHub')}
               className="btn-secondary"
             >
-              GitHub
+              {t('community.github')}
             </a>
           </div>
         </motion.div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

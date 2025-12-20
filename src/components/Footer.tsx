@@ -1,30 +1,33 @@
 import { ArrowUp } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { analytics } from '../utils/analytics';
-
-const footerLinks = {
-  Product: [
-    { name: 'Features', href: '#features', type: 'hash' },
-    { name: 'How It Works', href: '#how-it-works', type: 'hash' },
-    { name: 'Download', href: '#download', type: 'hash' },
-    { name: 'Changelog', href: 'https://docs.sciorex.com/changelog', type: 'external' },
-  ],
-  Resources: [
-    { name: 'Documentation', href: 'https://docs.sciorex.com', type: 'external' },
-    { name: 'Getting Started', href: 'https://docs.sciorex.com/guide/getting-started', type: 'external' },
-    { name: 'Blog', href: '#blog', type: 'hash' },
-  ],
-  Company: [
-    { name: 'About', href: '/about', type: 'internal' },
-    { name: 'Contact', href: '/contact', type: 'internal' },
-    { name: 'Privacy Policy', href: '/privacy', type: 'internal' },
-    { name: 'Terms of Service', href: '/terms', type: 'internal' },
-  ],
-};
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation('footer');
   const location = useLocation();
   const navigate = useNavigate();
+  const { locale } = useParams<{ locale: string }>();
+
+  const footerLinks = {
+    [t('product.title')]: [
+      { name: t('product.links.features'), href: '#features', type: 'hash' },
+      { name: t('product.links.howItWorks'), href: '#how-it-works', type: 'hash' },
+      { name: t('product.links.download'), href: '#download', type: 'hash' },
+      { name: t('product.links.changelog'), href: 'https://docs.sciorex.com/changelog', type: 'external' },
+    ],
+    [t('resources.title')]: [
+      { name: t('resources.links.documentation'), href: 'https://docs.sciorex.com', type: 'external' },
+      { name: t('resources.links.gettingStarted'), href: 'https://docs.sciorex.com/guide/getting-started', type: 'external' },
+      { name: t('resources.links.blog'), href: '#blog', type: 'hash' },
+    ],
+    [t('company.title')]: [
+      { name: t('company.links.about'), href: `/${locale || 'en'}/about`, type: 'internal' },
+      { name: t('company.links.contact'), href: `/${locale || 'en'}/contact`, type: 'internal' },
+      { name: t('company.links.privacy'), href: `/${locale || 'en'}/privacy`, type: 'internal' },
+      { name: t('company.links.terms'), href: `/${locale || 'en'}/terms`, type: 'internal' },
+    ],
+  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -33,9 +36,11 @@ export default function Footer() {
   const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.substring(1);
+    const currentLocale = locale || 'en';
+    const homePath = `/${currentLocale}/`;
 
-    if (location.pathname !== '/') {
-      navigate('/', { state: { scrollTo: targetId } });
+    if (location.pathname !== homePath) {
+      navigate(homePath, { state: { scrollTo: targetId } });
     } else {
       const element = document.getElementById(targetId);
       if (element) {
@@ -52,7 +57,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-4 group">
+            <Link to={`/${locale || 'en'}/`} className="flex items-center gap-3 mb-4 group">
               <img
                 src="/logo.png"
                 alt="Sciorex Logo"
@@ -63,8 +68,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-dark-100 mb-6 max-w-sm">
-              The King of Knowledge. Orchestrate AI agent swarms,
-              design research workflows, and rule your domain with ease.
+              {t('tagline')}
             </p>
             <div className="flex items-center gap-4">
               <a
@@ -145,12 +149,12 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-dark-200 text-sm">
-            © {new Date().getFullYear()} Sciorex. All rights reserved.
+            © {new Date().getFullYear()} {t('copyright')}
           </p>
           <button
             onClick={scrollToTop}
             className="w-10 h-10 rounded-lg glass flex items-center justify-center text-dark-100 hover:text-white hover:bg-white/10 transition-all"
-            aria-label="Scroll to top"
+            aria-label={t('scrollToTop')}
           >
             <ArrowUp className="w-5 h-5" />
           </button>

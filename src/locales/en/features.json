@@ -1,0 +1,64 @@
+{
+  "badge": "Powerful Features",
+  "title": "Everything You Need to",
+  "titleHighlight": "Manage AI Agents",
+  "subtitle": "From single agent tasks to complex multi-agent research pipelines, Sciorex gives you total control over your AI workflows.",
+  "features": [
+    {
+      "title": "Multi-Provider AI",
+      "description": "Use Claude, Gemini, Codex, or local models via LM Studio and Ollama. Switch providers per agent or chat session."
+    },
+    {
+      "title": "Custom AI Agents",
+      "description": "Create specialized agents with unique prompts, system instructions, and tool permissions. Each agent has its own personality and expertise."
+    },
+    {
+      "title": "Visual Flow Editor",
+      "description": "Design complex multi-agent pipelines with a node-based editor. Chain agents, add conditions, parallel execution, and data transformation."
+    },
+    {
+      "title": "Ticket & Kanban",
+      "description": "Track work across agents with a powerful ticket system. Link conversations to tickets and see the full history of agent interactions."
+    },
+    {
+      "title": "Multi-Session Chat",
+      "description": "Run multiple conversation threads, fork sessions from any message, and organize chats with color-coded labels."
+    },
+    {
+      "title": "MCP Tool Protocol",
+      "description": "Configure different MCP servers per agent. Need Slack alerts? Database access? Custom APIs? Just add the right MCP."
+    },
+    {
+      "title": "IDE Integration",
+      "description": "Open files in your VS Code compatible IDE via our bridge extension, use the integrated VS Code web, or the Monaco editor for quick edits."
+    },
+    {
+      "title": "Research Tracking",
+      "description": "Track research workflows: paper fetching, summarization, hypothesis generation, experimentation, and verification."
+    },
+    {
+      "title": "Epic Organization",
+      "description": "Group related tickets into epics for hierarchical organization. Perfect for tracking large research projects."
+    },
+    {
+      "title": "Full Audit Trail",
+      "description": "Every action is logged with actor information (human or agent). Never lose track of what happened and when."
+    },
+    {
+      "title": "Event-Driven Flows",
+      "description": "Trigger workflows from ticket events, cron schedules, or manual actions. Build reactive automation systems."
+    },
+    {
+      "title": "Extended Thinking",
+      "description": "Configure thinking levels from quick responses to ultra-deep analysis with adjustable token budgets."
+    },
+    {
+      "title": "100% Local & Private",
+      "description": "All data stays on your machine. No data collection, no tracking. Your AI interactions remain private."
+    },
+    {
+      "title": "Smart Notifications",
+      "description": "Desktop and sound notifications for agent completions, errors, and important events."
+    }
+  ]
+}

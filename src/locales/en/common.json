@@ -1,0 +1,120 @@
+{
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "docs": "Docs",
+    "blog": "Blog",
+    "download": "Download",
+    "getStarted": "Get Started"
+  },
+  "download": {
+    "badge": "Available Now",
+    "title": "Download",
+    "titleHighlight": "Sciorex",
+    "subtitle": "Claim your throne as the King of Knowledge. Free for personal use, no account required.",
+    "windows": "Windows",
+    "mac": "macOS",
+    "linux": "Linux",
+    "installer": "Installer",
+    "portable": "Portable",
+    "appleSilicon": "Apple Silicon",
+    "intel": "Intel",
+    "appImage": "AppImage",
+    "debian": "Debian/Ubuntu",
+    "fedora": "Fedora/RHEL",
+    "recommended": "Recommended",
+    "noInstall": "No install needed",
+    "m1m2m3": "M1/M2/M3/M4",
+    "intelMacs": "Intel Macs",
+    "universal": "Universal",
+    "aptCompatible": "apt compatible",
+    "dnfCompatible": "dnf/yum compatible",
+    "features": {
+      "free": "Free for personal use",
+      "allFeatures": "All features included",
+      "noAccount": "No account required",
+      "autoUpdates": "Auto-updates included",
+      "localPrivate": "100% local & private"
+    },
+    "requirements": "Supports Claude, Gemini, Codex, LM Studio & Ollama.",
+    "setupGuide": "Setup Guide"
+  },
+  "blog": {
+    "badge": "Learn & Explore",
+    "title": "Latest from the",
+    "titleHighlight": "Blog",
+    "emptyTitle": "No posts yet",
+    "emptyDescription": "We're working on some great content. Check back soon for tutorials, guides, and best practices."
+  },
+  "showcase": {
+    "badge": "See It In Action",
+    "title": "Powerful Interface,",
+    "titleHighlight": "Intuitive Design",
+    "subtitle": "Every feature designed to help you orchestrate AI agents efficiently",
+    "items": {
+      "kanban": {
+        "title": "Agent Kanban Dashboard",
+        "description": "Track all your agent tasks with a powerful drag-and-drop Kanban board. Organize by status, priority, and agent assignments.",
+        "category": "Task Management"
+      },
+      "flowEditor": {
+        "title": "Visual Flow Editor",
+        "description": "Design complex multi-agent workflows with our node-based editor. Chain agents, add conditions, and run parallel tasks.",
+        "category": "Workflow Design"
+      },
+      "execution": {
+        "title": "Real-Time Flow Execution",
+        "description": "Watch your workflows execute in real-time. See each node light up as agents process, track progress, and monitor results as they complete.",
+        "category": "Execution"
+      },
+      "config": {
+        "title": "Agent Configuration",
+        "description": "Create specialized agents with custom prompts, tool permissions, and MCP configurations tailored to specific tasks.",
+        "category": "Agent Setup"
+      },
+      "chat": {
+        "title": "Multi-Session Chat",
+        "description": "Run multiple conversations in parallel, fork any session, and link discussions directly to tickets for tracking.",
+        "category": "Chat Interface"
+      },
+      "worktree": {
+        "title": "Git Worktree Management",
+        "description": "Manage multiple git worktrees seamlessly. Work on different branches simultaneously without switching contexts.",
+        "category": "Version Control"
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "Simple Yet Powerful",
+    "title": "How",
+    "titleHighlight": "It Works",
+    "subtitle": "From agent creation to workflow automation in three simple steps. No coding required. Just drag, drop, and orchestrate.",
+    "steps": {
+      "createAgents": {
+        "number": "01",
+        "title": "Create Specialized Agents",
+        "description": "Define AI agents with specific prompts, tool permissions, and MCP configurations. Create a Paper Fetcher, a Hypothesis Generator, an Experiment Runner: each optimized for its role."
+      },
+      "designWorkflow": {
+        "number": "02",
+        "title": "Design Your Workflow",
+        "description": "Use the visual flow editor to chain agents together. Add conditional branches, parallel execution, and data transformation nodes to build sophisticated pipelines."
+      },
+      "trackTickets": {
+        "number": "03",
+        "title": "Track Everything with Tickets",
+        "description": "As agents work, their outputs link to tickets automatically. View the Kanban board to see progress, drill into any ticket for full conversation history and agent execution logs."
+      }
+    },
+    "getStarted": "Get Started Now"
+  },
+  "cta": {
+    "badge": "Ready to rule your knowledge domain?",
+    "title": "Claim Your Throne as",
+    "titleLine2": "The King of Knowledge",
+    "subtitle": "Download Sciorex and command your AI agent army. Free for personal use, no account required.",
+    "downloadNow": "Download Now",
+    "starGithub": "Star on GitHub"
+  }
+}

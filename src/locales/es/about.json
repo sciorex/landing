@@ -1,0 +1,29 @@
+{
+  "title": "Acerca de Sciorex",
+  "subtitle": "El Rey del Conocimiento",
+  "mission": {
+    "heading": "Nuestra Misión",
+    "paragraph1": "Sciorex nació de una creencia simple: la investigación debe ser potente pero sin esfuerzo. Estamos construyendo herramientas que te permiten orquestar enjambres de agentes de IA, diseñar flujos de investigación complejos y conquistar cualquier dominio de conocimiento con facilidad.",
+    "paragraph2": "Nuestra plataforma combina capacidades de IA de vanguardia con una interfaz intuitiva, permitiendo a investigadores, desarrolladores y trabajadores del conocimiento lograr en horas lo que antes tomaba días o semanas.",
+    "paragraph3": "Ya sea que estés realizando investigación académica, análisis competitivo o profundizando en cualquier tema, Sciorex te da el poder para gobernar tu dominio."
+  },
+  "valuesTitle": "Nuestros Valores",
+  "values": [
+    {
+      "title": "Excelencia",
+      "description": "Nos esforzamos por construir las herramientas de investigación más potentes e intuitivas disponibles."
+    },
+    {
+      "title": "Enfoque",
+      "description": "Cada función está diseñada para ayudarte a alcanzar tus objetivos de investigación más rápido."
+    },
+    {
+      "title": "Comunidad",
+      "description": "Construimos junto a nuestros usuarios, escuchando e iterando basándonos en necesidades reales."
+    },
+    {
+      "title": "Innovación",
+      "description": "Empujando los límites de lo que la investigación potenciada por IA puede lograr."
+    }
+  ]
+}

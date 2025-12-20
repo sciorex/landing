@@ -1,8 +1,18 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
 export default function Privacy() {
+  const { t } = useTranslation('privacy');
+
   return (
-    <div className="pt-32 pb-20">
+    <>
+      <SEO
+        title={`${t('title')} | Sciorex`}
+        description={t('sections.introduction.content')}
+        path="/privacy"
+      />
+      <div className="pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -11,10 +21,10 @@ export default function Privacy() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-            Privacy Policy
+            {t('title')}
           </h1>
           <p className="text-dark-100">
-            Last updated: December 2024
+            {t('lastUpdated')}
           </p>
         </motion.div>
 
@@ -27,105 +37,89 @@ export default function Privacy() {
           <div className="space-y-8 text-dark-100">
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                1. Introduction
+                {t('sections.introduction.title')}
               </h2>
               <p>
-                Sciorex ("we", "our", or "us") is committed to protecting your privacy.
-                We believe in minimal data collection and full transparency. This Privacy
-                Policy explains what little data we collect when you visit our website.
+                {t('sections.introduction.content')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                2. What We Collect
+                {t('sections.whatWeCollect.title')}
               </h2>
               <p className="mb-4">
-                <strong className="text-white">We do not collect any personal data.</strong> We
-                do not use cookies, we do not track you across websites, and we do not collect
-                any personally identifiable information.
+                <strong className="text-white">{t('sections.whatWeCollect.content')}</strong>
               </p>
               <p>
-                The only data we gather is anonymous, aggregated website analytics through{' '}
+                {t('sections.whatWeCollect.analytics')}{' '}
                 <a
                   href="https://plausible.io"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary-400 hover:text-primary-300"
                 >
-                  Plausible Analytics
+                  {t('sections.whatWeCollect.plausible')}
                 </a>
-                , a privacy-focused analytics service.
+                {t('sections.whatWeCollect.analyticsDesc')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                3. Plausible Analytics
+                {t('sections.plausibleAnalytics.title')}
               </h2>
               <p className="mb-4">
-                We use Plausible Analytics to understand how visitors use our website.
-                Plausible is a privacy-friendly alternative to Google Analytics that:
+                {t('sections.plausibleAnalytics.intro')}
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Does not use cookies</li>
-                <li>Does not collect personal data</li>
-                <li>Does not track you across websites</li>
-                <li>Is fully GDPR, CCPA, and PECR compliant</li>
-                <li>Is hosted in the EU</li>
+                {(t('sections.plausibleAnalytics.features', { returnObjects: true }) as string[]).map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
               </ul>
               <p className="mt-4">
-                The data collected includes: page views, referrer source, browser type,
-                operating system, device type, and country (not city or precise location).
-                This data cannot be used to identify you personally.
+                {t('sections.plausibleAnalytics.dataCollected')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                4. The Sciorex Application
+                {t('sections.application.title')}
               </h2>
               <p>
-                Sciorex is a local-first application. All your research data, workflows,
-                and configurations are stored entirely on your device. We have no access
-                to your data, and nothing is sent to our servers.
+                {t('sections.application.content')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                5. Third-Party AI Services
+                {t('sections.thirdPartyAI.title')}
               </h2>
               <p>
-                When you use AI features in Sciorex, your queries are sent directly to
-                the AI provider you configure (such as Anthropic's Claude). We do not
-                proxy, store, or have access to these communications. Please review the
-                privacy policy of your chosen AI provider.
+                {t('sections.thirdPartyAI.content')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                6. Changes to This Policy
+                {t('sections.changes.title')}
               </h2>
               <p>
-                We may update this Privacy Policy from time to time. We will notify you
-                of any changes by posting the new Privacy Policy on this page and updating
-                the "Last updated" date.
+                {t('sections.changes.content')}
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-display font-bold text-white mb-4">
-                7. Contact Us
+                {t('sections.contact.title')}
               </h2>
               <p>
-                If you have any questions about this Privacy Policy, please contact us at{' '}
+                {t('sections.contact.content')}{' '}
                 <a
-                  href="mailto:privacy@sciorex.com"
+                  href={`mailto:${t('sections.contact.email')}`}
                   className="text-primary-400 hover:text-primary-300"
                 >
-                  privacy@sciorex.com
+                  {t('sections.contact.email')}
                 </a>
                 .
               </p>
@@ -133,6 +127,7 @@ export default function Privacy() {
           </div>
         </motion.div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

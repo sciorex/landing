@@ -1,32 +1,28 @@
 import { motion } from 'framer-motion';
 import { Crown, Target, Users, Sparkles } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
-const values = [
-  {
-    icon: Crown,
-    title: 'Excellence',
-    description: 'We strive to build the most powerful and intuitive research tools available.',
-  },
-  {
-    icon: Target,
-    title: 'Focus',
-    description: 'Every feature is designed to help you achieve your research goals faster.',
-  },
-  {
-    icon: Users,
-    title: 'Community',
-    description: 'We build alongside our users, listening and iterating based on real needs.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Innovation',
-    description: 'Pushing the boundaries of what AI-powered research can accomplish.',
-  },
-];
+const valueIcons = [Crown, Target, Users, Sparkles];
 
 export default function About() {
+  const { t } = useTranslation('about');
+
+  const values = (t('values', { returnObjects: true }) as Array<{ title: string; description: string }>).map(
+    (value, index) => ({
+      icon: valueIcons[index],
+      title: value.title,
+      description: value.description,
+    })
+  );
   return (
-    <div className="pt-32 pb-20">
+    <>
+      <SEO
+        title={`${t('title')} | Sciorex`}
+        description={t('subtitle')}
+        path="/about"
+      />
+      <div className="pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,10 +31,10 @@ export default function About() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-            About Sciorex
+            {t('title')}
           </h1>
           <p className="text-xl text-dark-100">
-            The King of Knowledge
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -49,20 +45,15 @@ export default function About() {
           className="prose prose-invert prose-lg max-w-none mb-16"
         >
           <div className="glass rounded-2xl p-8 md:p-12">
-            <h2 className="text-2xl font-display font-bold text-white mb-4">Our Mission</h2>
+            <h2 className="text-2xl font-display font-bold text-white mb-4">{t('mission.heading')}</h2>
             <p className="text-dark-100 mb-6">
-              Sciorex was born from a simple belief: research should be powerful yet effortless.
-              We're building tools that let you orchestrate AI agent swarms, design complex
-              research workflows, and conquer any knowledge domain with ease.
+              {t('mission.paragraph1')}
             </p>
             <p className="text-dark-100 mb-6">
-              Our platform combines cutting-edge AI capabilities with an intuitive interface,
-              enabling researchers, developers, and knowledge workers to accomplish in hours
-              what once took days or weeks.
+              {t('mission.paragraph2')}
             </p>
             <p className="text-dark-100">
-              Whether you're conducting academic research, competitive analysis, or deep-diving
-              into any topic, Sciorex gives you the power to rule your domain.
+              {t('mission.paragraph3')}
             </p>
           </div>
         </motion.div>
@@ -73,7 +64,7 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h2 className="text-2xl font-display font-bold text-white mb-8 text-center">
-            Our Values
+            {t('valuesTitle')}
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {values.map((value, index) => (
@@ -94,6 +85,7 @@ export default function About() {
           </div>
         </motion.div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

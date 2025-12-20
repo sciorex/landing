@@ -1,34 +1,41 @@
 import { motion } from 'framer-motion';
 import { Bot, Workflow, CheckCircle, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const steps = [
-  {
-    number: '01',
-    icon: Bot,
-    title: 'Create Specialized Agents',
-    description:
-      'Define AI agents with specific prompts, tool permissions, and MCP configurations. Create a Paper Fetcher, a Hypothesis Generator, an Experiment Runner: each optimized for its role.',
-    image: '/screenshots/step-config.png',
-  },
-  {
-    number: '02',
-    icon: Workflow,
-    title: 'Design Your Workflow',
-    description:
-      'Use the visual flow editor to chain agents together. Add conditional branches, parallel execution, and data transformation nodes to build sophisticated pipelines.',
-    image: '/screenshots/step-flow.png',
-  },
-  {
-    number: '03',
-    icon: CheckCircle,
-    title: 'Track Everything with Tickets',
-    description:
-      'As agents work, their outputs link to tickets automatically. View the Kanban board to see progress, drill into any ticket for full conversation history and agent execution logs.',
-    image: '/screenshots/step-kanban.png',
-  },
+const stepImages = [
+  '/screenshots/step-config.png',
+  '/screenshots/step-flow.png',
+  '/screenshots/step-kanban.png',
 ];
 
+const stepIcons = [Bot, Workflow, CheckCircle];
+
 export default function HowItWorks() {
+  const { t } = useTranslation('common');
+
+  const steps = [
+    {
+      number: t('howItWorks.steps.createAgents.number'),
+      icon: stepIcons[0],
+      title: t('howItWorks.steps.createAgents.title'),
+      description: t('howItWorks.steps.createAgents.description'),
+      image: stepImages[0],
+    },
+    {
+      number: t('howItWorks.steps.designWorkflow.number'),
+      icon: stepIcons[1],
+      title: t('howItWorks.steps.designWorkflow.title'),
+      description: t('howItWorks.steps.designWorkflow.description'),
+      image: stepImages[1],
+    },
+    {
+      number: t('howItWorks.steps.trackTickets.number'),
+      icon: stepIcons[2],
+      title: t('howItWorks.steps.trackTickets.title'),
+      description: t('howItWorks.steps.trackTickets.description'),
+      image: stepImages[2],
+    },
+  ];
   return (
     <section id="how-it-works" className="section relative overflow-hidden bg-dark-800/50">
       <div className="max-w-7xl mx-auto relative z-10">
@@ -41,15 +48,14 @@ export default function HowItWorks() {
           className="text-center mb-20"
         >
           <span className="inline-block px-4 py-2 rounded-full glass text-sm text-primary-300 mb-4">
-            Simple Yet Powerful
+            {t('howItWorks.badge')}
           </span>
           <h2 className="text-4xl sm:text-5xl font-display font-bold mb-6">
-            How
-            <span className="text-gradient"> It Works</span>
+            {t('howItWorks.title')}
+            <span className="text-gradient"> {t('howItWorks.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-dark-100 max-w-2xl mx-auto">
-            From agent creation to workflow automation in three simple steps.
-            No coding required. Just drag, drop, and orchestrate.
+            {t('howItWorks.subtitle')}
           </p>
         </motion.div>
         
@@ -87,7 +93,7 @@ export default function HowItWorks() {
                     href="#download"
                     className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-semibold group"
                   >
-                    Get Started Now
+                    {t('howItWorks.getStarted')}
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 )}
