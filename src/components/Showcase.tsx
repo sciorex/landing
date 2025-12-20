@@ -10,6 +10,7 @@ const imageMap = [
   '/screenshots/showcase-config.png',
   '/screenshots/showcase-chat.png',
   '/screenshots/showcase-worktree.png',
+  '/screenshots/showcase-agentic.png',
 ];
 
 export default function Showcase() {
@@ -60,6 +61,13 @@ export default function Showcase() {
       category: t('showcase.items.worktree.category'),
       image: imageMap[5],
     },
+    {
+      id: 7,
+      title: t('showcase.items.agentic.title'),
+      description: t('showcase.items.agentic.description'),
+      category: t('showcase.items.agentic.category'),
+      image: imageMap[6],
+    },
   ];
 
   const nextSlide = () => {
@@ -108,7 +116,7 @@ export default function Showcase() {
             <div className="relative">
               {/* Glow Effect */}
               <div className="absolute -inset-4 bg-gradient-to-r from-primary-500/20 via-accent-500/10 to-primary-500/20 rounded-3xl blur-3xl" />
-              
+
               {/* Main Screenshot Frame */}
               <div className="image-frame relative">
                 <AnimatePresence mode="wait">
@@ -146,7 +154,7 @@ export default function Showcase() {
               </div>
             </div>
           </motion.div>
-          
+
           {/* Navigation and Info */}
           <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Info */}
@@ -168,7 +176,7 @@ export default function Showcase() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            
+
             {/* Navigation */}
             <div className="flex items-center gap-4">
               {/* Dots */}
@@ -177,16 +185,15 @@ export default function Showcase() {
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`w-2.5 h-2.5 rounded-full transition-all ${
-                      index === currentIndex
+                    className={`w-2.5 h-2.5 rounded-full transition-all ${index === currentIndex
                         ? 'bg-primary-500 w-8'
                         : 'bg-dark-400 hover:bg-dark-300'
-                    }`}
+                      }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />
                 ))}
               </div>
-              
+
               {/* Arrows */}
               <div className="flex gap-2">
                 <button

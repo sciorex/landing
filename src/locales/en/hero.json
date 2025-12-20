@@ -23,6 +23,10 @@
     {
       "main": "AI that follows your rules. Define coding standards, review criteria, and workflows your agents must follow.",
       "sub": "Every change tracked, every decision logged. Full visibility into what your agents did and why."
+    },
+    {
+      "main": "Full control over every line of code. Review, approve, or reject suggestions made by your AI agents with a powerful diff view.",
+      "sub": "Keep your code quality high. Your agents propose changes, you maintain the final authority. Perfectly integrated into your development flow."
     }
   ],
   "cta": {

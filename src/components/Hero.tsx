@@ -13,23 +13,33 @@ export default function Hero() {
     {
       main: t('messages.0.main'),
       sub: t('messages.0.sub'),
+      image: '/screenshots/hero-dashboard.png'
     },
     {
       main: t('messages.1.main'),
       sub: t('messages.1.sub'),
+      image: '/screenshots/showcase-kanban.png'
     },
     {
       main: t('messages.2.main'),
       sub: t('messages.2.sub'),
+      image: '/screenshots/showcase-chat.png'
     },
     {
       main: t('messages.3.main'),
       sub: t('messages.3.sub'),
+      image: '/screenshots/showcase-flow.png'
     },
     {
       main: t('messages.4.main'),
       sub: t('messages.4.sub'),
+      image: '/screenshots/showcase-execution.png'
     },
+    {
+      main: t('messages.5.main'),
+      sub: t('messages.5.sub'),
+      image: '/screenshots/showcase-agentic.png'
+    }
   ];
 
   useEffect(() => {
@@ -149,11 +159,18 @@ export default function Hero() {
 
               {/* Main app screenshot */}
               <div className="image-frame relative">
-                <img
-                  src="/screenshots/hero-dashboard.png"
-                  alt="Sciorex Dashboard"
-                  className="w-full aspect-[16/10] object-cover"
-                />
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={messageIndex}
+                    src={messages[messageIndex].image}
+                    alt="Sciorex Dashboard"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1.05 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full aspect-[16/10] object-cover"
+                  />
+                </AnimatePresence>
               </div>
 
               {/* Floating cards */}

@@ -82,6 +82,11 @@
         "title": "Gestión de Git Worktree",
         "description": "Gestiona múltiples worktrees de git sin problemas. Trabaja en diferentes ramas simultáneamente sin cambiar de contexto.",
         "category": "Control de Versiones"
+      },
+      "agentic": {
+        "title": "Revisión Agéntica de Archivos",
+        "description": "Revisa cada cambio de archivo realizado por tus agentes con un visor de diff detallado. Acepta, rechaza o modifica los cambios antes de que lleguen a tu código.",
+        "category": "Control de Agentes"
       }
     }
   },

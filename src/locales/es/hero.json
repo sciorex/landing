@@ -23,6 +23,10 @@
     {
       "main": "IA que sigue tus reglas. Define estándares de codificación, criterios de revisión y flujos de trabajo que tus agentes deben seguir.",
       "sub": "Cada cambio rastreado, cada decisión registrada. Visibilidad completa de qué hicieron tus agentes y por qué."
+    },
+    {
+      "main": "Control total sobre cada línea de código. Revisa, aprueba o rechaza las sugerencias hechas por tus agentes de IA con una potente vista de diff.",
+      "sub": "Mantén alta la calidad de tu código. Tus agentes proponen cambios, tú mantienes la autoridad final. Perfectamente integrado en tu flujo de desarrollo."
     }
   ],
   "cta": {

@@ -82,6 +82,11 @@
         "title": "Git Worktree Management",
         "description": "Manage multiple git worktrees seamlessly. Work on different branches simultaneously without switching contexts.",
         "category": "Version Control"
+      },
+      "agentic": {
+        "title": "Agentic File Review",
+        "description": "Review every file change made by your agents with a detailed diff viewer. Accept, reject, or modify changes before they reach your codebase.",
+        "category": "Agent Control"
       }
     }
   },
