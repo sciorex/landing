@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -43,6 +44,12 @@ export default {
           800: '#141517',
           900: '#101113',
         },
+        muted: 'var(--text-muted)',
+        body: 'var(--text-color)',
+        heading: 'var(--text-color)',
+        "card-border": 'var(--card-border)',
+        "glass-border": 'var(--glass-border)',
+        "section": 'var(--section-bg)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
