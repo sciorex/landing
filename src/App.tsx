@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useParams } from 'react-router-dom';
+import { Routes, Route, Navigate, useParams, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar';
@@ -8,12 +8,16 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import BlogPost from './pages/BlogPost';
+import BlogPage from './pages/BlogPage';
+import ScrollHandler from './components/ScrollHandler';
 
 // Component to handle language detection and redirect
 function LanguageRedirect() {
   const { i18n } = useTranslation();
+  const location = useLocation();
   const detectedLang = i18n.language.startsWith('es') ? 'es' : 'en';
-  return <Navigate to={`/${detectedLang}/`} replace />;
+  return <Navigate to={`/${detectedLang}/${location.hash}`} replace />;
 }
 
 // Wrapper component to sync URL locale with i18n
@@ -37,7 +41,8 @@ function LocaleWrapper({ children }: { children: React.ReactNode }) {
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark-900">
+    <div className="min-h-screen">
+      <ScrollHandler />
       <Routes>
         {/* Root redirect to detected language */}
         <Route path="/" element={<LanguageRedirect />} />
@@ -53,6 +58,8 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
               </Routes>
             </main>
             <Footer />
