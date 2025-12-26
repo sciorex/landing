@@ -45,7 +45,29 @@
     "title": "Lo Último del",
     "titleHighlight": "Blog",
     "emptyTitle": "Aún no hay publicaciones",
-    "emptyDescription": "Estamos trabajando en contenido excelente. Vuelve pronto para tutoriales, guías y mejores prácticas."
+    "emptyDescription": "Estamos trabajando en contenido excelente. Vuelve pronto para tutoriales, guías y mejores prácticas.",
+    "readMore": "Leer Más",
+    "posts": {
+      "why-ai-workflows-break": {
+        "title": "Por Qué se Rompen los Flujos de IA",
+        "excerpt": "La capacidad del modelo ya no es el cuello de botella. El flujo lo es. Explorando por qué el trabajo de IA basado en conversaciones falla a medida que crece el alcance."
+      },
+      "future-of-ai-work": {
+        "title": "El Futuro del Trabajo con IA",
+        "excerpt": "Más allá de los asistentes: avanzando hacia sistemas orquestados autónomos y el cambio en los roles de desarrollador."
+      },
+      "feature-showcase": {
+        "title": "Demostración de Funciones de Sciorex",
+        "excerpt": "Una inmersión profunda en las potentes funciones de Sciorex: desde el Kanban de Agentes hasta el Editor Visual de Flujos."
+      }
+    },
+    "series": {
+      "launch": {
+        "name": "Serie de Lanzamiento de Sciorex"
+      }
+    },
+    "prevPost": "Publicación Anterior",
+    "nextPost": "Siguiente Publicación"
   },
   "showcase": {
     "badge": "Véalo en Acción",

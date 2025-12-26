@@ -45,7 +45,29 @@
     "title": "Latest from the",
     "titleHighlight": "Blog",
     "emptyTitle": "No posts yet",
-    "emptyDescription": "We're working on some great content. Check back soon for tutorials, guides, and best practices."
+    "emptyDescription": "We're working on some great content. Check back soon for tutorials, guides, and best practices.",
+    "readMore": "Read More",
+    "posts": {
+      "why-ai-workflows-break": {
+        "title": "Why AI Workflows Break",
+        "excerpt": "Model capability is no longer the bottleneck. Workflow is. Exploring why conversation-based AI work fails as scope grows."
+      },
+      "future-of-ai-work": {
+        "title": "The Future of AI Work",
+        "excerpt": "Beyond assistants: moving towards autonomous orchestrated systems and the shift in developer roles."
+      },
+      "feature-showcase": {
+        "title": "Sciorex Feature Showcase",
+        "excerpt": "A deep dive into the powerful features of Sciorex: from the Agent Kanban to the Visual Flow Editor."
+      }
+    },
+    "series": {
+      "launch": {
+        "name": "Sciorex Launch Series"
+      }
+    },
+    "prevPost": "Previous Post",
+    "nextPost": "Next Post"
   },
   "showcase": {
     "badge": "See It In Action",
