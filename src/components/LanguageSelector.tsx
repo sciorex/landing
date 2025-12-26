@@ -51,7 +51,7 @@ export default function LanguageSelector() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg text-dark-100 hover:text-white hover:bg-white/5 transition-colors"
+        className="flex items-center gap-2 px-3 py-2 rounded-lg text-muted hover:text-primary-500 hover:bg-white/5 transition-colors"
         aria-label="Select language"
       >
         <Globe className="w-4 h-4" />
@@ -59,21 +59,20 @@ export default function LanguageSelector() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 glass rounded-xl overflow-hidden shadow-xl border border-white/10 animate-slide-up">
+        <div className="absolute right-0 mt-2 w-48 glass rounded-xl overflow-hidden shadow-xl border border-glass-border animate-slide-up">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
-              className={`w-full flex items-center gap-3 px-4 py-3 text-left transition-colors ${
-                lang.code === currentLocale
+              className={`w-full flex items-center gap-3 px-4 py-3 text-left transition-colors ${lang.code === currentLocale
                   ? 'bg-primary-500/10 text-primary-400'
-                  : 'text-dark-100 hover:text-white hover:bg-white/5'
-              }`}
+                  : 'text-muted hover:text-primary-500 hover:bg-white/5'
+                }`}
             >
               <span className="text-xl">{lang.flag}</span>
               <div className="flex-1">
-                <div className="font-medium">{lang.name}</div>
-                <div className="text-xs text-dark-200">{lang.code.toUpperCase()}</div>
+                <div className="font-medium text-heading">{lang.name}</div>
+                <div className="text-xs text-muted">{lang.code.toUpperCase()}</div>
               </div>
               {lang.code === currentLocale && (
                 <svg

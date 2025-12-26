@@ -10,36 +10,12 @@ export default function Hero() {
 
   // Get messages from translations
   const messages = [
-    {
-      main: t('messages.0.main'),
-      sub: t('messages.0.sub'),
-      image: '/screenshots/hero-dashboard.png'
-    },
-    {
-      main: t('messages.1.main'),
-      sub: t('messages.1.sub'),
-      image: '/screenshots/showcase-kanban.png'
-    },
-    {
-      main: t('messages.2.main'),
-      sub: t('messages.2.sub'),
-      image: '/screenshots/showcase-chat.png'
-    },
-    {
-      main: t('messages.3.main'),
-      sub: t('messages.3.sub'),
-      image: '/screenshots/showcase-flow.png'
-    },
-    {
-      main: t('messages.4.main'),
-      sub: t('messages.4.sub'),
-      image: '/screenshots/showcase-execution.png'
-    },
-    {
-      main: t('messages.5.main'),
-      sub: t('messages.5.sub'),
-      image: '/screenshots/showcase-agentic.png'
-    }
+    { main: t('messages.0.main'), sub: t('messages.0.sub') },
+    { main: t('messages.1.main'), sub: t('messages.1.sub') },
+    { main: t('messages.2.main'), sub: t('messages.2.sub') },
+    { main: t('messages.3.main'), sub: t('messages.3.sub') },
+    { main: t('messages.4.main'), sub: t('messages.4.sub') },
+    { main: t('messages.5.main'), sub: t('messages.5.sub') }
   ];
 
   useEffect(() => {
@@ -72,7 +48,7 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-sm text-dark-100">{t('badge')}</span>
+              <span className="text-sm text-muted">{t('badge')}</span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6">
@@ -93,12 +69,12 @@ export default function Hero() {
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <p className="text-xl text-dark-100 mb-4 max-w-lg">
+                  <p className="text-xl text-muted mb-4 max-w-lg">
                     {messages[messageIndex].main}
-                    <span className="text-white font-medium"> {t('tagline')}</span>
+                    <span className="text-heading font-medium"> {t('tagline')}</span>
                   </p>
 
-                  <p className="text-dark-200 max-w-lg">
+                  <p className="text-muted opacity-80 max-w-lg">
                     {messages[messageIndex].sub}
                   </p>
                 </motion.div>
@@ -111,7 +87,7 @@ export default function Hero() {
                     onClick={() => setMessageIndex(index)}
                     className={`w-2 h-2 rounded-full transition-all ${index === messageIndex
                       ? 'bg-primary-400 w-6'
-                      : 'bg-white/20 hover:bg-white/40'
+                      : 'bg-glass-border hover:bg-muted'
                       }`}
                     aria-label={`Go to message ${index + 1}`}
                   />
@@ -130,18 +106,18 @@ export default function Hero() {
               </button>
             </div>
 
-            <div className="flex items-center gap-8 mt-12 pt-8 border-t border-white/10">
+            <div className="flex items-center gap-8 mt-12 pt-8 border-t border-glass-border">
               <div>
-                <div className="text-3xl font-bold text-white">{t('stats.local.value')}</div>
-                <div className="text-sm text-dark-200">{t('stats.local.label')}</div>
+                <div className="text-3xl font-bold text-heading">{t('stats.local.value')}</div>
+                <div className="text-sm text-muted">{t('stats.local.label')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-white">{t('stats.workflows.value')}</div>
-                <div className="text-sm text-dark-200">{t('stats.workflows.label')}</div>
+                <div className="text-3xl font-bold text-heading">{t('stats.workflows.value')}</div>
+                <div className="text-sm text-muted">{t('stats.workflows.label')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-white">{t('stats.mcp.value')}</div>
-                <div className="text-sm text-dark-200">{t('stats.mcp.label')}</div>
+                <div className="text-3xl font-bold text-heading">{t('stats.mcp.value')}</div>
+                <div className="text-sm text-muted">{t('stats.mcp.label')}</div>
               </div>
             </div>
           </motion.div>
@@ -159,18 +135,11 @@ export default function Hero() {
 
               {/* Main app screenshot */}
               <div className="image-frame relative">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={messageIndex}
-                    src={messages[messageIndex].image}
-                    alt="Sciorex Dashboard"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 1.05 }}
-                    transition={{ duration: 0.5 }}
-                    className="w-full aspect-[16/10] object-cover"
-                  />
-                </AnimatePresence>
+                <img
+                  src="/screenshots/hero-dashboard.png"
+                  alt="Sciorex Dashboard"
+                  className="w-full aspect-[16/10] object-cover"
+                />
               </div>
 
               {/* Floating cards */}
@@ -186,8 +155,8 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-white">{t('floatingCards.agentCompleted.title')}</div>
-                    <div className="text-xs text-dark-200">{t('floatingCards.agentCompleted.subtitle')}</div>
+                    <div className="text-sm font-medium text-heading">{t('floatingCards.agentCompleted.title')}</div>
+                    <div className="text-xs text-muted">{t('floatingCards.agentCompleted.subtitle')}</div>
                   </div>
                 </div>
               </motion.div>
@@ -204,8 +173,8 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-white">{t('floatingCards.chatActive.title')}</div>
-                    <div className="text-xs text-dark-200">{t('floatingCards.chatActive.subtitle')}</div>
+                    <div className="text-sm font-medium text-heading">{t('floatingCards.chatActive.title')}</div>
+                    <div className="text-xs text-muted">{t('floatingCards.chatActive.subtitle')}</div>
                   </div>
                 </div>
               </motion.div>
@@ -222,8 +191,8 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-white">{t('floatingCards.flowTriggered.title')}</div>
-                    <div className="text-xs text-dark-200">{t('floatingCards.flowTriggered.subtitle')}</div>
+                    <div className="text-sm font-medium text-heading">{t('floatingCards.flowTriggered.title')}</div>
+                    <div className="text-xs text-muted">{t('floatingCards.flowTriggered.subtitle')}</div>
                   </div>
                 </div>
               </motion.div>
@@ -240,8 +209,8 @@ export default function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-white">{t('floatingCards.ticketCreated.title')}</div>
-                    <div className="text-xs text-dark-200">{t('floatingCards.ticketCreated.subtitle')}</div>
+                    <div className="text-sm font-medium text-heading">{t('floatingCards.ticketCreated.title')}</div>
+                    <div className="text-xs text-muted">{t('floatingCards.ticketCreated.subtitle')}</div>
                   </div>
                 </div>
               </motion.div>

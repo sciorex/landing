@@ -61,7 +61,7 @@ export default function Pricing() {
   ];
   return (
     <section id="pricing" className="section relative overflow-hidden">
-      <div className="absolute inset-0 mesh-bg opacity-30" />
+      <div className="absolute inset-0 mesh-bg" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header */}
@@ -72,14 +72,14 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full glass text-sm text-primary-300 mb-4">
+          <span className="inline-block px-4 py-2 rounded-full glass text-sm text-primary-400 mb-4">
             {t('badge')}
           </span>
           <h2 className="text-4xl sm:text-5xl font-display font-bold mb-6">
             {t('title')}
             <span className="text-gradient"> {t('titleHighlight')}</span>
           </h2>
-          <p className="text-xl text-dark-100 max-w-2xl mx-auto">
+          <p className="text-xl text-muted max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
         </motion.div>
@@ -94,8 +94,8 @@ export default function Pricing() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative rounded-2xl overflow-hidden ${plan.popular
-                  ? 'ring-2 ring-primary-500/50'
-                  : ''
+                ? 'ring-2 ring-primary-500/50'
+                : ''
                 }`}
             >
               {/* Popular Badge */}
@@ -110,8 +110,8 @@ export default function Pricing() {
 
               {/* Coming Soon Overlay */}
               {!plan.available && (
-                <div className="absolute inset-0 bg-dark-900/60 backdrop-blur-[2px] z-20 flex items-center justify-center">
-                  <span className="px-4 py-2 rounded-full bg-dark-700 text-dark-100 text-sm font-medium border border-white/10">
+                <div className="absolute inset-0 bg-section/60 backdrop-blur-[2px] z-20 flex items-center justify-center">
+                  <span className="px-4 py-2 rounded-full glass-dark text-heading text-sm font-medium border border-glass-border">
                     {plan.comingSoonText}
                   </span>
                 </div>
@@ -119,28 +119,28 @@ export default function Pricing() {
 
               <div className="glass-dark h-full">
                 {/* Plan Header */}
-                <div className={`p-6 border-b border-white/5`}>
+                <div className={`p-6 border-b border-glass-border`}>
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${plan.color} flex items-center justify-center`}>
                       <plan.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-display font-bold text-white">
+                      <h3 className="text-xl font-display font-bold text-heading">
                         {plan.name}
                       </h3>
                     </div>
                   </div>
 
                   <div className="mb-4">
-                    <span className="text-4xl font-display font-bold text-white">
+                    <span className="text-4xl font-display font-bold text-heading">
                       {plan.price}
                     </span>
                     {plan.period && (
-                      <span className="text-dark-200 ml-2">{plan.period}</span>
+                      <span className="text-muted ml-2">{plan.period}</span>
                     )}
                   </div>
 
-                  <p className="text-sm text-dark-100">
+                  <p className="text-sm text-muted">
                     {plan.description}
                   </p>
                 </div>
@@ -150,9 +150,9 @@ export default function Pricing() {
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${plan.popular ? 'text-primary-400' : 'text-dark-300'
+                        <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${plan.popular ? 'text-primary-400' : 'text-muted'
                           }`} />
-                        <span className="text-sm text-dark-100">{feature}</span>
+                        <span className="text-sm text-muted">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -161,8 +161,8 @@ export default function Pricing() {
                   <a
                     href={plan.ctaLink}
                     className={`block w-full py-3 px-6 rounded-xl font-semibold text-center transition-all ${plan.popular
-                        ? 'bg-gradient-to-r from-primary-600 to-primary-500 text-white hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25'
-                        : 'glass text-white hover:bg-white/10'
+                      ? 'bg-gradient-to-r from-primary-600 to-primary-500 text-white hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25'
+                      : 'btn-secondary'
                       }`}
                   >
                     {plan.cta}
@@ -181,7 +181,7 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 text-center"
         >
-          <p className="text-dark-200 text-sm">
+          <p className="text-muted text-sm">
             {t('enterpriseCTA.text')}{' '}
             <Link
               to={`/${locale || 'en'}/contact`}

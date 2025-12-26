@@ -100,7 +100,7 @@ export default function Features() {
   return (
     <section id="features" className="section relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 mesh-bg opacity-50" />
+      <div className="absolute inset-0 mesh-bg" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
@@ -111,14 +111,14 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full glass text-sm text-primary-300 mb-4">
+          <span className="inline-block px-4 py-2 rounded-full glass text-sm text-primary-400 mb-4">
             {t('badge')}
           </span>
           <h2 className="text-4xl sm:text-5xl font-display font-bold mb-6">
             {t('title')}
             <span className="text-gradient"> {t('titleHighlight')}</span>
           </h2>
-          <p className="text-xl text-dark-100 max-w-2xl mx-auto">
+          <p className="text-xl text-muted max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
         </motion.div>
@@ -142,10 +142,10 @@ export default function Features() {
               >
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
+              <h3 className="text-lg font-semibold text-heading mb-2">
                 {feature.title}
               </h3>
-              <p className="text-dark-100 text-sm leading-relaxed">
+              <p className="text-muted text-sm leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

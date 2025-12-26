@@ -37,7 +37,7 @@ export default function HowItWorks() {
     },
   ];
   return (
-    <section id="how-it-works" className="section relative overflow-hidden bg-dark-800/50">
+    <section id="how-it-works" className="section relative overflow-hidden bg-section">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
@@ -54,11 +54,11 @@ export default function HowItWorks() {
             {t('howItWorks.title')}
             <span className="text-gradient"> {t('howItWorks.titleHighlight')}</span>
           </h2>
-          <p className="text-xl text-dark-100 max-w-2xl mx-auto">
+          <p className="text-xl text-muted max-w-2xl mx-auto">
             {t('howItWorks.subtitle')}
           </p>
         </motion.div>
-        
+
         {/* Steps */}
         <div className="space-y-32">
           {steps.map((step, index) => (
@@ -68,9 +68,8 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-              }`}
+              className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                }`}
             >
               {/* Content */}
               <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
@@ -82,10 +81,10 @@ export default function HowItWorks() {
                     <step.icon className="w-7 h-7 text-primary-400" />
                   </div>
                 </div>
-                <h3 className="text-3xl font-display font-bold text-white mb-4">
+                <h3 className="text-3xl font-display font-bold text-heading mb-4">
                   {step.title}
                 </h3>
-                <p className="text-lg text-dark-100 leading-relaxed mb-6">
+                <p className="text-lg text-muted leading-relaxed mb-6">
                   {step.description}
                 </p>
                 {index === steps.length - 1 && (
@@ -98,7 +97,7 @@ export default function HowItWorks() {
                   </a>
                 )}
               </div>
-              
+
               {/* Image */}
               <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
                 <div className="relative">

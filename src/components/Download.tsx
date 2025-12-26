@@ -56,9 +56,9 @@ export default function DownloadSection() {
   return (
     <section id="download" className="section relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-800/50 to-dark-900" />
+      <div className="absolute inset-0" style={{ background: 'var(--download-bg)' }} />
       <div className="absolute inset-0 mesh-bg" />
-      
+
       <div className="max-w-5xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -74,11 +74,11 @@ export default function DownloadSection() {
             {t('download.title')}
             <span className="text-gradient"> {t('download.titleHighlight')}</span>
           </h2>
-          <p className="text-xl text-dark-100 max-w-2xl mx-auto">
+          <p className="text-xl text-muted max-w-2xl mx-auto">
             {t('download.subtitle')}
           </p>
         </motion.div>
-        
+
         {/* Download Cards by OS */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -93,20 +93,20 @@ export default function DownloadSection() {
               className="glass-dark rounded-2xl overflow-hidden"
             >
               {/* OS Header */}
-              <div className={`bg-gradient-to-r ${group.color} bg-opacity-10 p-5 border-b border-white/5`}>
+              <div className={`bg-gradient-to-r ${group.color} bg-opacity-10 p-5 border-b border-glass-border`}>
                 <div className="flex items-center gap-3">
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${group.color} bg-opacity-20 flex items-center justify-center`}>
                     <group.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-display font-bold text-white">
+                    <h3 className="text-xl font-display font-bold text-heading">
                       {group.os}
                     </h3>
-                    <p className="text-xs text-dark-200">v1.0.0</p>
+                    <p className="text-xs text-muted">v1.0.0</p>
                   </div>
                 </div>
               </div>
-              
+
               {/* Download Options */}
               <div className="p-4 space-y-3">
                 {group.options.map((option) => (
@@ -116,7 +116,7 @@ export default function DownloadSection() {
                     whileHover={{ scale: 1.01, x: 4 }}
                     whileTap={{ scale: 0.99 }}
                     onClick={() => analytics.trackDownload(group.os, option.name)}
-                    className="w-full flex items-center justify-between p-3 rounded-xl bg-dark-700/50 hover:bg-dark-600/50 border border-white/5 hover:border-primary-500/30 transition-all group"
+                    className="w-full flex items-center justify-between p-3 rounded-xl bg-card-bg hover:bg-primary-500/5 border border-glass-border hover:border-primary-500/30 transition-all group"
                   >
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-lg bg-primary-500/10 flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
@@ -127,17 +127,17 @@ export default function DownloadSection() {
                         )}
                       </div>
                       <div className="text-left">
-                        <p className="text-sm font-medium text-white">
+                        <p className="text-sm font-medium text-heading">
                           {option.name}
                         </p>
-                        <p className="text-xs text-dark-300">
+                        <p className="text-xs text-muted opacity-80">
                           {option.description}
                         </p>
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="text-xs text-dark-200">{option.file}</p>
-                      <p className="text-xs text-dark-400">{option.size}</p>
+                      <p className="text-xs text-muted">{option.file}</p>
+                      <p className="text-xs text-muted opacity-60">{option.size}</p>
                     </div>
                   </motion.a>
                 ))}
@@ -145,7 +145,7 @@ export default function DownloadSection() {
             </div>
           ))}
         </motion.div>
-        
+
         {/* Features List */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -157,14 +157,14 @@ export default function DownloadSection() {
           {features.map((feature) => (
             <div
               key={feature}
-              className="flex items-center gap-2 text-dark-100"
+              className="flex items-center gap-2 text-muted"
             >
               <CheckCircle className="w-4 h-4 text-green-400" />
               <span className="text-sm">{feature}</span>
             </div>
           ))}
         </motion.div>
-        
+
         {/* Requirement Note */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -173,7 +173,7 @@ export default function DownloadSection() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-12 text-center"
         >
-          <p className="text-sm text-dark-300">
+          <p className="text-sm text-muted">
             {t('download.requirements')}{' '}
             <a href="https://docs.sciorex.com/guide/getting-started" className="text-primary-400 hover:text-primary-300 underline">
               {t('download.setupGuide')} →
