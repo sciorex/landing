@@ -2,7 +2,9 @@ import { motion } from 'framer-motion';
 import { Download, Apple, Monitor, Terminal, CheckCircle, Package } from 'lucide-react';
 import { analytics } from '../utils/analytics';
 import { useTranslation } from 'react-i18next';
-import { DOWNLOAD_BASE_URL, DOCS_URL } from '../config/urls';
+import { DOWNLOAD_BASE_URL, DOCS_URL, config } from '../config/urls';
+import { getVersionJsonUrl } from '@sciorex/shared-config';
+import { useState, useEffect } from 'react';
 
 const osIcons = [Monitor, Apple, Terminal];
 const osColors = [
@@ -13,6 +15,24 @@ const osColors = [
 
 export default function DownloadSection() {
   const { t } = useTranslation('common');
+  const [version, setVersion] = useState<string>('');
+
+  useEffect(() => {
+    const fetchVersion = async () => {
+      try {
+        const response = await fetch(getVersionJsonUrl(config));
+        if (response.ok) {
+          const data = await response.json();
+          // Handle both signed and unsigned format
+          const ver = data.data?.version || data.version;
+          if (ver) setVersion(ver);
+        }
+      } catch {
+        // Silently fail, version will just not show
+      }
+    };
+    fetchVersion();
+  }, []);
 
   const downloadGroups = [
     {
@@ -101,7 +121,7 @@ export default function DownloadSection() {
                     <h3 className="text-xl font-display font-bold text-heading">
                       {group.os}
                     </h3>
-                    <p className="text-xs text-muted">v1.0.0</p>
+                    {version && <p className="text-xs text-muted">v{version}</p>}
                   </div>
                 </div>
               </div>
