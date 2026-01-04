@@ -3,6 +3,7 @@ import { Mail, MessageSquare, FileText } from 'lucide-react';
 import { analytics } from '../utils/analytics';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
+import { REPO_URL, DISCORD_URL, GIT_PROVIDER_NAME } from '../config/urls';
 
 const iconMap = [Mail, MessageSquare, FileText];
 
@@ -79,7 +80,7 @@ export default function Contact() {
             </p>
             <div className="flex items-center justify-center gap-4">
               <a
-                href="https://discord.gg/zSjPjA5j"
+                href={DISCORD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => analytics.trackSocialClick('Discord')}
@@ -88,10 +89,10 @@ export default function Contact() {
                 {t('community.discord')}
               </a>
               <a
-                href="https://github.com/sciorex/sciorex"
+                href={REPO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => analytics.trackSocialClick('GitHub')}
+                onClick={() => analytics.trackSocialClick(GIT_PROVIDER_NAME)}
                 className="btn-secondary"
               >
                 {t('community.github')}

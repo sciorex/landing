@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 import { Download, Apple, Monitor, Terminal, CheckCircle, Package } from 'lucide-react';
 import { analytics } from '../utils/analytics';
 import { useTranslation } from 'react-i18next';
-
-const BASE_URL = 'https://github.com/sciorex/sciorex/releases/latest/download';
+import { DOWNLOAD_BASE_URL, DOCS_URL } from '../config/urls';
 
 const osIcons = [Monitor, Apple, Terminal];
 const osColors = [
@@ -21,8 +20,8 @@ export default function DownloadSection() {
       icon: osIcons[0],
       color: osColors[0],
       options: [
-        { name: t('download.installer'), file: 'Sciorex-win-x64.exe', size: '~85 MB', description: t('download.recommended'), url: `${BASE_URL}/Sciorex-win-x64.exe` },
-        { name: t('download.portable'), file: 'Sciorex-portable.exe', size: '~82 MB', description: t('download.noInstall'), url: `${BASE_URL}/Sciorex-portable.exe` },
+        { name: t('download.installer'), file: 'Sciorex-win-x64.exe', size: '~200 MB', description: t('download.recommended'), url: `${DOWNLOAD_BASE_URL}/Sciorex-win-x64.exe` },
+        { name: t('download.portable'), file: 'Sciorex-portable.exe', size: '~200 MB', description: t('download.noInstall'), url: `${DOWNLOAD_BASE_URL}/Sciorex-portable.exe` },
       ],
     },
     {
@@ -30,8 +29,8 @@ export default function DownloadSection() {
       icon: osIcons[1],
       color: osColors[1],
       options: [
-        { name: t('download.appleSilicon'), file: 'Sciorex-mac-arm64.dmg', size: '~88 MB', description: t('download.m1m2m3'), url: `${BASE_URL}/Sciorex-mac-arm64.dmg` },
-        { name: t('download.intel'), file: 'Sciorex-mac-x64.dmg', size: '~92 MB', description: t('download.intelMacs'), url: `${BASE_URL}/Sciorex-mac-x64.dmg` },
+        { name: t('download.appleSilicon'), file: 'Sciorex-mac-arm64.dmg', size: '~340 MB', description: t('download.m1m2m3'), url: `${DOWNLOAD_BASE_URL}/Sciorex-mac-arm64.dmg` },
+        { name: t('download.intel'), file: 'Sciorex-mac-x64.dmg', size: '~340 MB', description: t('download.intelMacs'), url: `${DOWNLOAD_BASE_URL}/Sciorex-mac-x64.dmg` },
       ],
     },
     {
@@ -39,9 +38,9 @@ export default function DownloadSection() {
       icon: osIcons[2],
       color: osColors[2],
       options: [
-        { name: t('download.appImage'), file: 'Sciorex-linux-x86_64.AppImage', size: '~103 MB', description: t('download.universal'), url: `${BASE_URL}/Sciorex-linux-x86_64.AppImage` },
-        { name: t('download.debian'), file: 'Sciorex-linux-amd64.deb', size: '~88 MB', description: t('download.aptCompatible'), url: `${BASE_URL}/Sciorex-linux-amd64.deb` },
-        { name: t('download.fedora'), file: 'Sciorex-linux-x86_64.rpm', size: '~89 MB', description: t('download.dnfCompatible'), url: `${BASE_URL}/Sciorex-linux-x86_64.rpm` },
+        { name: t('download.appImage'), file: 'Sciorex-linux-x86_64.AppImage', size: '~250 MB', description: t('download.universal'), url: `${DOWNLOAD_BASE_URL}/Sciorex-linux-x86_64.AppImage` },
+        { name: t('download.debian'), file: 'Sciorex-linux-amd64.deb', size: '~220 MB', description: t('download.aptCompatible'), url: `${DOWNLOAD_BASE_URL}/Sciorex-linux-amd64.deb` },
+        { name: t('download.fedora'), file: 'Sciorex-linux-x86_64.rpm', size: '~220 MB', description: t('download.dnfCompatible'), url: `${DOWNLOAD_BASE_URL}/Sciorex-linux-x86_64.rpm` },
       ],
     },
   ];
@@ -175,7 +174,7 @@ export default function DownloadSection() {
         >
           <p className="text-sm text-muted">
             {t('download.requirements')}{' '}
-            <a href="https://docs.sciorex.com/guide/getting-started" className="text-primary-400 hover:text-primary-300 underline">
+            <a href={`${DOCS_URL}/guide/getting-started`} className="text-primary-400 hover:text-primary-300 underline">
               {t('download.setupGuide')} →
             </a>
           </p>
