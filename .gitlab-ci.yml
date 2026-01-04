@@ -15,7 +15,6 @@ cache:
 
 before_script:
   # Configure git to use CI token for accessing other GitLab repos (for shared-config)
-  # Rewrite both SSH and HTTPS URLs to use the CI token
   - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/".insteadOf "git@gitlab.com:"
   - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/".insteadOf "ssh://git@gitlab.com/"
   - npm ci
@@ -32,15 +31,15 @@ build:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
     - if: $CI_MERGE_REQUEST_IID
 
-pages:
+deploy:
   stage: deploy
+  dependencies:
+    - build
   script:
-    - mv dist public
-  artifacts:
-    paths:
-      - public
+    - npm install -g wrangler
+    - wrangler pages deploy dist --project-name=sciorex-landing
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   environment:
     name: production
-    url: https://$CI_PROJECT_NAMESPACE.gitlab.io/$CI_PROJECT_NAME
+    url: https://sciorex.com

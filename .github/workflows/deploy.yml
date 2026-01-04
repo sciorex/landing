@@ -1,4 +1,4 @@
-name: Deploy to Public Branch
+name: Deploy to Cloudflare Pages
 
 on:
   push:
@@ -6,7 +6,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  deployments: write
 
 jobs:
   build-and-deploy:
@@ -28,11 +29,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to 'public' branch
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
-          publish_branch: public
-          force_orphan: true
-          commit_message: "Deploy: ${{ github.event.head_commit.message }}"
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=sciorex-landing
