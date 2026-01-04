@@ -6,6 +6,8 @@ stages:
 
 variables:
   npm_config_cache: "$CI_PROJECT_DIR/.npm"
+  SCIOREX_GIT_PROVIDER: gitlab
+  SCIOREX_GIT_ORG: sciorex
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -37,7 +39,7 @@ deploy:
     - build
   script:
     - npm install -g wrangler
-    - wrangler pages deploy dist --project-name=sciorex-landing
+    - wrangler pages deploy dist --project-name=sciorex-landing --branch=main
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   environment:
