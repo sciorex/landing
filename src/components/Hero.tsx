@@ -100,10 +100,15 @@ export default function Hero() {
                 {t('cta.download')}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <button className="btn-secondary flex items-center gap-2">
+              <a
+                href="https://www.youtube.com/@SciorexApp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary flex items-center gap-2"
+              >
                 <Play className="w-5 h-5" />
                 {t('cta.watchDemo')}
-              </button>
+              </a>
             </div>
 
             <div className="flex items-center gap-8 mt-12 pt-8 border-t border-glass-border">
