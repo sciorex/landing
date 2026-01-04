@@ -14,6 +14,10 @@ cache:
     - node_modules/
 
 before_script:
+  # Configure git to use CI token for accessing other GitLab repos (for shared-config)
+  # Rewrite both SSH and HTTPS URLs to use the CI token
+  - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/".insteadOf "git@gitlab.com:"
+  - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/".insteadOf "ssh://git@gitlab.com/"
   - npm ci
 
 build:

@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@sciorex/shared-config": "file:../shared-config",
+    "@sciorex/shared-config": "git+ssh://git@gitlab.com/sciorex/shared-config.git#main",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
     "framer-motion": "^12.23.26",
