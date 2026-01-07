@@ -1,4 +1,4 @@
-image: node:20
+image: node:24
 
 stages:
   - build
@@ -23,6 +23,8 @@ before_script:
 
 build:
   stage: build
+  tags:
+    - saas-linux-medium-amd64
   script:
     - npm run build
   artifacts:
@@ -35,6 +37,8 @@ build:
 
 deploy:
   stage: deploy
+  tags:
+    - saas-linux-medium-amd64
   dependencies:
     - build
   script:
