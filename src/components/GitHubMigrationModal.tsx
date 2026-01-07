@@ -13,6 +13,14 @@ export default function GitHubMigrationModal({ isOpen, onClose, originalUrl }: G
   const { t } = useTranslation('common');
   const { locale } = useParams<{ locale: string }>();
 
+  // Convert GitHub URL to GitLab equivalent
+  const gitlabUrl = originalUrl.replace('github.com', 'gitlab.com');
+
+  const handleGoToGitLab = () => {
+    window.open(gitlabUrl, '_blank', 'noopener,noreferrer');
+    onClose();
+  };
+
   const handleContinueToGitHub = () => {
     window.open(originalUrl, '_blank', 'noopener,noreferrer');
     onClose();
@@ -68,10 +76,18 @@ export default function GitHubMigrationModal({ isOpen, onClose, originalUrl }: G
 
               {/* Actions */}
               <div className="px-6 pb-6 space-y-3">
-                <Link
-                  to={`/${locale}/blog/sciorex-migrated-from-github-to-gitlab`}
-                  onClick={onClose}
+                <button
+                  onClick={handleGoToGitLab}
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold rounded-xl hover:from-primary-500 hover:to-accent-500 transition-all group"
+                >
+                  {t('githubMigration.goToGitLab')}
+                  <ExternalLink className="w-4 h-4" />
+                </button>
+
+                <Link
+                  to={`/${locale}/blog/why-we-moved-sciorex-off-github`}
+                  onClick={onClose}
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 glass hover:bg-white/10 text-white font-medium rounded-xl transition-all group"
                 >
                   {t('githubMigration.readMore')}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -79,7 +95,7 @@ export default function GitHubMigrationModal({ isOpen, onClose, originalUrl }: G
 
                 <button
                   onClick={handleContinueToGitHub}
-                  className="flex items-center justify-center gap-2 w-full px-4 py-3 glass hover:bg-white/5 text-muted hover:text-white font-medium rounded-xl transition-all"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 text-muted hover:text-white font-medium rounded-xl transition-all"
                 >
                   {t('githubMigration.continueAnyway')}
                   <ExternalLink className="w-4 h-4" />

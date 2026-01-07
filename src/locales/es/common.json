@@ -147,6 +147,7 @@
   "githubMigration": {
     "title": "¡Nos hemos mudado a GitLab!",
     "description": "Sciorex ha migrado de GitHub a GitLab. El enlace que hiciste clic apunta a nuestro antiguo repositorio de GitHub.",
+    "goToGitLab": "Ir a GitLab",
     "readMore": "Descubre por qué migramos",
     "continueAnyway": "Continuar a GitHub de todos modos",
     "close": "Cerrar"
