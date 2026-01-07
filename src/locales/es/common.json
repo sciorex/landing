@@ -48,6 +48,10 @@
     "emptyDescription": "Estamos trabajando en contenido excelente. Vuelve pronto para tutoriales, guías y mejores prácticas.",
     "readMore": "Leer Más",
     "posts": {
+      "github-migration": {
+        "title": "Por Qué Movimos Sciorex de GitHub",
+        "excerpt": "Nuestra cuenta de GitHub fue marcada como spam sin previo aviso. Después de diez días de silencio, tomamos la decisión pragmática de mudarnos a GitLab."
+      },
       "why-ai-workflows-break": {
         "title": "Por Qué se Rompen los Flujos de IA",
         "excerpt": "La capacidad del modelo ya no es el cuello de botella. El flujo lo es. Explorando por qué el trabajo de IA basado en conversaciones falla a medida que crece el alcance."

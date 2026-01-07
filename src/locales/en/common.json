@@ -48,6 +48,10 @@
     "emptyDescription": "We're working on some great content. Check back soon for tutorials, guides, and best practices.",
     "readMore": "Read More",
     "posts": {
+      "github-migration": {
+        "title": "Why We Moved Sciorex Off GitHub",
+        "excerpt": "Our GitHub account was flagged as spam without warning. After ten days of silence, we made a pragmatic decision to move to GitLab."
+      },
       "why-ai-workflows-break": {
         "title": "Why AI Workflows Break",
         "excerpt": "Model capability is no longer the bottleneck. Workflow is. Exploring why conversation-based AI work fails as scope grows."

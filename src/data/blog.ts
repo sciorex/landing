@@ -12,6 +12,13 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        slug: 'why-we-moved-sciorex-off-github',
+        titleKey: 'blog.posts.github-migration.title',
+        excerptKey: 'blog.posts.github-migration.excerpt',
+        date: '2026-01-07',
+        file: 'why_we_moved_sciorex_off_git_hub.md'
+    },
+    {
         slug: 'sciorex-beta-launch-part-1-why-ai-workflows-break',
         titleKey: 'blog.posts.why-ai-workflows-break.title',
         excerptKey: 'blog.posts.why-ai-workflows-break.excerpt',
