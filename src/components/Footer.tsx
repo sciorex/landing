@@ -2,6 +2,7 @@ import { ArrowUp } from 'lucide-react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { analytics } from '../utils/analytics';
 import { useTranslation } from 'react-i18next';
+import { useGitHubMigration } from '../context/GitHubMigrationContext';
 import { REPO_URL, TWITTER_URL, DISCORD_URL, DOCS_URL, GIT_PROVIDER, GIT_PROVIDER_NAME } from '../config/urls';
 import { GitHubIcon, GitLabIcon } from './GitProviderLink';
 
@@ -10,6 +11,7 @@ export default function Footer() {
   const location = useLocation();
   const navigate = useNavigate();
   const { locale } = useParams<{ locale: string }>();
+  const { openModal, isGitHubSciorexUrl } = useGitHubMigration();
 
   const footerLinks = {
     [t('product.title')]: [
@@ -73,20 +75,33 @@ export default function Footer() {
               {t('tagline')}
             </p>
             <div className="flex items-center gap-4">
-              <a
-                href={REPO_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => analytics.trackSocialClick(GIT_PROVIDER_NAME)}
-                className="w-10 h-10 rounded-lg glass flex items-center justify-center text-muted hover:text-primary-500 hover:bg-white/10 transition-all"
-                aria-label={GIT_PROVIDER_NAME}
-              >
-                {GIT_PROVIDER === 'gitlab' ? (
-                  <GitLabIcon className="w-5 h-5" />
-                ) : (
+              {isGitHubSciorexUrl(REPO_URL) ? (
+                <button
+                  onClick={() => {
+                    analytics.trackSocialClick(GIT_PROVIDER_NAME);
+                    openModal(REPO_URL);
+                  }}
+                  className="w-10 h-10 rounded-lg glass flex items-center justify-center text-muted hover:text-primary-500 hover:bg-white/10 transition-all"
+                  aria-label={GIT_PROVIDER_NAME}
+                >
                   <GitHubIcon className="w-5 h-5" />
-                )}
-              </a>
+                </button>
+              ) : (
+                <a
+                  href={REPO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => analytics.trackSocialClick(GIT_PROVIDER_NAME)}
+                  className="w-10 h-10 rounded-lg glass flex items-center justify-center text-muted hover:text-primary-500 hover:bg-white/10 transition-all"
+                  aria-label={GIT_PROVIDER_NAME}
+                >
+                  {GIT_PROVIDER === 'gitlab' ? (
+                    <GitLabIcon className="w-5 h-5" />
+                  ) : (
+                    <GitHubIcon className="w-5 h-5" />
+                  )}
+                </a>
+              )}
               <a
                 href={TWITTER_URL}
                 target="_blank"

@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Crown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useGitHubMigration } from '../context/GitHubMigrationContext';
 import { REPO_URL, GIT_PROVIDER } from '../config/urls';
 import { GitHubIcon, GitLabIcon } from './GitProviderLink';
 
 export default function CTA() {
   const { t } = useTranslation('common');
+  const { openModal, isGitHubSciorexUrl } = useGitHubMigration();
 
   return (
     <section className="section relative overflow-hidden">
@@ -55,19 +57,29 @@ export default function CTA() {
                   {t('cta.downloadNow')}
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
-                <a
-                  href={REPO_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all backdrop-blur-sm"
-                >
-                  {GIT_PROVIDER === 'gitlab' ? (
-                    <GitLabIcon className="w-5 h-5" />
-                  ) : (
+                {isGitHubSciorexUrl(REPO_URL) ? (
+                  <button
+                    onClick={() => openModal(REPO_URL)}
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all backdrop-blur-sm"
+                  >
                     <GitHubIcon className="w-5 h-5" />
-                  )}
-                  {t('cta.starGithub')}
-                </a>
+                    {t('cta.starGithub')}
+                  </button>
+                ) : (
+                  <a
+                    href={REPO_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all backdrop-blur-sm"
+                  >
+                    {GIT_PROVIDER === 'gitlab' ? (
+                      <GitLabIcon className="w-5 h-5" />
+                    ) : (
+                      <GitHubIcon className="w-5 h-5" />
+                    )}
+                    {t('cta.starGithub')}
+                  </a>
+                )}
               </div>
             </motion.div>
           </div>

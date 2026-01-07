@@ -143,5 +143,12 @@
     "subtitle": "Descarga Sciorex y comanda tu ejército de agentes de IA. Gratis para uso personal, sin necesidad de cuenta.",
     "downloadNow": "Descargar Ahora",
     "starGithub": "Estrella en GitHub"
+  },
+  "githubMigration": {
+    "title": "¡Nos hemos mudado a GitLab!",
+    "description": "Sciorex ha migrado de GitHub a GitLab. El enlace que hiciste clic apunta a nuestro antiguo repositorio de GitHub.",
+    "readMore": "Descubre por qué migramos",
+    "continueAnyway": "Continuar a GitHub de todos modos",
+    "close": "Cerrar"
   }
 }

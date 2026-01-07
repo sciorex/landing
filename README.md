@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://sciorex.com">View Website</a> •
-  <a href="https://github.com/sciorex/sciorex">Main Repository</a> •
+  <a href="https://gitlab.com/sciorex/sciorex">Main Repository</a> •
   <a href="https://docs.sciorex.com">Documentation</a>
 </p>
 
@@ -72,7 +72,7 @@ The site is automatically deployed to GitHub Pages via the `public` branch when 
 
 ## Contributing
 
-By submitting a contribution, you agree to the [Contributor License Agreement](https://github.com/sciorex/sciorex/blob/main/CLA.md).
+By submitting a contribution, you agree to the [Contributor License Agreement](https://gitlab.com/sciorex/sciorex/blob/main/CLA.md).
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/my-update`)
@@ -84,7 +84,7 @@ By submitting a contribution, you agree to the [Contributor License Agreement](h
 
 - **Website**: [sciorex.com](https://sciorex.com)
 - **Documentation**: [docs.sciorex.com](https://docs.sciorex.com)
-- **Main Repo**: [github.com/sciorex/sciorex](https://github.com/sciorex/sciorex)
+- **Main Repo**: [gitlab.com/sciorex/sciorex](https://gitlab.com/sciorex/sciorex)
 - **Twitter**: [@sciorex](https://x.com/sciorex)
 - **Discord**: [discord.gg/zSjPjA5j](https://discord.gg/zSjPjA5j)
 

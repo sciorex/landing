@@ -6,12 +6,15 @@ import './i18n/config'
 import App from './App.tsx'
 
 import { ThemeProvider } from './context/ThemeContext';
+import { GitHubMigrationProvider } from './context/GitHubMigrationContext';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <ThemeProvider>
-        <App />
+        <GitHubMigrationProvider>
+          <App />
+        </GitHubMigrationProvider>
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>,

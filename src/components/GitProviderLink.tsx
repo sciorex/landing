@@ -1,3 +1,4 @@
+import { useGitHubMigration } from '../context/GitHubMigrationContext';
 import { REPO_URL, GIT_PROVIDER, GIT_PROVIDER_NAME } from '../config/urls';
 
 interface GitProviderLinkProps {
@@ -19,7 +20,20 @@ const GitLabIcon = ({ className }: { className?: string }) => (
 );
 
 export default function GitProviderLink({ className }: GitProviderLinkProps) {
+  const { openModal, isGitHubSciorexUrl } = useGitHubMigration();
   const Icon = GIT_PROVIDER === 'gitlab' ? GitLabIcon : GitHubIcon;
+
+  if (isGitHubSciorexUrl(REPO_URL)) {
+    return (
+      <button
+        onClick={() => openModal(REPO_URL)}
+        className={className}
+        aria-label={`Visit us on ${GIT_PROVIDER_NAME}`}
+      >
+        <GitHubIcon className="w-6 h-6" />
+      </button>
+    );
+  }
 
   return (
     <a

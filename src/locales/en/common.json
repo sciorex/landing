@@ -143,5 +143,12 @@
     "subtitle": "Download Sciorex and command your AI agent army. Free for personal use, no account required.",
     "downloadNow": "Download Now",
     "starGithub": "Star on GitHub"
+  },
+  "githubMigration": {
+    "title": "We've Moved to GitLab!",
+    "description": "Sciorex has migrated from GitHub to GitLab. The link you clicked points to our old GitHub repository.",
+    "readMore": "Learn why we migrated",
+    "continueAnyway": "Continue to GitHub anyway",
+    "close": "Close"
   }
 }

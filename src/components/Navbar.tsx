@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
 import { useTheme } from '../context/ThemeContext';
+import { useGitHubMigration } from '../context/GitHubMigrationContext';
 import { REPO_URL, TWITTER_URL, DOCS_URL, GIT_PROVIDER, GIT_PROVIDER_NAME } from '../config/urls';
 import { GitHubIcon, GitLabIcon } from './GitProviderLink';
 
@@ -15,6 +16,7 @@ export default function Navbar() {
   const { locale } = useParams<{ locale: string }>();
   const { t } = useTranslation('common');
   const { theme, toggleTheme } = useTheme();
+  const { openModal, isGitHubSciorexUrl } = useGitHubMigration();
 
   const navLinks = [
     { name: t('nav.features'), href: '#features' },
@@ -99,19 +101,29 @@ export default function Navbar() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <a
-              href={REPO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted hover:text-primary-500 transition-colors"
-              aria-label={GIT_PROVIDER_NAME}
-            >
-              {GIT_PROVIDER === 'gitlab' ? (
-                <GitLabIcon className="w-6 h-6" />
-              ) : (
+            {isGitHubSciorexUrl(REPO_URL) ? (
+              <button
+                onClick={() => openModal(REPO_URL)}
+                className="text-muted hover:text-primary-500 transition-colors"
+                aria-label={GIT_PROVIDER_NAME}
+              >
                 <GitHubIcon className="w-6 h-6" />
-              )}
-            </a>
+              </button>
+            ) : (
+              <a
+                href={REPO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted hover:text-primary-500 transition-colors"
+                aria-label={GIT_PROVIDER_NAME}
+              >
+                {GIT_PROVIDER === 'gitlab' ? (
+                  <GitLabIcon className="w-6 h-6" />
+                ) : (
+                  <GitHubIcon className="w-6 h-6" />
+                )}
+              </a>
+            )}
             <a
               href={TWITTER_URL}
               target="_blank"
@@ -185,14 +197,26 @@ export default function Navbar() {
                 </button>
               </div>
               <div className="flex gap-4 pt-4 border-t border-glass-border">
-                <a
-                  href={REPO_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted hover:text-primary-500 transition-colors"
-                >
-                  {GIT_PROVIDER_NAME}
-                </a>
+                {isGitHubSciorexUrl(REPO_URL) ? (
+                  <button
+                    onClick={() => {
+                      openModal(REPO_URL);
+                      setMobileMenuOpen(false);
+                    }}
+                    className="text-muted hover:text-primary-500 transition-colors"
+                  >
+                    {GIT_PROVIDER_NAME}
+                  </button>
+                ) : (
+                  <a
+                    href={REPO_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted hover:text-primary-500 transition-colors"
+                  >
+                    {GIT_PROVIDER_NAME}
+                  </a>
+                )}
                 <a
                   href={TWITTER_URL}
                   target="_blank"

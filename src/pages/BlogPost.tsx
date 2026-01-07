@@ -8,12 +8,14 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight } from 'lucide-react';
 import { blogPosts } from '../data/blog';
 import SEO from '../components/SEO';
+import { useGitHubMigration } from '../context/GitHubMigrationContext';
 
 export default function BlogPost() {
     const { slug, locale } = useParams<{ slug: string; locale: string }>();
     const { t } = useTranslation('common');
     const [content, setContent] = useState<string>('');
     const [loading, setLoading] = useState(true);
+    const { openModal, isGitHubSciorexUrl } = useGitHubMigration();
 
     const currentIndex = blogPosts.findIndex((p) => p.slug === slug);
     const post = blogPosts[currentIndex];
@@ -111,6 +113,7 @@ export default function BlogPost() {
                                 components={{
                                     a: ({ href, children }) => {
                                         const isInternal = href?.startsWith('../') || href?.startsWith('/');
+
                                         if (isInternal && href) {
                                             // Handle relative links like ../slug
                                             const targetPath = href.startsWith('../')
@@ -122,6 +125,18 @@ export default function BlogPost() {
                                                 </Link>
                                             );
                                         }
+
+                                        if (isGitHubSciorexUrl(href || '')) {
+                                            return (
+                                                <button
+                                                    onClick={() => openModal(href || '')}
+                                                    className="text-primary-400 hover:text-primary-300 transition-colors cursor-pointer underline"
+                                                >
+                                                    {children}
+                                                </button>
+                                            );
+                                        }
+
                                         return (
                                             <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 transition-colors">
                                                 {children}
