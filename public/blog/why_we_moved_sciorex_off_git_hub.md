@@ -84,3 +84,13 @@ If you have experienced something similar, or if you have insight into how these
 And if you are here because you are curious about what we are building, welcome.
 
 > **This is Sciorex, and this is us shipping anyway.**
+
+---
+
+## Update 2026-01-12
+
+Finally, after 15 days, GitHub got back to us and resolved the situation.
+
+**That’s 15 days of having a public profile and project effectively erased, including our website hosted on GitHub Pages.** Just because of "an error" on their automated systems.
+
+![GitHub reinstatement request update](/screenshots/github-reinstatement-request-update.png)
