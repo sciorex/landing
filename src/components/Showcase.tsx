@@ -2,21 +2,25 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '../context/ThemeContext';
 
-const imageMap = [
-  '/screenshots/showcase-kanban.png',
-  '/screenshots/showcase-flow.png',
-  '/screenshots/showcase-execution.png',
-  '/screenshots/showcase-config.png',
-  '/screenshots/showcase-chat.png',
-  '/screenshots/showcase-worktree.png',
-  '/screenshots/showcase-agentic.png',
+const imageNames = [
+  'showcase-kanban.png',
+  'showcase-flow.png',
+  'showcase-execution.png',
+  'showcase-config.png',
+  'showcase-chat.png',
+  'showcase-worktree.png',
+  'showcase-agentic.png',
 ];
 
 export default function Showcase() {
   const { t } = useTranslation('common');
+  const { theme } = useTheme();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const getImagePath = (name: string) => `/screenshots/${theme}/${name}`;
 
   const showcaseItems = [
     {
@@ -24,49 +28,49 @@ export default function Showcase() {
       title: t('showcase.items.kanban.title'),
       description: t('showcase.items.kanban.description'),
       category: t('showcase.items.kanban.category'),
-      image: imageMap[0],
+      image: getImagePath(imageNames[0]),
     },
     {
       id: 2,
       title: t('showcase.items.flowEditor.title'),
       description: t('showcase.items.flowEditor.description'),
       category: t('showcase.items.flowEditor.category'),
-      image: imageMap[1],
+      image: getImagePath(imageNames[1]),
     },
     {
       id: 3,
       title: t('showcase.items.execution.title'),
       description: t('showcase.items.execution.description'),
       category: t('showcase.items.execution.category'),
-      image: imageMap[2],
+      image: getImagePath(imageNames[2]),
     },
     {
       id: 4,
       title: t('showcase.items.config.title'),
       description: t('showcase.items.config.description'),
       category: t('showcase.items.config.category'),
-      image: imageMap[3],
+      image: getImagePath(imageNames[3]),
     },
     {
       id: 5,
       title: t('showcase.items.chat.title'),
       description: t('showcase.items.chat.description'),
       category: t('showcase.items.chat.category'),
-      image: imageMap[4],
+      image: getImagePath(imageNames[4]),
     },
     {
       id: 6,
       title: t('showcase.items.worktree.title'),
       description: t('showcase.items.worktree.description'),
       category: t('showcase.items.worktree.category'),
-      image: imageMap[5],
+      image: getImagePath(imageNames[5]),
     },
     {
       id: 7,
       title: t('showcase.items.agentic.title'),
       description: t('showcase.items.agentic.description'),
       category: t('showcase.items.agentic.category'),
-      image: imageMap[6],
+      image: getImagePath(imageNames[6]),
     },
   ];
 

@@ -1,64 +1,160 @@
 {
-  "badge": "Powerful Features",
-  "title": "Everything You Need to",
-  "titleHighlight": "Manage AI Agents",
-  "subtitle": "From single agent tasks to complex multi-agent research pipelines, Sciorex gives you total control over your AI workflows.",
-  "features": [
+  "showLess": "Show less",
+  "showMore": "Show {{count}} more",
+  "groups": [
     {
-      "title": "Multi-Provider AI",
-      "description": "Use Claude, Gemini, Codex, or local models via LM Studio and Ollama. Switch providers per agent or chat session."
+      "id": "core",
+      "badge": "Why Sciorex",
+      "title": "Your AI,",
+      "titleHighlight": "Your Rules",
+      "subtitle": "100% local, completely free. Bring your own CLI and keep full control over your data and workflows.",
+      "features": [
+        {
+          "icon": "Shield",
+          "color": "from-emerald-500 to-green-500",
+          "title": "100% Local & Private",
+          "description": "All data stays on your machine. No third-party APIs, no data collection, no subscriptions. Completely free."
+        },
+        {
+          "icon": "Sparkles",
+          "color": "from-violet-500 to-purple-500",
+          "title": "Bring Your Own CLI",
+          "description": "Use Claude Code, Gemini CLI, OpenCode, Codex CLI, or local models via LM Studio and Ollama. We're a free wrapper for your existing tools."
+        },
+        {
+          "icon": "Unlock",
+          "color": "from-purple-500 to-pink-500",
+          "title": "No Vendor Lock-In",
+          "description": "Switch between CLIs anytime. Your workflows, agents, and data stay with you. Not locked to any single provider or ecosystem."
+        }
+      ],
+      "images": ["chat-view.png", "start-chat.png", "settings-clis.png"]
     },
     {
-      "title": "Custom AI Agents",
-      "description": "Create specialized agents with unique prompts, system instructions, and tool permissions. Each agent has its own personality and expertise."
+      "id": "workflow",
+      "badge": "Manage Your Work",
+      "title": "Organize,",
+      "titleHighlight": "Track, Execute",
+      "subtitle": "Powerful tools to manage AI agents like a real team. Tickets, boards, and custom agents working together.",
+      "features": [
+        {
+          "icon": "Kanban",
+          "color": "from-green-500 to-emerald-500",
+          "title": "Ticket & Kanban",
+          "description": "Track work across agents with a powerful ticket system. Link conversations to tickets and see the full history of agent interactions."
+        },
+        {
+          "icon": "Bot",
+          "color": "from-blue-500 to-cyan-500",
+          "title": "Custom AI Agents",
+          "description": "Create specialized agents with unique prompts, system instructions, and tool permissions. Each agent has its own personality and expertise."
+        },
+        {
+          "icon": "Layers",
+          "color": "from-rose-500 to-pink-500",
+          "title": "Epic Organization",
+          "description": "Group related tickets into epics for hierarchical organization. Perfect for tracking large research projects."
+        }
+      ],
+      "images": ["kanban-view.png", "tickets-list.png", "ticket-description.png", "agents-view.png", "epics-view.png"]
     },
     {
-      "title": "Visual Flow Editor",
-      "description": "Design complex multi-agent pipelines with a node-based editor. Chain agents, add conditions, parallel execution, and data transformation."
+      "id": "power",
+      "badge": "Power Features",
+      "title": "Built for",
+      "titleHighlight": "Power Users",
+      "subtitle": "Advanced capabilities for developers and researchers who need more than basic chat.",
+      "features": [
+        {
+          "icon": "Users",
+          "color": "from-amber-500 to-orange-500",
+          "title": "Agent Council",
+          "description": "Let multiple AI personas collaborate on your prompts. Each agent brings a different perspective, debating and refining ideas to produce richer, more thoughtful responses."
+        },
+        {
+          "icon": "Puzzle",
+          "color": "from-indigo-500 to-violet-500",
+          "title": "MCP Tool Protocol",
+          "description": "Connect agents to anything via MCP servers. Send Slack or Discord notifications, query databases, call external APIs, run browser automation, trigger webhooks. Combined with visual flows, the possibilities are endless."
+        },
+        {
+          "icon": "PanelLeftClose",
+          "color": "from-sky-500 to-cyan-500",
+          "title": "Split Panel Previews",
+          "description": "Preview anything side by side: Playwright browser, Markdown, HTML, images, Excalidraw diagrams, molecule structures, BibTeX references, and PRD documents. All synced with your code."
+        },
+        {
+          "icon": "FileDiff",
+          "color": "from-emerald-500 to-green-500",
+          "title": "Agentic File Review",
+          "description": "IDE-like view of all agent changes. Review every file modification in diff views, accept or reject changes individually, and maintain full control before anything reaches your codebase."
+        },
+        {
+          "icon": "MessageSquare",
+          "color": "from-orange-500 to-amber-500",
+          "title": "Multi-Session Chat",
+          "description": "Run multiple conversation threads, fork sessions from any message, and organize chats with color-coded labels."
+        },
+        {
+          "icon": "Code2",
+          "color": "from-cyan-500 to-blue-500",
+          "title": "IDE Integration",
+          "description": "Open files in your VS Code compatible IDE via our bridge extension, use the integrated VS Code web, or the Monaco editor for quick edits."
+        },
+        {
+          "icon": "Workflow",
+          "color": "from-purple-500 to-pink-500",
+          "title": "Visual Flow Editor",
+          "description": "Design multi-agent pipelines with a node-based editor. Chain agents, add conditions, parallel execution, loops, and scheduled triggers."
+        }
+      ],
+      "images": ["flow-edition-view.png", "chat-council.png", "browser-preview.png", "agentic-preview.png", "flow-view.png", "editor-view.png"]
     },
     {
-      "title": "Ticket & Kanban",
-      "description": "Track work across agents with a powerful ticket system. Link conversations to tickets and see the full history of agent interactions."
-    },
-    {
-      "title": "Multi-Session Chat",
-      "description": "Run multiple conversation threads, fork sessions from any message, and organize chats with color-coded labels."
-    },
-    {
-      "title": "MCP Tool Protocol",
-      "description": "Configure different MCP servers per agent. Need Slack alerts? Database access? Custom APIs? Just add the right MCP."
-    },
-    {
-      "title": "IDE Integration",
-      "description": "Open files in your VS Code compatible IDE via our bridge extension, use the integrated VS Code web, or the Monaco editor for quick edits."
-    },
-    {
-      "title": "Research Tracking",
-      "description": "Track research workflows: paper fetching, summarization, hypothesis generation, experimentation, and verification."
-    },
-    {
-      "title": "Epic Organization",
-      "description": "Group related tickets into epics for hierarchical organization. Perfect for tracking large research projects."
-    },
-    {
-      "title": "Full Audit Trail",
-      "description": "Every action is logged with actor information (human or agent). Never lose track of what happened and when."
-    },
-    {
-      "title": "Event-Driven Flows",
-      "description": "Trigger workflows from ticket events, cron schedules, or manual actions. Build reactive automation systems."
-    },
-    {
-      "title": "Extended Thinking",
-      "description": "Configure thinking levels from quick responses to ultra-deep analysis with adjustable token budgets."
-    },
-    {
-      "title": "100% Local & Private",
-      "description": "All data stays on your machine. No data collection, no tracking. Your AI interactions remain private."
-    },
-    {
-      "title": "Smart Notifications",
-      "description": "Desktop and sound notifications for agent completions, errors, and important events."
+      "id": "technical",
+      "badge": "Under the Hood",
+      "title": "Enterprise",
+      "titleHighlight": "Grade Features",
+      "subtitle": "Audit trails, event-driven automation, and advanced thinking modes for professional workflows.",
+      "features": [
+        {
+          "icon": "GitGraph",
+          "color": "from-emerald-500 to-teal-500",
+          "title": "Git Graph Visualization",
+          "description": "Interactive branch visualization with commit history. See your repository structure, compare branches, and navigate commits visually."
+        },
+        {
+          "icon": "Terminal",
+          "color": "from-gray-500 to-slate-500",
+          "title": "Command Runner & Server Detection",
+          "description": "Run commands and see output in real-time. Auto-detects local servers and opens them in the split panel preview. No context switching needed."
+        },
+        {
+          "icon": "History",
+          "color": "from-yellow-500 to-orange-500",
+          "title": "Full Audit Trail",
+          "description": "Every action is logged with actor information (human or agent). Never lose track of what happened and when."
+        },
+        {
+          "icon": "Zap",
+          "color": "from-sky-500 to-blue-500",
+          "title": "Event-Driven Flows",
+          "description": "Trigger workflows from ticket events, cron schedules, or manual actions. Build reactive automation systems."
+        },
+        {
+          "icon": "Bug",
+          "color": "from-fuchsia-500 to-purple-500",
+          "title": "Flow Debug Mode",
+          "description": "Pause flows on errors, inspect state, fix issues, and resume execution. Debug complex multi-agent workflows without starting over."
+        },
+        {
+          "icon": "Bell",
+          "color": "from-red-500 to-rose-500",
+          "title": "Smart Notifications",
+          "description": "Desktop and sound notifications for agent completions, errors, and important events."
+        }
+      ],
+      "images": ["editor-git-view.png", "flow-run-view.png", "agent-run-view.png", "worktree-view.png", "worktree-view-2.png"]
     }
   ]
 }

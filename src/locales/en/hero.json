@@ -5,8 +5,8 @@
   "tagline": "AI agents that actually get things done.",
   "messages": [
     {
-      "main": "Create AI agents, chain them into workflows, and let them handle your coding, research, and documentation tasks.",
-      "sub": "You define what each agent does. Sciorex runs them, tracks progress with tickets, and keeps everything on your machine. No cloud, no subscriptions."
+      "main": "A free, 100% local wrapper for Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, Ollama, and more.",
+      "sub": "Bring your own CLI. We add visual workflows, ticket tracking, and multi-agent orchestration. No third-party APIs, no data collection, no subscriptions."
     },
     {
       "main": "Plan entire solutions with your AI agents. Control every decision, track every change, and steer the AI to follow your best practices.",
@@ -43,8 +43,8 @@
       "label": "Agent Workflows"
     },
     "mcp": {
-      "value": "MCP",
-      "label": "Tool Protocol"
+      "value": "Multi",
+      "label": "Agent Orchestration"
     }
   },
   "floatingCards": {

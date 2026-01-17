@@ -1,64 +1,160 @@
 {
-  "badge": "Funciones Potentes",
-  "title": "Todo lo que Necesitas para",
-  "titleHighlight": "Gestionar Agentes de IA",
-  "subtitle": "Desde tareas de un solo agente hasta complejos pipelines de investigación multi-agente, Sciorex te da control total sobre tus flujos de trabajo de IA.",
-  "features": [
+  "showLess": "Mostrar menos",
+  "showMore": "Ver {{count}} más",
+  "groups": [
     {
-      "title": "IA Multi-Proveedor",
-      "description": "Usa Claude, Gemini, Codex o modelos locales vía LM Studio y Ollama. Cambia de proveedor por agente o sesión de chat."
+      "id": "core",
+      "badge": "Por qué Sciorex",
+      "title": "Tu IA,",
+      "titleHighlight": "Tus Reglas",
+      "subtitle": "100% local, completamente gratis. Trae tu propio CLI y mantén el control total sobre tus datos y flujos de trabajo.",
+      "features": [
+        {
+          "icon": "Shield",
+          "color": "from-emerald-500 to-green-500",
+          "title": "100% Local y Privado",
+          "description": "Todos los datos permanecen en tu máquina. Sin APIs de terceros, sin recopilación de datos, sin suscripciones. Completamente gratis."
+        },
+        {
+          "icon": "Sparkles",
+          "color": "from-violet-500 to-purple-500",
+          "title": "Trae Tu Propio CLI",
+          "description": "Usa Claude Code, Gemini CLI, OpenCode, Codex CLI o modelos locales vía LM Studio y Ollama. Somos un wrapper gratuito para tus herramientas existentes."
+        },
+        {
+          "icon": "Unlock",
+          "color": "from-purple-500 to-pink-500",
+          "title": "Sin Bloqueo de Proveedor",
+          "description": "Cambia entre CLIs cuando quieras. Tus flujos de trabajo, agentes y datos se quedan contigo. Sin atarte a ningún proveedor o ecosistema."
+        }
+      ],
+      "images": ["chat-view.png", "start-chat.png", "settings-clis.png"]
     },
     {
-      "title": "Agentes de IA Personalizados",
-      "description": "Crea agentes especializados con prompts únicos, instrucciones del sistema y permisos de herramientas. Cada agente tiene su propia personalidad y experiencia."
+      "id": "workflow",
+      "badge": "Gestiona Tu Trabajo",
+      "title": "Organiza,",
+      "titleHighlight": "Rastrea, Ejecuta",
+      "subtitle": "Herramientas potentes para gestionar agentes de IA como un equipo real. Tickets, tableros y agentes personalizados trabajando juntos.",
+      "features": [
+        {
+          "icon": "Kanban",
+          "color": "from-green-500 to-emerald-500",
+          "title": "Tickets y Kanban",
+          "description": "Rastrea el trabajo a través de agentes con un potente sistema de tickets. Vincula conversaciones a tickets y ve el historial completo de interacciones de agentes."
+        },
+        {
+          "icon": "Bot",
+          "color": "from-blue-500 to-cyan-500",
+          "title": "Agentes de IA Personalizados",
+          "description": "Crea agentes especializados con prompts únicos, instrucciones del sistema y permisos de herramientas. Cada agente tiene su propia personalidad y experiencia."
+        },
+        {
+          "icon": "Layers",
+          "color": "from-rose-500 to-pink-500",
+          "title": "Organización por Épicas",
+          "description": "Agrupa tickets relacionados en épicas para organización jerárquica. Perfecto para rastrear proyectos de investigación grandes."
+        }
+      ],
+      "images": ["kanban-view.png", "tickets-list.png", "ticket-description.png", "agents-view.png", "epics-view.png"]
     },
     {
-      "title": "Editor Visual de Flujos",
-      "description": "Diseña pipelines complejos multi-agente con un editor basado en nodos. Encadena agentes, añade condiciones, ejecución paralela y transformación de datos."
+      "id": "power",
+      "badge": "Funciones Avanzadas",
+      "title": "Hecho para",
+      "titleHighlight": "Usuarios Avanzados",
+      "subtitle": "Capacidades avanzadas para desarrolladores e investigadores que necesitan más que un chat básico.",
+      "features": [
+        {
+          "icon": "Users",
+          "color": "from-amber-500 to-orange-500",
+          "title": "Consejo de Agentes",
+          "description": "Deja que múltiples personalidades de IA colaboren en tus prompts. Cada agente aporta una perspectiva diferente, debatiendo y refinando ideas para producir respuestas más ricas y reflexivas."
+        },
+        {
+          "icon": "Puzzle",
+          "color": "from-indigo-500 to-violet-500",
+          "title": "Protocolo de Herramientas MCP",
+          "description": "Conecta agentes a cualquier cosa vía servidores MCP. Envía notificaciones a Slack o Discord, consulta bases de datos, llama APIs externas, ejecuta automatización de navegador, dispara webhooks. Combinado con flujos visuales, las posibilidades son infinitas."
+        },
+        {
+          "icon": "PanelLeftClose",
+          "color": "from-sky-500 to-cyan-500",
+          "title": "Previsualizaciones en Panel Dividido",
+          "description": "Previsualiza cualquier cosa lado a lado: navegador Playwright, Markdown, HTML, imágenes, diagramas Excalidraw, estructuras moleculares, referencias BibTeX y documentos PRD. Todo sincronizado con tu código."
+        },
+        {
+          "icon": "FileDiff",
+          "color": "from-emerald-500 to-green-500",
+          "title": "Revisión Agéntica de Archivos",
+          "description": "Vista tipo IDE de todos los cambios de agentes. Revisa cada modificación de archivo en vistas diff, acepta o rechaza cambios individualmente y mantén control total antes de que lleguen a tu código."
+        },
+        {
+          "icon": "MessageSquare",
+          "color": "from-orange-500 to-amber-500",
+          "title": "Chat Multi-Sesión",
+          "description": "Ejecuta múltiples hilos de conversación, bifurca sesiones desde cualquier mensaje y organiza chats con etiquetas codificadas por colores."
+        },
+        {
+          "icon": "Code2",
+          "color": "from-cyan-500 to-blue-500",
+          "title": "Integración con IDE",
+          "description": "Abre archivos en tu IDE compatible con VS Code mediante nuestra extensión puente, usa el VS Code web integrado o el editor Monaco para ediciones rápidas."
+        },
+        {
+          "icon": "Workflow",
+          "color": "from-purple-500 to-pink-500",
+          "title": "Editor Visual de Flujos",
+          "description": "Diseña pipelines multi-agente con un editor basado en nodos. Encadena agentes, añade condiciones, ejecución paralela, bucles y disparadores programados."
+        }
+      ],
+      "images": ["flow-edition-view.png", "chat-council.png", "browser-preview.png", "agentic-preview.png", "flow-view.png", "editor-view.png"]
     },
     {
-      "title": "Tickets y Kanban",
-      "description": "Rastrea el trabajo a través de agentes con un potente sistema de tickets. Vincula conversaciones a tickets y ve el historial completo de interacciones de agentes."
-    },
-    {
-      "title": "Chat Multi-Sesión",
-      "description": "Ejecuta múltiples hilos de conversación, bifurca sesiones desde cualquier mensaje y organiza chats con etiquetas codificadas por colores."
-    },
-    {
-      "title": "Protocolo de Herramientas MCP",
-      "description": "Configura diferentes servidores MCP por agente. ¿Necesitas alertas de Slack? ¿Acceso a base de datos? ¿APIs personalizadas? Solo añade el MCP correcto."
-    },
-    {
-      "title": "Integración con IDE",
-      "description": "Abre archivos en tu IDE compatible con VS Code mediante nuestra extensión puente, usa el VS Code web integrado o el editor Monaco para ediciones rápidas."
-    },
-    {
-      "title": "Seguimiento de Investigación",
-      "description": "Rastrea flujos de investigación: búsqueda de artículos, resumen, generación de hipótesis, experimentación y verificación."
-    },
-    {
-      "title": "Organización por Épicas",
-      "description": "Agrupa tickets relacionados en épicas para organización jerárquica. Perfecto para rastrear proyectos de investigación grandes."
-    },
-    {
-      "title": "Registro de Auditoría Completo",
-      "description": "Cada acción se registra con información del actor (humano o agente). Nunca pierdas el rastro de qué sucedió y cuándo."
-    },
-    {
-      "title": "Flujos Basados en Eventos",
-      "description": "Activa flujos de trabajo desde eventos de tickets, horarios cron o acciones manuales. Construye sistemas de automatización reactivos."
-    },
-    {
-      "title": "Pensamiento Extendido",
-      "description": "Configura niveles de pensamiento desde respuestas rápidas hasta análisis ultra-profundo con presupuestos de tokens ajustables."
-    },
-    {
-      "title": "100% Local y Privado",
-      "description": "Todos los datos permanecen en tu máquina. Sin recopilación de datos, sin seguimiento. Tus interacciones con IA permanecen privadas."
-    },
-    {
-      "title": "Notificaciones Inteligentes",
-      "description": "Notificaciones de escritorio y sonido para completaciones de agentes, errores y eventos importantes."
+      "id": "technical",
+      "badge": "Bajo el Capó",
+      "title": "Características de",
+      "titleHighlight": "Nivel Empresarial",
+      "subtitle": "Registros de auditoría, automatización basada en eventos y modos de pensamiento avanzados para flujos de trabajo profesionales.",
+      "features": [
+        {
+          "icon": "GitGraph",
+          "color": "from-emerald-500 to-teal-500",
+          "title": "Visualización de Grafo Git",
+          "description": "Visualización interactiva de ramas con historial de commits. Ve la estructura de tu repositorio, compara ramas y navega commits visualmente."
+        },
+        {
+          "icon": "Terminal",
+          "color": "from-gray-500 to-slate-500",
+          "title": "Ejecutor de Comandos y Detección de Servidores",
+          "description": "Ejecuta comandos y ve la salida en tiempo real. Auto-detecta servidores locales y los abre en la vista previa del panel dividido. Sin cambiar de contexto."
+        },
+        {
+          "icon": "History",
+          "color": "from-yellow-500 to-orange-500",
+          "title": "Registro de Auditoría Completo",
+          "description": "Cada acción se registra con información del actor (humano o agente). Nunca pierdas el rastro de qué sucedió y cuándo."
+        },
+        {
+          "icon": "Zap",
+          "color": "from-sky-500 to-blue-500",
+          "title": "Flujos Basados en Eventos",
+          "description": "Activa flujos de trabajo desde eventos de tickets, horarios cron o acciones manuales. Construye sistemas de automatización reactivos."
+        },
+        {
+          "icon": "Bug",
+          "color": "from-fuchsia-500 to-purple-500",
+          "title": "Modo Debug de Flujos",
+          "description": "Pausa flujos en errores, inspecciona el estado, corrige problemas y reanuda la ejecución. Depura flujos multi-agente complejos sin empezar de cero."
+        },
+        {
+          "icon": "Bell",
+          "color": "from-red-500 to-rose-500",
+          "title": "Notificaciones Inteligentes",
+          "description": "Notificaciones de escritorio y sonido para completaciones de agentes, errores y eventos importantes."
+        }
+      ],
+      "images": ["editor-git-view.png", "flow-run-view.png", "agent-run-view.png", "worktree-view.png", "worktree-view-2.png"]
     }
   ]
 }

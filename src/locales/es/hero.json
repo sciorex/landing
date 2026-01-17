@@ -5,8 +5,8 @@
   "tagline": "Agentes de IA que realmente hacen el trabajo.",
   "messages": [
     {
-      "main": "Crea agentes de IA, encadénalos en flujos de trabajo y deja que se encarguen de tus tareas de programación, investigación y documentación.",
-      "sub": "Tú defines qué hace cada agente. Sciorex los ejecuta, rastrea el progreso con tickets y mantiene todo en tu máquina. Sin nube, sin suscripciones."
+      "main": "Un wrapper gratuito y 100% local para Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, Ollama y más.",
+      "sub": "Trae tu propio CLI. Añadimos flujos visuales, seguimiento de tickets y orquestación multi-agente. Sin APIs de terceros, sin recopilación de datos, sin suscripciones."
     },
     {
       "main": "Planifica soluciones completas con tus agentes de IA. Controla cada decisión, rastrea cada cambio y dirige la IA para que siga tus mejores prácticas.",
@@ -43,8 +43,8 @@
       "label": "Flujos de Agentes"
     },
     "mcp": {
-      "value": "MCP",
-      "label": "Protocolo de Herramientas"
+      "value": "Multi",
+      "label": "Orquestación de Agentes"
     }
   },
   "floatingCards": {

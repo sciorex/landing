@@ -1,0 +1,9 @@
+# Sciorex Landing Page - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sciorex.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

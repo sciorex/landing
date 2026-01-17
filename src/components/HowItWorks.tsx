@@ -1,17 +1,21 @@
 import { motion } from 'framer-motion';
 import { Bot, Workflow, CheckCircle, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '../context/ThemeContext';
 
-const stepImages = [
-  '/screenshots/step-config.png',
-  '/screenshots/step-flow.png',
-  '/screenshots/step-kanban.png',
+const stepImageNames = [
+  'step-config.png',
+  'step-flow.png',
+  'step-kanban.png',
 ];
 
 const stepIcons = [Bot, Workflow, CheckCircle];
 
 export default function HowItWorks() {
   const { t } = useTranslation('common');
+  const { theme } = useTheme();
+
+  const getImagePath = (name: string) => `/screenshots/${theme}/${name}`;
 
   const steps = [
     {
@@ -19,21 +23,21 @@ export default function HowItWorks() {
       icon: stepIcons[0],
       title: t('howItWorks.steps.createAgents.title'),
       description: t('howItWorks.steps.createAgents.description'),
-      image: stepImages[0],
+      image: getImagePath(stepImageNames[0]),
     },
     {
       number: t('howItWorks.steps.designWorkflow.number'),
       icon: stepIcons[1],
       title: t('howItWorks.steps.designWorkflow.title'),
       description: t('howItWorks.steps.designWorkflow.description'),
-      image: stepImages[1],
+      image: getImagePath(stepImageNames[1]),
     },
     {
       number: t('howItWorks.steps.trackTickets.number'),
       icon: stepIcons[2],
       title: t('howItWorks.steps.trackTickets.title'),
       description: t('howItWorks.steps.trackTickets.description'),
-      image: stepImages[2],
+      image: getImagePath(stepImageNames[2]),
     },
   ];
   return (

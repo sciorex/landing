@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Menu, X, Sun, Moon, MoreHorizontal } from 'lucide-react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
@@ -11,6 +11,8 @@ import { GitHubIcon, GitLabIcon } from './GitProviderLink';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [moreMenuOpen, setMoreMenuOpen] = useState(false);
+  const moreMenuRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const navigate = useNavigate();
   const { locale } = useParams<{ locale: string }>();
@@ -21,10 +23,11 @@ export default function Navbar() {
   const navLinks = [
     { name: t('nav.features'), href: '#features' },
     { name: t('nav.howItWorks'), href: '#how-it-works' },
-    { name: t('nav.pricing'), href: '#pricing' },
+    { name: t('nav.pricing'), href: '#pricing', badge: t('nav.free') },
     { name: t('nav.docs'), href: DOCS_URL, external: true },
     { name: t('nav.blog'), href: '#blog' },
     { name: t('nav.download'), href: '#download' },
+    { name: t('nav.faq'), href: '#faq' },
   ];
 
   useEffect(() => {
@@ -33,6 +36,17 @@ export default function Navbar() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close more menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (moreMenuRef.current && !moreMenuRef.current.contains(event.target as Node)) {
+        setMoreMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -74,7 +88,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               link.external ? (
                 <a
@@ -82,7 +96,7 @@ export default function Navbar() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted hover:text-primary-500 transition-colors font-medium"
+                  className="text-muted hover:text-primary-500 transition-colors font-medium text-sm"
                 >
                   {link.name}
                 </a>
@@ -91,23 +105,28 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-muted hover:text-primary-500 transition-colors font-medium"
+                  className="text-muted hover:text-primary-500 transition-colors font-medium text-sm relative"
                 >
                   {link.name}
+                  {link.badge && (
+                    <span className="absolute -top-2 -right-6 text-[10px] font-bold bg-gradient-to-r from-primary-500 to-accent-500 text-white px-1.5 py-0.5 rounded-full">
+                      {link.badge}
+                    </span>
+                  )}
                 </a>
               )
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* CTA Buttons - Large screens */}
+          <div className="hidden lg:flex items-center gap-3">
             {isGitHubSciorexUrl(REPO_URL) ? (
               <button
                 onClick={() => openModal(REPO_URL)}
                 className="text-muted hover:text-primary-500 transition-colors"
                 aria-label={GIT_PROVIDER_NAME}
               >
-                <GitHubIcon className="w-6 h-6" />
+                <GitHubIcon className="w-5 h-5" />
               </button>
             ) : (
               <a
@@ -118,9 +137,9 @@ export default function Navbar() {
                 aria-label={GIT_PROVIDER_NAME}
               >
                 {GIT_PROVIDER === 'gitlab' ? (
-                  <GitLabIcon className="w-6 h-6" />
+                  <GitLabIcon className="w-5 h-5" />
                 ) : (
-                  <GitHubIcon className="w-6 h-6" />
+                  <GitHubIcon className="w-5 h-5" />
                 )}
               </a>
             )}
@@ -145,7 +164,129 @@ export default function Navbar() {
             <a
               href="#download"
               onClick={(e) => handleNavClick(e, '#download')}
-              className="btn-primary text-sm px-6 py-3"
+              className="btn-primary text-sm px-5 py-2.5"
+            >
+              {t('nav.download')}
+            </a>
+          </div>
+
+          {/* Medium screens - Show key links + more dropdown */}
+          <div className="hidden md:flex lg:hidden items-center gap-4">
+            {/* Key links shown directly */}
+            <a
+              href="#features"
+              onClick={(e) => handleNavClick(e, '#features')}
+              className="text-muted hover:text-primary-500 transition-colors font-medium text-sm"
+            >
+              {t('nav.features')}
+            </a>
+            <a
+              href="#pricing"
+              onClick={(e) => handleNavClick(e, '#pricing')}
+              className="text-muted hover:text-primary-500 transition-colors font-medium text-sm relative"
+            >
+              {t('nav.pricing')}
+              <span className="absolute -top-2 -right-5 text-[10px] font-bold bg-gradient-to-r from-primary-500 to-accent-500 text-white px-1.5 py-0.5 rounded-full">
+                {t('nav.free')}
+              </span>
+            </a>
+            <a
+              href={DOCS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-primary-500 transition-colors font-medium text-sm"
+            >
+              {t('nav.docs')}
+            </a>
+            <a
+              href="#blog"
+              onClick={(e) => handleNavClick(e, '#blog')}
+              className="text-muted hover:text-primary-500 transition-colors font-medium text-sm"
+            >
+              {t('nav.blog')}
+            </a>
+
+            {/* More dropdown for secondary links */}
+            <div className="relative" ref={moreMenuRef}>
+              <button
+                onClick={() => setMoreMenuOpen(!moreMenuOpen)}
+                className="p-2 rounded-xl glass hover:bg-white/10 transition-colors text-muted hover:text-primary-500"
+                aria-label="More options"
+              >
+                <MoreHorizontal className="w-5 h-5" />
+              </button>
+              {moreMenuOpen && (
+                <div className="absolute right-0 top-full mt-2 w-48 glass rounded-xl p-3 shadow-xl animate-slide-up">
+                  <div className="flex flex-col gap-2">
+                    <a
+                      href="#how-it-works"
+                      onClick={(e) => { handleNavClick(e, '#how-it-works'); setMoreMenuOpen(false); }}
+                      className="text-muted hover:text-primary-500 transition-colors text-sm py-1.5"
+                    >
+                      {t('nav.howItWorks')}
+                    </a>
+                    <a
+                      href="#faq"
+                      onClick={(e) => { handleNavClick(e, '#faq'); setMoreMenuOpen(false); }}
+                      className="text-muted hover:text-primary-500 transition-colors text-sm py-1.5"
+                    >
+                      {t('nav.faq')}
+                    </a>
+                    <div className="border-t border-glass-border my-2" />
+                    <div className="flex items-center gap-3">
+                      {isGitHubSciorexUrl(REPO_URL) ? (
+                        <button
+                          onClick={() => { openModal(REPO_URL); setMoreMenuOpen(false); }}
+                          className="text-muted hover:text-primary-500 transition-colors"
+                        >
+                          {GIT_PROVIDER === 'gitlab' ? (
+                            <GitLabIcon className="w-5 h-5" />
+                          ) : (
+                            <GitHubIcon className="w-5 h-5" />
+                          )}
+                        </button>
+                      ) : (
+                        <a
+                          href={REPO_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted hover:text-primary-500 transition-colors"
+                        >
+                          {GIT_PROVIDER === 'gitlab' ? (
+                            <GitLabIcon className="w-5 h-5" />
+                          ) : (
+                            <GitHubIcon className="w-5 h-5" />
+                          )}
+                        </a>
+                      )}
+                      <a
+                        href={TWITTER_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted hover:text-primary-500 transition-colors"
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                      </a>
+                      <LanguageSelector />
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-xl glass hover:bg-white/10 transition-colors text-muted hover:text-primary-500"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
+            <a
+              href="#download"
+              onClick={(e) => handleNavClick(e, '#download')}
+              className="btn-primary text-sm px-4 py-2"
             >
               {t('nav.download')}
             </a>
@@ -181,9 +322,14 @@ export default function Navbar() {
                     key={link.name}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="text-muted hover:text-primary-500 transition-colors font-medium py-2"
+                    className="text-muted hover:text-primary-500 transition-colors font-medium py-2 flex items-center gap-2"
                   >
                     {link.name}
+                    {link.badge && (
+                      <span className="text-[10px] font-bold bg-gradient-to-r from-primary-500 to-accent-500 text-white px-1.5 py-0.5 rounded-full">
+                        {link.badge}
+                      </span>
+                    )}
                   </a>
                 )
               ))}

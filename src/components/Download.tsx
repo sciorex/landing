@@ -69,7 +69,6 @@ export default function DownloadSection() {
     t('download.features.free'),
     t('download.features.allFeatures'),
     t('download.features.noAccount'),
-    t('download.features.autoUpdates'),
     t('download.features.localPrivate'),
   ];
   return (
@@ -121,7 +120,7 @@ export default function DownloadSection() {
                     <h3 className="text-xl font-display font-bold text-heading">
                       {group.os}
                     </h3>
-                    {version && <p className="text-xs text-muted">v{version}</p>}
+                    {version && <p className="text-xs text-white/60">v{version}</p>}
                   </div>
                 </div>
               </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import ThemeImage from './ThemeImage';
 
 export default function Hero() {
   const { t } = useTranslation('hero');
@@ -140,18 +141,18 @@ export default function Hero() {
 
               {/* Main app screenshot */}
               <div className="image-frame relative">
-                <img
-                  src="/screenshots/hero-dashboard.png"
+                <ThemeImage
+                  name="hero-dashboard.png"
                   alt="Sciorex Dashboard"
                   className="w-full aspect-[16/10] object-cover"
                 />
               </div>
 
-              {/* Floating cards */}
+              {/* Floating cards - hidden on mobile */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -left-6 top-[10%] glass p-4 rounded-xl shadow-2xl"
+                className="hidden md:block absolute -left-6 top-[10%] glass p-4 rounded-xl shadow-2xl"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center">
@@ -169,7 +170,7 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity }}
-                className="absolute -right-4 top-[5%] glass p-4 rounded-xl shadow-2xl"
+                className="hidden md:block absolute -right-4 top-[5%] glass p-4 rounded-xl shadow-2xl"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
@@ -187,7 +188,7 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 5, repeat: Infinity }}
-                className="absolute -right-6 bottom-[10%] glass p-4 rounded-xl shadow-2xl"
+                className="hidden md:block absolute -right-6 bottom-[10%] glass p-4 rounded-xl shadow-2xl"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-primary-500/20 flex items-center justify-center">
@@ -205,7 +206,7 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4.5, repeat: Infinity }}
-                className="absolute -left-4 bottom-[5%] glass p-4 rounded-xl shadow-2xl"
+                className="hidden md:block absolute -left-4 bottom-[5%] glass p-4 rounded-xl shadow-2xl"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center">
