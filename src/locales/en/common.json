@@ -75,20 +75,20 @@
     "nextPost": "Next Post"
   },
   "showcase": {
-    "badge": "See It In Action",
+    "badge": "Vibe Kanban In Action",
     "title": "Powerful Interface,",
     "titleHighlight": "Intuitive Design",
-    "subtitle": "Every feature designed to help you orchestrate AI agents efficiently",
+    "subtitle": "Every feature designed for vibe coding and agentic workflows",
     "items": {
       "kanban": {
-        "title": "Agent Kanban Dashboard",
-        "description": "Track all your agent tasks with a powerful drag-and-drop Kanban board. Organize by status, priority, and agent assignments.",
-        "category": "Task Management"
+        "title": "Vibe Kanban Dashboard",
+        "description": "The original vibe kanban for AI coding agents. Track tasks with drag-and-drop boards, organize by status, priority, and parallel agent execution.",
+        "category": "Vibe Kanban"
       },
       "flowEditor": {
         "title": "Visual Flow Editor",
-        "description": "Design complex multi-agent workflows with our node-based editor. Chain agents, add conditions, and run parallel tasks.",
-        "category": "Workflow Design"
+        "description": "Design agentic workflows with our node-based editor. Chain Claude Code, Gemini CLI, and other agents. Run parallel tasks with git worktrees.",
+        "category": "Agentic Workflows"
       },
       "execution": {
         "title": "Real-Time Flow Execution",
@@ -107,8 +107,8 @@
       },
       "worktree": {
         "title": "Git Worktree Management",
-        "description": "Manage multiple git worktrees seamlessly. Work on different branches simultaneously without switching contexts.",
-        "category": "Version Control"
+        "description": "Run parallel AI agents without conflicts using git worktrees. Each agent works in isolation, merge changes when ready. Perfect for vibe coding at scale.",
+        "category": "Parallel Execution"
       },
       "agentic": {
         "title": "Agentic File Review",
@@ -161,35 +161,35 @@
     "badge": "Common Questions",
     "title": "Frequently",
     "titleHighlight": "Asked Questions",
-    "subtitle": "Everything you need to know about Sciorex, from pricing to privacy.",
+    "subtitle": "Everything you need to know about vibe kanban, agentic coding, and Sciorex.",
     "items": [
       {
+        "question": "What is vibe kanban and how does Sciorex implement it?",
+        "answer": "Vibe kanban is a workflow methodology where AI coding agents execute tasks in parallel while humans focus on planning, reviewing, and strategic oversight. Sciorex is the original vibe kanban platform - agents work in separate git worktrees so they never conflict, and you review changes through a built-in diff tool before merging."
+      },
+      {
         "question": "Is Sciorex really free?",
-        "answer": "Yes, Sciorex is completely free for personal and professional use. There are no subscriptions, no premium tiers, and no hidden costs. We're a wrapper for existing AI CLIs, so you only pay for what you already use (your own API keys or local models)."
+        "answer": "Yes, Sciorex is completely free for personal and professional use. There are no subscriptions, no premium tiers, and no hidden costs. We're a wrapper for existing AI CLIs like Claude Code and Gemini CLI, so you only pay for what you already use (your own API keys or local models)."
       },
       {
-        "question": "Where is my data stored? Is Sciorex private?",
-        "answer": "Sciorex never sends your data anywhere. All your conversations, code, and files stay 100% on your local machine. We don't collect analytics, telemetry, or usage data. The CLIs you use (Claude Code, Gemini CLI, etc.) are the only components that may communicate with external APIs, depending on their configuration."
-      },
-      {
-        "question": "What AI providers and CLIs does Sciorex support?",
-        "answer": "Sciorex supports Claude Code, Gemini CLI, OpenCode, Codex CLI, and local models via LM Studio and Ollama. Since we wrap these existing tools, you get access to any AI provider they support, including OpenAI, Anthropic, Google, and open-source models."
-      },
-      {
-        "question": "Do I need API keys to use Sciorex?",
-        "answer": "Sciorex itself requires no API keys, no login, and no email. Just download and use it. The CLIs you connect are a different story: cloud-based CLIs like Claude Code or Gemini CLI need API keys from their providers, while local models via LM Studio or Ollama run entirely on your machine."
+        "question": "Does Sciorex support the ralph loop technique?",
+        "answer": "Yes! Sciorex is fully compatible with the ralph loop (Ralph Wiggum loop) methodology. You can set up iterative workflows where agents continuously work on tasks, with progress persisting in git history rather than context windows. This makes Sciorex ideal for long-running agentic coding sessions."
       },
       {
         "question": "How is Sciorex different from Cursor or Windsurf?",
-        "answer": "Unlike Cursor or Windsurf, Sciorex is a wrapper for existing AI CLIs rather than a standalone IDE. This means you bring your own AI provider, keep full control over your data, and can use any CLI you prefer. Sciorex adds visual workflows, ticket tracking, multi-agent orchestration, and a Kanban board on top of your existing tools."
+        "answer": "Unlike Cursor or Windsurf, Sciorex is a vibe kanban platform that wraps existing AI CLIs rather than being a standalone IDE. This means you bring your own AI provider (Claude Code, Gemini CLI, etc.), keep full control over your data with 100% local execution, and can run parallel agents with git worktrees. Sciorex adds visual workflows, ticket tracking, and multi-agent orchestration on top of your existing agentic coding tools."
       },
       {
-        "question": "Is Sciorex open source?",
-        "answer": "Not yet. Some subcomponents are open source, but the main application is closed source for now. We plan to open source it once the project matures and the roadmap stabilizes. You can follow development, report issues, and request features on our GitLab repository."
+        "question": "What AI providers and CLIs does Sciorex support?",
+        "answer": "Sciorex supports all major agentic CLIs: Claude Code, Gemini CLI, OpenCode, Codex CLI, and local models via LM Studio and Ollama. Since we wrap these existing tools, you get access to any AI provider they support, including Anthropic, Google, OpenAI, and open-source models."
       },
       {
-        "question": "What can I build with Sciorex?",
-        "answer": "Sciorex excels at multi-step AI workflows: research pipelines that fetch and summarize papers, coding agents that implement features across multiple files, documentation generators, code review systems, and any task requiring multiple AI agents working together with human oversight."
+        "question": "Where is my data stored? Is Sciorex private?",
+        "answer": "Sciorex is 100% local and private - your data never leaves your machine. All conversations, code, and files stay on your local system. We don't collect analytics, telemetry, or usage data. The CLIs you use (Claude Code, Gemini CLI, etc.) are the only components that may communicate with external APIs, depending on their configuration."
+      },
+      {
+        "question": "What can I build with vibe coding in Sciorex?",
+        "answer": "Sciorex excels at agentic coding workflows: run parallel agents to implement features across multiple files, set up research pipelines that fetch and summarize papers, create documentation generators, build code review systems, and orchestrate any task requiring multiple AI agents working together with human oversight and vibe kanban tracking."
       }
     ]
   }

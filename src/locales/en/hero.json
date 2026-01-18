@@ -1,28 +1,28 @@
 {
-  "badge": "Now available for Windows, macOS & Linux",
+  "badge": "The Original Vibe Kanban Platform",
   "title": "The King of",
   "titleHighlight": "Knowledge",
-  "tagline": "AI agents that actually get things done.",
+  "tagline": "Vibe coding with AI agents that actually get things done.",
   "messages": [
     {
-      "main": "A free, 100% local wrapper for Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, Ollama, and more.",
-      "sub": "Bring your own CLI. We add visual workflows, ticket tracking, and multi-agent orchestration. No third-party APIs, no data collection, no subscriptions."
+      "main": "The ultimate vibe kanban platform for agentic coding. Free, 100% local wrapper for Claude Code, Gemini CLI, and more.",
+      "sub": "Orchestrate parallel AI agents with visual workflows, git worktrees, and ralph loop support. The best Cursor and Windsurf alternative for vibe coding."
     },
     {
       "main": "Plan entire solutions with your AI agents. Control every decision, track every change, and steer the AI to follow your best practices.",
       "sub": "Build applications from the ground up. Define architecture with specialized agents, break work into trackable tickets, and watch your agents deliver."
     },
     {
-      "main": "Stop context-switching between tools. One workspace for AI chat, task tracking, and code execution.",
-      "sub": "Your agents share context, remember decisions, and build on each other's work. Like a team that never forgets."
+      "main": "Stop context-switching between tools. One vibe kanban workspace for AI chat, task tracking, and code execution.",
+      "sub": "Your agentic coding workflow in one place. Agents share context, remember decisions, and build on each other's work. Like a team that never forgets."
     },
     {
       "main": "Turn hours of research into minutes. Agents fetch papers, extract insights, and synthesize knowledge automatically.",
       "sub": "Feed it sources, get structured summaries. Perfect for literature reviews, competitive analysis, or learning new domains."
     },
     {
-      "main": "AI that follows your rules. Define coding standards, review criteria, and workflows your agents must follow.",
-      "sub": "Every change tracked, every decision logged. Full visibility into what your agents did and why."
+      "main": "AI that follows your rules. Define coding standards, review criteria, and agentic workflows your agents must follow.",
+      "sub": "Every change tracked, every decision logged. Full visibility with vibe kanban boards and audit trails."
     },
     {
       "main": "Full control over every line of code. Review, approve, or reject suggestions made by your AI agents with a powerful diff view.",

@@ -81,10 +81,10 @@ export default function Terms() {
                   {t('sections.yourContent.title')}
                 </h2>
                 <p className="mb-4">
-                  <strong className="text-white">{t('sections.yourContent.ownership')}</strong> {t('sections.yourContent.ownershipDesc')}
+                  <strong className="text-heading">{t('sections.yourContent.ownership')}</strong> {t('sections.yourContent.ownershipDesc')}
                 </p>
                 <p>
-                  <strong className="text-white">{t('sections.yourContent.aiOutput')}</strong> {t('sections.yourContent.aiOutputDesc')}
+                  <strong className="text-heading">{t('sections.yourContent.aiOutput')}</strong> {t('sections.yourContent.aiOutputDesc')}
                 </p>
               </section>
 
@@ -93,10 +93,10 @@ export default function Terms() {
                   {t('sections.dataPrivacy.title')}
                 </h2>
                 <p className="mb-4">
-                  <strong className="text-white">{t('sections.dataPrivacy.noCollection')}</strong> {t('sections.dataPrivacy.noCollectionDesc')}
+                  <strong className="text-heading">{t('sections.dataPrivacy.noCollection')}</strong> {t('sections.dataPrivacy.noCollectionDesc')}
                 </p>
                 <p>
-                  <strong className="text-white">{t('sections.dataPrivacy.noTraining')}</strong> {t('sections.dataPrivacy.noTrainingDesc')}
+                  <strong className="text-heading">{t('sections.dataPrivacy.noTraining')}</strong> {t('sections.dataPrivacy.noTrainingDesc')}
                 </p>
               </section>
 
@@ -117,7 +117,7 @@ export default function Terms() {
                   {t('sections.aiDisclaimer.intro')}
                 </p>
                 <p>
-                  <strong className="text-white">{t('sections.aiDisclaimer.responsibility')}</strong> {t('sections.aiDisclaimer.responsibilityDesc')}
+                  <strong className="text-heading">{t('sections.aiDisclaimer.responsibility')}</strong> {t('sections.aiDisclaimer.responsibilityDesc')}
                 </p>
               </section>
 

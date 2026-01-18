@@ -75,20 +75,20 @@
     "nextPost": "Siguiente Publicación"
   },
   "showcase": {
-    "badge": "Véalo en Acción",
+    "badge": "Vibe Kanban en Acción",
     "title": "Interfaz Potente,",
     "titleHighlight": "Diseño Intuitivo",
-    "subtitle": "Cada función diseñada para ayudarte a orquestar agentes de IA de manera eficiente",
+    "subtitle": "Cada función diseñada para vibe coding y flujos de trabajo agénticos",
     "items": {
       "kanban": {
-        "title": "Panel Kanban de Agentes",
-        "description": "Rastrea todas las tareas de tus agentes con un potente tablero Kanban de arrastrar y soltar. Organiza por estado, prioridad y asignaciones de agentes.",
-        "category": "Gestión de Tareas"
+        "title": "Panel Vibe Kanban",
+        "description": "El vibe kanban original para agentes de código IA. Rastrea tareas con tableros arrastrables, organiza por estado, prioridad y ejecución paralela de agentes.",
+        "category": "Vibe Kanban"
       },
       "flowEditor": {
         "title": "Editor Visual de Flujos",
-        "description": "Diseña flujos de trabajo complejos multi-agente con nuestro editor basado en nodos. Encadena agentes, añade condiciones y ejecuta tareas paralelas.",
-        "category": "Diseño de Flujos"
+        "description": "Diseña flujos agénticos con nuestro editor basado en nodos. Encadena Claude Code, Gemini CLI y otros agentes. Ejecuta tareas paralelas con git worktrees.",
+        "category": "Flujos Agénticos"
       },
       "execution": {
         "title": "Ejecución de Flujos en Tiempo Real",
@@ -107,8 +107,8 @@
       },
       "worktree": {
         "title": "Gestión de Git Worktree",
-        "description": "Gestiona múltiples worktrees de git sin problemas. Trabaja en diferentes ramas simultáneamente sin cambiar de contexto.",
-        "category": "Control de Versiones"
+        "description": "Ejecuta agentes de IA en paralelo sin conflictos usando git worktrees. Cada agente trabaja aislado, fusiona cambios cuando estés listo. Perfecto para vibe coding a escala.",
+        "category": "Ejecución Paralela"
       },
       "agentic": {
         "title": "Revisión Agéntica de Archivos",
@@ -161,35 +161,35 @@
     "badge": "Preguntas Comunes",
     "title": "Preguntas",
     "titleHighlight": "Frecuentes",
-    "subtitle": "Todo lo que necesitas saber sobre Sciorex, desde precios hasta privacidad.",
+    "subtitle": "Todo lo que necesitas saber sobre vibe kanban, codificación agéntica y Sciorex.",
     "items": [
       {
+        "question": "¿Qué es vibe kanban y cómo lo implementa Sciorex?",
+        "answer": "Vibe kanban es una metodología donde los agentes de código IA ejecutan tareas en paralelo mientras los humanos se centran en planificar, revisar y supervisión estratégica. Sciorex es la plataforma original de vibe kanban - los agentes trabajan en git worktrees separados para nunca conflictar, y revisas los cambios con una herramienta de diff integrada antes de fusionar."
+      },
+      {
         "question": "¿Sciorex es realmente gratis?",
-        "answer": "Sí, Sciorex es completamente gratis para uso personal y profesional. No hay suscripciones, niveles premium ni costos ocultos. Somos un wrapper para CLIs de IA existentes, así que solo pagas por lo que ya usas (tus propias claves API o modelos locales)."
+        "answer": "Sí, Sciorex es completamente gratis para uso personal y profesional. No hay suscripciones, niveles premium ni costos ocultos. Somos un wrapper para CLIs de IA existentes como Claude Code y Gemini CLI, así que solo pagas por lo que ya usas (tus propias claves API o modelos locales)."
       },
       {
-        "question": "¿Dónde se almacenan mis datos? ¿Sciorex es privado?",
-        "answer": "Sciorex nunca envía tus datos a ningún lugar. Todas tus conversaciones, código y archivos permanecen 100% en tu máquina local. No recopilamos análisis, telemetría ni datos de uso. Los CLIs que uses (Claude Code, Gemini CLI, etc.) son los únicos componentes que pueden comunicarse con APIs externas, dependiendo de su configuración."
-      },
-      {
-        "question": "¿Qué proveedores de IA y CLIs soporta Sciorex?",
-        "answer": "Sciorex soporta Claude Code, Gemini CLI, OpenCode, Codex CLI y modelos locales vía LM Studio y Ollama. Como envolvemos estas herramientas existentes, tienes acceso a cualquier proveedor de IA que soporten, incluyendo OpenAI, Anthropic, Google y modelos de código abierto."
-      },
-      {
-        "question": "¿Necesito claves API para usar Sciorex?",
-        "answer": "Sciorex no requiere claves API, ni login, ni email. Solo descárgalo y úsalo. Los CLIs que conectes son otra historia: CLIs basados en la nube como Claude Code o Gemini CLI necesitan claves API de sus proveedores, mientras que los modelos locales vía LM Studio u Ollama se ejecutan completamente en tu máquina."
+        "question": "¿Sciorex soporta la técnica ralph loop?",
+        "answer": "¡Sí! Sciorex es totalmente compatible con la metodología ralph loop (Ralph Wiggum loop). Puedes configurar flujos iterativos donde los agentes trabajan continuamente en tareas, con el progreso persistiendo en el historial de git en lugar de ventanas de contexto. Esto hace que Sciorex sea ideal para sesiones largas de codificación agéntica."
       },
       {
         "question": "¿En qué se diferencia Sciorex de Cursor o Windsurf?",
-        "answer": "A diferencia de Cursor o Windsurf, Sciorex es un wrapper para CLIs de IA existentes en lugar de un IDE independiente. Esto significa que traes tu propio proveedor de IA, mantienes control total sobre tus datos y puedes usar cualquier CLI que prefieras. Sciorex añade flujos visuales, seguimiento de tickets, orquestación multi-agente y un tablero Kanban sobre tus herramientas existentes."
+        "answer": "A diferencia de Cursor o Windsurf, Sciorex es una plataforma vibe kanban que envuelve CLIs de IA existentes en lugar de ser un IDE independiente. Esto significa que traes tu propio proveedor de IA (Claude Code, Gemini CLI, etc.), mantienes control total sobre tus datos con ejecución 100% local, y puedes ejecutar agentes paralelos con git worktrees. Sciorex añade flujos visuales, seguimiento de tickets y orquestación multi-agente sobre tus herramientas de codificación agéntica existentes."
       },
       {
-        "question": "¿Sciorex es de código abierto?",
-        "answer": "Aún no. Algunos subcomponentes son de código abierto, pero la aplicación principal es de código cerrado por ahora. Planeamos hacerlo open source una vez que el proyecto madure y la hoja de ruta se estabilice. Puedes seguir el desarrollo, reportar problemas y solicitar funciones en nuestro repositorio de GitLab."
+        "question": "¿Qué proveedores de IA y CLIs soporta Sciorex?",
+        "answer": "Sciorex soporta todos los CLIs agénticos principales: Claude Code, Gemini CLI, OpenCode, Codex CLI y modelos locales vía LM Studio y Ollama. Como envolvemos estas herramientas existentes, tienes acceso a cualquier proveedor de IA que soporten, incluyendo Anthropic, Google, OpenAI y modelos de código abierto."
       },
       {
-        "question": "¿Qué puedo construir con Sciorex?",
-        "answer": "Sciorex sobresale en flujos de trabajo de IA de múltiples pasos: pipelines de investigación que buscan y resumen artículos, agentes de codificación que implementan funciones en múltiples archivos, generadores de documentación, sistemas de revisión de código y cualquier tarea que requiera múltiples agentes de IA trabajando juntos con supervisión humana."
+        "question": "¿Dónde se almacenan mis datos? ¿Sciorex es privado?",
+        "answer": "Sciorex es 100% local y privado - tus datos nunca salen de tu máquina. Todas las conversaciones, código y archivos permanecen en tu sistema local. No recopilamos análisis, telemetría ni datos de uso. Los CLIs que uses (Claude Code, Gemini CLI, etc.) son los únicos componentes que pueden comunicarse con APIs externas, dependiendo de su configuración."
+      },
+      {
+        "question": "¿Qué puedo construir con vibe coding en Sciorex?",
+        "answer": "Sciorex sobresale en flujos de trabajo de codificación agéntica: ejecuta agentes paralelos para implementar funciones en múltiples archivos, configura pipelines de investigación que buscan y resumen artículos, crea generadores de documentación, construye sistemas de revisión de código y orquesta cualquier tarea que requiera múltiples agentes de IA trabajando juntos con supervisión humana y seguimiento vibe kanban."
       }
     ]
   }

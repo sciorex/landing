@@ -169,7 +169,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-glass-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-muted text-sm">
-            © {new Date().getFullYear()} {t('copyright')}
+            © 2025-{new Date().getFullYear()} {t('copyright')}
           </p>
           <button
             onClick={scrollToTop}

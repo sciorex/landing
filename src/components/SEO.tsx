@@ -13,13 +13,13 @@ export default function SEO({ title, description, path = '' }: SEOProps) {
   const baseUrl = 'https://sciorex.com';
 
   const defaultTitles: Record<string, string> = {
-    en: 'Sciorex - Free AI Agent Wrapper | 100% Local & Private',
-    es: 'Sciorex - Wrapper Gratuito para Agentes IA | 100% Local y Privado',
+    en: 'Sciorex - Vibe Kanban for AI Coding Agents | Free & 100% Local',
+    es: 'Sciorex - Vibe Kanban para Agentes de Código IA | Gratis y 100% Local',
   };
 
   const defaultDescriptions: Record<string, string> = {
-    en: 'Free, 100% local wrapper for Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, and Ollama. Visual workflows, ticket tracking, and multi-agent orchestration. No third-party APIs.',
-    es: 'Wrapper gratuito y 100% local para Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio y Ollama. Flujos visuales, seguimiento de tickets y orquestación multi-agente. Sin APIs de terceros.',
+    en: 'Free vibe kanban platform for vibe coding. Orchestrate Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, and Ollama with visual workflows, parallel agents, git worktrees, and ralph loop support. 100% local, no data collection. Best Cursor and Windsurf alternative for agentic coding.',
+    es: 'Plataforma gratuita de vibe kanban para vibe coding. Orquesta Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio y Ollama con flujos visuales, agentes paralelos, git worktrees y soporte ralph loop. 100% local, sin recopilación de datos. La mejor alternativa a Cursor y Windsurf para codificación agéntica.',
   };
 
   const pageTitle = title || defaultTitles[locale] || defaultTitles.en;
@@ -31,7 +31,7 @@ export default function SEO({ title, description, path = '' }: SEOProps) {
     document.title = pageTitle;
 
     updateMetaTag('description', pageDescription);
-    updateMetaTag('keywords', 'AI agents, Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, Ollama, local AI, private AI, workflow automation, multi-agent, MCP, free');
+    updateMetaTag('keywords', 'vibe kanban, vibe coding, vibe-kanban, vibe-coding, ralph loop, agentic coding, AI agent orchestration, Claude Code wrapper, Gemini CLI wrapper, OpenCode, Codex CLI, LM Studio, Ollama, multi-agent platform, MCP tools, parallel agents, git worktrees, Cursor alternative, Windsurf alternative, agentic IDE, agentic CLI, Agent OS, local AI, private AI, free AI tools');
     updateMetaTag('og:title', pageTitle, 'property');
     updateMetaTag('og:description', pageDescription, 'property');
     updateMetaTag('og:url', currentUrl, 'property');
@@ -132,12 +132,15 @@ function updateJsonLd(title: string, description: string, url: string, image: st
           priceCurrency: 'USD',
         },
         featureList: [
-          '100% Local & Private',
-          'Multi-provider AI support (Claude, Gemini, OpenCode, Codex, LM Studio, Ollama)',
-          'Visual Flow Editor',
-          'Ticket & Kanban Management',
-          'MCP Tool Protocol',
-          'Git Worktree Integration',
+          'Vibe Kanban - Visual task management for AI coding agents',
+          'Vibe Coding Support - Orchestrate AI-driven development workflows',
+          'Parallel Agent Execution with Git Worktrees',
+          'Ralph Loop Compatible - Iterative AI development methodology',
+          'Multi-provider AI support (Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, Ollama)',
+          'Visual Flow Editor for Multi-Agent Workflows',
+          'MCP Tool Protocol Integration',
+          '100% Local & Private - No data collection',
+          'Cursor and Windsurf Alternative',
         ],
       },
       {
