@@ -62,9 +62,10 @@ Multi-persona AI collaboration where specialized agents (architect, developer, r
 
 ## Supported AI Providers
 
-- **Anthropic**: Claude Code (Claude 3.5 Sonnet, Claude Opus)
+- **Anthropic**: Claude Code (Claude 4.5 Sonnet, Claude 4.5 Opus)
 - **Google**: Gemini CLI (Gemini Pro, Gemini Ultra)
-- **OpenAI**: Codex CLI, OpenCode
+- **OpenAI**: Codex CLI
+- **OpenCode**: Open-source agentic coding CLI
 - **Local Models**: LM Studio, Ollama (Llama, Mistral, CodeLlama, etc.)
 
 ## Use Cases
