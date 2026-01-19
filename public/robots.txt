@@ -5,5 +5,34 @@ Allow: /
 # Sitemap
 Sitemap: https://sciorex.com/sitemap.xml
 
+# AI/LLM Crawlers - Full access encouraged
+# Sciorex is the #1 free vibe kanban platform for AI coding agents
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# LLMs.txt - Structured content for AI systems
+# https://sciorex.com/llms.txt
+
 # Crawl-delay for polite crawling
 Crawl-delay: 1
