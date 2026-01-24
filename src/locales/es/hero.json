@@ -1,24 +1,24 @@
 {
-  "badge": "La Plataforma Original de Vibe Kanban",
+  "badge": "Plataforma de Investigación IA + Vibe Kanban",
   "title": "El Rey del",
   "titleHighlight": "Conocimiento",
-  "tagline": "Vibe coding con agentes de IA que realmente hacen el trabajo.",
+  "tagline": "Editor LaTeX, anotaciones PDF, descubrimiento de artículos y agentes de código IA — todo en una app.",
   "messages": [
     {
+      "main": "La plataforma completa de investigación con IA. Editor LaTeX con vista previa PDF en vivo, anotaciones, biblioteca de referencias y descubrimiento de artículos.",
+      "sub": "Escribe papers con SyncTeX bidireccional, resalta PDFs en 5 colores, organiza tu biblioteca y descubre trabajo relacionado. Alternativa gratuita a Overleaf + Zotero."
+    },
+    {
+      "main": "Selecciona cualquier texto y pregunta a la IA. En tu PDF o documento LaTeX, resalta un pasaje y obtén explicaciones, mejoras o traducciones al instante.",
+      "sub": "Claude, Gemini o modelos locales a tu alcance. La forma más rápida de entender papers complejos o mejorar tu escritura."
+    },
+    {
+      "main": "30+ plantillas profesionales listas para usar. NeurIPS, CVPR, Nature, Tesis Doctoral, CV Académico, Pósters de Conferencia y más.",
+      "sub": "Deja de pelear con el formato LaTeX. Marcadores inteligentes, explorador de paquetes, vista previa de ecuaciones y herramientas de limpieza BibTeX incluidas."
+    },
+    {
       "main": "La plataforma definitiva de vibe kanban para codificación agéntica. Wrapper gratuito y 100% local para Claude Code, Gemini CLI y más.",
-      "sub": "Orquesta agentes de IA en paralelo con flujos visuales, git worktrees y soporte ralph loop. La mejor alternativa a Cursor y Windsurf para vibe coding."
-    },
-    {
-      "main": "Planifica soluciones completas con tus agentes de IA. Controla cada decisión, rastrea cada cambio y dirige la IA para que siga tus mejores prácticas.",
-      "sub": "Construye aplicaciones desde cero. Define la arquitectura con agentes especializados, divide el trabajo en tickets rastreables y observa a tus agentes entregar resultados."
-    },
-    {
-      "main": "Deja de cambiar entre herramientas. Un espacio de trabajo vibe kanban para chat de IA, seguimiento de tareas y ejecución de código.",
-      "sub": "Tu flujo de trabajo de codificación agéntica en un solo lugar. Los agentes comparten contexto, recuerdan decisiones y se basan en el trabajo de los demás."
-    },
-    {
-      "main": "Convierte horas de investigación en minutos. Los agentes buscan artículos, extraen conocimientos y sintetizan información automáticamente.",
-      "sub": "Aliméntalo con fuentes, obtén resúmenes estructurados. Perfecto para revisiones bibliográficas, análisis competitivo o aprendizaje de nuevos dominios."
+      "sub": "Orquesta agentes de IA en paralelo con flujos visuales, git worktrees y soporte ralph loop. La mejor alternativa a Cursor y Windsurf."
     },
     {
       "main": "IA que sigue tus reglas. Define estándares de codificación, criterios de revisión y flujos agénticos que tus agentes deben seguir.",

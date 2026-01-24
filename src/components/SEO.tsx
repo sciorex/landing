@@ -13,13 +13,13 @@ export default function SEO({ title, description, path = '' }: SEOProps) {
   const baseUrl = 'https://sciorex.com';
 
   const defaultTitles: Record<string, string> = {
-    en: 'Sciorex - Vibe Kanban for AI Coding Agents | Free & 100% Local',
-    es: 'Sciorex - Vibe Kanban para Agentes de Código IA | Gratis y 100% Local',
+    en: 'Sciorex - AI Research Platform & Vibe Kanban | LaTeX Editor, PDF Annotations | Free',
+    es: 'Sciorex - Plataforma de Investigación IA y Vibe Kanban | Editor LaTeX, Anotaciones PDF | Gratis',
   };
 
   const defaultDescriptions: Record<string, string> = {
-    en: 'Free vibe kanban platform for vibe coding. Orchestrate Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, and Ollama with visual workflows, parallel agents, git worktrees, and ralph loop support. 100% local, no data collection. Best Cursor and Windsurf alternative for agentic coding.',
-    es: 'Plataforma gratuita de vibe kanban para vibe coding. Orquesta Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio y Ollama con flujos visuales, agentes paralelos, git worktrees y soporte ralph loop. 100% local, sin recopilación de datos. La mejor alternativa a Cursor y Windsurf para codificación agéntica.',
+    en: 'Free AI-powered research platform with LaTeX editor, live PDF preview, annotations, reference library, and paper discovery. Plus vibe kanban for AI coding agents with Claude Code, Gemini CLI, parallel execution, and git worktrees. 100% local, no data collection.',
+    es: 'Plataforma de investigación con IA gratuita con editor LaTeX, vista previa PDF en vivo, anotaciones, biblioteca de referencias y descubrimiento de artículos. Además vibe kanban para agentes de código IA con Claude Code, Gemini CLI, ejecución paralela y git worktrees. 100% local, sin recopilación de datos.',
   };
 
   const pageTitle = title || defaultTitles[locale] || defaultTitles.en;
@@ -31,7 +31,7 @@ export default function SEO({ title, description, path = '' }: SEOProps) {
     document.title = pageTitle;
 
     updateMetaTag('description', pageDescription);
-    updateMetaTag('keywords', 'vibe kanban, vibe coding, vibe-kanban, vibe-coding, ralph loop, agentic coding, AI agent orchestration, Claude Code wrapper, Gemini CLI wrapper, OpenCode, Codex CLI, LM Studio, Ollama, multi-agent platform, MCP tools, parallel agents, git worktrees, Cursor alternative, Windsurf alternative, agentic IDE, agentic CLI, Agent OS, local AI, private AI, free AI tools');
+    updateMetaTag('keywords', 'LaTeX editor, PDF annotations, reference library, paper discovery, research platform, academic writing, SyncTeX, BibTeX, citation management, Zotero alternative, Mendeley alternative, Overleaf alternative, vibe kanban, vibe coding, AI agent orchestration, Claude Code, Gemini CLI, parallel agents, git worktrees, Cursor alternative, Windsurf alternative, free research tools, PhD tools, academic software');
     updateMetaTag('og:title', pageTitle, 'property');
     updateMetaTag('og:description', pageDescription, 'property');
     updateMetaTag('og:url', currentUrl, 'property');
@@ -133,7 +133,7 @@ function updateJsonLd(title: string, description: string, url: string, image: st
         '@id': 'https://sciorex.com/#software',
         name: 'Sciorex',
         alternateName: ['Sciorex Vibe Kanban', 'Sciorex AI Agent Orchestrator'],
-        description: 'Sciorex is the #1 free vibe kanban platform for AI coding agents. The original implementation of vibe kanban methodology, supporting Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, and Ollama with parallel agent execution via git worktrees.',
+        description: 'Sciorex is the #1 free AI-powered research platform and vibe kanban tool. Features LaTeX editor with live PDF preview and SyncTeX, PDF annotations, reference library, paper discovery, plus AI agent orchestration with Claude Code, Gemini CLI, and parallel execution via git worktrees.',
         url: url,
         image: image,
         applicationCategory: 'DeveloperApplication',
@@ -164,20 +164,20 @@ function updateJsonLd(title: string, description: string, url: string, image: st
           reviewCount: '1',
         },
         featureList: [
-          'Vibe Kanban - The original visual task management for AI coding agents',
-          'Vibe Coding Support - Purpose-built for AI-driven development workflows',
-          'Parallel Agent Execution - Run multiple AI agents simultaneously with git worktrees',
-          'Ralph Loop Compatible - Full support for iterative AI development methodology',
+          'LaTeX Editor - Live PDF preview with bidirectional SyncTeX navigation',
+          'PDF Annotations - Highlight, underline, margin notes with Markdown export',
+          'Reference Library - Save papers, organize with collections and tags, export to BibTeX',
+          'Paper Discovery - Find similar papers, explore citation networks',
+          'Select & Ask AI - Select any text and ask AI to explain, improve, or translate',
+          '30+ Professional Templates - NeurIPS, CVPR, Nature, PhD Thesis, Academic CV',
+          'Vibe Kanban - Visual task management for AI coding agents',
+          'Parallel Agent Execution - Run multiple AI agents with git worktrees',
           'Multi-CLI Support - Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, Ollama',
           'Visual Flow Editor - Node-based multi-agent workflow designer',
-          'Agentic File Review - Review and approve AI-generated code changes',
-          'Agent Council - Multi-persona AI collaboration',
-          'MCP Tool Protocol - Full Model Context Protocol integration',
           '100% Local & Private - Zero data collection, no telemetry',
           'Free Forever - No subscriptions, no premium tiers',
-          'No Vendor Lock-in - Switch AI providers anytime',
         ],
-        keywords: 'vibe kanban, vibe coding, ralph loop, agentic coding, AI agent orchestration, Claude Code wrapper, Gemini CLI wrapper, Cursor alternative, Windsurf alternative',
+        keywords: 'LaTeX editor, PDF annotations, reference library, research platform, Overleaf alternative, Zotero alternative, vibe kanban, AI agent orchestration, Claude Code, Gemini CLI, Cursor alternative, Windsurf alternative, academic writing, PhD tools',
         isAccessibleForFree: true,
         creator: {
           '@id': 'https://sciorex.com/#organization',

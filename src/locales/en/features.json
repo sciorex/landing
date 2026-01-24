@@ -3,6 +3,52 @@
   "showMore": "Show {{count}} more",
   "groups": [
     {
+      "id": "research",
+      "badge": "For Researchers",
+      "title": "Your Complete",
+      "titleHighlight": "Research Platform",
+      "subtitle": "PDF annotations, LaTeX editing with live preview, reference library, and AI-powered paper discovery — all in one app.",
+      "features": [
+        {
+          "icon": "FileText",
+          "color": "from-blue-500 to-indigo-500",
+          "title": "LaTeX Editor with Live PDF",
+          "description": "Write LaTeX with real-time PDF preview and bidirectional SyncTeX navigation. Click in editor → jump to PDF. Click in PDF → jump to source. Live equation rendering as you type."
+        },
+        {
+          "icon": "Highlighter",
+          "color": "from-yellow-500 to-amber-500",
+          "title": "PDF Annotations",
+          "description": "Highlight in 5 colors, add margin notes, underline text. Export all annotations as Markdown, JSON, or CSV. Your annotations persist and sync with your library."
+        },
+        {
+          "icon": "BookOpen",
+          "color": "from-emerald-500 to-teal-500",
+          "title": "Reference Library",
+          "description": "Save papers from any search. Organize with collections, folders, and tags. Track reading status. Export your entire library to BibTeX with one click."
+        },
+        {
+          "icon": "Search",
+          "color": "from-purple-500 to-pink-500",
+          "title": "Paper Discovery",
+          "description": "Find similar papers instantly. Explore citation networks — see who cites your sources and what they reference. Discover connections you'd never find manually."
+        },
+        {
+          "icon": "Sparkles",
+          "color": "from-violet-500 to-purple-500",
+          "title": "Select & Ask AI",
+          "description": "Select any text in your PDF or LaTeX document and ask AI to explain, improve, rewrite, or translate it. Start a focused chat about any passage instantly."
+        },
+        {
+          "icon": "LayoutTemplate",
+          "color": "from-rose-500 to-red-500",
+          "title": "30+ Professional Templates",
+          "description": "NeurIPS, CVPR, Nature, Springer, PhD Thesis, Academic CV, Conference Posters, and more. All with smart placeholders and proper formatting."
+        }
+      ],
+      "images": ["latex-editor.png", "pdf-annotations.png", "reference-library.png", "paper-discovery.png"]
+    },
+    {
       "id": "core",
       "badge": "Why Sciorex",
       "title": "Your AI,",

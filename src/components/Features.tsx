@@ -28,6 +28,11 @@ import {
   Bug,
   X,
   Maximize2,
+  FileText,
+  Highlighter,
+  BookOpen,
+  Search,
+  LayoutTemplate,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -55,6 +60,11 @@ const iconMap: Record<string, LucideIcon> = {
   Unlock,
   FileDiff,
   Bug,
+  FileText,
+  Highlighter,
+  BookOpen,
+  Search,
+  LayoutTemplate,
 };
 
 const containerVariants = {
