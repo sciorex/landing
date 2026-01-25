@@ -46,7 +46,7 @@
           "description": "NeurIPS, CVPR, Nature, Springer, PhD Thesis, Academic CV, Conference Posters, and more. All with smart placeholders and proper formatting."
         }
       ],
-      "images": ["latex-editor.png", "pdf-annotations.png", "reference-library.png", "paper-discovery.png"]
+      "images": ["latex-editor.png", "pdf-annotations.png", "export-annotations.png", "reference-library.png", "paper-discovery.png", "paper-discovery-citations.png"]
     },
     {
       "id": "core",

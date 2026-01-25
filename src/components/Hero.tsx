@@ -140,12 +140,27 @@ export default function Hero() {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-3xl blur-3xl" />
 
               {/* Main app screenshot */}
-              <div className="image-frame relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary-500/20">
                 <ThemeImage
                   name="hero-dashboard.png"
                   alt="Sciorex Dashboard"
-                  className="w-full aspect-[16/10] object-cover"
+                  className="w-full h-auto"
                 />
+                {/* Gradient fade overlay */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <div
+                    className="absolute inset-x-0 bottom-0 h-32"
+                    style={{ background: 'linear-gradient(to top, var(--bg-color), var(--bg-color) 20%, transparent)' }}
+                  />
+                  <div
+                    className="absolute inset-y-0 left-0 w-16"
+                    style={{ background: 'linear-gradient(to right, var(--bg-color), transparent)' }}
+                  />
+                  <div
+                    className="absolute inset-y-0 right-0 w-16"
+                    style={{ background: 'linear-gradient(to left, var(--bg-color), transparent)' }}
+                  />
+                </div>
               </div>
 
               {/* Floating cards - hidden on mobile */}

@@ -131,6 +131,12 @@ export default function Features() {
     'agent-run-view.png': 'Agent execution details',
     'worktree-view.png': 'Git worktree management',
     'worktree-view-2.png': 'Multiple worktrees view',
+    'latex-editor.png': 'LaTeX editor with live PDF preview',
+    'pdf-annotations.png': 'PDF highlighting and annotations',
+    'export-annotations.png': 'Export annotations to Markdown',
+    'reference-library.png': 'Reference library with collections',
+    'paper-discovery.png': 'AI-powered paper discovery',
+    'paper-discovery-citations.png': 'Citation network exploration',
   };
 
   const getImageDescription = (name: string) => imageDescriptions[name] || name.replace('.png', '').replace(/-/g, ' ');

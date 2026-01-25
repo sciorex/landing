@@ -46,7 +46,7 @@
           "description": "NeurIPS, CVPR, Nature, Springer, Tesis Doctoral, CV Académico, Pósters de Conferencia y más. Todas con marcadores inteligentes y formato apropiado."
         }
       ],
-      "images": ["latex-editor.png", "pdf-annotations.png", "reference-library.png", "paper-discovery.png"]
+      "images": ["latex-editor.png", "pdf-annotations.png", "export-annotations.png", "reference-library.png", "paper-discovery.png", "paper-discovery-citations.png"]
     },
     {
       "id": "core",
