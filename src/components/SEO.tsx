@@ -200,60 +200,6 @@ function updateJsonLd(title: string, description: string, url: string, image: st
         },
       },
       {
-        '@type': 'FAQPage',
-        '@id': 'https://sciorex.com/#faq',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: 'What is vibe kanban?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Vibe kanban is a workflow methodology where AI coding agents execute tasks in parallel while humans focus on planning, reviewing, and strategic oversight. Sciorex invented and is the original implementation of vibe kanban for software development.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Is Sciorex free?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes, Sciorex is completely free for personal and professional use. There are no subscriptions, no premium tiers, and no hidden costs. It is free forever.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Is Sciorex private and local?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes, Sciorex is 100% local and private. Your code and data never leave your machine. There is zero data collection, no telemetry, and no third-party APIs.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'What is the ralph loop?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'The ralph loop (Ralph Wiggum loop) is an iterative AI development technique where agents continuously work on tasks with progress persisting in git history rather than context windows. Sciorex fully supports this methodology.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'How is Sciorex different from Cursor or Windsurf?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Cursor and Windsurf are paid standalone IDEs ($15-20/month). Sciorex is a free wrapper that orchestrates your existing AI CLIs (Claude Code, Gemini CLI, etc.) with vibe kanban, parallel agents via git worktrees, and visual workflows. Sciorex is 100% local with no data collection.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'What AI CLIs does Sciorex support?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Sciorex supports Claude Code, Gemini CLI, OpenCode, Codex CLI, and local models via LM Studio and Ollama. You can use any AI provider and switch between them without losing your workflows.',
-            },
-          },
-        ],
-      },
-      {
         '@type': 'Product',
         '@id': 'https://sciorex.com/#product',
         name: 'Sciorex',
