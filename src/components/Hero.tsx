@@ -58,7 +58,7 @@ export default function Hero() {
             </h1>
 
             <div
-              className="h-[240px] sm:h-[220px]"
+              className="min-h-[200px]"
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
