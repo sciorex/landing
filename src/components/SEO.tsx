@@ -204,8 +204,10 @@ function updateJsonLd(title: string, description: string, url: string, image: st
         '@id': 'https://sciorex.com/#product',
         name: 'Sciorex',
         description: 'The #1 free vibe kanban platform for AI coding agents',
+        image: 'https://sciorex.com/og-image.png',
         brand: {
-          '@id': 'https://sciorex.com/#organization',
+          '@type': 'Brand',
+          name: 'Sciorex',
         },
         category: 'Software > Developer Tools > AI Development',
         offers: {
