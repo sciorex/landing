@@ -41,6 +41,8 @@ export default function SEO({ title, description, path = '' }: SEOProps) {
     updateMetaTag('og:image:width', '1200', 'property');
     updateMetaTag('og:image:height', '630', 'property');
     updateMetaTag('twitter:card', 'summary_large_image', 'name');
+    updateMetaTag('twitter:site', '@sciorex', 'name');
+    updateMetaTag('twitter:creator', '@sciorex', 'name');
     updateMetaTag('twitter:title', pageTitle, 'name');
     updateMetaTag('twitter:description', pageDescription, 'name');
     updateMetaTag('twitter:image', ogImage, 'name');
