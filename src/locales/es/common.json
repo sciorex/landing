@@ -38,8 +38,17 @@
       "noAccount": "Sin necesidad de cuenta",
       "localPrivate": "100% local y privado"
     },
+    "macNotice": {
+      "title": "Aviso de instalaci\u00f3n en macOS",
+      "description": "macOS puede mostrar \"La app est\u00e1 da\u00f1ada\" o \"desarrollador no identificado\" porque Sciorex a\u00fan no est\u00e1 firmada con un certificado de Apple Developer. Para solucionarlo, abre Terminal y ejecuta:",
+      "command": "xattr -cr /Applications/Sciorex.app",
+      "alternative": "O: Haz clic derecho en la app > Abrir > clic en \"Abrir\" en el di\u00e1logo.",
+      "sequoia": "En macOS Sequoia (15+): Intenta abrir la app primero, luego ve a Ajustes del Sistema > Privacidad y Seguridad y haz clic en \"Abrir igualmente\".",
+      "whyLink": "\u00bfPor qu\u00e9 macOS muestra esta advertencia?",
+      "whyUrl": "https://support.apple.com/en-us/102445"
+    },
     "requirements": "Compatible con Claude, Gemini, OpenCode, Codex, LM Studio y Ollama.",
-    "setupGuide": "Guía de Configuración"
+    "setupGuide": "Gu\u00eda de Configuraci\u00f3n"
   },
   "blog": {
     "badge": "Aprende y Explora",

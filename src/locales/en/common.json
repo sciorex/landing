@@ -38,6 +38,15 @@
       "noAccount": "No account required",
       "localPrivate": "100% local & private"
     },
+    "macNotice": {
+      "title": "macOS Installation Notice",
+      "description": "macOS may show \"App is damaged\" or \"unidentified developer\" because Sciorex is not yet signed with an Apple Developer certificate. To fix this, open Terminal and run:",
+      "command": "xattr -cr /Applications/Sciorex.app",
+      "alternative": "Or: Right-click the app > Open > click \"Open\" in the dialog.",
+      "sequoia": "On macOS Sequoia (15+): Try opening the app first, then go to System Settings > Privacy & Security and click \"Open Anyway\".",
+      "whyLink": "Why does macOS show this warning?",
+      "whyUrl": "https://support.apple.com/en-us/102445"
+    },
     "requirements": "Supports Claude, Gemini, OpenCode, Codex, LM Studio & Ollama.",
     "setupGuide": "Setup Guide"
   },
