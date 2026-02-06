@@ -170,16 +170,16 @@ export default function DownloadSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mb-12 rounded-xl border border-amber-500/20 bg-amber-500/5 p-5"
+          className="mb-12 rounded-xl border border-amber-600/30 dark:border-amber-500/20 bg-amber-50 dark:bg-amber-500/5 p-5"
         >
           <div className="flex gap-3">
             <div className="mt-0.5 flex-shrink-0">
-              <AlertTriangle className="w-5 h-5 text-amber-400" />
+              <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400" />
             </div>
             <div className="space-y-2 text-sm">
-              <p className="font-semibold text-amber-300">{t('download.macNotice.title')}</p>
+              <p className="font-semibold text-amber-800 dark:text-amber-300">{t('download.macNotice.title')}</p>
               <p className="text-muted">{t('download.macNotice.description')}</p>
-              <code className="block rounded-lg bg-black/30 px-4 py-2.5 text-xs text-amber-200 font-mono select-all">
+              <code className="block rounded-lg bg-amber-100 dark:bg-black/30 px-4 py-2.5 text-xs text-amber-900 dark:text-amber-200 font-mono select-all">
                 {t('download.macNotice.command')}
               </code>
               <p className="text-muted text-xs">{t('download.macNotice.alternative')}</p>
@@ -188,7 +188,7 @@ export default function DownloadSection() {
                 href={t('download.macNotice.whyUrl')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-amber-300 transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs text-amber-700 hover:text-amber-800 dark:text-amber-400 dark:hover:text-amber-300 transition-colors"
               >
                 {t('download.macNotice.whyLink')}
                 <ExternalLink className="w-3 h-3" />
