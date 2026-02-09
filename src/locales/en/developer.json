@@ -27,16 +27,19 @@
   "sectionA": {
     "section": "SECTION A",
     "title": "AI & DEVELOPMENT SUITE",
-    "subtitle": "Chat, Agents, Flows, Editor, Git, Kanban",
+    "subtitle": "Chat, Agents, Flows, Editor, Terminal, Git, Kanban",
     "aiChat": {
       "title": "AI CHAT SYSTEM",
       "specs": [
         { "label": "CLIs", "value": "Claude Code, Gemini CLI, Codex CLI, OpenCode, LM Studio, Ollama" },
-        { "label": "Mentions", "value": "@file, @library, @ticket, @epic context injection" },
+        { "label": "Mentions", "value": "9 types: @file, @directory, @ticket, @epic, @conversation, @flow, @execution, @command, @library" },
         { "label": "Modes", "value": "Chat, Agentic, Preview, Editor" },
         { "label": "Thinking", "value": "Think / Think Hard / Think Harder / Ultrathink" },
         { "label": "Queue", "value": "Message queue \u2014 compose while AI processes" },
-        { "label": "Fork", "value": "Session forking to explore alternatives" }
+        { "label": "Fork", "value": "Session forking to explore alternatives" },
+        { "label": "Search", "value": "Find in Chat (Ctrl+F) with match highlighting and navigation" },
+        { "label": "Tokens", "value": "Token counting with cost tracking, cache metrics, and tokens/sec" },
+        { "label": "Plan", "value": "Plan mode for structured implementation with step-by-step review" }
       ],
       "tabs": ["Chat", "Start", "Tool Use"]
     },
@@ -87,7 +90,9 @@
         { "label": "Nodes", "value": "Trigger, Agent, Condition, Wait, Parallel, Merge, Transform, Ticket Action, End" },
         { "label": "Debug", "value": "Breakpoints, step-through, I/O inspection" },
         { "label": "Source", "value": "User flows + community templates" },
-        { "label": "Trigger", "value": "Manual, scheduled, event-driven" }
+        { "label": "Trigger", "value": "Manual, cron schedule, ticket-created, ticket-updated" },
+        { "label": "Validation", "value": "Cycle detection, orphan nodes, reachability analysis" },
+        { "label": "Output", "value": "Schema validation with automatic retry on mismatch" }
       ],
       "tabs": ["Editor", "Debug", "Templates", "Quick Start"]
     },
@@ -104,13 +109,15 @@
     "editor": {
       "title": "INTEGRATED EDITOR",
       "specs": [
-        { "label": "Engine", "value": "Monaco-based with LSP support" },
-        { "label": "Features", "value": "Syntax, VIM mode, multi-tab, outline, Select & Ask AI" },
+        { "label": "Engine", "value": "Monaco editor with 50+ language syntax and 7+ LSP integrations (TS, Python, Rust, Go, C++, Lua, TeX)" },
+        { "label": "Features", "value": "VIM mode, 45+ shortcuts, 6 themes, Select & Ask AI, document outline" },
         { "label": "Files", "value": "Code, Markdown, LaTeX, Notebooks, PDF, Images, 3D molecules (.pdb/.mol/.sdf)" },
-        { "label": "Rich Text", "value": "TipTap-based editor with formatting toolbar and markdown conversion" },
-        { "label": "File Tree", "value": "Multi-select, drag-drop, process explorer" },
+        { "label": "Diagnostics", "value": "Problems panel with LSP diagnostics, severity filtering, click-to-navigate" },
+        { "label": "Search", "value": "File search and replace across entire workspace" },
+        { "label": "File Tree", "value": "Multi-select, drag-drop, git status badges, context menus" },
         { "label": "Preview", "value": "Playwright CDP sync + auto dev-server detection" },
-        { "label": "VS Code", "value": "Embedded VS Code Server \u2014 full VS Code experience with all your extensions" }
+        { "label": "VS Code", "value": "Embedded VS Code Server \u2014 full VS Code experience with all your extensions" },
+        { "label": "External", "value": "VS Code, Cursor, and Windsurf via bridge extension" }
       ],
       "tabs": ["Editor", "Preview"]
     },
@@ -120,7 +127,7 @@
         { "label": "Engine", "value": "Native Git integration (when Git is installed)" },
         { "label": "Views", "value": "Diff viewer, commit graph, branch manager, stash panel" },
         { "label": "Staging", "value": "Hunk-level partial staging, interactive change selection" },
-        { "label": "Worktree", "value": "Parallel branches with merge + conflict detection" },
+        { "label": "Worktree", "value": "Parallel branches with 3 merge strategies (merge, squash, rebase) + conflict detection" },
         { "label": "Scoped", "value": "Independent AI sessions per worktree" },
         { "label": "Backup", "value": "Git init any project, push to GitHub/GitLab \u2014 free cloud backup" }
       ],
@@ -141,8 +148,10 @@
       "specs": [
         { "label": "Views", "value": "Kanban, List, Epic" },
         { "label": "Tickets", "value": "Types, priorities, subtasks, blockers" },
-        { "label": "Linking", "value": "Files, branches, sessions, flows, papers" },
-        { "label": "AI", "value": "Auto-progress tracking via MCP" }
+        { "label": "Linking", "value": "9 resource types: files, dirs, branches, worktrees, URLs, sessions, flows, councils, library" },
+        { "label": "Bridge", "value": "Flow-ticket bridge: auto-trigger flows on ticket events" },
+        { "label": "AI", "value": "Auto-progress tracking via MCP" },
+        { "label": "Dashboard", "value": "Project Dashboard with stats cards and activity feed" }
       ],
       "tabs": ["Kanban", "Full Board", "List", "Ticket"]
     },
@@ -154,6 +163,16 @@
         { "label": "Detail", "value": "AI progress reports, checklists, blockers" }
       ],
       "tabs": ["Epics", "Detail"]
+    },
+    "terminal": {
+      "title": "COMMAND RUNNER & PROCESS",
+      "specs": [
+        { "label": "Runner", "value": "Launch commands directly: npm install, dev servers, build scripts, git operations" },
+        { "label": "Instances", "value": "Up to 20 concurrent processes with independent state and ANSI output" },
+        { "label": "History", "value": "Command history with favorites, search, and path-specific recall" },
+        { "label": "Processes", "value": "Process explorer with tree view, real-time CPU and memory tracking" },
+        { "label": "Detection", "value": "Auto-detect Ollama, LM Studio, dev servers, and local services" }
+      ]
     }
   },
   "sectionB": {
@@ -172,7 +191,7 @@
     "pdfAnnotations": {
       "title": "PDF ANNOTATIONS",
       "specs": [
-        { "label": "Tools", "value": "Highlight, notes, freeform drawing" },
+        { "label": "Tools", "value": "4 types: highlight, underline, strikeout, text notes" },
         { "label": "AI Tools", "value": "pdf_read, pdf_annotate, pdf_get_annotations" },
         { "label": "Export", "value": "Structured annotation export" },
         { "label": "Storage", "value": "100% local filesystem" }
@@ -184,8 +203,8 @@
       "specs": [
         { "label": "Sources", "value": "Semantic Scholar, arXiv, CrossRef" },
         { "label": "Items", "value": "43 types (articles, books, theses, datasets...)" },
-        { "label": "Citations", "value": "11 styles (APA, MLA, IEEE, Chicago, Nature...)" },
-        { "label": "Import", "value": "BibTeX, RIS, CSL-JSON, Zotero, Mendeley" }
+        { "label": "Citations", "value": "11 styles (APA, MLA, Chicago, Harvard, IEEE, Vancouver, AMA, ACS, ACM, Turabian, BibTeX)" },
+        { "label": "Import", "value": "BibTeX, RIS, CSL-JSON, Zotero RDF, EndNote XML" }
       ],
       "tabs": ["Search", "Citations", "Library"]
     }
@@ -193,7 +212,7 @@
   "sectionC": {
     "section": "SECTION C",
     "title": "MCP PROTOCOL \u2014 AI AUTONOMY LAYER",
-    "subtitle": "59 custom tools (and counting) across multiple servers exposed to all AI CLIs \u2014 plus custom MCP server support",
+    "subtitle": "59 custom tools across 6 servers exposed to all AI CLIs \u2014 plus custom MCP server support",
     "intro": "Sciorex exposes 59 custom tools to every connected CLI via the Model Context Protocol (MCP). Every subsystem\u2014PDFs, library, tickets, flows, agents, secrets\u2014is accessible to whichever CLI you use. This means Claude Code, Gemini CLI, or any other connected CLI can autonomously annotate a PDF, add it to your library, create a ticket to review its findings, and trigger a workflow to compile your LaTeX document\u2014all from a single natural language instruction. You can also add your own MCP servers (Playwright, database connectors, custom tools) and Sciorex will automatically expose them to all CLIs.",
     "blocks": [
       {
@@ -263,6 +282,13 @@
           "release_secret \u2014 Release granted secrets",
           "add_secret \u2014 Store with user confirmation"
         ]
+      },
+      {
+        "server": "Permissions Server",
+        "count": "1 tool",
+        "tools": [
+          "sciorex_request_permission \u2014 Runtime approval prompts for sensitive operations"
+        ]
       }
     ],
     "customMcp": "You can also add your own MCP servers (Playwright, database connectors, custom tools) and Sciorex will automatically expose them to all CLIs."
@@ -274,8 +300,8 @@
       { "label": "PRIVACY", "value": "100% LOCAL" },
       { "label": "PLATFORMS", "value": "Win / Mac / Linux" },
       { "label": "MCP TOOLS", "value": "59" },
-      { "label": "TEMPLATES", "value": "30+ LaTeX" },
-      { "label": "CITE STYLES", "value": "11" },
+      { "label": "LANGUAGES", "value": "50+" },
+      { "label": "SHORTCUTS", "value": "45+" },
       { "label": "AI CLIs", "value": "6" },
       { "label": "PRICE", "value": "FREE" }
     ]

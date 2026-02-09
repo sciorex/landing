@@ -4,10 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Import English translations
 import enCommon from '../locales/en/common.json';
-import enHero from '../locales/en/hero.json';
 import enFeatures from '../locales/en/features.json';
-import enPricing from '../locales/en/pricing.json';
-import enFooter from '../locales/en/footer.json';
 import enAbout from '../locales/en/about.json';
 import enContact from '../locales/en/contact.json';
 import enPrivacy from '../locales/en/privacy.json';
@@ -18,10 +15,7 @@ import enDeveloper from '../locales/en/developer.json';
 
 // Import Spanish translations
 import esCommon from '../locales/es/common.json';
-import esHero from '../locales/es/hero.json';
 import esFeatures from '../locales/es/features.json';
-import esPricing from '../locales/es/pricing.json';
-import esFooter from '../locales/es/footer.json';
 import esAbout from '../locales/es/about.json';
 import esContact from '../locales/es/contact.json';
 import esPrivacy from '../locales/es/privacy.json';
@@ -33,10 +27,7 @@ import esDeveloper from '../locales/es/developer.json';
 const resources = {
   en: {
     common: enCommon,
-    hero: enHero,
     features: enFeatures,
-    pricing: enPricing,
-    footer: enFooter,
     about: enAbout,
     contact: enContact,
     privacy: enPrivacy,
@@ -47,10 +38,7 @@ const resources = {
   },
   es: {
     common: esCommon,
-    hero: esHero,
     features: esFeatures,
-    pricing: esPricing,
-    footer: esFooter,
     about: esAbout,
     contact: esContact,
     privacy: esPrivacy,

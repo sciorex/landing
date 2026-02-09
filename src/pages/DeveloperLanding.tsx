@@ -710,6 +710,7 @@ export default function DeveloperLanding() {
     cliIntegrations: { specs: t('sectionA.cliIntegrations.specs', { returnObjects: true }) as { label: string; value: string }[] },
     taskManagement: { specs: t('sectionA.taskManagement.specs', { returnObjects: true }) as { label: string; value: string }[], tabs: t('sectionA.taskManagement.tabs', { returnObjects: true }) as string[] },
     epicManagement: { specs: t('sectionA.epicManagement.specs', { returnObjects: true }) as { label: string; value: string }[], tabs: t('sectionA.epicManagement.tabs', { returnObjects: true }) as string[] },
+    terminal: { specs: t('sectionA.terminal.specs', { returnObjects: true }) as { label: string; value: string }[] },
   };
 
   // SpecCard translations — Section B
@@ -1030,6 +1031,15 @@ export default function DeveloperLanding() {
               { src: 'browser-preview.png', tab: specA.editor.tabs[1] },
             ]}
             screenshotAlt="Integrated code editor"
+            bp={bp}
+            onImageClick={openLightbox}
+          />
+
+          {/* Terminal & Process */}
+          <SpecCard
+            title={t('sectionA.terminal.title')}
+            specs={specA.terminal.specs}
+            screenshotAlt="Terminal and process explorer"
             bp={bp}
             onImageClick={openLightbox}
           />

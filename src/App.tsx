@@ -5,10 +5,7 @@ import { useTranslation } from 'react-i18next';
 import ScrollHandler from './components/ScrollHandler';
 
 // Lazy-loaded route components for code splitting
-const Navbar = lazy(() => import('./components/Navbar'));
-const Footer = lazy(() => import('./components/Footer'));
 const ContentLayout = lazy(() => import('./components/ContentLayout'));
-const Home = lazy(() => import('./pages/Home'));
 const DarkroomEntry = lazy(() => import('./pages/DarkroomEntry'));
 const ResearcherLanding = lazy(() => import('./pages/ResearcherLanding'));
 const DeveloperLanding = lazy(() => import('./pages/DeveloperLanding'));
@@ -120,17 +117,6 @@ function LocaleWrapper({ children }: { children: ReactNode }) {
   return <>{children}</>;
 }
 
-// Layout with Navbar + Footer (for standard pages)
-function StandardLayout({ children }: { children: ReactNode }) {
-  return (
-    <>
-      <Navbar />
-      <main>{children}</main>
-      <Footer />
-    </>
-  );
-}
-
 function App() {
   return (
     <ErrorBoundary>
@@ -151,13 +137,6 @@ function App() {
                   {/* Audience-specific landings — own navigation */}
                   <Route path="/researcher" element={<ResearcherLanding />} />
                   <Route path="/developer" element={<DeveloperLanding />} />
-
-                  {/* Legacy home (kept for backward compat) */}
-                  <Route path="/home" element={
-                    <StandardLayout>
-                      <Home />
-                    </StandardLayout>
-                  } />
 
                   {/* Features page */}
                   <Route path="/features" element={

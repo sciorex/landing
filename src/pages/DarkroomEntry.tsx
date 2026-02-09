@@ -3,10 +3,10 @@ import { useNavigate, useLocation, useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import {
-  Sun, Moon, MessageSquare, Zap, LayoutDashboard,
-  FileText, Shield, Sparkles,
+  Sun, Moon, Bot, Zap, LayoutDashboard,
+  Puzzle, FileText, Shield,
   Download as DownloadIcon, Monitor, Terminal,
-  ChevronDown, ExternalLink, CheckCircle,
+  ChevronDown, ExternalLink, CheckCircle, ArrowRight,
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { DOWNLOAD_BASE_URL, DOCS_URL, config } from '../config/urls';
@@ -87,7 +87,7 @@ const PHASE = {
 // Features overview data
 // ---------------------------------------------------------------------------
 
-const FEATURE_ICONS = [MessageSquare, Zap, LayoutDashboard, FileText, Shield, Sparkles];
+const FEATURE_ICONS = [Bot, Zap, LayoutDashboard, Puzzle, FileText, Shield];
 
 // ---------------------------------------------------------------------------
 // SVG Icons (theme-aware)
@@ -827,7 +827,7 @@ export default function DarkroomEntry() {
           })}
         </div>
 
-        {/* See all features link */}
+        {/* See all features CTA */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -835,22 +835,49 @@ export default function DarkroomEntry() {
           transition={{ duration: 0.5, delay: 0.1 }}
           style={{ textAlign: 'center', marginBottom: 40 }}
         >
+          <p
+            style={{
+              fontFamily: "'Inter', system-ui, sans-serif",
+              fontSize: 13,
+              fontWeight: 400,
+              color: colors.subtitle,
+              opacity: 0.5,
+              letterSpacing: '0.06em',
+              textTransform: 'uppercase',
+              marginBottom: 16,
+            }}
+          >
+            {t('featuresHint')}
+          </p>
           <Link
             to={`/${safeLocale}/features`}
             style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 8,
+              padding: '10px 24px',
+              borderRadius: 10,
+              border: `1px solid ${colors.amber}40`,
+              background: `${colors.amber}0A`,
               fontFamily: "'Inter', system-ui, sans-serif",
               fontSize: 14,
-              fontWeight: 400,
+              fontWeight: 500,
               color: colors.amber,
               textDecoration: 'none',
               letterSpacing: '0.02em',
-              opacity: 0.75,
-              transition: 'opacity 0.3s ease',
+              transition: 'all 0.3s ease',
             }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '1'; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.75'; }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = `${colors.amber}80`;
+              (e.currentTarget as HTMLAnchorElement).style.background = `${colors.amber}14`;
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = `${colors.amber}40`;
+              (e.currentTarget as HTMLAnchorElement).style.background = `${colors.amber}0A`;
+            }}
           >
-            {t('viewAllFeatures')} &rarr;
+            {t('seeAllFeatures')}
+            <ArrowRight style={{ width: 16, height: 16 }} />
           </Link>
         </motion.div>
 
@@ -1117,14 +1144,14 @@ export default function DarkroomEntry() {
                       (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
                     }}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                      <DownloadIcon style={{ width: 14, height: 14, color: colors.amber }} />
-                      <div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, flex: 1, minWidth: 0 }}>
+                      <DownloadIcon style={{ width: 14, height: 14, color: colors.amber, flexShrink: 0 }} />
+                      <div style={{ minWidth: 0 }}>
                         <div style={{ fontSize: 13, fontWeight: 500, color: colors.title }}>{opt.name}</div>
                         <div style={{ fontSize: 11, color: colors.subtitle, opacity: 0.7 }}>{opt.desc}</div>
                       </div>
                     </div>
-                    <span style={{ fontSize: 10, color: colors.subtitle, opacity: 0.5, fontFamily: 'monospace' }}>
+                    <span title={opt.file} style={{ fontSize: 10, color: colors.subtitle, opacity: 0.5, fontFamily: 'monospace', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '40%', flexShrink: 1 }}>
                       {opt.file}
                     </span>
                   </a>

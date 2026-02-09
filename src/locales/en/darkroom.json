@@ -6,39 +6,41 @@
   "subtitle": "Where research meets code.",
   "featuresTitle": "Built for everyone",
   "featuresSubtitle": "One workspace for writing, research, coding, and automation \u2014 powered by AI, controlled by you.",
+  "featuresHint": "A glimpse of 155+ capabilities",
+  "seeAllFeatures": "See the full feature list",
   "features": [
     {
-      "title": "AI Chat",
-      "desc": "Talk to 6 AI models in parallel sessions. Fork conversations, debate ideas in council mode with custom personas, control reasoning depth."
+      "title": "Bring Your Own AI",
+      "desc": "Use Claude Code, Gemini CLI, Codex, OpenCode, or local models via Ollama and LM Studio. We're a free wrapper \u2014 you bring the AI, we provide the workspace."
     },
     {
       "title": "Visual Workflows",
-      "desc": "Design multi-step automations with a drag-and-drop flow builder. 9 node types, breakpoints, and live debugging."
+      "desc": "Design multi-agent pipelines with a drag-and-drop editor. 9 node types, conditional branching, parallel execution, debug mode, and event-driven triggers."
     },
     {
-      "title": "Task Management",
-      "desc": "Kanban boards, tickets, priorities, and epics. Assign tasks to AI agents, track progress across workspaces."
+      "title": "Vibe Kanban",
+      "desc": "Assign tickets to AI agents running in isolated git worktrees. Review every change in diff views, accept or reject individually. Your AI team, your rules."
     },
     {
-      "title": "Document Suite",
-      "desc": "Read and annotate PDFs, compile LaTeX with 30+ templates, manage a reference library with 11 citation styles, and view 3D molecules."
+      "title": "Deep AI Integration",
+      "desc": "Your AI doesn't just chat \u2014 it operates the app. Through custom MCP tools, any connected CLI can annotate PDFs, manage references, create tickets, and trigger workflows autonomously."
     },
     {
-      "title": "100% Private",
-      "desc": "Everything stays on your machine. No telemetry, no cloud sync, no analytics. Encrypted local vault for secrets."
+      "title": "Research & Writing",
+      "desc": "LaTeX editor with live PDF preview, PDF annotations, reference library with paper discovery across citation networks, and bibliography generation in 11 styles."
     },
     {
-      "title": "Free, No Limits",
-      "desc": "No subscriptions, no premium tiers, no feature gates. Every capability is yours from day one."
+      "title": "Private & Free",
+      "desc": "Everything stays on your machine. No telemetry, no cloud, no subscriptions. Encrypted vault for secrets. Every feature unlocked from day one."
     }
   ],
   "researcher": {
     "title": "Researcher",
-    "subtitle": "AI-powered writing, 30+ LaTeX templates, reference library, PDF annotation, paper discovery and 3D molecule viewer"
+    "subtitle": "Ask an AI council of experts. Write LaTeX with live preview. Discover papers through citation networks. Annotate, cite, and manage your entire bibliography"
   },
   "developer": {
     "title": "Developer",
-    "subtitle": "Parallel AI agents, vibe kanban, visual flow builder, VS Code integration, multi-CLI orchestration and 59 MCP tools"
+    "subtitle": "AI agents working in parallel on isolated git branches. Visual automation pipelines. Any CLI you want \u2014 Claude Code, Gemini, Codex, or local models"
   },
   "or": "or",
   "viewAllFeatures": "View all features",

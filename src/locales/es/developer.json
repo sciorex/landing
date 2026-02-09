@@ -27,16 +27,19 @@
   "sectionA": {
     "section": "SECCIÓN A",
     "title": "SUITE DE IA Y DESARROLLO",
-    "subtitle": "Chat, Agentes, Flujos, Editor, Git, Kanban",
+    "subtitle": "Chat, Agentes, Flujos, Editor, Terminal, Git, Kanban",
     "aiChat": {
       "title": "SISTEMA DE CHAT IA",
       "specs": [
         { "label": "CLIs", "value": "Claude Code, Gemini CLI, Codex CLI, OpenCode, LM Studio, Ollama" },
-        { "label": "Menciones", "value": "Inyección de contexto @archivo, @biblioteca, @ticket, @épica" },
+        { "label": "Menciones", "value": "9 tipos: @file, @directory, @ticket, @epic, @conversation, @flow, @execution, @command, @library" },
         { "label": "Modos", "value": "Chat, Agéntico, Vista previa, Editor" },
         { "label": "Razonamiento", "value": "Think / Think Hard / Think Harder / Ultrathink" },
         { "label": "Cola", "value": "Cola de mensajes — redacta mientras la IA procesa" },
-        { "label": "Bifurcación", "value": "Bifurcación de sesiones para explorar alternativas" }
+        { "label": "Bifurcación", "value": "Bifurcación de sesiones para explorar alternativas" },
+        { "label": "Buscar", "value": "Buscar en Chat (Ctrl+F) con resaltado de coincidencias y navegación" },
+        { "label": "Tokens", "value": "Conteo de tokens con seguimiento de costos, métricas de caché y tokens/seg" },
+        { "label": "Plan", "value": "Modo Plan para implementación estructurada con revisión paso a paso" }
       ],
       "tabs": ["Chat", "Inicio", "Uso de herramientas"]
     },
@@ -87,7 +90,9 @@
         { "label": "Nodos", "value": "Disparador, Agente, Condición, Espera, Paralelo, Fusión, Transformación, Acción de Ticket, Fin" },
         { "label": "Depuración", "value": "Puntos de interrupción, ejecución paso a paso, inspección de E/S" },
         { "label": "Origen", "value": "Flujos de usuario + plantillas de la comunidad" },
-        { "label": "Disparador", "value": "Manual, programado, basado en eventos" }
+        { "label": "Disparador", "value": "Manual, programación cron, ticket-creado, ticket-actualizado" },
+        { "label": "Validación", "value": "Detección de ciclos, nodos huérfanos, análisis de alcanzabilidad" },
+        { "label": "Salida", "value": "Validación de esquema con reintento automático ante discrepancias" }
       ],
       "tabs": ["Editor", "Depuración", "Plantillas", "Inicio rápido"]
     },
@@ -104,13 +109,15 @@
     "editor": {
       "title": "EDITOR INTEGRADO",
       "specs": [
-        { "label": "Motor", "value": "Basado en Monaco con soporte LSP" },
-        { "label": "Características", "value": "Sintaxis, modo VIM, múltiples pestañas, esquema, Seleccionar y Preguntar al AI" },
+        { "label": "Motor", "value": "Editor Monaco con sintaxis para 50+ lenguajes y 7+ integraciones LSP (TS, Python, Rust, Go, C++, Lua, TeX)" },
+        { "label": "Características", "value": "Modo VIM, 45+ atajos, 6 temas, Seleccionar y Preguntar al AI, esquema del documento" },
         { "label": "Archivos", "value": "Código, Markdown, LaTeX, Notebooks, PDF, Imágenes, Moléculas 3D (.pdb/.mol/.sdf)" },
-        { "label": "Texto enriquecido", "value": "Editor basado en TipTap con barra de formato y conversión a Markdown" },
-        { "label": "Árbol de archivos", "value": "Selección múltiple, arrastrar y soltar, explorador de procesos" },
+        { "label": "Diagnósticos", "value": "Panel de problemas con diagnósticos LSP, filtrado por severidad, clic para navegar" },
+        { "label": "Buscar", "value": "Buscar y reemplazar en archivos de todo el workspace" },
+        { "label": "Árbol de archivos", "value": "Selección múltiple, arrastrar y soltar, badges de estado git, menús contextuales" },
         { "label": "Vista previa", "value": "Sincronización Playwright CDP + detección automática de servidor de desarrollo" },
-        { "label": "VS Code", "value": "VS Code Server integrado — experiencia completa de VS Code con todas tus extensiones" }
+        { "label": "VS Code", "value": "VS Code Server integrado — experiencia completa de VS Code con todas tus extensiones" },
+        { "label": "Externo", "value": "VS Code, Cursor y Windsurf mediante extensión bridge" }
       ],
       "tabs": ["Editor", "Vista previa"]
     },
@@ -120,7 +127,7 @@
         { "label": "Motor", "value": "Integración nativa con Git (cuando Git está instalado)" },
         { "label": "Vistas", "value": "Visor de diferencias, grafo de commits, gestor de ramas, panel de stash" },
         { "label": "Staging", "value": "Staging parcial a nivel de bloque, selección interactiva de cambios" },
-        { "label": "Worktree", "value": "Ramas paralelas con fusión + detección de conflictos" },
+        { "label": "Worktree", "value": "Ramas paralelas con 3 estrategias de fusión (merge, squash, rebase) + detección de conflictos" },
         { "label": "Alcance", "value": "Sesiones de IA independientes por worktree" },
         { "label": "Respaldo", "value": "Git init en cualquier proyecto, push a GitHub/GitLab — respaldo en la nube gratuito" }
       ],
@@ -141,8 +148,10 @@
       "specs": [
         { "label": "Vistas", "value": "Kanban, Lista, Épica" },
         { "label": "Tickets", "value": "Tipos, prioridades, subtareas, bloqueantes" },
-        { "label": "Vinculación", "value": "Archivos, ramas, sesiones, flujos, artículos" },
-        { "label": "IA", "value": "Seguimiento de progreso automático vía MCP" }
+        { "label": "Vinculación", "value": "9 tipos de recurso: archivos, dirs, ramas, worktrees, URLs, sesiones, flujos, consejos, biblioteca" },
+        { "label": "Puente", "value": "Puente flujo-ticket: auto-disparar flujos en eventos de tickets" },
+        { "label": "IA", "value": "Seguimiento de progreso automático vía MCP" },
+        { "label": "Dashboard", "value": "Dashboard del Proyecto con tarjetas de estadísticas y feed de actividad" }
       ],
       "tabs": ["Kanban", "Tablero completo", "Lista", "Ticket"]
     },
@@ -154,6 +163,16 @@
         { "label": "Detalle", "value": "Informes de progreso IA, listas de verificación, bloqueantes" }
       ],
       "tabs": ["Épicas", "Detalle"]
+    },
+    "terminal": {
+      "title": "EJECUTOR DE COMANDOS Y PROCESOS",
+      "specs": [
+        { "label": "Ejecutor", "value": "Lanza comandos directamente: npm install, servidores de desarrollo, scripts de compilación, operaciones git" },
+        { "label": "Instancias", "value": "Hasta 20 procesos concurrentes con estado independiente y salida ANSI" },
+        { "label": "Historial", "value": "Historial de comandos con favoritos, búsqueda y recuperación por ruta" },
+        { "label": "Procesos", "value": "Explorador de procesos con vista de árbol, seguimiento de CPU y memoria en tiempo real" },
+        { "label": "Detección", "value": "Auto-detección de Ollama, LM Studio, servidores de desarrollo y servicios locales" }
+      ]
     }
   },
   "sectionB": {
@@ -172,7 +191,7 @@
     "pdfAnnotations": {
       "title": "ANOTACIONES PDF",
       "specs": [
-        { "label": "Herramientas", "value": "Resaltado, notas, dibujo libre" },
+        { "label": "Herramientas", "value": "4 tipos: resaltado, subrayado, tachado, notas de texto" },
         { "label": "Herramientas IA", "value": "pdf_read, pdf_annotate, pdf_get_annotations" },
         { "label": "Exportar", "value": "Exportación estructurada de anotaciones" },
         { "label": "Almacenamiento", "value": "100% sistema de archivos local" }
@@ -184,8 +203,8 @@
       "specs": [
         { "label": "Fuentes", "value": "Semantic Scholar, arXiv, CrossRef" },
         { "label": "Elementos", "value": "43 tipos (artículos, libros, tesis, conjuntos de datos...)" },
-        { "label": "Citas", "value": "11 estilos (APA, MLA, IEEE, Chicago, Nature...)" },
-        { "label": "Importar", "value": "BibTeX, RIS, CSL-JSON, Zotero, Mendeley" }
+        { "label": "Citas", "value": "11 estilos (APA, MLA, Chicago, Harvard, IEEE, Vancouver, AMA, ACS, ACM, Turabian, BibTeX)" },
+        { "label": "Importar", "value": "BibTeX, RIS, CSL-JSON, Zotero RDF, EndNote XML" }
       ],
       "tabs": ["Buscar", "Citas", "Biblioteca"]
     }
@@ -193,7 +212,7 @@
   "sectionC": {
     "section": "SECCIÓN C",
     "title": "PROTOCOLO MCP — CAPA DE AUTONOMÍA IA",
-    "subtitle": "59 herramientas personalizadas (y contando) en m\u00faltiples servidores expuestas a todos los CLIs de IA — además de soporte para servidores MCP propios",
+    "subtitle": "59 herramientas personalizadas en 6 servidores expuestas a todos los CLIs de IA — además de soporte para servidores MCP propios",
     "intro": "Sciorex expone 59 herramientas personalizadas a cada CLI conectado a través del Model Context Protocol (MCP). Cada subsistema—PDFs, biblioteca, tickets, flujos, agentes, secretos—es accesible desde cualquier CLI que utilices. Esto significa que Claude Code, Gemini CLI, o cualquier otro CLI conectado puede autónomamente anotar un PDF, añadirlo a tu biblioteca, crear un ticket para revisar sus hallazgos y disparar un flujo de trabajo para compilar tu documento LaTeX—todo desde una única instrucción en lenguaje natural. También puedes añadir tus propios servidores MCP (Playwright, conectores de base de datos, herramientas personalizadas) y Sciorex los expondrá automáticamente a todos los CLIs.",
     "blocks": [
       {
@@ -263,6 +282,13 @@
           "release_secret — Liberar secretos concedidos",
           "add_secret — Almacenar con confirmación del usuario"
         ]
+      },
+      {
+        "server": "Servidor de Permisos",
+        "count": "1 herramienta",
+        "tools": [
+          "sciorex_request_permission — Solicitudes de aprobación en tiempo de ejecución para operaciones sensibles"
+        ]
       }
     ],
     "customMcp": "También puedes añadir tus propios servidores MCP (Playwright, conectores de base de datos, herramientas personalizadas) y Sciorex los expondrá automáticamente a todos los CLIs."
@@ -274,8 +300,8 @@
       { "label": "PRIVACIDAD", "value": "100% LOCAL" },
       { "label": "PLATAFORMAS", "value": "Win / Mac / Linux" },
       { "label": "HERRAMIENTAS MCP", "value": "59" },
-      { "label": "PLANTILLAS", "value": "30+ LaTeX" },
-      { "label": "ESTILOS DE CITA", "value": "11" },
+      { "label": "LENGUAJES", "value": "50+" },
+      { "label": "ATAJOS", "value": "45+" },
       { "label": "CLIs DE IA", "value": "6" },
       { "label": "PRECIO", "value": "GRATIS" }
     ]

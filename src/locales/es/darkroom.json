@@ -5,40 +5,42 @@
   },
   "subtitle": "Donde la investigaci\u00f3n se encuentra con el c\u00f3digo.",
   "featuresTitle": "Dise\u00f1ado para todos",
-  "featuresSubtitle": "Un espacio de trabajo para escritura, investigaci\u00f3n, programaci\u00f3n y automatizaci\u00f3n \u2014 impulsado por AI, controlado por ti.",
+  "featuresSubtitle": "Un espacio de trabajo para escritura, investigaci\u00f3n, programaci\u00f3n y automatizaci\u00f3n \u2014 impulsado por IA, controlado por ti.",
+  "featuresHint": "Un vistazo a m\u00e1s de 155 funciones",
+  "seeAllFeatures": "Ver la lista completa de funciones",
   "features": [
     {
-      "title": "Chat AI",
-      "desc": "Habla con 6 modelos de AI en sesiones paralelas. Bifurca conversaciones, debate ideas en modo consejo con perfiles personalizados, controla la profundidad de razonamiento."
+      "title": "Trae tu propia IA",
+      "desc": "Usa Claude Code, Gemini CLI, Codex, OpenCode o modelos locales v\u00eda Ollama y LM Studio. Somos un wrapper gratuito \u2014 t\u00fa traes la IA, nosotros el espacio de trabajo."
     },
     {
       "title": "Flujos visuales",
-      "desc": "Dise\u00f1a automatizaciones de m\u00faltiples pasos con un constructor de flujos visual. 9 tipos de nodos, puntos de interrupci\u00f3n y depuraci\u00f3n en vivo."
+      "desc": "Dise\u00f1a pipelines multi-agente con un editor de arrastrar y soltar. 9 tipos de nodos, ramificaci\u00f3n condicional, ejecuci\u00f3n paralela, modo debug y disparadores por eventos."
     },
     {
-      "title": "Gesti\u00f3n de tareas",
-      "desc": "Tableros kanban, tickets, prioridades y epics. Asigna tareas a agentes AI, sigue el progreso en todos los espacios de trabajo."
+      "title": "Vibe Kanban",
+      "desc": "Asigna tickets a agentes IA ejecut\u00e1ndose en git worktrees aislados. Revisa cada cambio en vistas diff, acepta o rechaza individualmente. Tu equipo IA, tus reglas."
     },
     {
-      "title": "Suite de documentos",
-      "desc": "Lee y anota PDFs, compila LaTeX con m\u00e1s de 30 plantillas, gestiona una biblioteca de referencias con 11 estilos de citaci\u00f3n y visualiza mol\u00e9culas 3D."
+      "title": "Integraci\u00f3n profunda con IA",
+      "desc": "Tu IA no solo conversa \u2014 opera toda la app. A trav\u00e9s de herramientas MCP, cualquier CLI conectado puede anotar PDFs, gestionar referencias, crear tickets y disparar flujos aut\u00f3nomamente."
     },
     {
-      "title": "100% privado",
-      "desc": "Todo permanece en tu m\u00e1quina. Sin telemetr\u00eda, sin sincronizaci\u00f3n en la nube, sin anal\u00edtica. B\u00f3veda local cifrada para secretos."
+      "title": "Investigaci\u00f3n y escritura",
+      "desc": "Editor LaTeX con vista previa PDF en vivo, anotaciones PDF, biblioteca de referencias con descubrimiento de art\u00edculos en redes de citas, y generaci\u00f3n de bibliograf\u00eda en 11 estilos."
     },
     {
-      "title": "Gratis, sin l\u00edmites",
-      "desc": "Sin suscripciones, sin niveles premium, sin restricciones de funciones. Todas las capacidades son tuyas desde el primer d\u00eda."
+      "title": "Privado y gratuito",
+      "desc": "Todo permanece en tu m\u00e1quina. Sin telemetr\u00eda, sin nube, sin suscripciones. B\u00f3veda cifrada para secretos. Todas las funciones desbloqueadas desde el primer d\u00eda."
     }
   ],
   "researcher": {
     "title": "Investigador",
-    "subtitle": "Escritura impulsada por AI, m\u00e1s de 30 plantillas LaTeX, biblioteca de referencias, anotaci\u00f3n de PDF, descubrimiento de art\u00edculos y visor de mol\u00e9culas 3D"
+    "subtitle": "Consulta un consejo de expertos IA. Escribe LaTeX con vista previa en vivo. Descubre art\u00edculos en redes de citas. Anota, cita y gestiona toda tu bibliograf\u00eda"
   },
   "developer": {
     "title": "Desarrollador",
-    "subtitle": "Agentes AI en paralelo, vibe kanban, constructor de flujos visual, integraci\u00f3n con VS Code, orquestaci\u00f3n multi-CLI y 59 herramientas MCP"
+    "subtitle": "Agentes IA trabajando en paralelo en ramas git aisladas. Pipelines de automatizaci\u00f3n visuales. Cualquier CLI \u2014 Claude Code, Gemini, Codex o modelos locales"
   },
   "or": "o",
   "viewAllFeatures": "Ver todas las funciones",
