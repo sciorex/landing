@@ -11,7 +11,7 @@
   "features": [
     {
       "title": "Bring Your Own AI",
-      "desc": "Use Claude Code, Gemini CLI, Codex, OpenCode, or local models via Ollama and LM Studio. We're a free wrapper \u2014 you bring the AI, we provide the workspace."
+      "desc": "Use Claude Code, Gemini CLI, OpenAI Codex, OpenCode, or local models via Ollama and LM Studio. We're a free wrapper \u2014 you bring the AI, we provide the workspace."
     },
     {
       "title": "Visual Workflows",
@@ -40,7 +40,7 @@
   },
   "developer": {
     "title": "Developer",
-    "subtitle": "AI agents working in parallel on isolated git branches. Visual automation pipelines. Any CLI you want \u2014 Claude Code, Gemini, Codex, or local models"
+    "subtitle": "AI agents working in parallel on isolated git branches. Visual automation pipelines. Any CLI you want \u2014 Claude Code, Gemini, OpenAI Codex, or local models"
   },
   "or": "or",
   "viewAllFeatures": "View all features",

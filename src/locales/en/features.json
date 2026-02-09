@@ -11,9 +11,9 @@
         "icon": "MessageSquare",
         "title": "AI & Chat",
         "items": [
-          "6 AI CLIs: Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, Ollama",
+          "6 AI CLIs: Claude Code, Gemini CLI, OpenCode, OpenAI Codex, LM Studio, Ollama",
           "Council mode: multi-agent debate with turn management, pass detection, and YAML persona import/export",
-          "Extended thinking (5 levels Claude, 6 Codex, always-on Gemini) and 4 effort levels (Low to Maximum) for fine-tuning reasoning depth",
+          "Extended thinking (5 levels Claude, 6 OpenAI Codex, always-on Gemini) and 4 effort levels (Low to Maximum) for fine-tuning reasoning depth",
           "Session forking: branch from any message or continue from current point",
           "9 mention types: @file, @directory, @ticket, @epic, @conversation, @flow, @execution, @command, @library",
           "Token counting with cost tracking, cache metrics, and tokens/second speed",

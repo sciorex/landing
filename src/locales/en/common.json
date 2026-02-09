@@ -190,7 +190,7 @@
       },
       {
         "question": "What AI providers and CLIs does Sciorex support?",
-        "answer": "Sciorex supports all major agentic CLIs: Claude Code, Gemini CLI, OpenCode, Codex CLI, and local models via LM Studio and Ollama. Since we wrap these existing tools, you get access to any AI provider they support, including Anthropic, Google, OpenAI, and open-source models."
+        "answer": "Sciorex supports all major agentic CLIs: Claude Code, Gemini CLI, OpenCode, OpenAI Codex, and local models via LM Studio and Ollama. Since we wrap these existing tools, you get access to any AI provider they support, including Anthropic, Google, OpenAI, and open-source models."
       },
       {
         "question": "Where is my data stored? Is Sciorex private?",

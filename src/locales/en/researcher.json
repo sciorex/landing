@@ -55,7 +55,7 @@
     "discovery": {
       "title": "Literature Discovery",
       "number": "2.3",
-      "p1": "Finding relevant papers is one of the most time-consuming aspects of research. Sciorex integrates an AI-powered literature discovery engine that allows researchers to search across Semantic Scholar, arXiv, and CrossRef. Beyond keyword search, the system offers a citation network explorer that visualizes the relationship between papers, enabling researchers to trace intellectual lineage and discover foundational works through graph traversal. The AI library tools allow models to search for papers, add them to the library, and organize them into collections\u2014automating the literature survey process."
+      "p1": "Finding relevant papers is one of the most time-consuming aspects of research. Sciorex integrates an AI-powered literature discovery engine that allows researchers to search across 14 sources including Semantic Scholar, arXiv, CrossRef, PubMed, DBLP, OpenLibrary, Google Books, and Unpaywall. Beyond keyword search, the system offers a citation network explorer that visualizes the relationship between papers, enabling researchers to trace intellectual lineage and discover foundational works through graph traversal. The AI library tools allow models to search for papers, add them to the library, and organize them into collections\u2014automating the literature survey process."
     },
     "library": {
       "title": "Reference Library",
@@ -69,7 +69,7 @@
     "ai": {
       "title": "AI-Assisted Coding",
       "number": "3.1",
-      "p1": "Sciorex includes built-in AI assistants that let you converse with leading AI models\u2014Claude by Anthropic, Gemini by Google, GPT by OpenAI, or fully private local models that run on your own machine with no internet required. Under the hood, Sciorex orchestrates lightweight programs called AI CLIs (such as Claude Code, Gemini CLI, Codex CLI, OpenCode, LM Studio, and Ollama) that communicate directly with AI providers\u2014Sciorex never proxies or stores conversations on intermediate servers. What matters for the researcher is what the AI can do: it can annotate your PDFs, manage your reference library, compile your LaTeX documents, create and track tickets, and execute automation workflows\u2014all from a single conversation. The chat supports multiple modes: standard chat for general questions, an agentic mode where the AI can read, write, and edit files with the researcher reviewing each change, and a preview mode that opens a live browser panel. Extended Thinking levels (Think, Think Hard, Think Harder, Ultrathink) allow researchers to control the depth of AI reasoning for complex problems. A message queue system lets users continue composing follow-up instructions while the AI processes the current request, and context mentions (@file, @library, @ticket, @epic) inject relevant context directly into the conversation. Session forking allows branching a conversation at any point to explore alternative approaches without losing the original thread, and Select & Ask AI lets researchers highlight any text in the editor to instantly query the AI about it."
+      "p1": "Sciorex includes built-in AI assistants that let you converse with leading AI models\u2014Claude by Anthropic, Gemini by Google, GPT by OpenAI, or fully private local models that run on your own machine with no internet required. Under the hood, Sciorex orchestrates lightweight programs called AI CLIs (such as Claude Code, Gemini CLI, OpenAI Codex, OpenCode, LM Studio, and Ollama) that communicate directly with AI providers\u2014Sciorex never proxies or stores conversations on intermediate servers. What matters for the researcher is what the AI can do: it can annotate your PDFs, manage your reference library, compile your LaTeX documents, create and track tickets, and execute automation workflows\u2014all from a single conversation. The chat supports multiple modes: standard chat for general questions, an agentic mode where the AI can read, write, and edit files with the researcher reviewing each change, and a preview mode that opens a live browser panel. Extended Thinking levels (Think, Think Hard, Think Harder, Ultrathink) allow researchers to control the depth of AI reasoning for complex problems. A message queue system lets users continue composing follow-up instructions while the AI processes the current request, and context mentions (@file, @library, @ticket, @epic) inject relevant context directly into the conversation. Session forking allows branching a conversation at any point to explore alternative approaches without losing the original thread, and Select & Ask AI lets researchers highlight any text in the editor to instantly query the AI about it."
     },
     "council": {
       "title": "Council Mode",
@@ -255,7 +255,7 @@
       },
       {
         "q": "Can I use Sciorex completely offline?",
-        "a": "Yes. Install a local AI CLI like LM Studio or Ollama (both free), and Sciorex operates entirely offline with no internet connection required. Paper discovery (Semantic Scholar, arXiv, CrossRef) naturally requires internet, but all other features\u2014the editor, LaTeX compilation, PDF annotation, library management, ticket tracking, and workflows\u2014work fully offline."
+        "a": "Yes. Install a local AI CLI like LM Studio or Ollama (both free), and Sciorex operates entirely offline with no internet connection required. Paper discovery (Semantic Scholar, arXiv, CrossRef, PubMed, and other online sources) naturally requires internet, but all other features\u2014the editor, LaTeX compilation, PDF annotation, library management, ticket tracking, and workflows\u2014work fully offline."
       },
       {
         "q": "Where is my data stored? Is my research private?",
@@ -309,7 +309,7 @@
     "14": "An AI chat session demonstrating autonomous tool use: the model downloads a paper, extracts content via pdf_read, adds it to the library, and creates a summary\u2014all through MCP tool invocations visible in the conversation.",
     "15": "Project management views: the Kanban board with drag-and-drop status management, a populated board with tickets across all workflow stages, the list view with filtering and search, and a detailed ticket with description, subtasks, progress tracking, and linked resources.",
     "16": "Epics and ticket details: the Epics view with milestone progress tracking, and a detailed ticket showing AI-reported progress updates, acceptance criteria checklists, resource links, and blocker relationships.",
-    "17": "CLI integration settings showing support for Claude Code, Gemini CLI, OpenAI Codex CLI, OpenCode, LM Studio, and Ollama, each with independent model selection and permission configuration."
+    "17": "CLI integration settings showing support for Claude Code, Gemini CLI, OpenAI Codex, OpenCode, LM Studio, and Ollama, each with independent model selection and permission configuration."
   },
   "figureLabels": {
     "3": ["Annotation", "Export"],

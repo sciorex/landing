@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Sciorex para Desarrolladores — Orquestación de Agentes IA, Vibe Kanban y Herramientas MCP | Gratis",
-    "description": "Plataforma de desarrollo de grado ingenieril que integra CLIs de IA (Claude Code, Gemini CLI, Codex CLI, OpenCode, LM Studio, Ollama) con orquestación de agentes, flujos visuales, ejecución paralela vía git worktrees, 59 herramientas MCP personalizadas, VS Code Server integrado, marketplace de la comunidad, Modo Consejo con perfiles personalizados y vibe kanban. 100% local, gratis para siempre."
+    "description": "Plataforma de desarrollo de grado ingenieril que integra CLIs de IA (Claude Code, Gemini CLI, OpenAI Codex, OpenCode, LM Studio, Ollama) con orquestación de agentes, flujos visuales, ejecución paralela vía git worktrees, 59 herramientas MCP personalizadas, VS Code Server integrado, marketplace de la comunidad, Modo Consejo con perfiles personalizados y vibe kanban. 100% local, gratis para siempre."
   },
   "nav": {
     "back": "Volver a Sciorex",
@@ -31,7 +31,7 @@
     "aiChat": {
       "title": "SISTEMA DE CHAT IA",
       "specs": [
-        { "label": "CLIs", "value": "Claude Code, Gemini CLI, Codex CLI, OpenCode, LM Studio, Ollama" },
+        { "label": "CLIs", "value": "Claude Code, Gemini CLI, OpenAI Codex, OpenCode, LM Studio, Ollama" },
         { "label": "Menciones", "value": "9 tipos: @file, @directory, @ticket, @epic, @conversation, @flow, @execution, @command, @library" },
         { "label": "Modos", "value": "Chat, Agéntico, Vista previa, Editor" },
         { "label": "Razonamiento", "value": "Think / Think Hard / Think Harder / Ultrathink" },
@@ -137,7 +137,7 @@
       "title": "INTEGRACIONES CLI",
       "specs": [
         { "label": "Arquitectura", "value": "Sciorex envuelve CLIs de IA externos — instala el CLI, Sciorex lo orquesta" },
-        { "label": "Soportados", "value": "Claude Code, Gemini CLI, OpenAI Codex CLI, OpenCode" },
+        { "label": "Soportados", "value": "Claude Code, Gemini CLI, OpenAI Codex, OpenCode" },
         { "label": "Local", "value": "LM Studio, Ollama (modo completamente offline)" },
         { "label": "Protocolo", "value": "Puente MCP (59 herramientas personalizadas + soporte para servidores MCP propios)" },
         { "label": "Configuración", "value": "Configuración de modelo y permisos por CLI" }
@@ -201,7 +201,7 @@
     "paperDiscovery": {
       "title": "DESCUBRIMIENTO DE ARTÍCULOS Y BIBLIOTECA",
       "specs": [
-        { "label": "Fuentes", "value": "Semantic Scholar, arXiv, CrossRef" },
+        { "label": "Fuentes", "value": "14 — Semantic Scholar, CrossRef, arXiv, PubMed, DBLP, OpenLibrary, Google Books, Unpaywall y m\u00e1s" },
         { "label": "Elementos", "value": "43 tipos (artículos, libros, tesis, conjuntos de datos...)" },
         { "label": "Citas", "value": "11 estilos (APA, MLA, Chicago, Harvard, IEEE, Vancouver, AMA, ACS, ACM, Turabian, BibTeX)" },
         { "label": "Importar", "value": "BibTeX, RIS, CSL-JSON, Zotero RDF, EndNote XML" }
@@ -360,11 +360,11 @@
     },
     {
       "q": "¿Sciorex es realmente gratis?",
-      "a": "Sí. Completamente gratis para uso personal y profesional—sin suscripciones, sin niveles premium, sin restricciones de funciones. Sciorex es un envoltorio sobre CLIs de IA existentes (Claude Code, Gemini CLI, Codex CLI, OpenCode, LM Studio, Ollama). Instalas el CLI que quieras usar y Sciorex lo orquesta. Tus costos son lo que el CLI cobre—o cero con modelos completamente locales vía LM Studio/Ollama."
+      "a": "Sí. Completamente gratis para uso personal y profesional—sin suscripciones, sin niveles premium, sin restricciones de funciones. Sciorex es un envoltorio sobre CLIs de IA existentes (Claude Code, Gemini CLI, OpenAI Codex, OpenCode, LM Studio, Ollama). Instalas el CLI que quieras usar y Sciorex lo orquesta. Tus costos son lo que el CLI cobre—o cero con modelos completamente locales vía LM Studio/Ollama."
     },
     {
       "q": "¿En qué se diferencia Sciorex de Cursor o Windsurf?",
-      "a": "Cursor y Windsurf son editores de código mejorados con IA. Sciorex es una plataforma de desarrollo que envuelve tus CLIs de IA existentes y añade orquestación encima: flujos visuales (constructor de flujos con arrastrar y soltar con 9 tipos de nodos), ejecución paralela de agentes vía git worktrees, gestión de proyectos kanban, exposición de herramientas MCP (59 herramientas personalizadas disponibles para todos los CLIs más soporte para servidores MCP propios), Modo Consejo con perfiles personalizados para debate multi-LLM, un VS Code Server integrado para una experiencia IDE completa, un marketplace de la comunidad para compartir agentes/flujos/perfiles/plantillas, y una suite de investigación (LaTeX, PDF, biblioteca de referencias). Instalas el CLI que quieras (Claude Code, Gemini CLI, Codex CLI, etc.) y Sciorex se encarga del resto—100% control local."
+      "a": "Cursor y Windsurf son editores de código mejorados con IA. Sciorex es una plataforma de desarrollo que envuelve tus CLIs de IA existentes y añade orquestación encima: flujos visuales (constructor de flujos con arrastrar y soltar con 9 tipos de nodos), ejecución paralela de agentes vía git worktrees, gestión de proyectos kanban, exposición de herramientas MCP (59 herramientas personalizadas disponibles para todos los CLIs más soporte para servidores MCP propios), Modo Consejo con perfiles personalizados para debate multi-LLM, un VS Code Server integrado para una experiencia IDE completa, un marketplace de la comunidad para compartir agentes/flujos/perfiles/plantillas, y una suite de investigación (LaTeX, PDF, biblioteca de referencias). Instalas el CLI que quieras (Claude Code, Gemini CLI, OpenAI Codex, etc.) y Sciorex se encarga del resto—100% control local."
     },
     {
       "q": "¿Cómo funcionan los worktrees con agentes paralelos?",
@@ -372,7 +372,7 @@
     },
     {
       "q": "¿Qué es MCP y qué significa para mi flujo de trabajo?",
-      "a": "MCP (Model Context Protocol) es un estándar abierto que permite a los modelos de IA invocar herramientas estructuradas. Sciorex expone 59 herramientas personalizadas (y contando) en m\u00faltiples servidores: Investigación (16 herramientas para lectura/anotación de PDF, compilación LaTeX, gestión de biblioteca), Tickets (23 herramientas para CRUD de tickets, subtareas, épicas, bloqueantes, comentarios, vinculación de recursos), Recursos (11 herramientas para gestión de agentes y flujos), Interacciones (4 herramientas para comunicación con el usuario) y Secretos (4 herramientas para gestión de credenciales). Cada CLI que instales—Claude Code, Gemini CLI, Codex CLI, OpenCode—obtiene acceso automáticamente a todas las herramientas. También puedes añadir tus propios servidores MCP personalizados (Playwright, conectores de base de datos, etc.) y Sciorex los expone a todos los CLIs."
+      "a": "MCP (Model Context Protocol) es un estándar abierto que permite a los modelos de IA invocar herramientas estructuradas. Sciorex expone 59 herramientas personalizadas (y contando) en m\u00faltiples servidores: Investigación (16 herramientas para lectura/anotación de PDF, compilación LaTeX, gestión de biblioteca), Tickets (23 herramientas para CRUD de tickets, subtareas, épicas, bloqueantes, comentarios, vinculación de recursos), Recursos (11 herramientas para gestión de agentes y flujos), Interacciones (4 herramientas para comunicación con el usuario) y Secretos (4 herramientas para gestión de credenciales). Cada CLI que instales—Claude Code, Gemini CLI, OpenAI Codex, OpenCode—obtiene acceso automáticamente a todas las herramientas. También puedes añadir tus propios servidores MCP personalizados (Playwright, conectores de base de datos, etc.) y Sciorex los expone a todos los CLIs."
     },
     {
       "q": "¿Sciorex soporta la técnica del ralph loop?",
@@ -380,7 +380,7 @@
     },
     {
       "q": "¿Qué CLIs de IA están soportados?",
-      "a": "Sciorex envuelve 6 CLIs de IA: Claude Code (Opus 4.6, Sonnet 4.5, Haiku 4.5), Gemini CLI (Gemini 3 Flash, Pro), OpenAI Codex CLI (GPT-5.3 Codex), OpenCode, LM Studio y Ollama (Llama, Mistral, DeepSeek, Qwen, etc.). Instala cualquier CLI que quieras usar y Sciorex lo detecta e integra automáticamente. El Modo Consejo puede mezclar CLIs—ej., Claude Code debatiendo contra Gemini CLI debatiendo contra Codex—en rondas estructuradas con perfiles personalizados (importar/exportar YAML). Extended Thinking (Think / Think Hard / Think Harder / Ultrathink) controla la profundidad de razonamiento por mensaje."
+      "a": "Sciorex envuelve 6 CLIs de IA: Claude Code (Opus 4.6, Sonnet 4.5, Haiku 4.5), Gemini CLI (Gemini 3 Flash, Pro), OpenAI Codex (GPT-5.3), OpenCode, LM Studio y Ollama (Llama, Mistral, DeepSeek, Qwen, etc.). Instala cualquier CLI que quieras usar y Sciorex lo detecta e integra automáticamente. El Modo Consejo puede mezclar CLIs—ej., Claude Code debatiendo contra Gemini CLI debatiendo contra OpenAI Codex—en rondas estructuradas con perfiles personalizados (importar/exportar YAML). Extended Thinking (Think / Think Hard / Think Harder / Ultrathink) controla la profundidad de razonamiento por mensaje."
     },
     {
       "q": "¿Dónde se almacenan mis datos? ¿Es Sciorex privado?",
@@ -421,5 +421,134 @@
     "privacy": "Privacidad",
     "terms": "Términos",
     "returnToMain": "VOLVER AL INICIO"
+  },
+  "chapters": {
+    "ch0": {
+      "tagline": "Entorno de Desarrollo de Grado Ingenieril",
+      "body": "Una plataforma de desarrollo con IA donde los agentes trabajan en paralelo \u2014 cada uno en su propio git worktree, produciendo cero conflictos de fusi\u00f3n. Conecta seis CLIs de IA, previsualiza apps en vivo con Playwright CDP, dise\u00f1a flujos de automatizaci\u00f3n visualmente y revisa cada cambio generado por IA con un visor de diferencias multi-archivo. El modo Plan te permite controlar la profundidad de razonamiento desde Think hasta Ultrathink. Incluye un IDE completo con Monaco y VS Code Server, 11 tipos de paneles divididos para resultados en vivo junto a cada conversaci\u00f3n y hasta 20 procesos concurrentes. 100% local. Gratis para siempre.",
+      "stats": ["6 CLIs de IA", "Vibe Kanban", "Vista Previa en Vivo", "Modo Plan", "IDE Completo", "100% Local"],
+      "highlights": [
+        { "label": "Vibe Kanban", "desc": "Agentes IA en paralelo en git worktrees aislados \u2014 cero conflictos de fusi\u00f3n" },
+        { "label": "6 CLIs de IA", "desc": "Claude Code, Gemini CLI, OpenAI Codex, OpenCode, LM Studio, Ollama" },
+        { "label": "Vista Previa", "desc": "Playwright CDP, servidores dev auto-detectados, 11 tipos de paneles divididos" },
+        { "label": "Modo Plan", "desc": "Think / Think Hard / Think Harder / Ultrathink niveles de razonamiento" },
+        { "label": "Revisi\u00f3n Ag\u00e9ntica", "desc": "Visor de diferencias multi-archivo, en l\u00ednea + lado a lado, 3 niveles de permisos" },
+        { "label": "Flujos Visuales", "desc": "Automatizaci\u00f3n arrastrar y soltar, 9 tipos de nodos, disparadores, depuraci\u00f3n paso a paso" }
+      ]
+    },
+    "ch1": {
+      "title": "Sistema de Chat IA",
+      "body": "Conecta seis interfaces de l\u00ednea de comandos de IA a trav\u00e9s de una experiencia de chat unificada. Claude Code, Gemini CLI, OpenAI Codex, OpenCode, LM Studio y Ollama \u2014 todos orquestados desde un solo espacio de trabajo. Cada modo de chat abre un panel dividido dedicado: vista previa del navegador en vivo con auto-detecci\u00f3n de servidores, un revisor de diferencias multi-archivo o un editor de c\u00f3digo junto a la conversaci\u00f3n. Encola mensajes mientras la IA procesa, bifurca sesiones para explorar alternativas y adjunta im\u00e1genes para entrada multimodal.",
+      "specs": [
+        { "label": "Menciones", "value": "9 tipos \u2014 @file, @directory, @ticket, @epic, @conversation, @flow, @execution, @command, @library" },
+        { "label": "Modos", "value": "Chat, Ag\u00e9ntico, Vista previa, Editor" },
+        { "label": "Razonamiento", "value": "Think / Think Hard / Think Harder / Ultrathink" },
+        { "label": "Paneles", "value": "11 vistas divididas \u2014 navegador en vivo, PDF, Markdown, Excalidraw, mol\u00e9culas 3D, diff multi-archivo" },
+        { "label": "Entrada", "value": "Adjuntos de imagen, multimodal, comandos slash con autocompletado" },
+        { "label": "Pantalla", "value": "3 modos \u2014 Enfocado (solo asistente), Compacto (pareado), Extendido (debug completo)" },
+        { "label": "Funciones", "value": "Cola de mensajes, bifurcaci\u00f3n de sesiones, seguimiento de tokens, modo plan" }
+      ]
+    },
+    "ch2": {
+      "title": "Revisi\u00f3n de C\u00f3digo Ag\u00e9ntica",
+      "body": "Revisa y aprueba cambios de c\u00f3digo generados por IA antes de que toquen tu c\u00f3digo base. Un visor de diferencias multi-archivo con vistas en l\u00ednea y lado a lado te permite examinar cada modificaci\u00f3n. Tres niveles de permisos \u2014 YOLO, Auto y Preguntar \u2014 te dan control preciso sobre la autonom\u00eda del agente. Acepta cambios individuales, rechaza lo que no encaje, o aprueba en bloque cuando conf\u00edas en el resultado.",
+      "specs": [
+        { "label": "Vistas Diff", "value": "En l\u00ednea + lado a lado" },
+        { "label": "Acciones", "value": "Aceptar, rechazar, aprobar en bloque" },
+        { "label": "Seguridad", "value": "YOLO (auto completo), Auto (aprobaci\u00f3n inteligente), Preguntar (manual)" }
+      ]
+    },
+    "ch3": {
+      "title": "Agentes y Modo Consejo",
+      "body": "Crea agentes de IA personalizados con indicaciones de sistema, selecci\u00f3n de modelo, permisos de herramientas y ejecuci\u00f3n en sandbox. Comparte agentes a trav\u00e9s del marketplace de la comunidad \u2014 o instala agentes, flujos, perfiles y plantillas LaTeX creados por otros. El Modo Consejo habilita debates multi-CLI estructurados: enfrenta a Claude Code contra Gemini CLI en discusiones basadas en rondas con perfiles personalizados definidos en YAML.",
+      "specs": [
+        { "label": "Agentes", "value": "Prompts personalizados, marketplace, ejecuci\u00f3n en sandbox" },
+        { "label": "Consejo", "value": "Debate multi-CLI basado en rondas" },
+        { "label": "Perfiles", "value": "Indicaciones de sistema, temperatura, importar/exportar YAML" },
+        { "label": "Equipos", "value": "Colaboraci\u00f3n multi-agente con especializaci\u00f3n de roles" },
+        { "label": "Ejecuciones", "value": "Panel de agentes \u2014 monitoreo de estado, duraci\u00f3n, costos, repetici\u00f3n de conversaci\u00f3n" }
+      ]
+    },
+    "ch4": {
+      "title": "Motor de Flujos Visual",
+      "body": "Dise\u00f1a flujos de trabajo de IA con un editor visual de arrastrar y soltar. Nueve tipos de nodos \u2014 Disparador, Agente, Condici\u00f3n, Espera, Paralelo, Fusi\u00f3n, Transformaci\u00f3n, Acci\u00f3n de Ticket, Fin \u2014 cubren cada patr\u00f3n de automatizaci\u00f3n. Depura flujos con puntos de interrupci\u00f3n y ejecuci\u00f3n paso a paso. Inspecciona entradas y salidas en cada nodo. Dispara flujos manualmente, con programaci\u00f3n cron, o autom\u00e1ticamente cuando se crean o actualizan tickets.",
+      "specs": [
+        { "label": "Nodos", "value": "9 tipos con editor visual" },
+        { "label": "Depuraci\u00f3n", "value": "Puntos de interrupci\u00f3n, paso a paso, inspecci\u00f3n de E/S" },
+        { "label": "Disparadores", "value": "Manual, cron, ticket-creado, ticket-actualizado" },
+        { "label": "Validaci\u00f3n", "value": "Detecci\u00f3n de ciclos, nodos hu\u00e9rfanos, an\u00e1lisis de alcanzabilidad" },
+        { "label": "Salida", "value": "Validaci\u00f3n de esquema con reintento autom\u00e1tico" },
+        { "label": "Transformar", "value": "3 tipos \u2014 rutas jq, interpolaci\u00f3n de plantillas, JavaScript en sandbox" }
+      ]
+    },
+    "ch5": {
+      "title": "Monitor de Ejecuci\u00f3n",
+      "body": "Observa tus flujos de trabajo ejecutarse en tiempo real. Cada nodo se ilumina mientras se ejecuta, con visualizaci\u00f3n de estado en vivo mostrando exactamente d\u00f3nde est\u00e1 tu flujo. Paneles interactivos de errores y decisiones de bucle te permiten intervenir cuando es necesario. Registros de ejecuci\u00f3n por nodo y una traza de auditor\u00eda completa aseguran reproducibilidad total.",
+      "specs": [
+        { "label": "Vista", "value": "Estado de nodos en tiempo real" },
+        { "label": "Depuraci\u00f3n", "value": "Paneles interactivos de errores y bucles" },
+        { "label": "Registros", "value": "Salida de ejecuci\u00f3n por nodo" },
+        { "label": "Auditor\u00eda", "value": "Traza completa para reproducibilidad" }
+      ]
+    },
+    "ch6": {
+      "title": "Editor Integrado",
+      "body": "Un editor Monaco con resaltado de sintaxis para 50+ lenguajes y 7+ integraciones LSP \u2014 TypeScript, Python, Rust, Go, C++, Lua, TeX. Once tipos de paneles divididos \u2014 navegador en vivo, PDF, Markdown, Excalidraw, mol\u00e9culas 3D, diff multi-archivo y m\u00e1s \u2014 ponen resultados junto al chat. Modo VIM, 45+ atajos de teclado, 6 temas, diagramas Mermaid, ecuaciones KaTeX, reproducci\u00f3n de video/audio y un pizarr\u00f3n Excalidraw para bocetos.",
+      "specs": [
+        { "label": "Motor", "value": "Monaco + VS Code Server integrado" },
+        { "label": "Lenguajes", "value": "50+ sintaxis, 7+ LSP (TS, Python, Rust, Go, C++, Lua, TeX)" },
+        { "label": "Funciones", "value": "Modo VIM, 45+ atajos, 6 temas, panel de diagn\u00f3sticos" },
+        { "label": "Archivos", "value": "C\u00f3digo, Markdown, LaTeX, Notebooks, PDF, Im\u00e1genes, Mol\u00e9culas 3D" },
+        { "label": "Externo", "value": "VS Code, Cursor, Windsurf v\u00eda extensi\u00f3n bridge" },
+        { "label": "Media", "value": "Reproducci\u00f3n de video/audio, diagramas Mermaid, matem\u00e1ticas KaTeX, pizarr\u00f3n Excalidraw" },
+        { "label": "Personalizar", "value": "10 colores de acento, 5 paletas de gris, 4 preajustes de borde, 12 fuentes" }
+      ]
+    },
+    "ch7": {
+      "title": "Control de C\u00f3digo y Worktrees",
+      "body": "Integraci\u00f3n nativa con Git incluyendo visor de diferencias, grafo de commits, gestor de ramas, panel de stash y staging parcial a nivel de bloque. Crea worktrees paralelos \u2014 cada uno con su propio directorio de trabajo y sesi\u00f3n de IA independiente. Tres estrategias de fusi\u00f3n (merge, squash, rebase) con detecci\u00f3n de conflictos integrada. Push a GitHub o GitLab para respaldo gratuito en la nube.",
+      "specs": [
+        { "label": "Git", "value": "Visor de diferencias, grafo de commits, gestor de ramas, stash" },
+        { "label": "Staging", "value": "Staging parcial a nivel de bloque, selecci\u00f3n interactiva" },
+        { "label": "Worktrees", "value": "Ramas paralelas con sesiones de IA independientes" },
+        { "label": "Fusi\u00f3n", "value": "3 estrategias (merge, squash, rebase) + detecci\u00f3n de conflictos" },
+        { "label": "Respaldo", "value": "Git init en cualquier proyecto, push a GitHub/GitLab" }
+      ]
+    },
+    "ch8": {
+      "title": "Vibe Kanban y Gesti\u00f3n de Tareas",
+      "body": "Un tablero kanban donde los agentes de IA ejecutan tareas en paralelo \u2014 cada agente en su propio git worktree, produciendo cero conflictos de fusi\u00f3n. Los tickets soportan tipos, prioridades, subtareas, bloqueantes y 9 tipos de recursos vinculables (archivos, directorios, ramas, worktrees, URLs, sesiones, flujos, consejos, elementos de biblioteca). Agrupa tickets en \u00e9picas con seguimiento de progreso. El puente flujo-ticket auto-dispara flujos en eventos de tickets.",
+      "specs": [
+        { "label": "Vistas", "value": "Kanban, Lista, \u00c9pica" },
+        { "label": "Enlaces", "value": "9 tipos de recurso" },
+        { "label": "Puente", "value": "Auto-disparo flujo-ticket" },
+        { "label": "\u00c9picas", "value": "Progreso %, informes IA, listas de verificaci\u00f3n, bloqueantes" },
+        { "label": "Dashboard", "value": "Tarjetas de estad\u00edsticas y feed de actividad" },
+        { "label": "Revisi\u00f3n", "value": "Panel de diferencias multi-worktree, agrupaci\u00f3n de ediciones por bloques" }
+      ]
+    },
+    "ch9": {
+      "title": "Ejecutor de Comandos y Procesos",
+      "body": "Lanza comandos directamente desde la interfaz \u2014 npm install, servidores de desarrollo, scripts de compilaci\u00f3n, operaciones git. Ejecuta hasta 20 procesos concurrentes con estado independiente y salida ANSI. Un explorador de procesos muestra vistas de \u00e1rbol con seguimiento de CPU y memoria en tiempo real. Auto-detecta servicios en ejecuci\u00f3n como Ollama, LM Studio y servidores de desarrollo.",
+      "specs": [
+        { "label": "Ejecutor", "value": "Ejecuci\u00f3n directa de comandos" },
+        { "label": "Instancias", "value": "Hasta 20 procesos concurrentes" },
+        { "label": "Historial", "value": "Favoritos, b\u00fasqueda, recuperaci\u00f3n por ruta" },
+        { "label": "Procesos", "value": "Vista de \u00e1rbol, seguimiento CPU/memoria" },
+        { "label": "Detecci\u00f3n", "value": "Auto-detectar Ollama, LM Studio, servidores dev" }
+      ]
+    },
+    "ch10": {
+      "title": "59 Herramientas MCP",
+      "body": "Cada subsistema es accesible para cada CLI de IA conectado a trav\u00e9s del Model Context Protocol. Sciorex expone 59 herramientas personalizadas en 6 servidores. Claude Code, Gemini CLI, o cualquier CLI conectado puede aut\u00f3nomamente anotar un PDF, crear un ticket, disparar un flujo de trabajo y compilar un documento LaTeX \u2014 todo desde una \u00fanica instrucci\u00f3n en lenguaje natural. A\u00f1ade tus propios servidores MCP (Playwright, conectores de base de datos, herramientas personalizadas) y Sciorex los expone autom\u00e1ticamente a todos los CLIs."
+    },
+    "ch11": {
+      "title": "Suite de Investigaci\u00f3n",
+      "body": "Editor LaTeX con vista previa en vivo, navegaci\u00f3n SyncTeX y 30+ plantillas. Lector PDF con anotaciones. Descubrimiento de art\u00edculos en 14 fuentes \u2014 Semantic Scholar, CrossRef, arXiv, PubMed, DBLP, OpenLibrary, Google Books y Unpaywall. Biblioteca de referencias con 43 tipos de elementos compatibles con Zotero, 11 estilos de citaci\u00f3n y 5 formatos de importaci\u00f3n/exportaci\u00f3n.",
+      "briefSpecs": "Plantillas: 30+  |  Citas: 11 estilos  |  Elementos: 43 tipos  |  Fuentes: 14"
+    },
+    "ch12": {
+      "tagline": "Gratis. Local. Extensible. Para siempre."
+    }
   }
 }

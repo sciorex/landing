@@ -190,7 +190,7 @@
       },
       {
         "question": "¿Qué proveedores de IA y CLIs soporta Sciorex?",
-        "answer": "Sciorex soporta todos los CLIs agénticos principales: Claude Code, Gemini CLI, OpenCode, Codex CLI y modelos locales vía LM Studio y Ollama. Como envolvemos estas herramientas existentes, tienes acceso a cualquier proveedor de IA que soporten, incluyendo Anthropic, Google, OpenAI y modelos de código abierto."
+        "answer": "Sciorex soporta todos los CLIs agénticos principales: Claude Code, Gemini CLI, OpenCode, OpenAI Codex y modelos locales vía LM Studio y Ollama. Como envolvemos estas herramientas existentes, tienes acceso a cualquier proveedor de IA que soporten, incluyendo Anthropic, Google, OpenAI y modelos de código abierto."
       },
       {
         "question": "¿Dónde se almacenan mis datos? ¿Sciorex es privado?",

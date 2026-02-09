@@ -11,9 +11,9 @@
         "icon": "MessageSquare",
         "title": "IA y Chat",
         "items": [
-          "6 CLIs de IA: Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, Ollama",
+          "6 CLIs de IA: Claude Code, Gemini CLI, OpenCode, OpenAI Codex, LM Studio, Ollama",
           "Modo consejo: debate multi-agente con gestión de turnos, detección de pases e importación/exportación de perfiles YAML",
-          "Pensamiento extendido (5 niveles Claude, 6 Codex, siempre activo Gemini) y 4 niveles de esfuerzo (Bajo a Máximo) para ajustar la profundidad de razonamiento",
+          "Pensamiento extendido (5 niveles Claude, 6 OpenAI Codex, siempre activo Gemini) y 4 niveles de esfuerzo (Bajo a Máximo) para ajustar la profundidad de razonamiento",
           "Bifurcación de sesiones: ramifica desde cualquier mensaje o continúa desde el punto actual",
           "9 tipos de mención: @file, @directory, @ticket, @epic, @conversation, @flow, @execution, @command, @library",
           "Conteo de tokens con seguimiento de costos, métricas de caché y velocidad tokens/segundo",
