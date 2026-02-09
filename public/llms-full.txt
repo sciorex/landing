@@ -261,7 +261,7 @@ A: Yes. Students use Sciorex to organize notes, research topics, write papers wi
 - **Source Code**: https://gitlab.com/sciorex
 - **YouTube**: https://youtube.com/@SciorexApp
 - **Twitter/X**: https://x.com/sciorex
-- **Discord**: https://discord.gg/zSjPjA5j
+- **Discord**: https://discord.gg/3WTpHTdnGV
 - **Blog**: https://sciorex.com/en/blog
 
 ## Summary

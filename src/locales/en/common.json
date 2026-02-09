@@ -47,7 +47,7 @@
       "whyLink": "Why does macOS show this warning?",
       "whyUrl": "https://support.apple.com/en-us/102445"
     },
-    "requirements": "Supports Claude, Gemini, OpenCode, Codex, LM Studio & Ollama.",
+    "requirements": "Supports Claude, Gemini, OpenCode, OpenAI Codex, LM Studio & Ollama.",
     "setupGuide": "Setup Guide"
   },
   "blog": {

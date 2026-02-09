@@ -86,7 +86,7 @@ By submitting a contribution, you agree to the [Contributor License Agreement](h
 - **Documentation**: [docs.sciorex.com](https://docs.sciorex.com)
 - **Main Repo**: [gitlab.com/sciorex/sciorex](https://gitlab.com/sciorex/sciorex)
 - **Twitter**: [@sciorex](https://x.com/sciorex)
-- **Discord**: [discord.gg/zSjPjA5j](https://discord.gg/zSjPjA5j)
+- **Discord**: [discord.gg/3WTpHTdnGV](https://discord.gg/3WTpHTdnGV)
 
 ## License
 

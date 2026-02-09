@@ -47,7 +47,7 @@
       "whyLink": "\u00bfPor qu\u00e9 macOS muestra esta advertencia?",
       "whyUrl": "https://support.apple.com/en-us/102445"
     },
-    "requirements": "Compatible con Claude, Gemini, OpenCode, Codex, LM Studio y Ollama.",
+    "requirements": "Compatible con Claude, Gemini, OpenCode, OpenAI Codex, LM Studio y Ollama.",
     "setupGuide": "Gu\u00eda de Configuraci\u00f3n"
   },
   "blog": {

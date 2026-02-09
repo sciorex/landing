@@ -9,7 +9,8 @@ import {
   ChevronDown, ExternalLink, CheckCircle, ArrowRight,
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
-import { DOWNLOAD_BASE_URL, DOCS_URL, config } from '../config/urls';
+import { DOWNLOAD_BASE_URL, DOCS_URL, REPO_URL, DISCORD_URL, TWITTER_URL, config } from '../config/urls';
+import { useGitHubMigration } from '../context/GitHubMigrationContext';
 import { getVersionJsonUrl } from '@sciorex/shared-config';
 import SEO from '../components/SEO';
 
@@ -330,6 +331,7 @@ export default function DarkroomEntry() {
   const colors = getColors(theme);
   const { t, i18n } = useTranslation(['darkroom', 'common']);
   const location = useLocation();
+  const { openModal, isGitHubSciorexUrl } = useGitHubMigration();
   const features = t('darkroom:features', { returnObjects: true }) as Array<{ title: string; desc: string }>;
 
   const [mousePos, setMousePos] = useState({ x: -1000, y: -1000 });
@@ -398,7 +400,7 @@ export default function DarkroomEntry() {
         onMouseMove={handleMouseMove}
         className="relative select-none"
         style={{
-        width: '100vw',
+        width: '100%',
         overflowX: 'hidden',
         backgroundColor: colors.bg,
         fontFamily: "'Inter', system-ui, sans-serif",
@@ -1314,7 +1316,7 @@ export default function DarkroomEntry() {
 
       {/* ---------- Footer ---------- */}
       <footer
-        className="relative z-10 flex flex-wrap items-center justify-center gap-6 pb-6 pt-8"
+        className="relative z-10 flex flex-col items-center gap-4 pb-6 pt-8"
         style={{
           fontFamily: "'Inter', system-ui, sans-serif",
           fontSize: 12,
@@ -1322,19 +1324,53 @@ export default function DarkroomEntry() {
           letterSpacing: '0.02em',
         }}
       >
-        {[
-          { label: t('footer.blog'), to: `/${safeLocale}/blog` },
-          { label: t('footer.features'), to: `/${safeLocale}/features` },
-          { label: t('footer.docs'), to: `/${safeLocale}/docs`, external: true },
-          { label: t('footer.contact'), to: `/${safeLocale}/contact` },
-          { label: t('footer.about'), to: `/${safeLocale}/about` },
-          { label: t('footer.privacy'), to: `/${safeLocale}/privacy` },
-          { label: t('footer.terms'), to: `/${safeLocale}/terms` },
-        ].map((link) => (
-          'external' in link ? (
+        {/* Social links */}
+        <div className="flex flex-wrap justify-center gap-6">
+          {isGitHubSciorexUrl(REPO_URL) ? (
+            <button
+              onClick={() => openModal(REPO_URL)}
+              style={{
+                color: colors.subtitle,
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                fontFamily: "'Inter', system-ui, sans-serif",
+                fontSize: 12,
+                letterSpacing: '0.02em',
+                opacity: 0.45,
+                transition: 'opacity 0.3s ease',
+                padding: 0,
+              }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.opacity = '0.85'; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.opacity = '0.45'; }}
+            >
+              {t('footer.github')}
+            </button>
+          ) : (
+            <a
+              href={REPO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: colors.subtitle,
+                textDecoration: 'none',
+                opacity: 0.45,
+                transition: 'opacity 0.3s ease',
+              }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.85'; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.45'; }}
+            >
+              {t('footer.github')}
+            </a>
+          )}
+          {[
+            { label: t('footer.discord'), href: DISCORD_URL },
+            { label: t('footer.twitter'), href: TWITTER_URL },
+            { label: t('footer.youtube'), href: 'https://www.youtube.com/@SciorexApp' },
+          ].map((link) => (
             <a
               key={link.label}
-              href={DOCS_URL}
+              href={link.href}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -1348,23 +1384,55 @@ export default function DarkroomEntry() {
             >
               {link.label}
             </a>
-          ) : (
-            <Link
-              key={link.label}
-              to={link.to}
-              style={{
-                color: colors.subtitle,
-                textDecoration: 'none',
-                opacity: 0.45,
-                transition: 'opacity 0.3s ease',
-              }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.85'; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.45'; }}
-            >
-              {link.label}
-            </Link>
-          )
-        ))}
+          ))}
+        </div>
+
+        {/* Page links */}
+        <div className="flex flex-wrap justify-center gap-6">
+          {[
+            { label: t('footer.blog'), to: `/${safeLocale}/blog` },
+            { label: t('footer.features'), to: `/${safeLocale}/features` },
+            { label: t('footer.docs'), to: `/${safeLocale}/docs`, external: true },
+            { label: t('footer.contact'), to: `/${safeLocale}/contact` },
+            { label: t('footer.about'), to: `/${safeLocale}/about` },
+            { label: t('footer.privacy'), to: `/${safeLocale}/privacy` },
+            { label: t('footer.terms'), to: `/${safeLocale}/terms` },
+          ].map((link) => (
+            'external' in link ? (
+              <a
+                key={link.label}
+                href={DOCS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: colors.subtitle,
+                  textDecoration: 'none',
+                  opacity: 0.45,
+                  transition: 'opacity 0.3s ease',
+                }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.85'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.45'; }}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.label}
+                to={link.to}
+                style={{
+                  color: colors.subtitle,
+                  textDecoration: 'none',
+                  opacity: 0.45,
+                  transition: 'opacity 0.3s ease',
+                }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.85'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.45'; }}
+              >
+                {link.label}
+              </Link>
+            )
+          ))}
+        </div>
       </footer>
     </div>
     </>

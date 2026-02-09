@@ -49,6 +49,10 @@
   "exploreResearchers": "Explore for Researchers",
   "exploreDevelopers": "Explore for Developers",
   "footer": {
+    "github": "GitLab",
+    "discord": "Discord",
+    "twitter": "Twitter",
+    "youtube": "YouTube",
     "blog": "Blog",
     "docs": "Docs",
     "contact": "Contact",

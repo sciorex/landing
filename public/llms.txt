@@ -60,7 +60,7 @@
 - [Website](https://sciorex.com)
 - [Documentation](https://docs.sciorex.com)
 - [Source Code](https://gitlab.com/sciorex)
-- [Discord Community](https://discord.gg/zSjPjA5j)
+- [Discord Community](https://discord.gg/3WTpHTdnGV)
 - [Twitter / X](https://x.com/sciorex)
 - [YouTube](https://youtube.com/@SciorexApp)
 - [All Features](https://sciorex.com/en/features)
