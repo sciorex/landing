@@ -1,0 +1,65 @@
+{
+  "seo": {
+    "title": "Sciorex - AI Research Platform & Vibe Kanban | LaTeX Editor, PDF Annotations | Free",
+    "description": "Free AI-powered research platform with LaTeX editor, live PDF preview, PDF annotations, reference library, paper discovery, and vibe kanban for AI coding agents. 100% local, no data collection."
+  },
+  "subtitle": "Where research meets code.",
+  "featuresTitle": "Built for everyone",
+  "featuresSubtitle": "One workspace for writing, research, coding, and automation \u2014 powered by AI, controlled by you.",
+  "features": [
+    {
+      "title": "AI Chat",
+      "desc": "Talk to 6 AI models in parallel sessions. Fork conversations, debate ideas in council mode with custom personas, control reasoning depth."
+    },
+    {
+      "title": "Visual Workflows",
+      "desc": "Design multi-step automations with a drag-and-drop flow builder. 9 node types, breakpoints, and live debugging."
+    },
+    {
+      "title": "Task Management",
+      "desc": "Kanban boards, tickets, priorities, and epics. Assign tasks to AI agents, track progress across workspaces."
+    },
+    {
+      "title": "Document Suite",
+      "desc": "Read and annotate PDFs, compile LaTeX with 30+ templates, manage a reference library with 11 citation styles, and view 3D molecules."
+    },
+    {
+      "title": "100% Private",
+      "desc": "Everything stays on your machine. No telemetry, no cloud sync, no analytics. Encrypted local vault for secrets."
+    },
+    {
+      "title": "Free, No Limits",
+      "desc": "No subscriptions, no premium tiers, no feature gates. Every capability is yours from day one."
+    }
+  ],
+  "researcher": {
+    "title": "Researcher",
+    "subtitle": "AI-powered writing, 30+ LaTeX templates, reference library, PDF annotation, paper discovery and 3D molecule viewer"
+  },
+  "developer": {
+    "title": "Developer",
+    "subtitle": "Parallel AI agents, vibe kanban, visual flow builder, VS Code integration, multi-CLI orchestration and 59 MCP tools"
+  },
+  "or": "or",
+  "viewAllFeatures": "View all features",
+  "chooseYourPath": "choose your path",
+  "diveDeeper": "Dive deeper into what matters to you",
+  "exploreResearchers": "Explore for Researchers",
+  "exploreDevelopers": "Explore for Developers",
+  "footer": {
+    "blog": "Blog",
+    "docs": "Docs",
+    "contact": "Contact",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "features": "Features"
+  },
+  "themeToggle": "Toggle theme",
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "goHome": "Go home",
+    "readBlog": "Read the blog"
+  }
+}

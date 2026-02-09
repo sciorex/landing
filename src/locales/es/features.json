@@ -1,37 +1,288 @@
 {
   "showLess": "Mostrar menos",
-  "showMore": "Ver {{count}} más",
+  "showMore": "Ver {{count}} m\u00e1s",
+  "page": {
+    "seo": {
+      "title": "Todas las funciones - Sciorex",
+      "description": "Lista completa de funciones de Sciorex: 6 CLIs de IA, modo consejo, editor visual de flujos con 9 tipos de nodos, vibe kanban, editor LaTeX con proyectos multi-archivo, anotaciones PDF, biblioteca con 43 tipos, descubrimiento de art\u00edculos, 59 herramientas MCP, 45+ atajos, arrastrar y soltar, chat con texto enriquecido, grafo git, paneles divididos, 20 terminales concurrentes y m\u00e1s."
+    },
+    "title": "Todas las funciones",
+    "subtitle": "Todo lo que Sciorex ofrece \u2014 organizado por capacidad.",
+    "sections": [
+      {
+        "icon": "MessageSquare",
+        "title": "IA y Chat",
+        "items": [
+          "6 CLIs de IA: Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, Ollama",
+          "Modo consejo: debate multi-agente con gesti\u00f3n de turnos, detecci\u00f3n de pases e importaci\u00f3n/exportaci\u00f3n de perfiles YAML",
+          "Pensamiento extendido (5 niveles Claude, 6 Codex, siempre activo Gemini) y 4 niveles de esfuerzo (Bajo a M\u00e1ximo) para ajustar la profundidad de razonamiento",
+          "Bifurcaci\u00f3n de sesiones: ramifica desde cualquier mensaje o contin\u00faa desde el punto actual",
+          "9 tipos de menci\u00f3n: @file, @directory, @ticket, @epic, @conversation, @flow, @execution, @command, @library",
+          "Conteo de tokens con seguimiento de costos, m\u00e9tricas de cach\u00e9 y velocidad tokens/segundo",
+          "Adjuntos de im\u00e1genes y entrada multimodal para proveedores compatibles",
+          "Lanzamiento de subagentes para tareas en segundo plano y coordinaci\u00f3n de equipos",
+          "Modos de permisos: estricto, est\u00e1ndar y libre para aprobaci\u00f3n de herramientas",
+          "Modo plan para planificaci\u00f3n estructurada de implementaci\u00f3n con revisi\u00f3n",
+          "4 modos de chat: Ag\u00e9ntico (revisar ediciones), Normal (aplicar autom\u00e1ticamente), Vista previa (navegador en vivo), Editor (panel de c\u00f3digo)",
+          "3 modos de visualizaci\u00f3n: Enfoque (solo asistente), Compacto (llamadas de herramientas emparejadas), Extendido (debug completo)",
+          "Equipos de Agentes: colaboraci\u00f3n multi-agente con roles especializados trabajando juntos",
+          "Endpoints de API compatibles con Claude de terceros para proveedores alternativos",
+          "Comandos slash con autocompletado para agentes, flujos y comandos espec\u00edficos de CLI",
+          "Gesti\u00f3n de sesiones: etiquetas de color personalizadas, agrupaci\u00f3n, filtrado y archivado con vinculaci\u00f3n a tickets/\u00e9picas",
+          "Buscar en Chat (Ctrl+F) con resaltado de coincidencias y navegaci\u00f3n entre preguntas",
+          "Prompts de sistema personalizados por proveedor de IA con modos a\u00f1adir/reemplazar y plantillas reutilizables",
+          "Selecci\u00f3n de modelo y proveedor por agente, permisos de herramientas con coincidencia de patrones y validaci\u00f3n de esquemas I/O",
+          "Panel de ejecuciones de agentes: monitorea sesiones activas y completadas con estado, duraci\u00f3n, costos y reproducci\u00f3n de conversaci\u00f3n",
+          "Adem\u00e1s incluye: cola de mensajes para seguimiento, atajos de env\u00edo configurables, entrada con texto enriquecido y markdown, detener generaci\u00f3n y reintentar"
+        ]
+      },
+      {
+        "icon": "Workflow",
+        "title": "Flujos visuales",
+        "items": [
+          "Editor de flujos con arrastrar y soltar y 9 tipos de nodos: Agente, Disparador, Condici\u00f3n, Espera, Paralelo, Uni\u00f3n, Transformaci\u00f3n, Acci\u00f3n de Ticket, Fin",
+          "4 tipos de disparadores: manual con esquemas de entrada, ticket-creado, ticket-actualizado, cron programado",
+          "Modo debug con ejecuci\u00f3n paso a paso, breakpoints, modificaci\u00f3n de entrada/salida y replay temporal",
+          "3 tipos de transformaci\u00f3n: expresiones jq, interpolaci\u00f3n de plantillas, JavaScript en sandbox",
+          "3 estrategias de uni\u00f3n: esperar a todos, cualquiera o la primera rama en completar",
+          "Nodos de espera para aprobaci\u00f3n humana, entrada estructurada o tiempo l\u00edmite",
+          "Variables de flujo accesibles en todos los nodos v\u00eda rutas de contexto",
+          "Integraci\u00f3n con worktrees: crea git worktrees aislados por nodo de agente",
+          "Reanudaci\u00f3n de sesi\u00f3n y reutilizaci\u00f3n entre iteraciones de bucle",
+          "9 plantillas de flujos predefinidas para patrones comunes",
+          "Marketplace de flujos comunitarios con instalaci\u00f3n y versionado",
+          "Validaci\u00f3n de flujos: detecci\u00f3n de ciclos, nodos hu\u00e9rfanos, an\u00e1lisis de alcanzabilidad",
+          "Validaci\u00f3n de esquema de salida con reintento autom\u00e1tico en desajuste",
+          "Historial de ejecuci\u00f3n de flujos con seguimiento por nodo, marcas de tiempo y detalles de errores",
+          "Adem\u00e1s incluye: auto-layout (4 modos), enrutamiento de aristas con waypoints, deshacer/rehacer con 50 instant\u00e1neas, duplicaci\u00f3n de flujos con copia profunda"
+        ]
+      },
+      {
+        "icon": "LayoutDashboard",
+        "title": "Vibe Kanban",
+        "items": [
+          "Tableros kanban con transiciones de estado arrastrables",
+          "3 vistas de tablero: Kanban, lista ordenable y resumen de \u00e9picas",
+          "Ejecuci\u00f3n paralela de agentes IA v\u00eda git worktrees aislados",
+          "Panel multi-worktree con res\u00famenes de diff por agente",
+          "Revisi\u00f3n ag\u00e9ntica: acepta, rechaza o modifica cada cambio individualmente",
+          "Agrupaci\u00f3n de ediciones por bloques con detecci\u00f3n de conflictos y seguridad de reversi\u00f3n",
+          "6 estados de tickets con reglas de transici\u00f3n v\u00e1lidas: backlog, planificado, en progreso, en revisi\u00f3n, completado, cancelado",
+          "4 niveles de prioridad: cr\u00edtica, alta, media, baja",
+          "6 tipos de tickets: funcionalidad, bug, tarea, investigaci\u00f3n, documentaci\u00f3n, refactorizaci\u00f3n",
+          "Subtareas con seguimiento de completaci\u00f3n y porcentaje de progreso"
+        ]
+      },
+      {
+        "icon": "FileText",
+        "title": "Editor LaTeX",
+        "items": [
+          "Vista previa PDF en vivo con navegaci\u00f3n SyncTeX bidireccional",
+          "3 motores de compilaci\u00f3n: pdflatex, xelatex, lualatex con detecci\u00f3n autom\u00e1tica de distribuci\u00f3n TeX",
+          "Autocompletado de 90+ comandos con 30+ comandos matem\u00e1ticos y snippets con marcadores",
+          "Documentaci\u00f3n al pasar el cursor para 600+ comandos LaTeX con firmas y ejemplos",
+          "Esquema del documento: secciones, etiquetas, figuras, tablas, ecuaciones, teoremas",
+          "Ir a definici\u00f3n y Buscar todas las referencias para etiquetas y citas",
+          "Diagn\u00f3sticos y linting en tiempo real sin compilaci\u00f3n",
+          "16+ plantillas de inserci\u00f3n r\u00e1pida: ecuaciones, tablas, figuras, algoritmos, bloques de c\u00f3digo, teoremas",
+          "Generadores de tablas, figuras y bloques de c\u00f3digo con opciones configurables de estilo y formato",
+          "Paleta de s\u00edmbolos LaTeX con letras griegas, operadores y relaciones buscables",
+          "30+ plantillas en 5 categor\u00edas: Art\u00edculos Acad\u00e9micos, Tesis y Disertaci\u00f3n, Presentaciones, Profesional, Ense\u00f1anza",
+          "Soporte para proyectos multi-archivo con \\input, \\include y detecci\u00f3n autom\u00e1tica del archivo principal",
+          "Auto-compilaci\u00f3n al guardar con configuraci\u00f3n de compilaci\u00f3n personalizable",
+          "Adem\u00e1s incluye: plegado de c\u00f3digo para secciones, entornos, comentarios y pre\u00e1mbulo"
+        ]
+      },
+      {
+        "icon": "Highlighter",
+        "title": "Visor PDF y Anotaciones",
+        "items": [
+          "4 tipos de anotaci\u00f3n: resaltado, subrayado, tachado y notas de texto",
+          "5 colores de resaltado: amarillo, verde, azul, rosa, rojo",
+          "Exporta anotaciones como Markdown, JSON, CSV o texto plano con filtros por tipo, color o rango de p\u00e1ginas",
+          "Miniaturas de p\u00e1ginas, esquema del documento y navegaci\u00f3n por marcadores",
+          "Las anotaciones persisten en el PDF y se sincronizan con la biblioteca de referencias",
+          "Selecciona texto para pedir explicaciones a la IA",
+          "Adem\u00e1s incluye: b\u00fasqueda de texto con resaltado, controles de zoom, rotaci\u00f3n de p\u00e1ginas"
+        ]
+      },
+      {
+        "icon": "BookOpen",
+        "title": "Biblioteca de referencias",
+        "items": [
+          "43 tipos de \u00edtems compatibles con Zotero: art\u00edculo, libro, tesis, patente, preprint, dataset, software y m\u00e1s",
+          "11 estilos de citaci\u00f3n: APA, MLA, Chicago, Harvard, IEEE, Vancouver, AMA, ACS, ACM, Turabian, BibTeX",
+          "5 formatos de importaci\u00f3n/exportaci\u00f3n: BibTeX, RIS, CSL-JSON, Zotero RDF, EndNote XML",
+          "14 fuentes de importaci\u00f3n: Semantic Scholar, CrossRef, arXiv, PubMed, DBLP, OpenLibrary, Google Books, Unpaywall y entrada manual",
+          "Colecciones con colores e iconos personalizados para organizaci\u00f3n jer\u00e1rquica",
+          "Etiquetas, seguimiento de estado de lectura (por leer, leyendo, le\u00eddo, archivado) y valoraciones",
+          "Notas con asociaci\u00f3n de n\u00famero de p\u00e1gina y vinculaci\u00f3n a anotaciones",
+          "23 tipos de campos de metadatos personalizados incluyendo financiaci\u00f3n, ORCID, afiliaciones y licencia",
+          "B\u00fasqueda de texto completo con filtros: tipo, estado, etiquetas, colecci\u00f3n, a\u00f1o, valoraci\u00f3n, disponibilidad de PDF",
+          "Formato de citas en texto y generaci\u00f3n de bibliograf\u00eda con exportaci\u00f3n al portapapeles",
+          "Adem\u00e1s incluye: 35 tipos de creador, detecci\u00f3n de duplicados por DOI y arXiv ID, vinculaci\u00f3n de art\u00edculos a tickets con auto-sugerencia"
+        ]
+      },
+      {
+        "icon": "Search",
+        "title": "Descubrimiento de art\u00edculos",
+        "items": [
+          "Exploraci\u00f3n de redes de citas: referencias, citas y art\u00edculos similares",
+          "3 fuentes de API: Semantic Scholar, CrossRef y OpenCitations",
+          "B\u00fasqueda de autores y perfiles con listados completos de publicaciones",
+          "Recomendaciones basadas en biblioteca: sugiere art\u00edculos similares a toda tu colecci\u00f3n",
+          "Visualizaci\u00f3n de grafo de citas con marcadores de citas influyentes",
+          "Guarda art\u00edculos descubiertos directamente en tu biblioteca de referencias",
+          "Adem\u00e1s incluye: gesti\u00f3n de l\u00edmites de tasa de API con seguimiento de cola de solicitudes"
+        ]
+      },
+      {
+        "icon": "Puzzle",
+        "title": "Protocolo MCP",
+        "items": [
+          "59 herramientas en 6 servidores expuestas a agentes de IA",
+          "Research: 16 herramientas \u2014 compilaci\u00f3n LaTeX, gesti\u00f3n de citas, lectura de PDF, anotaciones, CRUD de biblioteca",
+          "Tickets: 23 herramientas \u2014 CRUD de tickets, subtareas, \u00e9picas, consultas, seguimiento de progreso, vinculaci\u00f3n de recursos",
+          "Resources: 11 herramientas \u2014 gesti\u00f3n de agentes y flujos, acceso a esquemas, ejecuci\u00f3n",
+          "Interactions: 4 herramientas \u2014 prompts al usuario, notificaciones, aprobaciones, control de panel dividido",
+          "Secrets: 4 herramientas \u2014 b\u00f3veda cifrada con colecciones, flujo de solicitud/liberaci\u00f3n",
+          "Permissions: 1 herramienta \u2014 prompts de aprobaci\u00f3n en tiempo de ejecuci\u00f3n para operaciones sensibles",
+          "Soporte para servidores MCP personalizados: a\u00f1ade tus propios servidores desde ajustes"
+        ]
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Gesti\u00f3n de proyectos",
+        "items": [
+          "Tickets con 6 tipos, 4 prioridades, etiquetas y descripciones enriquecidas",
+          "\u00c9picas con c\u00e1lculo autom\u00e1tico de progreso a partir de tickets hijos",
+          "Subtareas con seguimiento de completaci\u00f3n y gesti\u00f3n en l\u00ednea",
+          "Comentarios, actualizaciones de progreso y relaciones de bloqueo",
+          "9 tipos de recursos vinculables: archivos, directorios, ramas, worktrees, URLs, sesiones, ejecuciones de flujos, consejos, \u00edtems de biblioteca",
+          "L\u00ednea de tiempo de actividad rastreando cada acci\u00f3n con info del actor (humano, agente o sistema)",
+          "Puente flujo-ticket: dispara flujos autom\u00e1ticamente al crear, actualizar, cambiar estado de tickets, o para cualquier ticket dentro de una \u00e9pica vinculada",
+          "B\u00fasqueda de texto completo con filtros: tipo, prioridad, \u00e9pica, etiquetas, rango de fechas, bloqueadores",
+          "Panel de proyecto con tarjetas de estad\u00edsticas, feed de actividad y acceso r\u00e1pido a elementos recientes"
+        ]
+      },
+      {
+        "icon": "GitBranch",
+        "title": "Control de c\u00f3digo fuente y Git",
+        "items": [
+          "Grafo git interactivo con visualizaci\u00f3n de historial de commits",
+          "Gesti\u00f3n de ramas: crear, cambiar y comparar ramas",
+          "Cambios en staging y sin staging con vista previa de diff",
+          "Gesti\u00f3n de stash: guardar, listar y aplicar trabajo en progreso",
+          "Gesti\u00f3n de git worktrees: crear, fusionar, aceptar y limpiar espacios de trabajo aislados",
+          "Visor de diff de worktrees: compara cambios entre worktrees padre e hijo",
+          "3 estrategias de fusi\u00f3n de worktrees: merge, squash y rebase",
+          "Adem\u00e1s incluye: interfaz de commit con editor de mensajes, inicializaci\u00f3n de Git y gesti\u00f3n de remotos"
+        ]
+      },
+      {
+        "icon": "PanelLeftClose",
+        "title": "Paneles divididos y previsualizaciones",
+        "items": [
+          "11 modos de vista: editor, PDF, Markdown, HTML, imagen, BibTeX, mol\u00e9cula, Excalidraw, previsualizaci\u00f3n de navegador, diff multi-archivo y normal",
+          "Visor de estructuras moleculares 3D para archivos PDB, SDF, MOL y XYZ",
+          "Pizarra Excalidraw para diagramas y bocetos",
+          "Previsualizaci\u00f3n de navegador en vivo con navegaci\u00f3n por URL",
+          "Edici\u00f3n de c\u00f3digo y previsualizaci\u00f3n lado a lado",
+          "Panel de diff multi-archivo para revisar cambios ag\u00e9nticos",
+          "Auto-detecci\u00f3n de servidores de desarrollo para puertos 3000, 4200, 5173, 8080 y m\u00e1s",
+          "Reproducci\u00f3n de video y audio para MP4, WebM, MKV, MOV, MP3, WAV, FLAC y m\u00e1s",
+          "Renderizado de diagramas Mermaid y ecuaciones matem\u00e1ticas KaTeX en previsualizaci\u00f3n Markdown"
+        ]
+      },
+      {
+        "icon": "Code2",
+        "title": "IDE y Editor de c\u00f3digo",
+        "items": [
+          "Editor Monaco con resaltado de sintaxis para 50+ lenguajes",
+          "7+ integraciones de Language Server Protocol (LSP) con auto-instalador: TypeScript, Python, Rust, Go, C++, Lua, TeX",
+          "Integraci\u00f3n con VS Code: VS Code web embebido o editor externo v\u00eda extensi\u00f3n puente",
+          "Explorador de archivos con \u00e1rbol jer\u00e1rquico, insignias de estado git y filtro de b\u00fasqueda",
+          "Esquema del documento con navegaci\u00f3n por s\u00edmbolos",
+          "Panel de historial de acciones para seguimiento de operaciones de archivos",
+          "45+ atajos de teclado para navegaci\u00f3n, edici\u00f3n y cambio de vistas",
+          "Modo Vim para edici\u00f3n impulsada por teclado",
+          "6 temas de editor: Sciorex (Auto/Oscuro/Claro), Tokyo Night, GitHub Light, Alto Contraste",
+          "Soporte para editores externos: VS Code, Cursor y Windsurf v\u00eda extensi\u00f3n puente",
+          "B\u00fasqueda y reemplazo de archivos en todo el espacio de trabajo",
+          "Panel de problemas con diagn\u00f3sticos LSP: filtrado por severidad, agrupaci\u00f3n por archivo y clic para navegar",
+          "Adem\u00e1s incluye: deshacer/rehacer en \u00e1rbol de archivos, arrastrar y soltar entre paneles, 10+ men\u00fas contextuales, fijaci\u00f3n y reordenamiento de pesta\u00f1as"
+        ]
+      },
+      {
+        "icon": "Terminal",
+        "title": "Procesos y Terminal",
+        "items": [
+          "Terminal interactivo completo con stdin/stdout y renderizado de colores ANSI",
+          "Explorador de procesos con visualizaci\u00f3n de \u00e1rbol: monitorea procesos de sistema, renderer, CLI, git, LaTeX, MCP y VS Code",
+          "Seguimiento de uso de CPU y memoria en tiempo real por proceso",
+          "Auto-detecci\u00f3n de servidores para Ollama, LM Studio y servicios locales",
+          "Historial de comandos del terminal con favoritos, b\u00fasqueda y recuerdo por ruta",
+          "Hasta 20 procesos de terminal concurrentes con estado independiente",
+          "Adem\u00e1s incluye: monitoreo de listeners de eventos y suscripciones de EventBus"
+        ]
+      },
+      {
+        "icon": "Shield",
+        "title": "Privacidad y plataforma",
+        "items": [
+          "Ejecuci\u00f3n 100% local, sin dependencia de la nube",
+          "Sin telemetr\u00eda, sin anal\u00edtica, sin recopilaci\u00f3n de datos",
+          "B\u00f3veda local cifrada para claves API y secretos con colecciones",
+          "Multiplataforma: Windows 10+, macOS 11+, Linux",
+          "Actualizaci\u00f3n autom\u00e1tica con notas de versi\u00f3n y actualizaci\u00f3n forzada",
+          "Integraci\u00f3n con bandeja del sistema con indicadores de estado de agentes y flujos",
+          "Notificaciones de escritorio y sonido con configuraci\u00f3n por evento",
+          "26 pesta\u00f1as de configuraci\u00f3n cubriendo apariencia, IA, editor, seguridad, MCP y m\u00e1s",
+          "Soporte multi-ventana: abre espacios de trabajo en ventanas separadas",
+          "Integraci\u00f3n con el Explorador de Windows: clic derecho \u00abAbrir con Sciorex\u00bb en carpetas",
+          "Apariencia personalizable: 10 colores de acento, 5 paletas de grises, 4 presets de radio de borde, 12 fuentes",
+          "Marketplace comunitario: agentes, flujos, perfiles de consejo y plantillas LaTeX compartibles",
+          "Persistencia de sesiones y pesta\u00f1as con recuperaci\u00f3n ante fallos y detecci\u00f3n de cambios externos",
+          "Gesti\u00f3n de modelos locales: explorar, descargar, cargar y descargar modelos desde el hub",
+          "Gratis para siempre \u2014 sin suscripciones, sin restricciones",
+          "Adem\u00e1s incluye: asistente de configuraci\u00f3n inicial, feed de actividad, sistema de confianza de workspace, modo port\u00e1til para Windows"
+        ]
+      }
+    ],
+    "downloadCta": "Descargar Sciorex",
+    "downloadCtaSubtitle": "Gratis para uso personal y profesional. Sin necesidad de cuenta."
+  },
   "groups": [
     {
       "id": "research",
       "badge": "Para Investigadores",
       "title": "Tu Plataforma de",
-      "titleHighlight": "Investigación Completa",
-      "subtitle": "Anotaciones PDF, edición LaTeX con vista previa en vivo, biblioteca de referencias y descubrimiento de artículos con IA — todo en una app.",
+      "titleHighlight": "Investigaci\u00f3n Completa",
+      "subtitle": "Anotaciones PDF, edici\u00f3n LaTeX con vista previa en vivo, biblioteca de referencias y descubrimiento de art\u00edculos con IA \u2014 todo en una app.",
       "features": [
         {
           "icon": "FileText",
           "color": "from-blue-500 to-indigo-500",
           "title": "Editor LaTeX con PDF en Vivo",
-          "description": "Escribe LaTeX con vista previa PDF en tiempo real y navegación bidireccional SyncTeX. Clic en editor → salta al PDF. Clic en PDF → salta al código fuente. Renderizado de ecuaciones en vivo mientras escribes."
+          "description": "Escribe LaTeX con vista previa PDF en tiempo real y navegaci\u00f3n bidireccional SyncTeX. Clic en editor \u2192 salta al PDF. Clic en PDF \u2192 salta al c\u00f3digo fuente. Renderizado de ecuaciones en vivo mientras escribes."
         },
         {
           "icon": "Highlighter",
           "color": "from-yellow-500 to-amber-500",
           "title": "Anotaciones PDF",
-          "description": "Resalta en 5 colores, añade notas al margen, subraya texto. Exporta todas las anotaciones como Markdown, JSON o CSV. Tus anotaciones persisten y se sincronizan con tu biblioteca."
+          "description": "Resalta en 5 colores, a\u00f1ade notas al margen, subraya texto. Exporta todas las anotaciones como Markdown, JSON o CSV. Tus anotaciones persisten y se sincronizan con tu biblioteca."
         },
         {
           "icon": "BookOpen",
           "color": "from-emerald-500 to-teal-500",
           "title": "Biblioteca de Referencias",
-          "description": "Guarda artículos desde cualquier búsqueda. Organiza con colecciones, carpetas y etiquetas. Rastrea el estado de lectura. Exporta toda tu biblioteca a BibTeX con un clic."
+          "description": "Guarda art\u00edculos desde cualquier b\u00fasqueda. Organiza con colecciones, carpetas y etiquetas. Rastrea el estado de lectura. Exporta toda tu biblioteca a BibTeX con un clic."
         },
         {
           "icon": "Search",
           "color": "from-purple-500 to-pink-500",
-          "title": "Descubrimiento de Artículos",
-          "description": "Encuentra artículos similares al instante. Explora redes de citas — ve quién cita tus fuentes y qué referencian. Descubre conexiones que nunca encontrarías manualmente."
+          "title": "Descubrimiento de Art\u00edculos",
+          "description": "Encuentra art\u00edculos similares al instante. Explora redes de citas \u2014 ve qui\u00e9n cita tus fuentes y qu\u00e9 referencian. Descubre conexiones que nunca encontrar\u00edas manualmente."
         },
         {
           "icon": "Sparkles",
@@ -43,35 +294,35 @@
           "icon": "LayoutTemplate",
           "color": "from-rose-500 to-red-500",
           "title": "30+ Plantillas Profesionales",
-          "description": "NeurIPS, CVPR, Nature, Springer, Tesis Doctoral, CV Académico, Pósters de Conferencia y más. Todas con marcadores inteligentes y formato apropiado."
+          "description": "NeurIPS, CVPR, Nature, Springer, Tesis Doctoral, CV Acad\u00e9mico, P\u00f3sters de Conferencia y m\u00e1s. Todas con marcadores inteligentes y formato apropiado."
         }
       ],
       "images": ["latex-editor.png", "pdf-annotations.png", "export-annotations.png", "reference-library.png", "paper-discovery.png", "paper-discovery-citations.png"]
     },
     {
       "id": "core",
-      "badge": "Por qué Sciorex",
+      "badge": "Por qu\u00e9 Sciorex",
       "title": "Tu IA,",
       "titleHighlight": "Tus Reglas",
-      "subtitle": "100% local, completamente gratis. Trae tu propio CLI y mantén el control total sobre tus datos y flujos de trabajo.",
+      "subtitle": "100% local, completamente gratis. Trae tu propio CLI y mant\u00e9n el control total sobre tus datos y flujos de trabajo.",
       "features": [
         {
           "icon": "Shield",
           "color": "from-emerald-500 to-green-500",
           "title": "100% Local y Privado",
-          "description": "Todos los datos permanecen en tu máquina. Sin APIs de terceros, sin recopilación de datos, sin suscripciones. Completamente gratis."
+          "description": "Todos los datos permanecen en tu m\u00e1quina. Sin APIs de terceros, sin recopilaci\u00f3n de datos, sin suscripciones. Completamente gratis."
         },
         {
           "icon": "Sparkles",
           "color": "from-violet-500 to-purple-500",
           "title": "Trae Tu Propio CLI",
-          "description": "Usa Claude Code, Gemini CLI, OpenCode, Codex CLI o modelos locales vía LM Studio y Ollama. Somos un wrapper gratuito para tus herramientas existentes."
+          "description": "Usa Claude Code, Gemini CLI, OpenCode, Codex CLI o modelos locales v\u00eda LM Studio y Ollama. Somos un wrapper gratuito para tus herramientas existentes."
         },
         {
           "icon": "Unlock",
           "color": "from-purple-500 to-pink-500",
           "title": "Sin Bloqueo de Proveedor",
-          "description": "Cambia entre CLIs cuando quieras. Tus flujos de trabajo, agentes y datos se quedan contigo. Sin atarte a ningún proveedor o ecosistema."
+          "description": "Cambia entre CLIs cuando quieras. Tus flujos de trabajo, agentes y datos se quedan contigo. Sin atarte a ning\u00fan proveedor o ecosistema."
         }
       ],
       "images": ["chat-view.png", "start-chat.png", "settings-clis.png"]
@@ -87,19 +338,19 @@
           "icon": "Kanban",
           "color": "from-green-500 to-emerald-500",
           "title": "Tickets y Kanban",
-          "description": "Rastrea el trabajo a través de agentes con un potente sistema de tickets. Vincula conversaciones a tickets y ve el historial completo de interacciones de agentes."
+          "description": "Rastrea el trabajo a trav\u00e9s de agentes con un potente sistema de tickets. Vincula conversaciones a tickets y ve el historial completo de interacciones de agentes."
         },
         {
           "icon": "Bot",
           "color": "from-blue-500 to-cyan-500",
           "title": "Agentes de IA Personalizados",
-          "description": "Crea agentes especializados con prompts únicos, instrucciones del sistema y permisos de herramientas. Cada agente tiene su propia personalidad y experiencia."
+          "description": "Crea agentes especializados con prompts \u00fanicos, instrucciones del sistema y permisos de herramientas. Cada agente tiene su propia personalidad y experiencia."
         },
         {
           "icon": "Layers",
           "color": "from-rose-500 to-pink-500",
-          "title": "Organización por Épicas",
-          "description": "Agrupa tickets relacionados en épicas para organización jerárquica. Perfecto para rastrear proyectos de investigación grandes."
+          "title": "Organizaci\u00f3n por \u00c9picas",
+          "description": "Agrupa tickets relacionados en \u00e9picas para organizaci\u00f3n jer\u00e1rquica. Perfecto para rastrear proyectos de investigaci\u00f3n grandes."
         }
       ],
       "images": ["kanban-view.png", "tickets-list.png", "ticket-description.png", "agents-view.png", "epics-view.png"]
@@ -109,89 +360,89 @@
       "badge": "Funciones Avanzadas",
       "title": "Hecho para",
       "titleHighlight": "Usuarios Avanzados",
-      "subtitle": "Capacidades avanzadas para desarrolladores e investigadores que necesitan más que un chat básico.",
+      "subtitle": "Capacidades avanzadas para desarrolladores e investigadores que necesitan m\u00e1s que un chat b\u00e1sico.",
       "features": [
         {
           "icon": "Users",
           "color": "from-amber-500 to-orange-500",
           "title": "Consejo de Agentes",
-          "description": "Deja que múltiples personalidades de IA colaboren en tus prompts. Cada agente aporta una perspectiva diferente, debatiendo y refinando ideas para producir respuestas más ricas y reflexivas."
+          "description": "Deja que m\u00faltiples personalidades de IA colaboren en tus prompts. Cada agente aporta una perspectiva diferente, debatiendo y refinando ideas para producir respuestas m\u00e1s ricas y reflexivas."
         },
         {
           "icon": "Puzzle",
           "color": "from-indigo-500 to-violet-500",
           "title": "Protocolo de Herramientas MCP",
-          "description": "Conecta agentes a cualquier cosa vía servidores MCP. Envía notificaciones a Slack o Discord, consulta bases de datos, llama APIs externas, ejecuta automatización de navegador, dispara webhooks. Combinado con flujos visuales, las posibilidades son infinitas."
+          "description": "Conecta agentes a cualquier cosa v\u00eda servidores MCP. Env\u00eda notificaciones a Slack o Discord, consulta bases de datos, llama APIs externas, ejecuta automatizaci\u00f3n de navegador, dispara webhooks. Combinado con flujos visuales, las posibilidades son infinitas."
         },
         {
           "icon": "PanelLeftClose",
           "color": "from-sky-500 to-cyan-500",
           "title": "Previsualizaciones en Panel Dividido",
-          "description": "Previsualiza cualquier cosa lado a lado: navegador Playwright, Markdown, HTML, imágenes, diagramas Excalidraw, estructuras moleculares, referencias BibTeX y documentos PRD. Todo sincronizado con tu código."
+          "description": "Previsualiza cualquier cosa lado a lado: navegador Playwright, Markdown, HTML, im\u00e1genes, diagramas Excalidraw, estructuras moleculares, referencias BibTeX y documentos PRD. Todo sincronizado con tu c\u00f3digo."
         },
         {
           "icon": "FileDiff",
           "color": "from-emerald-500 to-green-500",
-          "title": "Revisión Agéntica de Archivos",
-          "description": "Vista tipo IDE de todos los cambios de agentes. Revisa cada modificación de archivo en vistas diff, acepta o rechaza cambios individualmente y mantén control total antes de que lleguen a tu código."
+          "title": "Revisi\u00f3n Ag\u00e9ntica de Archivos",
+          "description": "Vista tipo IDE de todos los cambios de agentes. Revisa cada modificaci\u00f3n de archivo en vistas diff, acepta o rechaza cambios individualmente y mant\u00e9n control total antes de que lleguen a tu c\u00f3digo."
         },
         {
           "icon": "MessageSquare",
           "color": "from-orange-500 to-amber-500",
-          "title": "Chat Multi-Sesión",
-          "description": "Ejecuta múltiples hilos de conversación, bifurca sesiones desde cualquier mensaje y organiza chats con etiquetas codificadas por colores."
+          "title": "Chat Multi-Sesi\u00f3n",
+          "description": "Ejecuta m\u00faltiples hilos de conversaci\u00f3n, bifurca sesiones desde cualquier mensaje y organiza chats con etiquetas codificadas por colores."
         },
         {
           "icon": "Code2",
           "color": "from-cyan-500 to-blue-500",
-          "title": "Integración con IDE",
-          "description": "Abre archivos en tu IDE compatible con VS Code mediante nuestra extensión puente, usa el VS Code web integrado o el editor Monaco para ediciones rápidas."
+          "title": "Integraci\u00f3n con IDE",
+          "description": "Abre archivos en tu IDE compatible con VS Code mediante nuestra extensi\u00f3n puente, usa el VS Code web integrado o el editor Monaco para ediciones r\u00e1pidas."
         },
         {
           "icon": "Workflow",
           "color": "from-purple-500 to-pink-500",
           "title": "Editor Visual de Flujos",
-          "description": "Diseña pipelines multi-agente con un editor basado en nodos. Encadena agentes, añade condiciones, ejecución paralela, bucles y disparadores programados."
+          "description": "Dise\u00f1a pipelines multi-agente con un editor basado en nodos. Encadena agentes, a\u00f1ade condiciones, ejecuci\u00f3n paralela, bucles y disparadores programados."
         }
       ],
       "images": ["flow-edition-view.png", "chat-council.png", "browser-preview.png", "agentic-preview.png", "flow-view.png", "editor-view.png"]
     },
     {
       "id": "technical",
-      "badge": "Bajo el Capó",
-      "title": "Características de",
+      "badge": "Bajo el Cap\u00f3",
+      "title": "Caracter\u00edsticas de",
       "titleHighlight": "Nivel Empresarial",
-      "subtitle": "Registros de auditoría, automatización basada en eventos y modos de pensamiento avanzados para flujos de trabajo profesionales.",
+      "subtitle": "Registros de auditor\u00eda, automatizaci\u00f3n basada en eventos y modos de pensamiento avanzados para flujos de trabajo profesionales.",
       "features": [
         {
           "icon": "GitGraph",
           "color": "from-emerald-500 to-teal-500",
-          "title": "Visualización de Grafo Git",
-          "description": "Visualización interactiva de ramas con historial de commits. Ve la estructura de tu repositorio, compara ramas y navega commits visualmente."
+          "title": "Visualizaci\u00f3n de Grafo Git",
+          "description": "Visualizaci\u00f3n interactiva de ramas con historial de commits. Ve la estructura de tu repositorio, compara ramas y navega commits visualmente."
         },
         {
           "icon": "Terminal",
           "color": "from-gray-500 to-slate-500",
-          "title": "Ejecutor de Comandos y Detección de Servidores",
+          "title": "Ejecutor de Comandos y Detecci\u00f3n de Servidores",
           "description": "Ejecuta comandos y ve la salida en tiempo real. Auto-detecta servidores locales y los abre en la vista previa del panel dividido. Sin cambiar de contexto."
         },
         {
           "icon": "History",
           "color": "from-yellow-500 to-orange-500",
-          "title": "Registro de Auditoría Completo",
-          "description": "Cada acción se registra con información del actor (humano o agente). Nunca pierdas el rastro de qué sucedió y cuándo."
+          "title": "Registro de Auditor\u00eda Completo",
+          "description": "Cada acci\u00f3n se registra con informaci\u00f3n del actor (humano o agente). Nunca pierdas el rastro de qu\u00e9 sucedi\u00f3 y cu\u00e1ndo."
         },
         {
           "icon": "Zap",
           "color": "from-sky-500 to-blue-500",
           "title": "Flujos Basados en Eventos",
-          "description": "Activa flujos de trabajo desde eventos de tickets, horarios cron o acciones manuales. Construye sistemas de automatización reactivos."
+          "description": "Activa flujos de trabajo desde eventos de tickets, horarios cron o acciones manuales. Construye sistemas de automatizaci\u00f3n reactivos."
         },
         {
           "icon": "Bug",
           "color": "from-fuchsia-500 to-purple-500",
           "title": "Modo Debug de Flujos",
-          "description": "Pausa flujos en errores, inspecciona el estado, corrige problemas y reanuda la ejecución. Depura flujos multi-agente complejos sin empezar de cero."
+          "description": "Pausa flujos en errores, inspecciona el estado, corrige problemas y reanuda la ejecuci\u00f3n. Depura flujos multi-agente complejos sin empezar de cero."
         },
         {
           "icon": "Bell",

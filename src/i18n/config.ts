@@ -12,6 +12,9 @@ import enAbout from '../locales/en/about.json';
 import enContact from '../locales/en/contact.json';
 import enPrivacy from '../locales/en/privacy.json';
 import enTerms from '../locales/en/terms.json';
+import enDarkroom from '../locales/en/darkroom.json';
+import enResearcher from '../locales/en/researcher.json';
+import enDeveloper from '../locales/en/developer.json';
 
 // Import Spanish translations
 import esCommon from '../locales/es/common.json';
@@ -23,6 +26,9 @@ import esAbout from '../locales/es/about.json';
 import esContact from '../locales/es/contact.json';
 import esPrivacy from '../locales/es/privacy.json';
 import esTerms from '../locales/es/terms.json';
+import esDarkroom from '../locales/es/darkroom.json';
+import esResearcher from '../locales/es/researcher.json';
+import esDeveloper from '../locales/es/developer.json';
 
 const resources = {
   en: {
@@ -35,6 +41,9 @@ const resources = {
     contact: enContact,
     privacy: enPrivacy,
     terms: enTerms,
+    darkroom: enDarkroom,
+    researcher: enResearcher,
+    developer: enDeveloper,
   },
   es: {
     common: esCommon,
@@ -46,6 +55,9 @@ const resources = {
     contact: esContact,
     privacy: esPrivacy,
     terms: esTerms,
+    darkroom: esDarkroom,
+    researcher: esResearcher,
+    developer: esDeveloper,
   },
 };
 

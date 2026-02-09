@@ -1,6 +1,257 @@
 {
   "showLess": "Show less",
   "showMore": "Show {{count}} more",
+  "page": {
+    "seo": {
+      "title": "All Features - Sciorex",
+      "description": "Complete list of Sciorex features: 6 AI CLIs, council mode, visual flow editor with 9 node types, vibe kanban, LaTeX editor with multi-file projects, PDF annotations, 43-type reference library, paper discovery, 59 MCP tools, 45+ shortcuts, drag-and-drop, rich text chat, git graph, split panels, 20 concurrent terminals, and more."
+    },
+    "title": "All Features",
+    "subtitle": "Everything Sciorex offers \u2014 organized by capability.",
+    "sections": [
+      {
+        "icon": "MessageSquare",
+        "title": "AI & Chat",
+        "items": [
+          "6 AI CLIs: Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, Ollama",
+          "Council mode: multi-agent debate with turn management, pass detection, and YAML persona import/export",
+          "Extended thinking (5 levels Claude, 6 Codex, always-on Gemini) and 4 effort levels (Low to Maximum) for fine-tuning reasoning depth",
+          "Session forking: branch from any message or continue from current point",
+          "9 mention types: @file, @directory, @ticket, @epic, @conversation, @flow, @execution, @command, @library",
+          "Token counting with cost tracking, cache metrics, and tokens/second speed",
+          "Image attachments and multimodal input for supported providers",
+          "Subagent spawning for background tasks and teammate coordination",
+          "Permission modes: strict, standard, and free tool approval levels",
+          "Plan mode for structured implementation planning with review",
+          "4 chat modes: Agentic (review edits), Normal (auto-apply), Preview (live browser), Editor (code panel)",
+          "3 display modes: Focus (assistant only), Compact (paired tool calls), Extended (full debug)",
+          "Agent Teams: multi-agent collaboration with specialized roles working together",
+          "Third-party Claude-compatible API endpoints for alternative providers",
+          "Slash commands with auto-complete for agents, flows, and CLI-specific commands",
+          "Session management: custom color labels, grouping, filtering, and archiving with ticket/epic linking",
+          "Find in Chat (Ctrl+F) with match highlighting and question-to-question navigation",
+          "Custom system prompts per AI provider with append/replace modes and reusable templates",
+          "Per-agent model and provider selection, tool permissions with pattern matching, and I/O schema validation",
+          "Agent Runs dashboard: monitor active and completed sessions with status, duration, costs, and conversation replay",
+          "Also includes: message queue for follow-ups, configurable send shortcuts, rich text input with markdown and attachments, stop generation and retry"
+        ]
+      },
+      {
+        "icon": "Workflow",
+        "title": "Visual Workflows",
+        "items": [
+          "Drag-and-drop flow editor with 9 node types: Agent, Trigger, Condition, Wait, Parallel, Merge, Transform, Ticket Action, End",
+          "4 trigger types: manual with input schemas, ticket-created, ticket-updated, cron schedule",
+          "Debug mode with step-by-step execution, breakpoints, input/output modification, and time-travel replay",
+          "3 transform types: jq path expressions, template interpolation, sandboxed JavaScript",
+          "3 merge strategies: wait for all, any, or first branch to complete",
+          "Wait nodes for human approval, structured input, or timed timeout",
+          "Flow variables accessible across all nodes via context paths",
+          "Worktree integration: create isolated git worktrees per agent node",
+          "Session resume and reuse across loop iterations",
+          "9 pre-built flow templates for common patterns",
+          "Community flow marketplace with install and versioning",
+          "Flow validation: cycle detection, orphan nodes, reachability analysis",
+          "Output schema validation with automatic retry on mismatch",
+          "Flow execution history with per-node result tracking, timestamps, and error details",
+          "Also includes: auto-layout (4 modes), edge waypoint routing, undo/redo with 50 snapshots, flow duplication with deep copy"
+        ]
+      },
+      {
+        "icon": "LayoutDashboard",
+        "title": "Vibe Kanban",
+        "items": [
+          "Kanban boards with drag-and-drop status transitions",
+          "3 board views: Kanban, sortable list, and epics overview",
+          "Parallel AI agent execution via isolated git worktrees",
+          "Multi-worktree dashboard with per-agent diff summaries",
+          "Agentic file review: accept, reject, or modify each change individually",
+          "Chunk-based edit grouping with conflict detection and revert safety",
+          "6 ticket statuses with valid transition rules: backlog, planned, in-progress, in-review, done, cancelled",
+          "4 priority levels: critical, high, medium, low",
+          "6 ticket types: feature, bug, task, research, documentation, refactor",
+          "Subtasks with completion tracking and progress percentage"
+        ]
+      },
+      {
+        "icon": "FileText",
+        "title": "LaTeX Editor",
+        "items": [
+          "Live PDF preview with bidirectional SyncTeX navigation",
+          "3 compilation engines: pdflatex, xelatex, lualatex with automatic TeX distribution detection",
+          "90+ command autocomplete with 30+ math commands and snippet placeholders",
+          "Hover documentation for 600+ LaTeX commands with signatures and examples",
+          "Document outline: sections, labels, figures, tables, equations, theorems",
+          "Go-to-definition and Find All References for labels and citations",
+          "Real-time diagnostics and linting without compilation",
+          "16+ quick-insert templates: equations, tables, figures, algorithms, code blocks, theorems",
+          "Table, figure, and code block generators with configurable styling and format options",
+          "LaTeX symbol palette with searchable Greek letters, operators, and relations",
+          "30+ templates across 5 categories: Academic Papers, Thesis & Dissertation, Presentations, Professional, Teaching",
+          "Multi-file project support with \\input, \\include, and automatic main file detection",
+          "Auto-compile on save with configurable compilation settings",
+          "Also includes: code folding for sections, environments, comments, and preamble"
+        ]
+      },
+      {
+        "icon": "Highlighter",
+        "title": "PDF Viewer & Annotations",
+        "items": [
+          "4 annotation types: highlight, underline, strikeout, and text notes",
+          "5 highlight colors: yellow, green, blue, pink, red",
+          "Export annotations as Markdown, JSON, CSV, or plain text with filters by type, color, or page range",
+          "Page thumbnails, document outline, and bookmark navigation",
+          "Annotations persist in PDF and sync with reference library",
+          "Select text to ask AI for explanations",
+          "Also includes: text search with match highlighting, zoom controls, page rotation"
+        ]
+      },
+      {
+        "icon": "BookOpen",
+        "title": "Reference Library",
+        "items": [
+          "43 Zotero-compatible item types: journal article, book, thesis, patent, preprint, dataset, software, and more",
+          "11 citation styles: APA, MLA, Chicago, Harvard, IEEE, Vancouver, AMA, ACS, ACM, Turabian, BibTeX",
+          "5 import/export formats: BibTeX, RIS, CSL-JSON, Zotero RDF, EndNote XML",
+          "14 paper import sources: Semantic Scholar, CrossRef, arXiv, PubMed, DBLP, OpenLibrary, Google Books, Unpaywall, and manual entry",
+          "Collections with custom colors and icons for hierarchical organization",
+          "Tags, reading status tracking (to read, reading, read, archived), and ratings",
+          "Notes with page number association and annotation linking",
+          "23 custom metadata field types including funding, ORCID, affiliations, and license",
+          "Full-text search with filters: type, status, tags, collection, year, rating, PDF availability",
+          "In-text citation formatting and bibliography generation with clipboard export",
+          "Also includes: 35 creator types, duplicate detection by DOI and arXiv ID, paper-to-ticket linking with auto-suggestion"
+        ]
+      },
+      {
+        "icon": "Search",
+        "title": "Paper Discovery",
+        "items": [
+          "Citation network exploration: references, citations, and similar papers",
+          "3 API sources: Semantic Scholar, CrossRef, and OpenCitations",
+          "Author search and profile browsing with full paper listings",
+          "Library-based recommendations: suggest papers similar to your entire collection",
+          "Citation graph visualization with influential citation markers",
+          "Save discovered papers directly to your reference library",
+          "Also includes: API rate limiting management with request queue tracking"
+        ]
+      },
+      {
+        "icon": "Puzzle",
+        "title": "MCP Protocol",
+        "items": [
+          "59 tools across 6 servers exposed to AI agents",
+          "Research: 16 tools \u2014 LaTeX compilation, citation management, PDF reading, annotations, library CRUD",
+          "Tickets: 23 tools \u2014 ticket CRUD, subtasks, epics, queries, progress tracking, resource linking",
+          "Resources: 11 tools \u2014 agent and flow management, schema access, execution",
+          "Interactions: 4 tools \u2014 user prompts, notifications, approvals, split panel control",
+          "Secrets: 4 tools \u2014 encrypted vault with collections, request/release workflow",
+          "Permissions: 1 tool \u2014 runtime approval prompts for sensitive operations",
+          "Custom MCP server support: add your own servers via settings"
+        ]
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Project Management",
+        "items": [
+          "Tickets with 6 types, 4 priorities, labels, and rich descriptions",
+          "Epics with automatic progress computation from child tickets",
+          "Subtasks with completion tracking and inline management",
+          "Comments, progress updates, and blocker relationships",
+          "9 linked resource types: files, directories, branches, worktrees, URLs, sessions, flow runs, councils, library items",
+          "Activity timeline tracking every action with actor info (human, agent, or system)",
+          "Flow-ticket bridge: auto-trigger flows on ticket creation, updates, status changes, or for any ticket within a linked epic",
+          "Full-text search with filters: type, priority, epic, labels, date range, blockers",
+          "Project Dashboard with stats cards, activity feed, and quick access to recent items"
+        ]
+      },
+      {
+        "icon": "GitBranch",
+        "title": "Source Control & Git",
+        "items": [
+          "Interactive git graph with commit history visualization",
+          "Branch management: create, switch, and compare branches",
+          "Staged and unstaged file changes with diff preview",
+          "Stash management: save, list, and apply work-in-progress",
+          "Git worktree management: create, merge, accept, and cleanup isolated workspaces",
+          "Worktree diff viewer: compare changes between parent and child worktrees",
+          "3 worktree merge strategies: merge, squash, and rebase",
+          "Also includes: commit interface with message editor, git initialization and remote management"
+        ]
+      },
+      {
+        "icon": "PanelLeftClose",
+        "title": "Split Panels & Previews",
+        "items": [
+          "11 view modes: editor, PDF, Markdown, HTML, image, BibTeX, molecule, Excalidraw, browser preview, multi-file diff, and normal",
+          "3D molecular structure viewer for PDB, SDF, MOL, and XYZ files",
+          "Excalidraw whiteboard for diagrams and sketches",
+          "Live browser preview with URL navigation",
+          "Side-by-side code editing and preview",
+          "Multi-file diff panel for reviewing agentic changes",
+          "Dev server auto-detection for ports 3000, 4200, 5173, 8080, and more",
+          "Video and audio playback for MP4, WebM, MKV, MOV, MP3, WAV, FLAC, and more",
+          "Mermaid diagram rendering and KaTeX math equations in Markdown preview"
+        ]
+      },
+      {
+        "icon": "Code2",
+        "title": "IDE & Code Editor",
+        "items": [
+          "Monaco editor with syntax highlighting for 50+ languages",
+          "7+ Language Server Protocol (LSP) integrations with auto-installer: TypeScript, Python, Rust, Go, C++, Lua, TeX",
+          "VS Code integration: embedded VS Code web or external editor via bridge extension",
+          "File explorer with hierarchical tree, git status badges, and search filter",
+          "Document outline with symbol navigation",
+          "Action history panel for tracking file operations",
+          "45+ keyboard shortcuts for navigation, editing, and view switching",
+          "Vim mode for keyboard-driven editing",
+          "6 editor themes: Sciorex (Auto/Dark/Light), Tokyo Night, GitHub Light, High Contrast",
+          "External editor support: VS Code, Cursor, and Windsurf via bridge extension",
+          "File search and replace across entire workspace",
+          "Problems panel with LSP diagnostics: severity filtering, file grouping, and click-to-navigate",
+          "Also includes: file tree undo/redo, cross-panel drag-and-drop, 10+ context menus, editor tab pinning and reorder"
+        ]
+      },
+      {
+        "icon": "Terminal",
+        "title": "Process & Terminal",
+        "items": [
+          "Full interactive terminal with stdin/stdout and ANSI color rendering",
+          "Process explorer with tree visualization: monitor system, renderer, CLI, git, LaTeX, MCP, and VS Code processes",
+          "Real-time CPU and memory usage tracking per process",
+          "Server auto-detection for Ollama, LM Studio, and local services",
+          "Terminal command history with favorites, search, and path-specific recall",
+          "Up to 20 concurrent terminal processes with independent state",
+          "Also includes: event listener and EventBus subscription monitoring"
+        ]
+      },
+      {
+        "icon": "Shield",
+        "title": "Privacy & Platform",
+        "items": [
+          "100% local execution, zero cloud dependency",
+          "No telemetry, no analytics, no data collection",
+          "Encrypted local vault for API keys and secrets with collections",
+          "Cross-platform: Windows 10+, macOS 11+, Linux",
+          "Auto-update with release notes and force-update enforcement",
+          "System tray integration with agent and flow status indicators",
+          "Desktop and sound notifications with per-event configuration",
+          "26 settings tabs covering appearance, AI, editor, security, MCP, and more",
+          "Multi-window support: open workspaces in separate windows",
+          "Windows Explorer integration: right-click 'Open with Sciorex' on folders",
+          "Customizable appearance: 10 accent colors, 5 gray palettes, 4 border radius presets, 12 fonts",
+          "Community marketplace: shareable agents, flows, council personas, and LaTeX templates",
+          "Session and tab persistence with crash recovery and external file change detection",
+          "Local model management: browse, download, load, and unload models from hub",
+          "Free forever \u2014 no subscriptions, no feature gates",
+          "Also includes: first-time setup wizard, activity feed, workspace trust system, portable mode for Windows"
+        ]
+      }
+    ],
+    "downloadCta": "Download Sciorex",
+    "downloadCtaSubtitle": "Free for personal and professional use. No account required."
+  },
   "groups": [
     {
       "id": "research",

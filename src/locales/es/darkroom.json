@@ -1,0 +1,65 @@
+{
+  "seo": {
+    "title": "Sciorex - Plataforma de Investigación IA y Vibe Kanban | Editor LaTeX, Anotaciones PDF | Gratis",
+    "description": "Plataforma de investigación con IA gratuita con editor LaTeX, vista previa PDF en vivo, anotaciones PDF, biblioteca de referencias, descubrimiento de artículos y vibe kanban para agentes de código IA. 100% local, sin recopilación de datos."
+  },
+  "subtitle": "Donde la investigaci\u00f3n se encuentra con el c\u00f3digo.",
+  "featuresTitle": "Dise\u00f1ado para todos",
+  "featuresSubtitle": "Un espacio de trabajo para escritura, investigaci\u00f3n, programaci\u00f3n y automatizaci\u00f3n \u2014 impulsado por AI, controlado por ti.",
+  "features": [
+    {
+      "title": "Chat AI",
+      "desc": "Habla con 6 modelos de AI en sesiones paralelas. Bifurca conversaciones, debate ideas en modo consejo con perfiles personalizados, controla la profundidad de razonamiento."
+    },
+    {
+      "title": "Flujos visuales",
+      "desc": "Dise\u00f1a automatizaciones de m\u00faltiples pasos con un constructor de flujos visual. 9 tipos de nodos, puntos de interrupci\u00f3n y depuraci\u00f3n en vivo."
+    },
+    {
+      "title": "Gesti\u00f3n de tareas",
+      "desc": "Tableros kanban, tickets, prioridades y epics. Asigna tareas a agentes AI, sigue el progreso en todos los espacios de trabajo."
+    },
+    {
+      "title": "Suite de documentos",
+      "desc": "Lee y anota PDFs, compila LaTeX con m\u00e1s de 30 plantillas, gestiona una biblioteca de referencias con 11 estilos de citaci\u00f3n y visualiza mol\u00e9culas 3D."
+    },
+    {
+      "title": "100% privado",
+      "desc": "Todo permanece en tu m\u00e1quina. Sin telemetr\u00eda, sin sincronizaci\u00f3n en la nube, sin anal\u00edtica. B\u00f3veda local cifrada para secretos."
+    },
+    {
+      "title": "Gratis, sin l\u00edmites",
+      "desc": "Sin suscripciones, sin niveles premium, sin restricciones de funciones. Todas las capacidades son tuyas desde el primer d\u00eda."
+    }
+  ],
+  "researcher": {
+    "title": "Investigador",
+    "subtitle": "Escritura impulsada por AI, m\u00e1s de 30 plantillas LaTeX, biblioteca de referencias, anotaci\u00f3n de PDF, descubrimiento de art\u00edculos y visor de mol\u00e9culas 3D"
+  },
+  "developer": {
+    "title": "Desarrollador",
+    "subtitle": "Agentes AI en paralelo, vibe kanban, constructor de flujos visual, integraci\u00f3n con VS Code, orquestaci\u00f3n multi-CLI y 59 herramientas MCP"
+  },
+  "or": "o",
+  "viewAllFeatures": "Ver todas las funciones",
+  "chooseYourPath": "elige tu camino",
+  "diveDeeper": "Profundiza en lo que m\u00e1s te importa",
+  "exploreResearchers": "Explorar para investigadores",
+  "exploreDevelopers": "Explorar para desarrolladores",
+  "footer": {
+    "blog": "Blog",
+    "docs": "Docs",
+    "contact": "Contacto",
+    "about": "Acerca de",
+    "privacy": "Privacidad",
+    "terms": "T\u00e9rminos",
+    "features": "Funciones"
+  },
+  "themeToggle": "Cambiar tema",
+  "notFound": {
+    "title": "P\u00e1gina no encontrada",
+    "description": "La p\u00e1gina que buscas no existe o ha sido movida.",
+    "goHome": "Ir al inicio",
+    "readBlog": "Leer el blog"
+  }
+}

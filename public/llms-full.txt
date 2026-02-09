@@ -1,0 +1,280 @@
+# Sciorex - AI-Powered Command Center for Everyone
+
+> Sciorex is a free, 100% local AI-powered command center where AI agents do the heavy lifting while you stay in control. It works alongside your favorite IDE and tools — not as a replacement. It combines LaTeX editing, PDF annotations, reference management, paper discovery, and AI agent orchestration in one desktop application. Available for Windows, macOS (Intel & Apple Silicon), and Linux.
+
+## What is Sciorex?
+
+Sciorex is your AI-powered companion that works alongside your favorite IDE. It's not a replacement for VS Code, Cursor, or any other editor — it's the command center where AI agents do the heavy lifting while you stay in control.
+
+**For Developers:** Agents read, write, and edit files in your codebase. They implement features, fix bugs, and refactor code. You review the changes and continue working in your IDE. Vibe kanban with parallel git worktrees means multiple agents work simultaneously without merge conflicts.
+
+**For Researchers:** Build automated pipelines for paper fetching, summarization, hypothesis generation, and knowledge synthesis. Full LaTeX editor with live PDF preview, PDF annotations, reference library, paper discovery with citation networks, and 30+ professional templates.
+
+**For Teams:** Track work with tickets and epics. Link AI sessions to tasks so everyone sees what the agents did and why. Visual kanban boards for project management.
+
+**For Writers:** Create specialized agents for drafting, editing, fact-checking, and formatting. Chain them together for complete content workflows using the visual flow editor.
+
+**For Data Analysts:** Explore datasets, generate visualizations, and build analysis pipelines with agents that understand your data.
+
+**For Students:** Organize notes, research topics, and get help understanding complex subjects with personalized AI tutors. Free access to LaTeX templates and reference management.
+
+**For Consultants:** Automate client research, competitive analysis, and report generation. Keep everything organized by project with tickets and epics.
+
+**For Journalists:** Investigate stories with agents that dig through sources, cross-reference facts, and help uncover connections.
+
+**For You:** Whatever your workflow, Sciorex adapts. Create the agents you need, design the pipelines you want, and let AI handle the rest.
+
+## Key Facts
+
+- **Price**: Free forever — no subscriptions, no premium tiers, no feature gates
+- **Privacy**: 100% local execution — no data collection, no telemetry, no cloud required
+- **Platforms**: Windows 10+, macOS 11+ (Intel & Apple Silicon), Linux
+- **Version**: 0.13.0
+- **AI CLIs Supported**: Claude Code, Gemini CLI, Codex CLI, OpenCode, LM Studio, Ollama
+
+## Research Features
+
+### LaTeX Editor with Live PDF
+- Real-time PDF preview as you type
+- Bidirectional SyncTeX: click in editor to jump to PDF, click in PDF to jump to source
+- Live equation rendering with KaTeX
+- Multiple compilation engines: pdfLaTeX, XeLaTeX, LuaLaTeX
+- Multi-file project support with \input, \include, and automatic main file detection
+- Auto-compile on save with configurable timeout, custom TeX path, and additional compiler flags
+- Error panel with clickable errors that jump to source
+
+### PDF Annotations
+- Multi-color highlights: Yellow, Green, Blue, Pink, Red
+- Margin notes on any highlight
+- Underline and strikethrough
+- Annotation sidebar to browse by page
+- Export to Markdown, JSON, or CSV with paper metadata
+
+### Reference Library
+- Save papers directly from citation search
+- Organize with collections, folders, and custom tags
+- Track reading status: To Read → Reading → Read → Archived
+- 43 item types, 11 citation styles (APA, MLA, IEEE, Chicago, Harvard, Vancouver, Nature, Science, ACM, APS, custom CSL)
+- Import/export: BibTeX, RIS, CSL-JSON, Zotero, Mendeley formats
+- Add notes to any paper
+- In-text citation formatting and bibliography generation with clipboard export
+- Duplicate detection by DOI and arXiv ID to prevent redundant entries
+- Link papers to project tickets and workspace folders with auto-suggestion
+- AI models can manage library via MCP tools
+
+### Paper Discovery
+- "Find Similar Papers" with one click
+- Explore citation networks: who cites your sources and what they reference
+- Author exploration: find more papers from same researchers
+- Smart recommendations based on your library
+- Sources: Semantic Scholar, arXiv, CrossRef
+
+### Select & Ask AI
+- Select any text in PDF or LaTeX document
+- Ask AI to explain, improve, rewrite, or translate
+- Start a focused chat about any passage instantly
+- Works with Claude, Gemini, or local models
+
+### 30+ Professional Templates
+
+**Academic Papers:** NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP, AAAI, IJCAI, IEEE (conference and journal), ACM (SIGCHI, SIGPLAN, etc.), Nature, Science, Springer (LNCS), Elsevier, APS (Physical Review), PNAS, JMLR, ACS, APA 7th Edition, RevTeX
+
+**Thesis & Dissertation:** PhD Thesis, Master's Thesis, Thesis Proposal, Research Proposal
+
+**Presentations:** Beamer Metropolis, Conference Poster A0/A1
+
+**Professional:** Academic CV, Modern Resume, Cover Letter, Technical Report, White Paper
+
+**Teaching:** Lecture Notes, Problem Sets, Exam Papers, Course Syllabus
+
+### LaTeX Tools
+- **Insert Elements**: One-click Figure, Table, Equation, Algorithm insertion
+- **Table Builder**: Visual grid editor with alignment options
+- **Symbol Picker**: Searchable math symbols with categories
+
+## Developer Features (Vibe Kanban)
+
+### Vibe Kanban Dashboard
+Vibe kanban is a workflow where AI agents execute tasks in parallel while you focus on planning, review, and strategic oversight. Each agent operates in its own git worktree (isolated branch + working directory), so agents never produce merge conflicts. You review each agent's changes through a built-in diff tool, approve or reject, then merge.
+
+### 4 Chat Modes & 3 Display Modes
+- **Agentic**: Review every file edit before applying
+- **Normal**: Auto-apply changes with full tool access
+- **Preview**: Live browser panel for frontend development
+- **Editor**: Side-by-side code panel
+- Display modes: Focus (assistant only), Compact (paired tool calls), Extended (full debug)
+
+### Agent Teams
+Multi-agent collaboration where specialized agents work together on complex tasks — e.g., a "Literature Reviewer" gathering sources while a "LaTeX Writer" drafts sections and a "Code Analyst" validates results.
+
+### Visual Flow Editor
+Design multi-agent workflows with a node-based editor. 9 node types: Trigger, Agent, Condition, Wait, Parallel, Merge, Transform, Ticket Action, End. Supports breakpoints, step-through debugging, and I/O inspection. Flow execution history with per-node tracking, undo/redo with 50-snapshot history, and flow duplication.
+
+### Git Worktree Management
+Each git worktree is a separate branch checked out in its own directory with an independent AI session. Multiple worktrees run simultaneously — one implementing a feature, another writing tests, a third refactoring. Worktree merging with built-in conflict detection.
+
+### Session Management
+- **Slash commands** with auto-complete for agents, flows, and CLI-specific commands
+- **Session labels** with custom colors for organization, grouping, and filtering
+- **Find in Chat** (Ctrl+F) with match highlighting and question-to-question navigation
+- **Session archiving** with ticket and epic linking for completed conversations
+
+### Custom System Prompts
+- **Per-provider system prompts** with append or replace modes
+- **Reusable template system** for saving and switching between prompt configurations
+- **Per-agent configuration**: model selection, tool permissions with pattern matching, I/O schema validation
+
+### Council Mode
+Multiple AI models debate problems in structured rounds. Custom personas (YAML import/export) shape how each AI participates. Mix CLIs — e.g., Claude Code debating Gemini CLI debating Codex.
+
+### MCP Tool Protocol
+59 custom tools across 6 servers:
+- **Research** (16 tools): PDF read/annotate, LaTeX compile, library management
+- **Tickets** (23 tools): Ticket CRUD, subtasks, epics, blockers, comments, resource linking
+- **Resources** (11 tools): Agent and flow management
+- **Interactions** (4 tools): User communication
+- **Secrets** (4 tools): Encrypted credential management
+- **Permissions**: Tool access control with user approval
+
+Every installed CLI automatically gets access to all tools. Custom MCP servers (Playwright, database connectors, etc.) can be added and are exposed to all CLIs.
+
+### Supported AI CLIs
+- **Anthropic**: Claude Code (Opus 4.6, Sonnet 4.5, Haiku 4.5)
+- **Google**: Gemini CLI (Gemini 3 Flash, Pro)
+- **OpenAI**: Codex CLI (GPT-5.3 Codex)
+- **OpenCode**: Open-source agentic coding CLI
+- **Local Models**: LM Studio, Ollama (Llama, Mistral, DeepSeek, Qwen, CodeLlama, etc.)
+
+### Agent Runs Dashboard
+Monitor active and completed agent sessions with status, duration, costs, and full conversation replay. Filter by status, search, label, and sort. One of the 8 main application views.
+
+### Extended Thinking & Effort
+Control reasoning depth per message: Think, Think Hard, Think Harder, Ultrathink. Separate effort levels (Low, Medium, High, Maximum) control response thoroughness. Stop generation mid-response and retry failed messages.
+
+### Message Queue
+Compose follow-up instructions while the AI processes your current request. Messages queue and execute in order.
+
+### Editor & IDE Features
+- **Vim mode** for keyboard-driven editing
+- **6 editor themes**: Sciorex (Auto/Dark/Light), Tokyo Night, GitHub Light, High Contrast
+- **45+ keyboard shortcuts** for navigation, editing, and view switching
+- **External editor support**: VS Code, Cursor, and Windsurf via bridge extension
+- **Dev server auto-detection** for ports 3000, 4200, 5173, 8080, and more
+- **Video and audio playback** for MP4, WebM, MKV, MOV, MP3, WAV, FLAC, and more
+- **Mermaid diagrams** and **KaTeX math equations** in Markdown preview
+- **Rich text chat input** with markdown formatting, code blocks, and inline file attachments
+- **File search and replace** across entire workspace
+- **File tree undo/redo** for create, rename, move, copy, and delete operations
+- **Drag-and-drop** across kanban boards, file tree, flow editor, library, and chat input
+- **10+ context menus** with contextual actions throughout the application
+- **Problems panel** with LSP diagnostics: severity filtering, file grouping, click-to-navigate
+- **Editor tab management**: pinning, drag-and-drop reorder, modified/external-change indicators
+
+### Terminal & Processes
+- **Up to 20 concurrent terminal processes** with independent state
+- **Terminal command history** with favorites, search, and path-specific recall
+- **Full interactive terminal** with stdin/stdout and ANSI color rendering
+- **Process explorer** with CPU/memory monitoring per process
+
+### Customization & Platform
+- **Multi-window support**: open workspaces in separate windows
+- **Windows Explorer integration**: right-click "Open with Sciorex" on folders
+- **First-time setup wizard** with guided onboarding
+- **Customizable appearance**: 10 accent colors, 5 gray palettes, 4 border radius presets, 12 fonts
+- **Activity feed** tracking all project actions with actor info
+- **Local model management**: browse, download, load, and unload models from hub
+- **Git initialization and remote repository management**
+- **Workspace trust system**: security dialog restricts scripts and file access for untrusted folders
+- **Portable mode** for Windows: run without installation from a single executable
+- **LSP auto-installer**: automatically downloads and installs language servers for supported languages
+- **35 creator types** in reference library (author, editor, translator, series editor, and more)
+- **30+ LaTeX templates** across 5 categories: Academic Papers, Thesis & Dissertation, Presentations, Professional, Teaching
+
+## Comparison: Sciorex vs Alternatives
+
+| Feature | Sciorex | Overleaf | Zotero | Mendeley | Cursor | Windsurf |
+|---------|---------|----------|--------|----------|--------|----------|
+| Price | Free | $15-40/mo | Free | Limited | $20/mo | $15/mo |
+| 100% Local | Yes | No | Yes | No | No | No |
+| LaTeX Editor | Yes | Yes | No | No | No | No |
+| Live PDF Preview | Yes | Yes | No | No | No | No |
+| PDF Annotations | Yes | No | Yes | Yes | No | No |
+| Reference Library | Yes | No | Yes | Yes | No | No |
+| Paper Discovery | Yes | No | Plugin | Limited | No | No |
+| AI Chat | Yes | No | No | No | Yes | Yes |
+| 30+ Templates | Yes | Yes | No | No | No | No |
+| Vibe Kanban | Yes | No | No | No | No | No |
+| Git Worktrees | Yes | No | No | No | No | No |
+| Visual Workflows | Yes | No | No | No | No | No |
+| MCP Tools (59) | Yes | No | No | No | No | No |
+| Multi-CLI Support | Yes | No | No | No | No | No |
+| Council Mode | Yes | No | No | No | No | No |
+
+## Frequently Asked Questions
+
+**Q: Is Sciorex free?**
+A: Yes. Completely free for personal and professional use — no subscriptions, no premium tiers, no hidden costs. Sciorex wraps AI CLIs (Claude Code, Gemini CLI, Ollama, etc.) that you install separately. Your costs are whatever the CLI charges, or zero with local models.
+
+**Q: Is Sciorex private?**
+A: Yes. Everything stays on your local machine — 100% of it. No telemetry, no analytics, no cloud sync. The only network traffic is between the CLI and its AI provider when you initiate a chat. Fully offline with local models via LM Studio or Ollama.
+
+**Q: Does Sciorex have a LaTeX editor?**
+A: Yes. Full LaTeX editor with live PDF preview, bidirectional SyncTeX, live equation rendering, 30+ professional templates, multiple compilation engines (pdfLaTeX, XeLaTeX, LuaLaTeX).
+
+**Q: Is Sciorex a good alternative to Overleaf?**
+A: Yes. LaTeX editing with live PDF like Overleaf, but 100% local, completely free (vs $15-40/month), plus PDF annotations, reference library, paper discovery, and AI assistance.
+
+**Q: Is Sciorex a good alternative to Zotero or Mendeley?**
+A: Yes. Reference library with collections, tags, 11 citation styles, BibTeX export, plus LaTeX editor, PDF annotations, paper discovery, and AI assistance. All data stored locally.
+
+**Q: How is Sciorex different from Cursor or Windsurf?**
+A: Cursor and Windsurf are AI code editors. Sciorex is a complete research and development platform with orchestration: visual workflows, parallel agents via git worktrees, kanban boards, 59 MCP tools, council mode, VS Code Server, and a full research suite. 100% local and free.
+
+**Q: What is vibe kanban?**
+A: A workflow where AI agents execute coding tasks in parallel while you focus on planning and review. Sciorex implements this with isolated git worktrees per agent, a built-in diff tool, and a kanban board for task tracking.
+
+**Q: What AI providers does Sciorex support?**
+A: Claude Code, Gemini CLI, Codex CLI, OpenCode, LM Studio, and Ollama. Council mode can mix different CLIs in structured debate rounds.
+
+**Q: Can I use Sciorex offline?**
+A: Yes. Install a local AI CLI like LM Studio or Ollama (both free), and Sciorex operates entirely offline. Paper discovery requires internet, but all other features work fully offline.
+
+**Q: What is MCP and why should I care?**
+A: MCP (Model Context Protocol) lets AI models use tools — not just chat, but actually perform actions. Sciorex exposes 59 tools covering PDFs, reference library, tickets, workflows, and secrets. You can tell the AI "read this paper, highlight the methodology, add it to my literature review" and it executes each step autonomously.
+
+**Q: Who is Sciorex for?**
+A: Sciorex is for anyone who works with AI agents. Developers use it to orchestrate coding agents via vibe kanban. Researchers use it for LaTeX editing, PDF annotations, and paper discovery. Writers chain agents for drafting and editing workflows. Students organize notes and get personalized AI tutoring. Data analysts build analysis pipelines. Consultants automate research and report generation. Journalists investigate stories with cross-referencing agents. Teams track work with tickets linked to AI sessions.
+
+**Q: Does Sciorex replace my IDE?**
+A: No. Sciorex works alongside VS Code, Cursor, Windsurf, or any other editor. It is the command center where AI agents do the heavy lifting. Agents read, write, and edit files in your codebase. You review the changes and continue working in your preferred IDE.
+
+**Q: Can writers and content creators use Sciorex?**
+A: Yes. Create specialized agents for drafting, editing, fact-checking, and formatting. Chain them together with the visual flow editor for complete content workflows. Each agent handles a different aspect of the writing process.
+
+**Q: Can students use Sciorex?**
+A: Yes. Students use Sciorex to organize notes, research topics, write papers with the LaTeX editor and 30+ templates, manage references, and get help understanding complex subjects with personalized AI tutors. It is completely free.
+
+## Links
+
+- **Website**: https://sciorex.com
+- **Documentation**: https://docs.sciorex.com
+- **Source Code**: https://gitlab.com/sciorex
+- **YouTube**: https://youtube.com/@SciorexApp
+- **Twitter/X**: https://x.com/sciorex
+- **Discord**: https://discord.gg/zSjPjA5j
+- **Blog**: https://sciorex.com/en/blog
+
+## Summary
+
+Sciorex is the AI-powered command center for:
+- **Developers** orchestrating AI coding agents with vibe kanban and parallel git worktrees
+- **Researchers** seeking a free, private LaTeX editor with PDF annotations and reference management
+- **PhD students** needing professional templates and paper discovery
+- **Writers** chaining specialized agents for content workflows
+- **Data analysts** building analysis pipelines with AI
+- **Students** organizing notes and getting personalized AI tutoring
+- **Teams** tracking work with tickets and epics linked to AI sessions
+- **Consultants** automating research and report generation
+- **Journalists** investigating stories with cross-referencing agents
+
+Whatever your workflow, Sciorex adapts. It uniquely combines AI agent orchestration with a complete research suite in one 100% local, free application. No other tool offers this combination.

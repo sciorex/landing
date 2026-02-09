@@ -5,9 +5,14 @@ interface SEOProps {
   title?: string;
   description?: string;
   path?: string;
+  faqItems?: Array<{ question: string; answer: string }>;
+  article?: {
+    datePublished: string;
+    dateModified?: string;
+  };
 }
 
-export default function SEO({ title, description, path = '' }: SEOProps) {
+export default function SEO({ title, description, path = '', faqItems, article }: SEOProps) {
   const { i18n } = useTranslation();
   const locale = i18n.language || 'en';
   const baseUrl = 'https://sciorex.com';
@@ -18,14 +23,14 @@ export default function SEO({ title, description, path = '' }: SEOProps) {
   };
 
   const defaultDescriptions: Record<string, string> = {
-    en: 'Free AI-powered research platform with LaTeX editor, live PDF preview, annotations, reference library, and paper discovery. Plus vibe kanban for AI coding agents with Claude Code, Gemini CLI, parallel execution, and git worktrees. 100% local, no data collection.',
-    es: 'Plataforma de investigación con IA gratuita con editor LaTeX, vista previa PDF en vivo, anotaciones, biblioteca de referencias y descubrimiento de artículos. Además vibe kanban para agentes de código IA con Claude Code, Gemini CLI, ejecución paralela y git worktrees. 100% local, sin recopilación de datos.',
+    en: 'Free AI-powered command center where AI agents do the heavy lifting. For developers, researchers, writers, students, teams, and more. LaTeX editor, PDF annotations, reference library, vibe kanban, 59 MCP tools. 100% local, no data collection.',
+    es: 'Centro de mando de IA gratuito donde los agentes de IA hacen el trabajo pesado. Para desarrolladores, investigadores, escritores, estudiantes, equipos y más. Editor LaTeX, anotaciones PDF, biblioteca de referencias, vibe kanban, 59 herramientas MCP. 100% local, sin recopilación de datos.',
   };
 
   const pageTitle = title || defaultTitles[locale] || defaultTitles.en;
   const pageDescription = description || defaultDescriptions[locale] || defaultDescriptions.en;
   const currentUrl = `${baseUrl}/${locale}${path}`;
-  const ogImage = `${baseUrl}/og-image.png`;
+  const ogImage = `${baseUrl}/logo.png`;
 
   useEffect(() => {
     document.title = pageTitle;
@@ -35,22 +40,30 @@ export default function SEO({ title, description, path = '' }: SEOProps) {
     updateMetaTag('og:title', pageTitle, 'property');
     updateMetaTag('og:description', pageDescription, 'property');
     updateMetaTag('og:url', currentUrl, 'property');
-    updateMetaTag('og:type', 'website', 'property');
+    updateMetaTag('og:type', article ? 'article' : 'website', 'property');
     updateMetaTag('og:locale', locale === 'es' ? 'es_ES' : 'en_US', 'property');
     updateMetaTag('og:image', ogImage, 'property');
-    updateMetaTag('og:image:width', '1200', 'property');
-    updateMetaTag('og:image:height', '630', 'property');
-    updateMetaTag('twitter:card', 'summary_large_image', 'name');
+    updateMetaTag('og:image:width', '512', 'property');
+    updateMetaTag('og:image:height', '512', 'property');
+    updateMetaTag('twitter:card', 'summary', 'name');
     updateMetaTag('twitter:site', '@sciorex', 'name');
     updateMetaTag('twitter:creator', '@sciorex', 'name');
     updateMetaTag('twitter:title', pageTitle, 'name');
     updateMetaTag('twitter:description', pageDescription, 'name');
     updateMetaTag('twitter:image', ogImage, 'name');
 
+    if (article) {
+      updateMetaTag('article:published_time', article.datePublished, 'property');
+      if (article.dateModified) {
+        updateMetaTag('article:modified_time', article.dateModified, 'property');
+      }
+      updateMetaTag('article:author', 'Sciorex', 'property');
+    }
+
     updateCanonicalLink(currentUrl);
     updateHrefLangLinks(path);
-    updateJsonLd(pageTitle, pageDescription, currentUrl, ogImage);
-  }, [pageTitle, pageDescription, currentUrl, locale, path, ogImage]);
+    updateJsonLd(pageTitle, pageDescription, currentUrl, ogImage, locale, faqItems, article);
+  }, [pageTitle, pageDescription, currentUrl, locale, path, ogImage, faqItems, article]);
 
   return null;
 }
@@ -96,167 +109,73 @@ function updateHrefLangLinks(path: string) {
   document.head.appendChild(defaultLink);
 }
 
-function updateJsonLd(title: string, description: string, url: string, image: string) {
-  const existingScript = document.querySelector('script[type="application/ld+json"]');
-  if (existingScript) {
-    existingScript.remove();
+function updateJsonLd(
+  title: string,
+  description: string,
+  url: string,
+  _image: string,
+  locale: string,
+  faqItems?: Array<{ question: string; answer: string }>,
+  article?: { datePublished: string; dateModified?: string },
+) {
+  // Remove any dynamically-added JSON-LD (keep the static one from index.html
+  // which already has Organization, SoftwareApplication, WebSite, HowTo, FAQPage)
+  document.querySelectorAll('script[type="application/ld+json"][data-dynamic]').forEach((el) => el.remove());
+
+  // Only emit page-specific schemas here. The static index.html @graph already
+  // contains the product-level schemas (Organization, SoftwareApplication,
+  // WebSite, HowTo, FAQPage). Duplicating them causes conflicting structured data.
+  const graph: Record<string, unknown>[] = [];
+
+  // Add FAQPage schema for landing pages with their own FAQ sections
+  if (faqItems && faqItems.length > 0) {
+    graph.push({
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    });
   }
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Organization',
+  // Add BlogPosting schema for blog articles
+  if (article) {
+    graph.push({
+      '@type': 'BlogPosting',
+      headline: title,
+      description: description,
+      url: url,
+      datePublished: article.datePublished,
+      dateModified: article.dateModified || article.datePublished,
+      inLanguage: locale,
+      author: {
         '@id': 'https://sciorex.com/#organization',
-        name: 'Sciorex',
-        url: 'https://sciorex.com',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://sciorex.com/logo.png',
-          width: 512,
-          height: 512,
-        },
-        description: 'Sciorex is the original vibe kanban platform - the #1 free AI agent orchestration tool for vibe coding.',
-        foundingDate: '2025',
-        sameAs: [
-          'https://www.youtube.com/@SciorexApp',
-          'https://gitlab.com/sciorex',
-          'https://x.com/sciorex',
-          'https://discord.gg/zSjPjA5j',
-        ],
-        contactPoint: {
-          '@type': 'ContactPoint',
-          contactType: 'customer support',
-          url: 'https://sciorex.com/contact',
-        },
       },
-      {
-        '@type': 'SoftwareApplication',
-        '@id': 'https://sciorex.com/#software',
-        name: 'Sciorex',
-        alternateName: ['Sciorex Vibe Kanban', 'Sciorex AI Agent Orchestrator'],
-        description: 'Sciorex is the #1 free AI-powered research platform and vibe kanban tool. Features LaTeX editor with live PDF preview and SyncTeX, PDF annotations, reference library, paper discovery, plus AI agent orchestration with Claude Code, Gemini CLI, and parallel execution via git worktrees.',
-        url: url,
-        image: image,
-        applicationCategory: 'DeveloperApplication',
-        applicationSubCategory: 'AI Development Tools',
-        operatingSystem: ['Windows 10+', 'macOS 11+', 'Linux'],
-        softwareVersion: '1.0',
-        releaseNotes: 'https://gitlab.com/sciorex/sciorex/-/releases',
-        downloadUrl: 'https://sciorex.com/#download',
-        installUrl: 'https://docs.sciorex.com/getting-started',
-        screenshot: 'https://sciorex.com/screenshots/dark/kanban-view.png',
-        softwareHelp: {
-          '@type': 'CreativeWork',
-          url: 'https://docs.sciorex.com',
-        },
-        offers: {
-          '@type': 'Offer',
-          price: '0',
-          priceCurrency: 'USD',
-          availability: 'https://schema.org/InStock',
-          priceValidUntil: '2030-12-31',
-        },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '5',
-          bestRating: '5',
-          worstRating: '1',
-          ratingCount: '1',
-          reviewCount: '1',
-        },
-        featureList: [
-          'LaTeX Editor - Live PDF preview with bidirectional SyncTeX navigation',
-          'PDF Annotations - Highlight, underline, margin notes with Markdown export',
-          'Reference Library - Save papers, organize with collections and tags, export to BibTeX',
-          'Paper Discovery - Find similar papers, explore citation networks',
-          'Select & Ask AI - Select any text and ask AI to explain, improve, or translate',
-          '30+ Professional Templates - NeurIPS, CVPR, Nature, PhD Thesis, Academic CV',
-          'Vibe Kanban - Visual task management for AI coding agents',
-          'Parallel Agent Execution - Run multiple AI agents with git worktrees',
-          'Multi-CLI Support - Claude Code, Gemini CLI, OpenCode, Codex CLI, LM Studio, Ollama',
-          'Visual Flow Editor - Node-based multi-agent workflow designer',
-          '100% Local & Private - Zero data collection, no telemetry',
-          'Free Forever - No subscriptions, no premium tiers',
-        ],
-        keywords: 'LaTeX editor, PDF annotations, reference library, research platform, Overleaf alternative, Zotero alternative, vibe kanban, AI agent orchestration, Claude Code, Gemini CLI, Cursor alternative, Windsurf alternative, academic writing, PhD tools',
-        isAccessibleForFree: true,
-        creator: {
-          '@id': 'https://sciorex.com/#organization',
-        },
+      publisher: {
+        '@id': 'https://sciorex.com/#organization',
       },
-      {
-        '@type': 'WebSite',
-        '@id': 'https://sciorex.com/#website',
-        url: 'https://sciorex.com',
-        name: title,
-        description: description,
-        publisher: {
-          '@id': 'https://sciorex.com/#organization',
-        },
-        inLanguage: ['en', 'es'],
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: 'https://docs.sciorex.com/search?q={search_term_string}',
-          'query-input': 'required name=search_term_string',
-        },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': url,
       },
-      {
-        '@type': 'Product',
-        '@id': 'https://sciorex.com/#product',
-        name: 'Sciorex',
-        description: 'The #1 free vibe kanban platform for AI coding agents',
-        image: 'https://sciorex.com/og-image.png',
-        brand: {
-          '@type': 'Brand',
-          name: 'Sciorex',
-        },
-        category: 'Software > Developer Tools > AI Development',
-        offers: {
-          '@type': 'Offer',
-          price: '0',
-          priceCurrency: 'USD',
-          availability: 'https://schema.org/InStock',
-        },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '5',
-          bestRating: '5',
-          worstRating: '1',
-          ratingCount: '1',
-        },
-      },
-      {
-        '@type': 'HowTo',
-        '@id': 'https://sciorex.com/#howto',
-        name: 'How to use Sciorex for Vibe Coding',
-        description: 'Get started with vibe kanban and AI agent orchestration in three simple steps',
-        step: [
-          {
-            '@type': 'HowToStep',
-            name: 'Create Your Agents',
-            text: 'Define specialized AI agents with custom prompts, tool permissions, and MCP configurations. Connect Claude Code, Gemini CLI, or local models.',
-            position: 1,
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Design Your Workflow',
-            text: 'Use the visual flow editor to connect agents with conditions, loops, and parallel execution. Each agent can work in its own git worktree.',
-            position: 2,
-          },
-          {
-            '@type': 'HowToStep',
-            name: 'Track with Vibe Kanban',
-            text: 'Organize work with the vibe kanban board. Track agent tasks, review code changes, and maintain full visibility over your AI-assisted development.',
-            position: 3,
-          },
-        ],
-      },
-    ],
-  };
+    });
+  }
 
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.textContent = JSON.stringify(jsonLd);
-  document.head.appendChild(script);
+  // Only inject if we have page-specific schemas to add
+  if (graph.length > 0) {
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@graph': graph,
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-dynamic', 'true');
+    script.textContent = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+  }
 }

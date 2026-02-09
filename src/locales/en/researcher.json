@@ -1,0 +1,346 @@
+{
+  "seo": {
+    "title": "Sciorex for Researchers - AI-Powered Research Environment | LaTeX, PDF Annotations, Reference Library",
+    "description": "A unified desktop environment for researchers: LaTeX editor with live preview, PDF annotation, AI-powered literature discovery, reference library, 3D molecule viewer, VS Code integration, and 59 MCP tools for autonomous research workflows. 100% local and free."
+  },
+  "nav": {
+    "brand": "SCIOREX",
+    "back": "Back",
+    "download": "Download",
+    "lightThemeLabel": "Switch to light theme",
+    "darkThemeLabel": "Switch to dark theme"
+  },
+  "sections": [
+    { "id": "title-block", "number": "", "title": "Title & Abstract", "label": "" },
+    { "id": "sec-introduction", "number": "1", "title": "Introduction", "label": "INTRO" },
+    { "id": "sec-research", "number": "2", "title": "Research Capabilities", "label": "RESEARCH" },
+    { "id": "sec-development", "number": "3", "title": "Development Environment", "label": "DEV" },
+    { "id": "sec-mcp", "number": "4", "title": "AI Autonomy & MCP", "label": "AI & MCP" },
+    { "id": "sec-project", "number": "5", "title": "Project Management", "label": "PROJECT" },
+    { "id": "sec-architecture", "number": "6", "title": "Architecture & Privacy", "label": "ARCH" },
+    { "id": "sec-availability", "number": "7", "title": "Availability", "label": "DOWNLOAD" },
+    { "id": "sec-pricing", "number": "8", "title": "Pricing", "label": "PRICING" },
+    { "id": "sec-faq", "number": "A", "title": "FAQ", "label": "FAQ" },
+    { "id": "sec-references", "number": "", "title": "References", "label": "" }
+  ],
+  "titleBlock": {
+    "title": "SCIOREX",
+    "subtitle": "A Unified Environment for Research-Driven Software Development",
+    "authors": "The Sciorex Team",
+    "affiliation": "Independent Research \u00b7 Free & Local-First",
+    "abstractLabel": "Abstract \u2014",
+    "abstract": "We present Sciorex, an integrated desktop environment that unifies AI-assisted coding, visual workflow automation, and academic research tools into a single privacy-first application. Unlike existing solutions that force researchers to juggle multiple disconnected tools, Sciorex provides a seamless workspace where LaTeX editing, PDF annotation, literature discovery, AI-powered development, and project management coexist natively. Through a Model Context Protocol (MCP) layer exposing 59 custom tools, AI models can autonomously annotate PDFs, manage reference libraries, compile LaTeX documents, create and track tickets, and execute automation workflows\u2014all while the researcher maintains full oversight and control. All computation and data storage occur locally on the user\u2019s machine, ensuring complete data sovereignty.",
+    "keywordsLabel": "Keywords:",
+    "keywords": "research tools, AI coding, workflow automation, LaTeX, MCP protocol, desktop application, privacy-first, literature management, PDF annotation, 3D molecule viewer, VS Code, council mode, custom personas"
+  },
+  "introduction": {
+    "title": "Introduction",
+    "p1": "The modern research workflow is fractured across an ever-growing constellation of specialized tools. A computational researcher may begin their morning in a LaTeX editor, switch to a Jupyter notebook for exploratory analysis, consult a reference manager for literature review, open a separate PDF reader for annotation, use a terminal for version control, and finally context-switch into a project management tool to update collaborators. Each transition imposes a cognitive tax that compounds throughout the day {{cite3}}.",
+    "p2": "Recent advances in large language models have introduced a new dimension to this problem. AI coding assistants {{cite1}} have demonstrated remarkable capability in accelerating software development, yet they exist as standalone applications or browser extensions\u2014yet another window demanding the researcher\u2019s fragmented attention. More critically, these AI assistants cannot interact with the researcher\u2019s tools: they cannot annotate a PDF the researcher is reading, add a paper to the reference library, or create a ticket for a bug they discovered during code review.",
+    "p3": "Sciorex addresses this fragmentation by providing a single, cohesive desktop environment purpose-built for researchers who write code. Drawing on principles from literate programming {{cite2}} and Bret Victor\u2019s vision of immediate-feedback creative tools {{cite4}}, Sciorex integrates a LaTeX editor with live preview, a PDF annotation system, an AI-powered literature discovery engine, a multi-model chat interface, visual workflow automation, and full project management\u2014all within a single window. Through a Model Context Protocol (MCP) layer {{cite5}}, these tools are not merely colocated but deeply interconnected: AI models can autonomously operate across every subsystem, transforming them from passive tools into active research collaborators."
+  },
+  "research": {
+    "title": "Research Capabilities",
+    "intro": "This section details the primary research-oriented features of Sciorex. These capabilities are designed to serve the daily needs of academic researchers, graduate students, and anyone whose work exists at the intersection of writing, reading, and programming.",
+    "latex": {
+      "title": "LaTeX Editing",
+      "number": "2.1",
+      "p1": "Sciorex includes a fully integrated LaTeX editor with real-time PDF preview. The editor supports syntax highlighting, auto-completion of common LaTeX commands, multi-file project structures, and BibTeX integration. SyncTeX bidirectional navigation allows clicking on any position in the PDF to jump to the corresponding source line, and vice versa\u2014eliminating the tedious process of manually locating source-preview correspondences. Over 30 publication-ready templates are included (NeurIPS, ICML, CVPR, IEEE, ACM, Nature, Springer, AAAI, PhD Thesis, and more), allowing researchers to begin writing in the correct format immediately. The LaTeX compilation toolchain runs locally with support for pdflatex, xelatex, and lualatex engines, and AI models can invoke it directly through MCP tools\u2014compiling documents, inserting citations, and scaffolding standard structures (figures, tables, algorithms) on the researcher\u2019s behalf."
+    },
+    "pdf": {
+      "title": "PDF Annotation & Management",
+      "number": "2.2",
+      "p1": "Researchers spend a significant portion of their time reading and annotating papers. Sciorex provides a built-in PDF viewer with highlighting, freeform annotation, and structured note-taking. All annotations are stored locally and can be exported in standard formats. The annotation layer integrates with the reference library, allowing users to jump directly from a citation to the annotated source document. Crucially, the PDF tools are also exposed to AI models via MCP: an LLM can read a PDF, add highlights and margin notes, and retrieve existing annotations\u2014enabling workflows like \u201csummarize this paper and highlight the key findings.\u201d"
+    },
+    "discovery": {
+      "title": "Literature Discovery",
+      "number": "2.3",
+      "p1": "Finding relevant papers is one of the most time-consuming aspects of research. Sciorex integrates an AI-powered literature discovery engine that allows researchers to search across Semantic Scholar, arXiv, and CrossRef. Beyond keyword search, the system offers a citation network explorer that visualizes the relationship between papers, enabling researchers to trace intellectual lineage and discover foundational works through graph traversal. The AI library tools allow models to search for papers, add them to the library, and organize them into collections\u2014automating the literature survey process."
+    },
+    "library": {
+      "title": "Reference Library",
+      "number": "2.4",
+      "p1": "All discovered and imported papers are organized in a local reference library that supports 43 distinct item types (journal articles, conference papers, books, theses, datasets, software, patents, and more) with 11 citation styles (APA 7th, MLA 9th, Chicago, IEEE, Harvard, Vancouver, Nature, Science, ACM, APS, and custom CSL) and 5 import/export formats (BibTeX, RIS, CSL-JSON, Zotero, and Mendeley). The library features collections, tags, full-text search, reading status tracking, and automatic metadata extraction from DOIs and arXiv identifiers. References can be directly inserted into LaTeX documents, and BibTeX entries are automatically generated and maintained. Through MCP, AI models have full access to the library: they can add items, update metadata, manage collections and tags, attach notes to papers, and link library items to project tickets\u2014creating a fully connected research knowledge graph."
+    }
+  },
+  "development": {
+    "title": "Development Environment",
+    "intro": "While the research capabilities form the intellectual core of Sciorex, the development environment ensures that researchers who write code can do so without leaving the application. The following subsections describe the programming and automation tools available.",
+    "ai": {
+      "title": "AI-Assisted Coding",
+      "number": "3.1",
+      "p1": "Sciorex includes built-in AI assistants that let you converse with leading AI models\u2014Claude by Anthropic, Gemini by Google, GPT by OpenAI, or fully private local models that run on your own machine with no internet required. Under the hood, Sciorex orchestrates lightweight programs called AI CLIs (such as Claude Code, Gemini CLI, Codex CLI, OpenCode, LM Studio, and Ollama) that communicate directly with AI providers\u2014Sciorex never proxies or stores conversations on intermediate servers. What matters for the researcher is what the AI can do: it can annotate your PDFs, manage your reference library, compile your LaTeX documents, create and track tickets, and execute automation workflows\u2014all from a single conversation. The chat supports multiple modes: standard chat for general questions, an agentic mode where the AI can read, write, and edit files with the researcher reviewing each change, and a preview mode that opens a live browser panel. Extended Thinking levels (Think, Think Hard, Think Harder, Ultrathink) allow researchers to control the depth of AI reasoning for complex problems. A message queue system lets users continue composing follow-up instructions while the AI processes the current request, and context mentions (@file, @library, @ticket, @epic) inject relevant context directly into the conversation. Session forking allows branching a conversation at any point to explore alternative approaches without losing the original thread, and Select & Ask AI lets researchers highlight any text in the editor to instantly query the AI about it."
+    },
+    "council": {
+      "title": "Council Mode",
+      "number": "3.2",
+      "p1": "For particularly complex problems\u2014architectural decisions, debugging subtle issues, or evaluating competing research hypotheses\u2014Sciorex offers a Council Mode in which multiple AI models engage in a structured, round-based discussion. Each participant can be configured with a custom council persona\u2014a reusable profile with its own system prompt, temperature setting, and role description. Personas can be created manually, imported from the community marketplace, or exported as YAML files for sharing with collaborators. The researcher poses a question and observes as different models reason through the problem from their configured perspectives, often surfacing insights that a single model would miss. Beyond councils, Agent Teams enable multi-agent collaboration where specialized agents work together on complex tasks, each contributing domain-specific expertise\u2014for instance, a \u201cLiterature Reviewer\u201d agent gathering sources while a \u201cLaTeX Writer\u201d agent drafts sections and a \u201cCode Analyst\u201d validates experimental results. This adversarial-collaborative approach mirrors the peer review and research team dynamics that researchers are already familiar with."
+    },
+    "agents": {
+      "title": "Custom Agents",
+      "number": "3.3",
+      "p1": "Researchers can define reusable AI agents with specialized system prompts, tool permissions, and input/output schemas. A \u201cResearch Orchestrator\u201d agent might be configured to clarify research goals, create tickets, manage the library, and coordinate experiments\u2014while a \u201cCode Reviewer\u201d agent focuses solely on code quality. Agents can be created manually, generated by an AI assistant, or imported from the community marketplace\u2014which also hosts shared workflows, council personas, and LaTeX templates. Each agent runs in a sandboxed local environment with configurable permission levels (from fully autonomous to requiring approval for every action)."
+    },
+    "agentExecution": {
+      "title": "Agent Execution & History",
+      "number": "3.4",
+      "p1": "Every agent execution is recorded with full message history, tool calls, and output. Researchers can review what an agent did, inspect individual tool invocations, and continue conversations from any point. Multiple agents can run in parallel across different worktrees, enabling side-by-side comparison of different approaches to the same problem."
+    },
+    "workflows": {
+      "title": "Visual Workflows",
+      "number": "3.5",
+      "p1": "Complex research pipelines\u2014data preprocessing, model training, figure generation, paper compilation\u2014often involve dozens of interdependent steps. Sciorex provides a visual, node-based workflow editor where users can compose automation pipelines by connecting pre-built and custom nodes. The node palette includes triggers, AI agent nodes, conditional branching, parallel execution, wait checkpoints (for human approval), data transforms, and ticket actions. Workflows support real-time debugging with breakpoints, step-through execution, and per-node output inspection."
+    },
+    "flowMonitoring": {
+      "title": "Flow Execution Monitoring",
+      "number": "3.6",
+      "p1": "Running workflows are monitored in real time. The execution view visualizes node-by-node progress, highlights the currently executing node, and provides interactive decision panels for error handling and loop control. Completed runs are logged with full execution traces, making research pipelines auditable and reproducible."
+    },
+    "editor": {
+      "title": "Integrated Editor",
+      "number": "3.7",
+      "p1": "The built-in Monaco-based editor supports syntax highlighting for all major languages, VIM mode, multi-tab editing, a file tree browser with multi-select and drag-and-drop operations, and a code outline panel. Beyond standard code files, it handles Markdown with preview, Jupyter notebooks, PDFs, images, HTML preview, LaTeX documents, a rich-text editor (TipTap) for note-taking, and a 3D molecule viewer for structural biology files. On Linux and macOS, an embedded VS Code Server provides a full VS Code environment alongside the primary editor; on Windows, the same capability is available via VS Code CLI serve-web. A live browser preview panel with Playwright CDP synchronization enables side-by-side frontend development: Sciorex auto-detects running dev servers, and the AI can interact with the live browser directly. The agentic preview mode shows AI-generated diffs for review before applying changes. A built-in process explorer with memory tracking gives researchers full visibility into running background tasks."
+    },
+    "sourceControl": {
+      "title": "Source Control & Worktrees",
+      "number": "3.8",
+      "p1": "Git is a free version-control system widely used in both software engineering and computational research. It tracks every change to your files, lets you revert to earlier versions, and makes it simple to back up your work to free hosting services like GitHub or GitLab. When Git is installed on your system, Sciorex provides a visual interface for it: a diff viewer, commit graph, branch management, and staged/unstaged change tracking\u2014no command line needed. Projects are plain folders; initialize Git whenever you want version control.",
+      "p2": "For researchers working on multiple experiments simultaneously, Git worktree support allows parallel branch workspaces\u2014each with its own independent working directory and AI sessions. Worktree merging with built-in conflict detection makes it straightforward to reconcile divergent experiments. This enables a workflow where one worktree runs an experiment while another explores an alternative approach, with results compared side by side before merging the winning approach back into the main branch."
+    }
+  },
+  "mcp": {
+    "title": "AI Autonomy & the MCP Layer",
+    "p1": "What distinguishes Sciorex from a collection of colocated tools is the Model Context Protocol (MCP) layer {{cite5}} that binds them together. MCP exposes 59 custom tools (and counting) across multiple specialized servers, giving AI models direct access to every subsystem in the application. Researchers can also register their own MCP-compatible servers in the workspace configuration, extending the AI\u2019s capabilities to any external tool or service that implements the protocol. This transforms the AI from a text-based assistant into an autonomous research collaborator that can operate across the full spectrum of research activities.",
+    "p2": "The following is a representative subset of the MCP capabilities, organized by domain. Each tool can be invoked by any AI model during a chat session, subject to the researcher\u2019s permission settings.",
+    "tools": [
+      {
+        "server": "RESEARCH SERVER (16 TOOLS)",
+        "tools": [
+          "pdf_read \u2014 Extract text from PDFs by page range",
+          "pdf_annotate \u2014 Add highlights, underlines, comments",
+          "pdf_get_annotations \u2014 Retrieve all annotations from a PDF",
+          "latex_compile \u2014 Compile LaTeX (pdflatex/xelatex/lualatex)",
+          "library_add_item \u2014 Add papers, books, datasets to library",
+          "library_manage \u2014 Create/update collections and tags",
+          "library_search \u2014 Search papers via Semantic Scholar, arXiv, CrossRef"
+        ]
+      },
+      {
+        "server": "TICKETS SERVER (23 TOOLS)",
+        "tools": [
+          "sciorex_create_ticket \u2014 Create tickets with type, priority, subtasks",
+          "sciorex_change_status \u2014 Move tickets through workflow stages",
+          "sciorex_report_progress \u2014 Report completion % and milestones",
+          "sciorex_create_epic \u2014 Group tickets into milestone epics",
+          "sciorex_link_resource \u2014 Link papers, branches, sessions to tickets",
+          "sciorex_add_comment \u2014 Add comments and discussion threads"
+        ]
+      },
+      {
+        "server": "RESOURCES SERVER (11 TOOLS)",
+        "tools": [
+          "sciorex_save_agent \u2014 Create or update custom AI agents",
+          "sciorex_save_flow \u2014 Create or update automation workflows",
+          "sciorex_execute_agent \u2014 Launch agent execution in background",
+          "sciorex_execute_flow \u2014 Trigger flow execution with parameters",
+          "sciorex_list_agents \u2014 Browse available agents and templates"
+        ]
+      },
+      {
+        "server": "INTERACTIONS SERVER (4 TOOLS)",
+        "tools": [
+          "sciorex_ask_user \u2014 Ask questions with single/multi-select options",
+          "sciorex_request_approval \u2014 Request explicit user approval",
+          "sciorex_notify_user \u2014 Send info/warning/error notifications",
+          "sciorex_set_view_mode \u2014 Switch between chat, agentic, and preview"
+        ]
+      },
+      {
+        "server": "SECRETS SERVER (4 TOOLS)",
+        "tools": [
+          "request_secret \u2014 Securely access secrets (value never exposed to AI)",
+          "release_secret \u2014 Release granted secrets when no longer needed",
+          "add_secret \u2014 Store new secrets with user confirmation",
+          "list_secrets \u2014 List available secret names (values never shown)"
+        ]
+      }
+    ],
+    "permissions": "The permission system provides three levels of AI autonomy: a \u201cYOLO\u201d mode where the AI operates freely, an \u201cauto-approve edits\u201d mode where file changes are applied automatically but other actions require confirmation, and an \u201cask for all\u201d mode where every tool invocation requires explicit researcher approval. This graduated control allows researchers to calibrate trust as they become familiar with the system\u2019s capabilities.",
+    "practical": "The practical implication is that a researcher can instruct the AI to \u201cdownload the latest paper on transformer architectures, add it to my reference library, annotate the key findings, and create a ticket to review its methodology\u201d\u2014and the AI can execute this entire workflow autonomously, using the MCP tools to interact with the PDF viewer, library, and ticket system without any manual intervention."
+  },
+  "project": {
+    "title": "Project Management",
+    "p1": "Research projects benefit from structured task tracking, especially in collaborative settings. Sciorex includes a built-in project management system with Kanban boards, a ticket list view, and epics for organizing work across longer timelines. Unlike external project management tools, Sciorex\u2019s system is tightly coupled with the codebase and research documents: tickets can be linked to specific files, Git branches, AI sessions, flow runs, and library papers. AI models can create, update, and query tickets through MCP, enabling automated progress tracking where the AI reports completion percentages and milestones as it works.",
+    "p2": "For larger research endeavors\u2014thesis chapters, multi-paper projects, or grant deliverables\u2014Epics provide a higher-level organizational layer. Epics group related tickets into coherent milestones, offering progress tracking across the entire scope of a research project. This hierarchical structure scales from a single-author study to multi-team collaborative efforts."
+  },
+  "architecture": {
+    "title": "Architecture & Privacy",
+    "p1": "Sciorex is built on a local-first architecture. The application runs entirely on the user\u2019s desktop with no mandatory cloud services, no user accounts, and no telemetry. All data\u2014projects, references, annotations, AI conversation history, workflow definitions\u2014is stored on the local filesystem in open, human-readable formats wherever possible. Projects are plain folders that can be git-initialized at any time, giving researchers free backup to GitHub, GitLab, or any Git remote\u2014without depending on any proprietary sync service.",
+    "p2": "This design is a deliberate response to the growing trend of cloud-dependent research tools that create data lock-in and raise legitimate concerns about intellectual property exposure. Since Sciorex wraps external AI CLIs, all communication goes directly from the CLI to its model provider\u2014Sciorex itself never relays, intercepts, or stores any data. It does not operate relay servers, does not collect usage data, and does not require an internet connection for any core functionality beyond the CLI\u2019s own model access and literature search. For researchers requiring complete offline operation, Sciorex supports local CLIs: LM Studio and Ollama.",
+    "p3": "The secrets management system ensures that tokens and credentials are stored securely and never exposed to AI models\u2014when a CLI requests access to a secret, it receives only an environment variable reference, with the actual value injected securely at execution time.",
+    "privacyGuarantee": {
+      "heading": "Privacy guarantee:",
+      "line1": "All data remains on the user\u2019s machine.",
+      "line2": "No cloud dependency. No telemetry. No data collection.",
+      "line3": "Secrets never exposed to AI models.",
+      "line4": "Your research is yours alone."
+    }
+  },
+  "availability": {
+    "title": "Availability",
+    "p1": "Sciorex is freely available for Windows, macOS, and Linux. The application is distributed as native installers for each platform and requires no account creation or license key.",
+    "docsNote": "Full installation instructions are available in the",
+    "docsLink": "Getting Started guide",
+    "docsMid": ", and the complete",
+    "docsFullLink": "documentation",
+    "docsEnd": "covers all features in detail.",
+    "downloads": {
+      "downloadAction": "Download \u2192",
+      "groups": [
+        {
+          "os": "Windows",
+          "targets": [
+            { "label": "Installer", "note": "Recommended, ~200 MB" },
+            { "label": "Portable", "note": "No install needed, ~200 MB" }
+          ]
+        },
+        {
+          "os": "macOS",
+          "targets": [
+            { "label": "Apple Silicon", "note": "M1/M2/M3/M4, ~340 MB" },
+            { "label": "Intel", "note": "Intel Macs, ~340 MB" }
+          ]
+        },
+        {
+          "os": "Linux",
+          "targets": [
+            { "label": "AppImage", "note": "Universal, ~250 MB" },
+            { "label": "Debian/Ubuntu", "note": "apt compatible, ~220 MB" },
+            { "label": "Fedora/RHEL", "note": "dnf/yum compatible, ~220 MB" }
+          ]
+        }
+      ]
+    },
+    "macNotice": {
+      "title": "macOS Installation Notice",
+      "p1": "macOS may show \u201cApp is damaged\u201d or \u201cunidentified developer\u201d because Sciorex is not yet signed with an Apple Developer certificate. To resolve this, open Terminal and run:",
+      "command": "xattr -cr /Applications/Sciorex.app",
+      "alternative": "Or: Right-click the app > Open > click \u201cOpen\u201d in the dialog.",
+      "sequoia": "On macOS Sequoia (15+): Try opening the app first, then go to System Settings > Privacy & Security and click \u201cOpen Anyway.\u201d",
+      "learnMore": "Why does macOS show this warning?"
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "p1": "Sciorex Personal is free and includes all features described in this paper. There are no feature gates, no trial limitations, and no premium tiers that restrict core functionality. If your institution requires team workspaces, collaboration, or enterprise features, contact us to discuss upcoming plans."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Is Sciorex really free?",
+        "a": "Yes. Completely free for personal and professional use\u2014no subscriptions, no premium tiers, no hidden costs. Sciorex works by wrapping AI CLIs (command-line interfaces)\u2014small programs like Claude Code, Gemini CLI, or Ollama that you install separately on your computer. Sciorex provides the graphical interface and orchestration on top. Your costs are whatever the CLI charges, or zero with fully local models via LM Studio or Ollama."
+      },
+      {
+        "q": "Can AI models actually annotate my PDFs and manage my library?",
+        "a": "Yes. Through the MCP protocol, AI models can read PDF content (pdf_read), add highlights and comments (pdf_annotate), retrieve existing annotations (pdf_get_annotations), add papers to your reference library (library_add_item), manage collections and tags (library_manage), and attach notes (library_add_note)\u2014all autonomously during a chat session. You can ask the AI to \u201cread this paper, highlight the methodology section, and add it to my literature review collection\u201d and it will execute each step using the appropriate tools."
+      },
+      {
+        "q": "What LaTeX templates are included?",
+        "a": "Over 30 publication-ready templates: NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP, AAAI, IJCAI, IEEE (conference and journal), ACM (SIGCHI, SIGPLAN, etc.), Nature, Science, Springer (LNCS), Elsevier, APS (Physical Review), PNAS, PhD Thesis, Master\u2019s Thesis, and general article formats. Each template includes the correct bibliography style and can be compiled with pdflatex, xelatex, or lualatex."
+      },
+      {
+        "q": "How does the reference library compare to Zotero or Mendeley?",
+        "a": "Sciorex\u2019s library supports 43 item types, 11 citation styles (APA, MLA, IEEE, Chicago, Harvard, Vancouver, Nature, Science, ACM, APS, and custom CSL), and imports/exports in BibTeX, RIS, CSL-JSON, Zotero, and Mendeley formats. The key difference is AI integration: your language models can search for papers, add them to collections, generate citations, and insert references into LaTeX documents\u2014something traditional reference managers cannot do. All data is stored locally on your machine."
+      },
+      {
+        "q": "Can I use Sciorex completely offline?",
+        "a": "Yes. Install a local AI CLI like LM Studio or Ollama (both free), and Sciorex operates entirely offline with no internet connection required. Paper discovery (Semantic Scholar, arXiv, CrossRef) naturally requires internet, but all other features\u2014the editor, LaTeX compilation, PDF annotation, library management, ticket tracking, and workflows\u2014work fully offline."
+      },
+      {
+        "q": "Where is my data stored? Is my research private?",
+        "a": "Everything stays on your local filesystem\u2014100% of it. Sciorex collects no analytics, no telemetry, and no usage data. Your papers, annotations, library, conversations, and code never leave your machine. Projects are plain folders\u2014if you install Git (a free version-control tool), you can track changes and back up your work to GitHub or GitLab at no cost. Secrets (tokens, credentials) are stored in an encrypted local vault and never exposed to AI models. The only network traffic is between the CLI and its provider when you initiate a chat."
+      },
+      {
+        "q": "What is MCP and why should researchers care?",
+        "a": "MCP (Model Context Protocol) is an open standard that gives AI models the ability to use tools\u2014not just generate text, but actually perform actions. In practice, this means you can tell the AI \u201cread this paper, highlight the methodology section, add it to my literature review collection, and create a ticket to follow up\u201d and it will do each step autonomously. Sciorex exposes 59 custom tools (and counting) across multiple servers covering PDFs, the reference library, project tickets, workflows, interactions, and secrets. You can also register your own MCP-compatible servers to extend the AI\u2019s capabilities further. It transforms AI from a chatbot into a research assistant that can operate across your entire workspace."
+      },
+      {
+        "q": "How is Sciorex different from Cursor, Windsurf, or Overleaf?",
+        "a": "Sciorex is neither a code editor nor an online LaTeX editor\u2014it\u2019s a complete research environment. Unlike Cursor or Windsurf (code-focused IDEs), Sciorex includes PDF annotation, a reference library, paper discovery, LaTeX with 30+ templates, project management with kanban boards, a 3D molecule viewer, and an embedded VS Code Server. Unlike Overleaf (cloud LaTeX), Sciorex runs 100% locally, supports AI-assisted writing with any model, and integrates code editing alongside document preparation. Council Mode lets multiple AI models debate problems, with custom personas you can tailor or import from the community marketplace. It wraps existing AI CLIs (Claude Code, Gemini CLI) so you keep full control."
+      },
+      {
+        "q": "Do I need programming experience to use Sciorex?",
+        "a": "No. While Sciorex includes a powerful code editor and agent framework, many researchers use it primarily for PDF reading, literature management, LaTeX writing, and AI-assisted research tasks\u2014none of which require programming. The visual workflow builder uses drag-and-drop, and the AI chat interface accepts natural language instructions. Researchers who do write code (Python, R, MATLAB) benefit from the integrated development environment."
+      }
+    ]
+  },
+  "references": {
+    "title": "References",
+    "items": [
+      "Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., and Polosukhin, I., \u201cAttention Is All You Need,\u201d Advances in Neural Information Processing Systems (NeurIPS), 2017.",
+      "Knuth, D. E., \u201cLiterate Programming,\u201d CSLI Lecture Notes, No. 27, Stanford University Center for the Study of Language and Information, 1992.",
+      "Nielsen, J., \u201cUsability Engineering,\u201d Morgan Kaufmann Publishers, 1993.",
+      "Victor, B., \u201cInventing on Principle,\u201d Canadian University Software Engineering Conference (CUSEC), 2012.",
+      "Anthropic, \u201cModel Context Protocol Specification,\u201d https://modelcontextprotocol.io, 2024."
+    ]
+  },
+  "cta": {
+    "title": "Start your research with Sciorex",
+    "subtitle": "Free, private, and built for academic workflows. Download now or view the project on GitHub.",
+    "download": "Download",
+    "viewSource": "View on GitHub",
+    "starGithub": "Star on GitHub"
+  },
+  "figures": {
+    "1": "The Sciorex integrated workspace showing the project dashboard with activity feed, quick stats, and navigation to all research and development tools.",
+    "2": "The integrated LaTeX editor with syntax highlighting and side-by-side live PDF preview. Changes are reflected in real time as the user types.",
+    "3": "PDF annotation interface with highlights, margin notes, and structured export. The annotation export panel compiles reading notes from multiple papers into reusable documents.",
+    "4": "Literature discovery with multi-source search and citation network visualization. Researchers can trace intellectual lineage across papers and add results directly to their local library.",
+    "5": "The reference library with collection-based organization, metadata display, reading status tracking, and one-click BibTeX export for LaTeX integration.",
+    "6": "The AI chat interface: standard conversation with code generation, the start screen showing model selection and feature access, and the agentic mode with inline diff review for AI-generated edits.",
+    "7": "Council Mode showing a multi-model discussion where different LLMs debate a problem with round-based conversation flow, participant indicators, and council controls.",
+    "8": "Custom agent management: the agents directory with community and user-created agents, detailed agent configuration with system prompts and MCP tool permissions, and the quick-start interface for creating new agents.",
+    "9": "Agent execution history showing session tree navigation, tool call inspection, and execution status indicators with the ability to continue or branch conversations.",
+    "10": "The visual workflow engine: the node-based editor, debugging mode with breakpoints and node configuration, community flow templates (Git Commit, PR Review, Scientific Research), and the quick-start interface.",
+    "11": "Flow execution monitoring: the completed run view with node-by-node status and timing, and a live execution showing an active workflow with interactive decision points.",
+    "12": "The integrated editor: Monaco-based code editing with syntax highlighting and file tree, the agentic review mode showing AI-generated diffs for approval, and the live browser preview for frontend development.",
+    "13": "Source control and worktrees: the Git integration with visual diff viewer, worktree management for parallel branches, a worktree in active use with independent file state, and AI chat sessions scoped to individual worktrees.",
+    "14": "An AI chat session demonstrating autonomous tool use: the model downloads a paper, extracts content via pdf_read, adds it to the library, and creates a summary\u2014all through MCP tool invocations visible in the conversation.",
+    "15": "Project management views: the Kanban board with drag-and-drop status management, a populated board with tickets across all workflow stages, the list view with filtering and search, and a detailed ticket with description, subtasks, progress tracking, and linked resources.",
+    "16": "Epics and ticket details: the Epics view with milestone progress tracking, and a detailed ticket showing AI-reported progress updates, acceptance criteria checklists, resource links, and blocker relationships.",
+    "17": "CLI integration settings showing support for Claude Code, Gemini CLI, OpenAI Codex CLI, OpenCode, LM Studio, and Ollama, each with independent model selection and permission configuration."
+  },
+  "figureLabels": {
+    "3": ["Annotation", "Export"],
+    "4": ["Search", "Citations"],
+    "6": ["Chat", "Start", "Agentic"],
+    "8": ["Agents List", "Agent Config", "Quick Start"],
+    "10": ["Editor", "Debug", "Templates", "Quick Start"],
+    "11": ["Execution", "Live Run"],
+    "12": ["Editor", "Agentic Review", "Browser Preview"],
+    "13": ["Git", "Worktree", "Parallel Work", "Worktree + Chat"],
+    "15": ["Kanban", "Full Board", "List View", "Ticket Detail"],
+    "16": ["Epics", "Ticket + Progress"]
+  },
+  "figurePrefix": "Figure",
+  "ui": {
+    "previous": "Previous",
+    "next": "Next",
+    "reference": "Reference"
+  },
+  "footer": {
+    "github": "GitHub",
+    "discord": "Discord",
+    "twitter": "Twitter",
+    "youtube": "YouTube",
+    "docs": "Docs",
+    "blog": "Blog",
+    "contact": "Contact",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "\u00a9 2025-{{year}} Sciorex \u2014 A free, privacy-first research environment.",
+    "backToTop": "\u2191 Back to top"
+  }
+}

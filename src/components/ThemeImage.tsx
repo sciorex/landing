@@ -4,9 +4,10 @@ interface ThemeImageProps {
   name: string;
   alt: string;
   className?: string;
+  onLoad?: () => void;
 }
 
-export default function ThemeImage({ name, alt, className = '' }: ThemeImageProps) {
+export default function ThemeImage({ name, alt, className = '', onLoad }: ThemeImageProps) {
   const { theme } = useTheme();
   const src = `/screenshots/${theme}/${name}`;
 
@@ -16,6 +17,7 @@ export default function ThemeImage({ name, alt, className = '' }: ThemeImageProp
       alt={alt}
       className={className}
       loading="lazy"
+      onLoad={onLoad}
     />
   );
 }

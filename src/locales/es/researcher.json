@@ -1,0 +1,346 @@
+{
+  "seo": {
+    "title": "Sciorex para Investigadores - Entorno de Investigaci\u00f3n con IA | LaTeX, Anotaciones PDF, Biblioteca de Referencias",
+    "description": "Un entorno de escritorio unificado para investigadores: editor LaTeX con vista previa en tiempo real, anotaci\u00f3n de PDF, descubrimiento de literatura impulsado por IA, biblioteca de referencias, visor de mol\u00e9culas 3D, integraci\u00f3n con VS Code y m\u00e1s 59 herramientas MCP para flujos de trabajo de investigaci\u00f3n aut\u00f3nomos. 100% local y gratuito."
+  },
+  "nav": {
+    "brand": "SCIOREX",
+    "back": "Volver",
+    "download": "Descargar",
+    "lightThemeLabel": "Cambiar a tema claro",
+    "darkThemeLabel": "Cambiar a tema oscuro"
+  },
+  "sections": [
+    { "id": "title-block", "number": "", "title": "T\u00edtulo y Resumen", "label": "" },
+    { "id": "sec-introduction", "number": "1", "title": "Introducci\u00f3n", "label": "INTRO" },
+    { "id": "sec-research", "number": "2", "title": "Capacidades de Investigaci\u00f3n", "label": "INVESTIG." },
+    { "id": "sec-development", "number": "3", "title": "Entorno de Desarrollo", "label": "DESARROLLO" },
+    { "id": "sec-mcp", "number": "4", "title": "Autonom\u00eda de IA y MCP", "label": "IA & MCP" },
+    { "id": "sec-project", "number": "5", "title": "Gesti\u00f3n de Proyectos", "label": "PROYECTO" },
+    { "id": "sec-architecture", "number": "6", "title": "Arquitectura y Privacidad", "label": "ARQUIT." },
+    { "id": "sec-availability", "number": "7", "title": "Disponibilidad", "label": "DESCARGA" },
+    { "id": "sec-pricing", "number": "8", "title": "Precios", "label": "PRECIOS" },
+    { "id": "sec-faq", "number": "A", "title": "Preguntas Frecuentes", "label": "FAQ" },
+    { "id": "sec-references", "number": "", "title": "Referencias", "label": "" }
+  ],
+  "titleBlock": {
+    "title": "SCIOREX",
+    "subtitle": "Un Entorno Unificado para el Desarrollo de Software Orientado a la Investigaci\u00f3n",
+    "authors": "El Equipo de Sciorex",
+    "affiliation": "Investigaci\u00f3n Independiente \u00b7 Gratuito y Local-First",
+    "abstractLabel": "Resumen \u2014",
+    "abstract": "Presentamos Sciorex, un entorno de escritorio integrado que unifica la programaci\u00f3n asistida por IA, la automatizaci\u00f3n visual de flujos de trabajo y las herramientas de investigaci\u00f3n acad\u00e9mica en una \u00fanica aplicaci\u00f3n con privacidad como prioridad. A diferencia de las soluciones existentes que obligan a los investigadores a alternar entre m\u00faltiples herramientas desconectadas, Sciorex proporciona un espacio de trabajo integrado donde la edici\u00f3n de LaTeX, la anotaci\u00f3n de PDF, el descubrimiento de literatura, el desarrollo asistido por IA y la gesti\u00f3n de proyectos coexisten de forma nativa. A trav\u00e9s de una capa de Model Context Protocol (MCP) que expone 59 herramientas personalizadas, los modelos de IA pueden anotar PDF de forma aut\u00f3noma, gestionar bibliotecas de referencias, compilar documentos LaTeX, crear y realizar seguimiento de tickets, y ejecutar flujos de trabajo automatizados\u2014todo mientras el investigador mantiene plena supervisi\u00f3n y control. Todo el c\u00f3mputo y almacenamiento de datos se realiza localmente en la m\u00e1quina del usuario, garantizando soberan\u00eda total sobre los datos.",
+    "keywordsLabel": "Palabras clave:",
+    "keywords": "herramientas de investigaci\u00f3n, programaci\u00f3n con IA, automatizaci\u00f3n de flujos de trabajo, LaTeX, protocolo MCP, aplicaci\u00f3n de escritorio, privacidad ante todo, gesti\u00f3n de literatura, anotaci\u00f3n de PDF, visor de mol\u00e9culas 3D, VS Code, modo consejo, perfiles personalizados"
+  },
+  "introduction": {
+    "title": "Introducci\u00f3n",
+    "p1": "El flujo de trabajo de investigaci\u00f3n moderno est\u00e1 fragmentado entre una constelaci\u00f3n creciente de herramientas especializadas. Un investigador computacional puede comenzar su ma\u00f1ana en un editor LaTeX, cambiar a un cuaderno Jupyter para an\u00e1lisis exploratorio, consultar un gestor de referencias para la revisi\u00f3n de literatura, abrir un lector de PDF independiente para anotaciones, usar una terminal para control de versiones y, finalmente, cambiar de contexto a una herramienta de gesti\u00f3n de proyectos para actualizar a sus colaboradores. Cada transici\u00f3n impone un coste cognitivo que se acumula a lo largo del d\u00eda {{cite3}}.",
+    "p2": "Los avances recientes en modelos de lenguaje de gran escala han introducido una nueva dimensi\u00f3n a este problema. Los asistentes de programaci\u00f3n con IA {{cite1}} han demostrado una capacidad notable para acelerar el desarrollo de software, pero existen como aplicaciones independientes o extensiones de navegador\u2014otra ventana m\u00e1s que demanda la atenci\u00f3n fragmentada del investigador. M\u00e1s cr\u00edticamente, estos asistentes de IA no pueden interactuar con las herramientas del investigador: no pueden anotar un PDF que el investigador est\u00e1 leyendo, agregar un art\u00edculo a la biblioteca de referencias ni crear un ticket para un error que descubrieron durante la revisi\u00f3n de c\u00f3digo.",
+    "p3": "Sciorex aborda esta fragmentaci\u00f3n proporcionando un entorno de escritorio \u00fanico y cohesivo, dise\u00f1ado espec\u00edficamente para investigadores que escriben c\u00f3digo. Bas\u00e1ndose en los principios de la programaci\u00f3n literaria {{cite2}} y la visi\u00f3n de Bret Victor sobre herramientas creativas con retroalimentaci\u00f3n inmediata {{cite4}}, Sciorex integra un editor LaTeX con vista previa en tiempo real, un sistema de anotaci\u00f3n de PDF, un motor de descubrimiento de literatura impulsado por IA, una interfaz de chat multimodelo, automatizaci\u00f3n visual de flujos de trabajo y gesti\u00f3n completa de proyectos\u2014todo dentro de una sola ventana. A trav\u00e9s de una capa de Model Context Protocol (MCP) {{cite5}}, estas herramientas no solo est\u00e1n colocadas en el mismo espacio, sino profundamente interconectadas: los modelos de IA pueden operar de forma aut\u00f3noma en cada subsistema, transform\u00e1ndolos de herramientas pasivas en colaboradores activos de investigaci\u00f3n."
+  },
+  "research": {
+    "title": "Capacidades de Investigaci\u00f3n",
+    "intro": "Esta secci\u00f3n detalla las principales funcionalidades orientadas a la investigaci\u00f3n de Sciorex. Estas capacidades est\u00e1n dise\u00f1adas para satisfacer las necesidades cotidianas de investigadores acad\u00e9micos, estudiantes de posgrado y cualquier persona cuyo trabajo se sit\u00fae en la intersecci\u00f3n de la escritura, la lectura y la programaci\u00f3n.",
+    "latex": {
+      "title": "Edici\u00f3n de LaTeX",
+      "number": "2.1",
+      "p1": "Sciorex incluye un editor LaTeX completamente integrado con vista previa de PDF en tiempo real. El editor soporta resaltado de sintaxis, autocompletado de comandos LaTeX comunes, estructuras de proyectos multi-archivo e integraci\u00f3n con BibTeX. La navegaci\u00f3n bidireccional SyncTeX permite hacer clic en cualquier posici\u00f3n del PDF para saltar a la l\u00ednea fuente correspondiente, y viceversa\u2014eliminando el tedioso proceso de localizar manualmente las correspondencias entre fuente y vista previa. Se incluyen m\u00e1s de 30 plantillas listas para publicaci\u00f3n (NeurIPS, ICML, CVPR, IEEE, ACM, Nature, Springer, AAAI, Tesis Doctoral y m\u00e1s), lo que permite a los investigadores comenzar a escribir en el formato correcto de inmediato. La cadena de compilaci\u00f3n LaTeX se ejecuta localmente con soporte para los motores pdflatex, xelatex y lualatex, y los modelos de IA pueden invocarla directamente a trav\u00e9s de herramientas MCP\u2014compilando documentos, insertando citas y generando estructuras est\u00e1ndar (figuras, tablas, algoritmos) en nombre del investigador."
+    },
+    "pdf": {
+      "title": "Anotaci\u00f3n y Gesti\u00f3n de PDF",
+      "number": "2.2",
+      "p1": "Los investigadores dedican una parte significativa de su tiempo a leer y anotar art\u00edculos. Sciorex proporciona un visor de PDF integrado con resaltado, anotaci\u00f3n libre y toma de notas estructurada. Todas las anotaciones se almacenan localmente y pueden exportarse en formatos est\u00e1ndar. La capa de anotaci\u00f3n se integra con la biblioteca de referencias, lo que permite a los usuarios saltar directamente de una cita al documento fuente anotado. De forma crucial, las herramientas de PDF tambi\u00e9n est\u00e1n expuestas a los modelos de IA a trav\u00e9s de MCP: un LLM puede leer un PDF, a\u00f1adir resaltados y notas al margen, y recuperar anotaciones existentes\u2014habilitando flujos de trabajo como \u00abresume este art\u00edculo y resalta los hallazgos principales.\u00bb"
+    },
+    "discovery": {
+      "title": "Descubrimiento de Literatura",
+      "number": "2.3",
+      "p1": "Encontrar art\u00edculos relevantes es uno de los aspectos m\u00e1s laboriosos de la investigaci\u00f3n. Sciorex integra un motor de descubrimiento de literatura impulsado por IA que permite a los investigadores buscar en Semantic Scholar, arXiv y CrossRef. M\u00e1s all\u00e1 de la b\u00fasqueda por palabras clave, el sistema ofrece un explorador de redes de citas que visualiza la relaci\u00f3n entre art\u00edculos, permitiendo a los investigadores rastrear el linaje intelectual y descubrir trabajos fundacionales mediante recorridos de grafos. Las herramientas de biblioteca con IA permiten a los modelos buscar art\u00edculos, a\u00f1adirlos a la biblioteca y organizarlos en colecciones\u2014automatizando el proceso de revisi\u00f3n de literatura."
+    },
+    "library": {
+      "title": "Biblioteca de Referencias",
+      "number": "2.4",
+      "p1": "Todos los art\u00edculos descubiertos e importados se organizan en una biblioteca de referencias local que admite 43 tipos de \u00edtems distintos (art\u00edculos de revista, ponencias de congresos, libros, tesis, conjuntos de datos, software, patentes y m\u00e1s) con 11 estilos de citaci\u00f3n (APA 7.\u00aa ed., MLA 9.\u00aa ed., Chicago, IEEE, Harvard, Vancouver, Nature, Science, ACM, APS y CSL personalizado) y 5 formatos de importaci\u00f3n/exportaci\u00f3n (BibTeX, RIS, CSL-JSON, Zotero y Mendeley). La biblioteca ofrece colecciones, etiquetas, b\u00fasqueda de texto completo, seguimiento del estado de lectura y extracci\u00f3n autom\u00e1tica de metadatos a partir de DOI e identificadores arXiv. Las referencias pueden insertarse directamente en documentos LaTeX, y las entradas BibTeX se generan y mantienen autom\u00e1ticamente. A trav\u00e9s de MCP, los modelos de IA tienen acceso completo a la biblioteca: pueden a\u00f1adir \u00edtems, actualizar metadatos, gestionar colecciones y etiquetas, adjuntar notas a art\u00edculos y vincular \u00edtems de la biblioteca con tickets del proyecto\u2014creando un grafo de conocimiento de investigaci\u00f3n completamente conectado."
+    }
+  },
+  "development": {
+    "title": "Entorno de Desarrollo",
+    "intro": "Si bien las capacidades de investigaci\u00f3n constituyen el n\u00facleo intelectual de Sciorex, el entorno de desarrollo garantiza que los investigadores que escriben c\u00f3digo puedan hacerlo sin salir de la aplicaci\u00f3n. Las siguientes subsecciones describen las herramientas de programaci\u00f3n y automatizaci\u00f3n disponibles.",
+    "ai": {
+      "title": "Programaci\u00f3n Asistida por IA",
+      "number": "3.1",
+      "p1": "Sciorex incluye asistentes de IA integrados que permiten conversar con los principales modelos de IA\u2014Claude de Anthropic, Gemini de Google, GPT de OpenAI, o modelos locales completamente privados que se ejecutan en su propia m\u00e1quina sin necesidad de internet. Internamente, Sciorex orquesta programas ligeros llamados AI CLI (como Claude Code, Gemini CLI, Codex CLI, OpenCode, LM Studio y Ollama) que se comunican directamente con los proveedores de IA\u2014Sciorex nunca act\u00faa como intermediario ni almacena conversaciones en servidores intermedios. Lo que importa para el investigador es lo que la IA puede hacer: puede anotar sus PDF, gestionar su biblioteca de referencias, compilar sus documentos LaTeX, crear y realizar seguimiento de tickets, y ejecutar flujos de trabajo automatizados\u2014todo desde una sola conversaci\u00f3n. El chat admite m\u00faltiples modos: chat est\u00e1ndar para preguntas generales, un modo ag\u00e9ntico donde la IA puede leer, escribir y editar archivos mientras el investigador revisa cada cambio, y un modo de vista previa que abre un panel de navegador en vivo. Los niveles de Pensamiento Extendido (Think, Think Hard, Think Harder, Ultrathink) permiten a los investigadores controlar la profundidad del razonamiento de la IA para problemas complejos. Un sistema de cola de mensajes permite a los usuarios seguir componiendo instrucciones de seguimiento mientras la IA procesa la solicitud actual, y las menciones de contexto (@file, @library, @ticket, @epic) inyectan contexto relevante directamente en la conversaci\u00f3n. La bifurcaci\u00f3n de sesiones permite ramificar una conversaci\u00f3n en cualquier punto para explorar enfoques alternativos sin perder el hilo original, y Seleccionar y Preguntar a la IA permite a los investigadores resaltar cualquier texto en el editor para consultar instant\u00e1neamente a la IA sobre \u00e9l."
+    },
+    "council": {
+      "title": "Modo Consejo",
+      "number": "3.2",
+      "p1": "Para problemas particularmente complejos\u2014decisiones arquitect\u00f3nicas, depuraci\u00f3n de errores sutiles o evaluaci\u00f3n de hip\u00f3tesis de investigaci\u00f3n contrapuestas\u2014Sciorex ofrece un Modo Consejo en el que m\u00faltiples modelos de IA participan en una discusi\u00f3n estructurada por rondas. Cada participante puede configurarse con un perfil de consejo personalizado\u2014un perfil reutilizable con su propio prompt de sistema, ajuste de temperatura y descripci\u00f3n de rol. Los perfiles pueden crearse manualmente, importarse desde el mercado comunitario o exportarse como archivos YAML para compartir con colaboradores. El investigador plantea una pregunta y observa c\u00f3mo los diferentes modelos razonan sobre el problema desde sus perspectivas configuradas, a menudo revelando ideas que un solo modelo pasar\u00eda por alto. M\u00e1s all\u00e1 de los consejos, los Equipos de Agentes permiten la colaboraci\u00f3n multi-agente donde agentes especializados trabajan juntos en tareas complejas, cada uno aportando experiencia espec\u00edfica de dominio\u2014por ejemplo, un agente \u00abRevisor de Literatura\u00bb recopilando fuentes mientras un agente \u00abEscritor LaTeX\u00bb redacta secciones y un \u00abAnalista de C\u00f3digo\u00bb valida los resultados experimentales. Este enfoque adversarial-colaborativo refleja la din\u00e1mica de revisi\u00f3n por pares y equipos de investigaci\u00f3n con la que los investigadores ya est\u00e1n familiarizados."
+    },
+    "agents": {
+      "title": "Agentes Personalizados",
+      "number": "3.3",
+      "p1": "Los investigadores pueden definir agentes de IA reutilizables con prompts de sistema especializados, permisos de herramientas y esquemas de entrada/salida. Un agente \u00abOrquestador de Investigaci\u00f3n\u00bb podr\u00eda configurarse para clarificar objetivos de investigaci\u00f3n, crear tickets, gestionar la biblioteca y coordinar experimentos\u2014mientras que un agente \u00abRevisor de C\u00f3digo\u00bb se enfoca \u00fanicamente en la calidad del c\u00f3digo. Los agentes pueden crearse manualmente, generarse con un asistente de IA o importarse desde el mercado comunitario\u2014que tambi\u00e9n aloja flujos de trabajo compartidos, perfiles de consejo y plantillas LaTeX. Cada agente se ejecuta en un entorno local aislado con niveles de permisos configurables (desde completamente aut\u00f3nomo hasta requerir aprobaci\u00f3n para cada acci\u00f3n)."
+    },
+    "agentExecution": {
+      "title": "Ejecuci\u00f3n e Historial de Agentes",
+      "number": "3.4",
+      "p1": "Cada ejecuci\u00f3n de agente se registra con el historial completo de mensajes, llamadas a herramientas y resultados. Los investigadores pueden revisar lo que hizo un agente, inspeccionar invocaciones individuales de herramientas y continuar conversaciones desde cualquier punto. M\u00faltiples agentes pueden ejecutarse en paralelo en diferentes \u00e1rboles de trabajo, permitiendo la comparaci\u00f3n simult\u00e1nea de diferentes enfoques para el mismo problema."
+    },
+    "workflows": {
+      "title": "Flujos de Trabajo Visuales",
+      "number": "3.5",
+      "p1": "Las l\u00edneas de investigaci\u00f3n complejas\u2014preprocesamiento de datos, entrenamiento de modelos, generaci\u00f3n de figuras, compilaci\u00f3n de art\u00edculos\u2014a menudo involucran docenas de pasos interdependientes. Sciorex proporciona un editor visual de flujos de trabajo basado en nodos donde los usuarios pueden componer canalizaciones de automatizaci\u00f3n conectando nodos predefinidos y personalizados. La paleta de nodos incluye disparadores, nodos de agentes de IA, ramificaci\u00f3n condicional, ejecuci\u00f3n paralela, puntos de control de espera (para aprobaci\u00f3n humana), transformaciones de datos y acciones de tickets. Los flujos de trabajo admiten depuraci\u00f3n en tiempo real con puntos de interrupci\u00f3n, ejecuci\u00f3n paso a paso e inspecci\u00f3n de resultados por nodo."
+    },
+    "flowMonitoring": {
+      "title": "Monitorizaci\u00f3n de Ejecuci\u00f3n de Flujos",
+      "number": "3.6",
+      "p1": "Los flujos de trabajo en ejecuci\u00f3n se monitorizan en tiempo real. La vista de ejecuci\u00f3n visualiza el progreso nodo a nodo, resalta el nodo en ejecuci\u00f3n actual y proporciona paneles interactivos de decisi\u00f3n para el manejo de errores y el control de bucles. Las ejecuciones completadas se registran con trazas de ejecuci\u00f3n completas, lo que hace que las l\u00edneas de investigaci\u00f3n sean auditables y reproducibles."
+    },
+    "editor": {
+      "title": "Editor Integrado",
+      "number": "3.7",
+      "p1": "El editor integrado basado en Monaco soporta resaltado de sintaxis para todos los lenguajes principales, modo VIM, edici\u00f3n con m\u00faltiples pesta\u00f1as, un explorador de archivos con selecci\u00f3n m\u00faltiple y operaciones de arrastrar y soltar, y un panel de esquema de c\u00f3digo. M\u00e1s all\u00e1 de los archivos de c\u00f3digo est\u00e1ndar, maneja Markdown con vista previa, cuadernos Jupyter, PDF, im\u00e1genes, vista previa HTML, documentos LaTeX, un editor de texto enriquecido (TipTap) para toma de notas y un visor de mol\u00e9culas 3D para archivos de biolog\u00eda estructural. En Linux y macOS, un VS Code Server integrado proporciona un entorno VS Code completo junto al editor principal; en Windows, la misma capacidad est\u00e1 disponible a trav\u00e9s de VS Code CLI serve-web. Un panel de vista previa de navegador en vivo con sincronizaci\u00f3n Playwright CDP permite el desarrollo frontend en paralelo: Sciorex detecta autom\u00e1ticamente los servidores de desarrollo en ejecuci\u00f3n, y la IA puede interactuar directamente con el navegador en vivo. El modo de vista previa ag\u00e9ntica muestra los diffs generados por la IA para su revisi\u00f3n antes de aplicar cambios. Un explorador de procesos integrado con seguimiento de memoria brinda a los investigadores visibilidad completa sobre las tareas en segundo plano."
+    },
+    "sourceControl": {
+      "title": "Control de Versiones y Worktrees",
+      "number": "3.8",
+      "p1": "Git es un sistema de control de versiones gratuito ampliamente utilizado tanto en ingenier\u00eda de software como en investigaci\u00f3n computacional. Registra cada cambio en sus archivos, permite revertir a versiones anteriores y facilita la copia de seguridad de su trabajo en servicios de alojamiento gratuitos como GitHub o GitLab. Cuando Git est\u00e1 instalado en su sistema, Sciorex proporciona una interfaz visual para \u00e9l: un visor de diferencias, grafo de commits, gesti\u00f3n de ramas y seguimiento de cambios preparados y no preparados\u2014sin necesidad de l\u00ednea de comandos. Los proyectos son carpetas simples; inicialice Git cuando desee control de versiones.",
+      "p2": "Para investigadores que trabajan en m\u00faltiples experimentos simult\u00e1neamente, el soporte de worktrees de Git permite espacios de trabajo de ramas paralelos\u2014cada uno con su propio directorio de trabajo independiente y sesiones de IA. La fusi\u00f3n de worktrees con detecci\u00f3n integrada de conflictos facilita la reconciliaci\u00f3n de experimentos divergentes. Esto permite un flujo de trabajo donde un worktree ejecuta un experimento mientras otro explora un enfoque alternativo, comparando los resultados en paralelo antes de fusionar el enfoque ganador de vuelta a la rama principal."
+    }
+  },
+  "mcp": {
+    "title": "Autonom\u00eda de IA y la Capa MCP",
+    "p1": "Lo que distingue a Sciorex de una colecci\u00f3n de herramientas colocadas es la capa de Model Context Protocol (MCP) {{cite5}} que las vincula entre s\u00ed. MCP expone 59 herramientas personalizadas a trav\u00e9s de m\u00faltiples servidores especializados, otorgando a los modelos de IA acceso directo a cada subsistema de la aplicaci\u00f3n. Los investigadores tambi\u00e9n pueden registrar sus propios servidores compatibles con MCP en la configuraci\u00f3n del espacio de trabajo, extendiendo las capacidades de la IA a cualquier herramienta o servicio externo que implemente el protocolo. Esto transforma a la IA de un asistente basado en texto en un colaborador de investigaci\u00f3n aut\u00f3nomo capaz de operar en todo el espectro de actividades de investigaci\u00f3n.",
+    "p2": "A continuaci\u00f3n se presenta un subconjunto representativo de las capacidades MCP, organizado por dominio. Cada herramienta puede ser invocada por cualquier modelo de IA durante una sesi\u00f3n de chat, sujeto a la configuraci\u00f3n de permisos del investigador.",
+    "tools": [
+      {
+        "server": "SERVIDOR DE INVESTIGACI\u00d3N (16 HERRAMIENTAS)",
+        "tools": [
+          "pdf_read \u2014 Extraer texto de PDF por rango de p\u00e1ginas",
+          "pdf_annotate \u2014 A\u00f1adir resaltados, subrayados y comentarios",
+          "pdf_get_annotations \u2014 Recuperar todas las anotaciones de un PDF",
+          "latex_compile \u2014 Compilar LaTeX (pdflatex/xelatex/lualatex)",
+          "library_add_item \u2014 A\u00f1adir art\u00edculos, libros y datasets a la biblioteca",
+          "library_manage \u2014 Crear y actualizar colecciones y etiquetas",
+          "library_search \u2014 Buscar art\u00edculos en Semantic Scholar, arXiv y CrossRef"
+        ]
+      },
+      {
+        "server": "SERVIDOR DE TICKETS (23 HERRAMIENTAS)",
+        "tools": [
+          "sciorex_create_ticket \u2014 Crear tickets con tipo, prioridad y subtareas",
+          "sciorex_change_status \u2014 Mover tickets a trav\u00e9s de las etapas del flujo de trabajo",
+          "sciorex_report_progress \u2014 Reportar porcentaje de avance e hitos",
+          "sciorex_create_epic \u2014 Agrupar tickets en \u00e9picas de hitos",
+          "sciorex_link_resource \u2014 Vincular art\u00edculos, ramas y sesiones a tickets",
+          "sciorex_add_comment \u2014 A\u00f1adir comentarios e hilos de discusi\u00f3n"
+        ]
+      },
+      {
+        "server": "SERVIDOR DE RECURSOS (11 HERRAMIENTAS)",
+        "tools": [
+          "sciorex_save_agent \u2014 Crear o actualizar agentes de IA personalizados",
+          "sciorex_save_flow \u2014 Crear o actualizar flujos de trabajo de automatizaci\u00f3n",
+          "sciorex_execute_agent \u2014 Lanzar ejecuci\u00f3n de agente en segundo plano",
+          "sciorex_execute_flow \u2014 Activar ejecuci\u00f3n de flujo con par\u00e1metros",
+          "sciorex_list_agents \u2014 Explorar agentes y plantillas disponibles"
+        ]
+      },
+      {
+        "server": "SERVIDOR DE INTERACCIONES (4 HERRAMIENTAS)",
+        "tools": [
+          "sciorex_ask_user \u2014 Hacer preguntas con opciones de selecci\u00f3n simple o m\u00faltiple",
+          "sciorex_request_approval \u2014 Solicitar aprobaci\u00f3n expl\u00edcita del usuario",
+          "sciorex_notify_user \u2014 Enviar notificaciones informativas, de advertencia o error",
+          "sciorex_set_view_mode \u2014 Cambiar entre modos de chat, ag\u00e9ntico y vista previa"
+        ]
+      },
+      {
+        "server": "SERVIDOR DE SECRETOS (4 HERRAMIENTAS)",
+        "tools": [
+          "request_secret \u2014 Acceder de forma segura a secretos (el valor nunca se expone a la IA)",
+          "release_secret \u2014 Liberar secretos concedidos cuando ya no sean necesarios",
+          "add_secret \u2014 Almacenar nuevos secretos con confirmaci\u00f3n del usuario",
+          "list_secrets \u2014 Listar nombres de secretos disponibles (los valores nunca se muestran)"
+        ]
+      }
+    ],
+    "permissions": "El sistema de permisos ofrece tres niveles de autonom\u00eda de la IA: un modo \u00abYOLO\u00bb en el que la IA opera libremente, un modo de \u00abaprobar ediciones autom\u00e1ticamente\u00bb en el que los cambios en archivos se aplican autom\u00e1ticamente pero otras acciones requieren confirmaci\u00f3n, y un modo de \u00abpreguntar para todo\u00bb en el que cada invocaci\u00f3n de herramienta requiere aprobaci\u00f3n expl\u00edcita del investigador. Este control gradual permite a los investigadores calibrar la confianza a medida que se familiarizan con las capacidades del sistema.",
+    "practical": "La implicaci\u00f3n pr\u00e1ctica es que un investigador puede instruir a la IA para que \u00abdescargue el \u00faltimo art\u00edculo sobre arquitecturas transformer, lo a\u00f1ada a mi biblioteca de referencias, anote los hallazgos clave y cree un ticket para revisar su metodolog\u00eda\u00bb\u2014y la IA puede ejecutar todo este flujo de trabajo de forma aut\u00f3noma, utilizando las herramientas MCP para interactuar con el visor de PDF, la biblioteca y el sistema de tickets sin ninguna intervenci\u00f3n manual."
+  },
+  "project": {
+    "title": "Gesti\u00f3n de Proyectos",
+    "p1": "Los proyectos de investigaci\u00f3n se benefician de un seguimiento estructurado de tareas, especialmente en entornos colaborativos. Sciorex incluye un sistema de gesti\u00f3n de proyectos integrado con tableros Kanban, vista de lista de tickets y \u00e9picas para organizar el trabajo a lo largo de l\u00edneas temporales extensas. A diferencia de las herramientas externas de gesti\u00f3n de proyectos, el sistema de Sciorex est\u00e1 estrechamente acoplado con el c\u00f3digo fuente y los documentos de investigaci\u00f3n: los tickets pueden vincularse a archivos espec\u00edficos, ramas Git, sesiones de IA, ejecuciones de flujos y art\u00edculos de la biblioteca. Los modelos de IA pueden crear, actualizar y consultar tickets a trav\u00e9s de MCP, permitiendo un seguimiento automatizado del progreso en el que la IA reporta porcentajes de completitud e hitos a medida que trabaja.",
+    "p2": "Para proyectos de investigaci\u00f3n de mayor envergadura\u2014cap\u00edtulos de tesis, proyectos de m\u00faltiples publicaciones o entregables de subvenciones\u2014las \u00c9picas proporcionan una capa organizativa de nivel superior. Las \u00c9picas agrupan tickets relacionados en hitos coherentes, ofreciendo seguimiento del progreso a lo largo de todo el alcance de un proyecto de investigaci\u00f3n. Esta estructura jer\u00e1rquica escala desde un estudio de autor \u00fanico hasta esfuerzos colaborativos de m\u00faltiples equipos."
+  },
+  "architecture": {
+    "title": "Arquitectura y Privacidad",
+    "p1": "Sciorex est\u00e1 construido sobre una arquitectura local-first. La aplicaci\u00f3n se ejecuta completamente en el escritorio del usuario sin servicios en la nube obligatorios, sin cuentas de usuario y sin telemetr\u00eda. Todos los datos\u2014proyectos, referencias, anotaciones, historial de conversaciones con IA, definiciones de flujos de trabajo\u2014se almacenan en el sistema de archivos local en formatos abiertos y legibles siempre que sea posible. Los proyectos son carpetas simples que pueden inicializarse con Git en cualquier momento, brindando a los investigadores copias de seguridad gratuitas en GitHub, GitLab o cualquier remoto Git\u2014sin depender de ning\u00fan servicio propietario de sincronizaci\u00f3n.",
+    "p2": "Este dise\u00f1o es una respuesta deliberada a la tendencia creciente de herramientas de investigaci\u00f3n dependientes de la nube que generan bloqueo de datos y plantean preocupaciones leg\u00edtimas sobre la exposici\u00f3n de propiedad intelectual. Dado que Sciorex envuelve CLI de IA externos, toda la comunicaci\u00f3n va directamente del CLI a su proveedor de modelos\u2014Sciorex nunca retransmite, intercepta ni almacena dato alguno. No opera servidores de retransmisi\u00f3n, no recopila datos de uso y no requiere conexi\u00f3n a internet para ninguna funcionalidad principal m\u00e1s all\u00e1 del acceso propio del CLI a modelos y la b\u00fasqueda de literatura. Para investigadores que requieran operaci\u00f3n completamente sin conexi\u00f3n, Sciorex soporta CLI locales: LM Studio y Ollama.",
+    "p3": "El sistema de gesti\u00f3n de secretos garantiza que los tokens y credenciales se almacenen de forma segura y nunca se expongan a los modelos de IA\u2014cuando un CLI solicita acceso a un secreto, recibe \u00fanicamente una referencia a una variable de entorno, con el valor real inyectado de forma segura en el momento de la ejecuci\u00f3n.",
+    "privacyGuarantee": {
+      "heading": "Garant\u00eda de privacidad:",
+      "line1": "Todos los datos permanecen en la m\u00e1quina del usuario.",
+      "line2": "Sin dependencia de la nube. Sin telemetr\u00eda. Sin recolecci\u00f3n de datos.",
+      "line3": "Los secretos nunca se exponen a los modelos de IA.",
+      "line4": "Su investigaci\u00f3n es solo suya."
+    }
+  },
+  "availability": {
+    "title": "Disponibilidad",
+    "p1": "Sciorex est\u00e1 disponible gratuitamente para Windows, macOS y Linux. La aplicaci\u00f3n se distribuye como instaladores nativos para cada plataforma y no requiere creaci\u00f3n de cuenta ni clave de licencia.",
+    "docsNote": "Las instrucciones completas de instalaci\u00f3n est\u00e1n disponibles en la",
+    "docsLink": "Gu\u00eda de Inicio R\u00e1pido",
+    "docsMid": ", y la",
+    "docsFullLink": "documentaci\u00f3n completa",
+    "docsEnd": "cubre todas las funcionalidades en detalle.",
+    "downloads": {
+      "downloadAction": "Descargar \u2192",
+      "groups": [
+        {
+          "os": "Windows",
+          "targets": [
+            { "label": "Instalador", "note": "Recomendado, ~200 MB" },
+            { "label": "Portable", "note": "Sin instalaci\u00f3n, ~200 MB" }
+          ]
+        },
+        {
+          "os": "macOS",
+          "targets": [
+            { "label": "Apple Silicon", "note": "M1/M2/M3/M4, ~340 MB" },
+            { "label": "Intel", "note": "Macs con Intel, ~340 MB" }
+          ]
+        },
+        {
+          "os": "Linux",
+          "targets": [
+            { "label": "AppImage", "note": "Universal, ~250 MB" },
+            { "label": "Debian/Ubuntu", "note": "Compatible con apt, ~220 MB" },
+            { "label": "Fedora/RHEL", "note": "Compatible con dnf/yum, ~220 MB" }
+          ]
+        }
+      ]
+    },
+    "macNotice": {
+      "title": "Aviso de Instalaci\u00f3n en macOS",
+      "p1": "macOS puede mostrar \u00abLa aplicaci\u00f3n est\u00e1 da\u00f1ada\u00bb o \u00abdesarrollador no identificado\u00bb porque Sciorex a\u00fan no est\u00e1 firmado con un certificado de Apple Developer. Para resolver esto, abra Terminal y ejecute:",
+      "command": "xattr -cr /Applications/Sciorex.app",
+      "alternative": "O bien: Haga clic derecho en la aplicaci\u00f3n > Abrir > pulse \u00abAbrir\u00bb en el di\u00e1logo.",
+      "sequoia": "En macOS Sequoia (15+): Intente abrir la aplicaci\u00f3n primero, luego vaya a Ajustes del Sistema > Privacidad y Seguridad y pulse \u00abAbrir de todos modos.\u00bb",
+      "learnMore": "\u00bfPor qu\u00e9 macOS muestra esta advertencia?"
+    }
+  },
+  "pricing": {
+    "title": "Precios",
+    "p1": "Sciorex Personal es gratuito e incluye todas las funcionalidades descritas en este art\u00edculo. No hay restricciones de funcionalidad, ni limitaciones de prueba, ni niveles premium que restrinjan la funcionalidad principal. Si su instituci\u00f3n requiere espacios de trabajo en equipo, colaboraci\u00f3n o funcionalidades empresariales, cont\u00e1ctenos para conocer los planes pr\u00f3ximos."
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "q": "\u00bfSciorex es realmente gratuito?",
+        "a": "S\u00ed. Completamente gratuito para uso personal y profesional\u2014sin suscripciones, sin niveles premium, sin costes ocultos. Sciorex funciona envolviendo AI CLI (interfaces de l\u00ednea de comandos)\u2014peque\u00f1os programas como Claude Code, Gemini CLI u Ollama que se instalan por separado en su ordenador. Sciorex proporciona la interfaz gr\u00e1fica y la orquestaci\u00f3n por encima. Sus costes son los que cobre el CLI, o cero con modelos completamente locales a trav\u00e9s de LM Studio u Ollama."
+      },
+      {
+        "q": "\u00bfLos modelos de IA pueden realmente anotar mis PDF y gestionar mi biblioteca?",
+        "a": "S\u00ed. A trav\u00e9s del protocolo MCP, los modelos de IA pueden leer el contenido de PDF (pdf_read), a\u00f1adir resaltados y comentarios (pdf_annotate), recuperar anotaciones existentes (pdf_get_annotations), a\u00f1adir art\u00edculos a su biblioteca de referencias (library_add_item), gestionar colecciones y etiquetas (library_manage), y adjuntar notas (library_add_note)\u2014todo de forma aut\u00f3noma durante una sesi\u00f3n de chat. Puede pedirle a la IA que \u00ablea este art\u00edculo, resalte la secci\u00f3n de metodolog\u00eda y lo a\u00f1ada a mi colecci\u00f3n de revisi\u00f3n de literatura\u00bb y ejecutar\u00e1 cada paso utilizando las herramientas apropiadas."
+      },
+      {
+        "q": "\u00bfQu\u00e9 plantillas LaTeX est\u00e1n incluidas?",
+        "a": "M\u00e1s de 30 plantillas listas para publicaci\u00f3n: NeurIPS, ICML, CVPR, ICCV, ECCV, ACL, EMNLP, AAAI, IJCAI, IEEE (conferencia y revista), ACM (SIGCHI, SIGPLAN, etc.), Nature, Science, Springer (LNCS), Elsevier, APS (Physical Review), PNAS, Tesis Doctoral, Tesis de M\u00e1ster y formatos de art\u00edculo general. Cada plantilla incluye el estilo bibliogr\u00e1fico correcto y puede compilarse con pdflatex, xelatex o lualatex."
+      },
+      {
+        "q": "\u00bfC\u00f3mo se compara la biblioteca de referencias con Zotero o Mendeley?",
+        "a": "La biblioteca de Sciorex admite 43 tipos de \u00edtems, 11 estilos de citaci\u00f3n (APA, MLA, IEEE, Chicago, Harvard, Vancouver, Nature, Science, ACM, APS y CSL personalizado), e importa/exporta en formatos BibTeX, RIS, CSL-JSON, Zotero y Mendeley. La diferencia clave es la integraci\u00f3n con IA: sus modelos de lenguaje pueden buscar art\u00edculos, a\u00f1adirlos a colecciones, generar citas e insertar referencias en documentos LaTeX\u2014algo que los gestores de referencias tradicionales no pueden hacer. Todos los datos se almacenan localmente en su m\u00e1quina."
+      },
+      {
+        "q": "\u00bfPuedo usar Sciorex completamente sin conexi\u00f3n?",
+        "a": "S\u00ed. Instale un AI CLI local como LM Studio u Ollama (ambos gratuitos) y Sciorex funcionar\u00e1 completamente sin conexi\u00f3n a internet. El descubrimiento de art\u00edculos (Semantic Scholar, arXiv, CrossRef) naturalmente requiere internet, pero todas las dem\u00e1s funcionalidades\u2014el editor, la compilaci\u00f3n LaTeX, la anotaci\u00f3n de PDF, la gesti\u00f3n de la biblioteca, el seguimiento de tickets y los flujos de trabajo\u2014funcionan completamente sin conexi\u00f3n."
+      },
+      {
+        "q": "\u00bfD\u00f3nde se almacenan mis datos? \u00bfMi investigaci\u00f3n es privada?",
+        "a": "Todo permanece en su sistema de archivos local\u2014el 100%. Sciorex no recopila anal\u00edticas, ni telemetr\u00eda, ni datos de uso. Sus art\u00edculos, anotaciones, biblioteca, conversaciones y c\u00f3digo nunca abandonan su m\u00e1quina. Los proyectos son carpetas simples\u2014si instala Git (una herramienta gratuita de control de versiones), puede rastrear cambios y hacer copias de seguridad de su trabajo en GitHub o GitLab sin coste alguno. Los secretos (tokens, credenciales) se almacenan en una b\u00f3veda local cifrada y nunca se exponen a los modelos de IA. El \u00fanico tr\u00e1fico de red es entre el CLI y su proveedor cuando usted inicia un chat."
+      },
+      {
+        "q": "\u00bfQu\u00e9 es MCP y por qu\u00e9 deber\u00eda importarles a los investigadores?",
+        "a": "MCP (Model Context Protocol) es un est\u00e1ndar abierto que otorga a los modelos de IA la capacidad de usar herramientas\u2014no solo generar texto, sino realizar acciones concretas. En la pr\u00e1ctica, esto significa que puede decirle a la IA \u00ablee este art\u00edculo, resalta la secci\u00f3n de metodolog\u00eda, a\u00f1\u00e1delo a mi colecci\u00f3n de revisi\u00f3n de literatura y crea un ticket de seguimiento\u00bb y ejecutar\u00e1 cada paso de forma aut\u00f3noma. Sciorex expone 59 herramientas personalizadas (y contando) en m\u00faltiples servidores que cubren PDF, la biblioteca de referencias, tickets de proyecto, flujos de trabajo, interacciones y secretos. Tambi\u00e9n puede registrar sus propios servidores compatibles con MCP para extender las capacidades de la IA a\u00fan m\u00e1s. Transforma a la IA de un chatbot en un asistente de investigaci\u00f3n que puede operar en todo su espacio de trabajo."
+      },
+      {
+        "q": "\u00bfEn qu\u00e9 se diferencia Sciorex de Cursor, Windsurf u Overleaf?",
+        "a": "Sciorex no es un editor de c\u00f3digo ni un editor de LaTeX en l\u00ednea\u2014es un entorno de investigaci\u00f3n completo. A diferencia de Cursor o Windsurf (IDE centrados en c\u00f3digo), Sciorex incluye anotaci\u00f3n de PDF, una biblioteca de referencias, descubrimiento de art\u00edculos, LaTeX con m\u00e1s de 30 plantillas, gesti\u00f3n de proyectos con tableros Kanban, un visor de mol\u00e9culas 3D y un VS Code Server integrado. A diferencia de Overleaf (LaTeX en la nube), Sciorex se ejecuta 100% localmente, admite escritura asistida por IA con cualquier modelo e integra la edici\u00f3n de c\u00f3digo junto con la preparaci\u00f3n de documentos. El Modo Consejo permite que m\u00faltiples modelos de IA debatan problemas, con perfiles personalizados que puede ajustar o importar desde el mercado comunitario. Envuelve CLI de IA existentes (Claude Code, Gemini CLI) para que usted mantenga el control total."
+      },
+      {
+        "q": "\u00bfNecesito experiencia en programaci\u00f3n para usar Sciorex?",
+        "a": "No. Aunque Sciorex incluye un potente editor de c\u00f3digo y un framework de agentes, muchos investigadores lo utilizan principalmente para lectura de PDF, gesti\u00f3n de literatura, escritura en LaTeX y tareas de investigaci\u00f3n asistidas por IA\u2014ninguna de las cuales requiere programaci\u00f3n. El constructor visual de flujos de trabajo utiliza arrastrar y soltar, y la interfaz de chat con IA acepta instrucciones en lenguaje natural. Los investigadores que s\u00ed escriben c\u00f3digo (Python, R, MATLAB) se benefician del entorno de desarrollo integrado."
+      }
+    ]
+  },
+  "references": {
+    "title": "Referencias",
+    "items": [
+      "Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., and Polosukhin, I., \u201cAttention Is All You Need,\u201d Advances in Neural Information Processing Systems (NeurIPS), 2017.",
+      "Knuth, D. E., \u201cLiterate Programming,\u201d CSLI Lecture Notes, No. 27, Stanford University Center for the Study of Language and Information, 1992.",
+      "Nielsen, J., \u201cUsability Engineering,\u201d Morgan Kaufmann Publishers, 1993.",
+      "Victor, B., \u201cInventing on Principle,\u201d Canadian University Software Engineering Conference (CUSEC), 2012.",
+      "Anthropic, \u201cModel Context Protocol Specification,\u201d https://modelcontextprotocol.io, 2024."
+    ]
+  },
+  "cta": {
+    "title": "Comience su investigaci\u00f3n con Sciorex",
+    "subtitle": "Gratuito, privado y dise\u00f1ado para flujos de trabajo acad\u00e9micos. Descargue ahora o vea el proyecto en GitHub.",
+    "download": "Descargar",
+    "viewSource": "Ver en GitHub",
+    "starGithub": "Dar Estrella en GitHub"
+  },
+  "figures": {
+    "1": "El espacio de trabajo integrado de Sciorex mostrando el panel de proyecto con el feed de actividad, estad\u00edsticas r\u00e1pidas y navegaci\u00f3n a todas las herramientas de investigaci\u00f3n y desarrollo.",
+    "2": "El editor LaTeX integrado con resaltado de sintaxis y vista previa de PDF en paralelo. Los cambios se reflejan en tiempo real a medida que el usuario escribe.",
+    "3": "Interfaz de anotaci\u00f3n de PDF con resaltados, notas al margen y exportaci\u00f3n estructurada. El panel de exportaci\u00f3n de anotaciones compila las notas de lectura de m\u00faltiples art\u00edculos en documentos reutilizables.",
+    "4": "Descubrimiento de literatura con b\u00fasqueda multifuente y visualizaci\u00f3n de redes de citas. Los investigadores pueden rastrear el linaje intelectual entre art\u00edculos y a\u00f1adir resultados directamente a su biblioteca local.",
+    "5": "La biblioteca de referencias con organizaci\u00f3n basada en colecciones, visualizaci\u00f3n de metadatos, seguimiento del estado de lectura y exportaci\u00f3n BibTeX con un solo clic para integraci\u00f3n con LaTeX.",
+    "6": "La interfaz de chat con IA: conversaci\u00f3n est\u00e1ndar con generaci\u00f3n de c\u00f3digo, la pantalla de inicio mostrando selecci\u00f3n de modelo y acceso a funcionalidades, y el modo ag\u00e9ntico con revisi\u00f3n de diffs en l\u00ednea para ediciones generadas por IA.",
+    "7": "Modo Consejo mostrando una discusi\u00f3n multimodelo donde diferentes LLM debaten un problema con flujo de conversaci\u00f3n por rondas, indicadores de participantes y controles de consejo.",
+    "8": "Gesti\u00f3n de agentes personalizados: el directorio de agentes con agentes comunitarios y creados por el usuario, configuraci\u00f3n detallada del agente con prompts de sistema y permisos de herramientas MCP, y la interfaz de inicio r\u00e1pido para crear nuevos agentes.",
+    "9": "Historial de ejecuci\u00f3n de agentes mostrando navegaci\u00f3n por \u00e1rbol de sesiones, inspecci\u00f3n de llamadas a herramientas e indicadores de estado de ejecuci\u00f3n con la capacidad de continuar o bifurcar conversaciones.",
+    "10": "El motor de flujos de trabajo visuales: el editor basado en nodos, modo de depuraci\u00f3n con puntos de interrupci\u00f3n y configuraci\u00f3n de nodos, plantillas de flujos comunitarios (Git Commit, PR Review, Scientific Research), y la interfaz de inicio r\u00e1pido.",
+    "11": "Monitorizaci\u00f3n de ejecuci\u00f3n de flujos: la vista de ejecuci\u00f3n completada con estado y tiempos nodo a nodo, y una ejecuci\u00f3n en vivo mostrando un flujo de trabajo activo con puntos de decisi\u00f3n interactivos.",
+    "12": "El editor integrado: edici\u00f3n de c\u00f3digo basada en Monaco con resaltado de sintaxis y \u00e1rbol de archivos, el modo de revisi\u00f3n ag\u00e9ntica mostrando diffs generados por IA para aprobaci\u00f3n, y la vista previa del navegador en vivo para desarrollo frontend.",
+    "13": "Control de versiones y worktrees: la integraci\u00f3n Git con visor visual de diferencias, gesti\u00f3n de worktrees para ramas paralelas, un worktree en uso activo con estado de archivos independiente, y sesiones de chat con IA asociadas a worktrees individuales.",
+    "14": "Una sesi\u00f3n de chat con IA demostrando el uso aut\u00f3nomo de herramientas: el modelo descarga un art\u00edculo, extrae contenido mediante pdf_read, lo a\u00f1ade a la biblioteca y crea un resumen\u2014todo a trav\u00e9s de invocaciones de herramientas MCP visibles en la conversaci\u00f3n.",
+    "15": "Vistas de gesti\u00f3n de proyectos: el tablero Kanban con gesti\u00f3n de estado mediante arrastrar y soltar, un tablero poblado con tickets en todas las etapas del flujo de trabajo, la vista de lista con filtrado y b\u00fasqueda, y un ticket detallado con descripci\u00f3n, subtareas, seguimiento de progreso y recursos vinculados.",
+    "16": "\u00c9picas y detalles de tickets: la vista de \u00c9picas con seguimiento de progreso de hitos, y un ticket detallado mostrando actualizaciones de progreso reportadas por IA, listas de verificaci\u00f3n de criterios de aceptaci\u00f3n, enlaces a recursos y relaciones de bloqueo.",
+    "17": "Configuraci\u00f3n de integraci\u00f3n de CLI mostrando soporte para Claude Code, Gemini CLI, OpenAI Codex CLI, OpenCode, LM Studio y Ollama, cada uno con selecci\u00f3n de modelo independiente y configuraci\u00f3n de permisos."
+  },
+  "figureLabels": {
+    "3": ["Anotaci\u00f3n", "Exportaci\u00f3n"],
+    "4": ["B\u00fasqueda", "Citas"],
+    "6": ["Chat", "Inicio", "Ag\u00e9ntico"],
+    "8": ["Lista de Agentes", "Config. de Agente", "Inicio R\u00e1pido"],
+    "10": ["Editor", "Depuraci\u00f3n", "Plantillas", "Inicio R\u00e1pido"],
+    "11": ["Ejecuci\u00f3n", "Ejecuci\u00f3n en Vivo"],
+    "12": ["Editor", "Revisi\u00f3n Ag\u00e9ntica", "Vista Previa del Navegador"],
+    "13": ["Git", "Worktree", "Trabajo Paralelo", "Worktree + Chat"],
+    "15": ["Kanban", "Tablero Completo", "Vista de Lista", "Detalle de Ticket"],
+    "16": ["\u00c9picas", "Ticket + Progreso"]
+  },
+  "figurePrefix": "Figura",
+  "ui": {
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "reference": "Referencia"
+  },
+  "footer": {
+    "github": "GitHub",
+    "discord": "Discord",
+    "twitter": "Twitter",
+    "youtube": "YouTube",
+    "docs": "Documentaci\u00f3n",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "about": "Acerca de",
+    "privacy": "Privacidad",
+    "terms": "T\u00e9rminos",
+    "copyright": "\u00a9 2025-{{year}} Sciorex \u2014 Un entorno de investigaci\u00f3n gratuito y privado.",
+    "backToTop": "\u2191 Volver arriba"
+  }
+}
