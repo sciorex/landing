@@ -82,7 +82,7 @@ class ErrorBoundary extends Component<{ children: ReactNode }, ErrorBoundaryStat
 // ---------------------------------------------------------------------------
 // Component to handle language detection and redirect
 // ---------------------------------------------------------------------------
-function LanguageRedirect() {
+function LanguageRedirect({ hash }: { hash?: string } = {}) {
   const { i18n } = useTranslation();
   const location = useLocation();
   const detectedLang = i18n.language.startsWith('es') ? 'es' : 'en';
@@ -94,8 +94,14 @@ function LanguageRedirect() {
   const remainingPath = hasLocalePrefix
     ? '/' + pathSegments.slice(1).join('/')
     : location.pathname;
-  const target = `/${detectedLang}${remainingPath === '/' ? '' : remainingPath}/${location.hash}`;
 
+  // If a hash override is provided (e.g. for /download → /#download), use it
+  // and redirect to the root darkroom page with that hash
+  if (hash) {
+    return <Navigate to={`/${detectedLang}/${hash}`} replace />;
+  }
+
+  const target = `/${detectedLang}${remainingPath === '/' ? '' : remainingPath}/${location.hash}`;
   return <Navigate to={target} replace />;
 }
 
@@ -186,6 +192,10 @@ function App() {
                 </Routes>
               </LocaleWrapper>
             } />
+
+            {/* Direct /download(s) shortcut → locale-prefixed darkroom #download */}
+            <Route path="/download" element={<LanguageRedirect hash="#download" />} />
+            <Route path="/downloads" element={<LanguageRedirect hash="#download" />} />
 
             {/* Top-level catch-all — redirect to locale-prefixed path */}
             <Route path="*" element={<LanguageRedirect />} />
